@@ -1,0 +1,32 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+
+h1{
+	text-align:center;
+}
+
+.topic{
+	margin-left: 5%;
+}
+.questions-group{
+	margin-left: 10%;
+}
+ul{
+	margin-left: 5%;
+}
+
+ul li{
+	list-style-type: square;
+}
+
+footer {
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
