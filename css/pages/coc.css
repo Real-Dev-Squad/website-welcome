@@ -1,0 +1,17 @@
+.coc-header {
+  width: 90%;
+  text-align: left;
+  font-weight: 550;
+  padding: 20px;
+ }
+ .coc-list {
+  width:90%;
+  text-align: left;
+  font-weight: 400;
+  margin-left:50px;
+ }
+ .coc-list-elements {
+   margin-left:50px;
+   padding: 5px;
+   font-weight: 500;
+ }
