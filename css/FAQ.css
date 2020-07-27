@@ -3,8 +3,18 @@ html {
     min-height: 100%;
 }
 
+
+
 body {
   font-family: 'Roboto', sans-serif;
+}
+
+section{
+    
+    border:2px solid blue;
+    padding: 2%;
+    width :80%;
+
 }
 
 .question {
@@ -22,7 +32,8 @@ h1 {
 }
 
 .topic {
-	margin-left: 5%;
+    margin-top:4%;
+	margin-left: 10%;
 }
 
 .questions-group {
@@ -38,10 +49,17 @@ ul li {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     height: 50px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
 }
+
+a{
+    text-decoration: none;
+    color: #0000FF;
+    font-weight: 400;
+}
+
