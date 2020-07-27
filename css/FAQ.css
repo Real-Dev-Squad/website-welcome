@@ -1,24 +1,34 @@
 body {
   font-family: 'Roboto', sans-serif;
-  
 }
 
+.question {
+  font-weight: 400;
+}
 
-h1{
+.answer {
+  font-weight: 100;
+  margin-left: 2%;
+  margin-right: 10%;
+}
+
+h1 {
 	text-align:center;
 }
 
-.topic{
-	margin-left: 5%;
-}
-.questions-group{
-	margin-left: 10%;
-}
-ul{
+.topic {
 	margin-left: 5%;
 }
 
-ul li{
+.questions-group {
+	margin-left: 10%;
+}
+
+ul {
+	margin-left: 5%;
+}
+
+ul li {
 	list-style-type: square;
 }
 
