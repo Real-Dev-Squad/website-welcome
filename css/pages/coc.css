@@ -8,10 +8,26 @@
   width:90%;
   text-align: left;
   font-weight: 400;
-  margin-left:50px;
+  margin-left: 1%;
  }
  .coc-list-elements {
-   margin-left:50px;
+   margin-left:4%;
    padding: 5px;
    font-weight: 500;
+ }
+
+ @media only screen and (max-width: 600px) {
+  .coc-list {
+    width: unset;
+    text-align: left;
+    font-weight: 400;
+    /* margin-left: -10%; */
+    padding: 20px;
+   }
+   .coc-list-elements {
+     padding: 5px;
+     font-weight: 500;
+     margin-left: 6%;
+   }
+
  }
