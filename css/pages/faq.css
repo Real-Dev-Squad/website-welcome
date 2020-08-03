@@ -13,22 +13,6 @@ section {
     width :80%;
 }
 
-a {
-  outline: none;
-  text-decoration: none;
-}
-
-a:focus, a:hover {
-  border-bottom: 1px solid;
-  background: #100170;
-  color: white;
-}
-
-a:active {
-  background: #f20a67;
-  color: white;
-}
-
 .question {
   font-weight: 400;
 }
