@@ -28,7 +28,7 @@
    @media only screen and (max-width: 1150px) {
     .burger-menu {
       display: inline-block;
-      width: 40px;
+      
 
     }
     #nav-toggle:checked ~ .left-menu {
