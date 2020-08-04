@@ -13,8 +13,10 @@ a {
 
 a:focus, a:hover {
   border-bottom: 1px solid;
-  background: #100170;
-  color: white;
+  background:white;
+  color:#2929a3;
+  transition-delay:0.2s;
+  font-weight:600;
 }
 
 a:active {
