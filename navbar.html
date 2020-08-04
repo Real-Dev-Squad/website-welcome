@@ -5,22 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>navbar</title>
-  <link rel="stylesheet" href="css/common/main.css">
+  
   <link rel="stylesheet" href="css/pages/navbar.css">
 
 </head>
 
 <body>
-  <nav>
-   <ul class="ul-display">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="discord.html">Discord</a></li>
-   </ul>
-  </nav>
 
+  <div class="nav-container">
+   <nav>
+    <input type="checkbox" id="nav-toggle">
+    <label for="nav-toggle" class="burger-menu">
+     <img src="img/logos/menu.png" alt="">
+    </label>
+    <div class="left-menu">
+     <a href="index.html">Home</a>
+     <a href="code-of-conduct.html">Code of Conduct</a>
+     <a href="faq.html">FAQ</a>
+     <a href="discord.html">Discord</a>
+    </div>
+      
+   </nav>
+  </div>
+ 
 
-  
 </body>
 </html>
