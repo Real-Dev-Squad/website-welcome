@@ -1,25 +1,39 @@
+.main-heading{
+  text-align: left;
+  font-weight: 600;
+  padding: 10px;
+}
+body{
+    margin-left: 5%;
+}
+
+.discord-info{
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2%;
+
+}
+.get-started{
+  text-align: left;
+  font-weight: 550;
+  padding: 10px;
+}
+
 ul{
-    padding-left: 15%;
-    font-weight: 100;
-    margin: 0 auto;
     text-align: left;
-    list-style-position: inside;
-    margin-left: 7%;
+    font-weight: 500;
+    margin-left: 2%;
+    padding:10px
     
 }
 
-body{
-    text-align: center;
-    align-content: center;   
+ol{
+   margin-left:4%;
+   font-weight: 500;
+   padding: 10px;
 }
-@media only screen and (max-width: 600px) {
-    body {
-      width: unset;
-      text-align: left;
-      font-weight: 400;
 
 .category-img{
-    margin-left: auto;
-    margin-right: auto;
     display: block;
+    margin-left: 2%;
 }
