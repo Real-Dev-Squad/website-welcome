@@ -1,9 +1,25 @@
-body{
- font-family: Arial, Helvetica, sans-serif;
- font-weight: 500;
- padding-left: 20px;
+ul{
+    padding-left: 15%;
+    font-weight: 100;
+    margin: 0 auto;
+    text-align: left;
+    list-style-position: inside;
+    margin-left: 7%;
+    
 }
-  
-.main-title{
-    color:darkgreen;
+
+body{
+    text-align: center;
+    align-content: center;   
+}
+@media only screen and (max-width: 600px) {
+    body {
+      width: unset;
+      text-align: left;
+      font-weight: 400;
+
+.category-img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
