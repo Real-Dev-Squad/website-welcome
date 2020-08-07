@@ -23,9 +23,11 @@ If you find a bug anywhere, you can fix it.
 
 # Setup
 
-1. Fork this repository using the Fork option at the top-right corner of this page. This will create your own copy of this repository. You'll be redirected to your forked repository. Copy the link of this repository (which will look like https://github.com/<your-username>/website-welcome/) as you'll need it in the step 2.
+1. Fork this repository using the **Fork** option at the top-right corner of this page. This will create your own copy of this repository. You'll be redirected to your forked repository. Copy the link of this repository (which will look like `https://github.com/<your-username>/website-welcome/`) as you'll need it in the step 2.
 
-2. Clone your forked repository, this will download your copy of repository in your computer. To do this, open your terminal (command prompt/bash/git bash) and enter the following command, paste your link after the word "clone" without the <>.
+![how-to-fork](https://i.imgur.com/VfoTxmy.png)
+
+2. Clone your forked repository, this will download your copy of repository in your computer. To do this, open your terminal (command prompt/bash/git bash) and enter the following command, paste your link after the word **clone** without the **<>**.
 ``` 
 git clone <link which you copied in the step 1>
 ```
@@ -44,14 +46,14 @@ git pull upstream main
 git checkout -b <branch-name> 
 ```
 
-For example, if I want to name my branch as "develop", I'll enter the following command:
+For example, if I want to name my branch as **develop**, I'll enter the following command:
 ``` 
 git checkout -b develop
 ```
 
 5. Perform the tasks you wanted to, can be anything, ranging from fixing simple typo to re-designing the whole page!
 
-6. Now you have made changes, though they are saved in your system, Git doesn't know what changes you've done. So you have "commit" your changes. First step is to add the files which you want to add to the staging area, the dot after add in the firt command tells Git to check for changes in all the files. The second step is about committing your changes. The message part is short description of your commit, like "fixed the css for homepage".
+6. Now you have made the changes, though they are saved in your system, Git doesn't know what changes you've done. So you have **commit** your changes. First step is to add the files which you want to add to the staging area, the dot after **add** in the first command tells Git to check for changes in all the files. The second step is about committing your changes. The message part is short description of your commit, like "fixed the css for homepage".
 ``` 
 git add .
 git commit -m "Write message about your commit" 
@@ -73,8 +75,10 @@ git merge develop
 git push origin
 ```
 
-9. Now go to your forked repository and you'll see that your branch is ahead of the main branch by some number of commits, right next to it will be an option to Pull Request. Click on it, submit your pull request explaining what you've done.
+9. Now go to your forked repository and you'll see that **This branch is xx commits ahead of Real-Dev-Squad:main.**  Right next to it will be an option to **Pull Request**. Click on it, submit your pull request (also known as *PR*) explaining what you've done.
 
-10. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit pull request again, your commits will be added to the pull request you had opened earlier (if it is NOT closed).
+![how-to-open-pull-request](https://i.imgur.com/NMAeWc2.png)
+
+10. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit **Pull Request** again, your commits will be added to the pull request you had opened earlier (if it is NOT closed).
 
 11. Congratulations on making your first Pull Request!
