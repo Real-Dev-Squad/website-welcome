@@ -23,11 +23,11 @@ If you find a bug anywhere, you can fix it.
 
 # Setup
 
-1. Fork this repository using the Fork option at the top-right corner of this page. This will create your own copy of this repository.
+1. Fork this repository using the Fork option at the top-right corner of this page. This will create your own copy of this repository. You'll be redirected to your forked repository. Copy the link of this repository (which will look like https://github.com/<your-username>/website-welcome/) as you'll need it in the step 2.
 
-2. Clone your forked repository, this will download your copy of repository in your computer. To do this, open your terminal (command prompt/bash/git bash) and enter the following command:
+2. Clone your forked repository, this will download your copy of repository in your computer. To do this, open your terminal (command prompt/bash/git bash) and enter the following command, paste your link after the word "clone" without the <>.
 ``` 
-git clone https://github.com/<your-username>/website-welcome/ 
+git clone <link which you copied in the step 1>
 ```
 
 3. Add the original repository as a remote repository, so that you can anytime pull the latest changes from the main repository which is being deployed, this needs to be done only for the first time.
@@ -73,8 +73,8 @@ git merge develop
 git push origin
 ```
 
-8. Now go to your forked repository and you'll see that your branch is ahead of the main branch by some number of commits, right next to it will be an option to Pull Request. Click on it, submit your pull request explaining what you've done.
+9. Now go to your forked repository and you'll see that your branch is ahead of the main branch by some number of commits, right next to it will be an option to Pull Request. Click on it, submit your pull request explaining what you've done.
 
-9. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit pull request again, your commits will be added to the pull request you had opened earlier (if it is NOT closed).
+10. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit pull request again, your commits will be added to the pull request you had opened earlier (if it is NOT closed).
 
-10. Congratulations on making your first Pull Request!
+11. Congratulations on making your first Pull Request!
