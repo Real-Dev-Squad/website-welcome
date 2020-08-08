@@ -1,39 +1,60 @@
-.main-heading{
+.discord-wrapper {
+  margin-left: 5%;
+}
+
+.main-heading {
+  margin-left: 10px;
+  margin-top: 40px;
   text-align: left;
   font-weight: 600;
-  padding: 10px;
-}
-body{
-    margin-left: 5%;
+  margin-bottom: 30px;
 }
 
-.discord-info{
-  text-align: left;
-  font-weight: 500;
-  margin-left: 2%;
-
-}
-.get-started{
+.get-started {
   text-align: left;
   font-weight: 550;
   padding: 10px;
 }
 
-ul{
-    text-align: left;
-    font-weight: 500;
-    margin-left: 2%;
-    padding:10px
-    
+.discord-info {
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2%;
+  font-size: 1em;
 }
 
-ol{
-   margin-left:4%;
-   font-weight: 500;
-   padding: 10px;
+div {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-.category-img{
-    display: block;
-    margin-left: 2%;
+ul {
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2%;
+  padding: 10px;
+}
+ol {
+  margin-left: 4%;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.category-name {
+  margin-top: 10px;
+}
+.channel-name {
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 650px) {
+  .category-img {
+    width: 91%;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 950px) {
+  .category-img {
+    width: 85%;
+  }
 }
