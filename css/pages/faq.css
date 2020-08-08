@@ -112,3 +112,10 @@ a {
 .faq--show .faq__text{
     display: block;
 }
+
+@media (max-width:575.98px){
+    .faq__btn{
+        flex: 0 0 24px;
+    margin-left: 15px;
+    }
+}

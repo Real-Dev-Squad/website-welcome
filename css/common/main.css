@@ -145,3 +145,10 @@ justify-content: center;
 .icon-plus:before {
   content: "\e901";
 }
+
+@media(max-width:767.98px){
+  .col-8{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
