@@ -1,8 +1,9 @@
 # How can I contribute?
 
-You can add questions and answers in FAQ.
-You can style the pages using CSS.
-If you find a bug anywhere, you can fix it.
+- You can add questions and answers in FAQ.
+- You can style the pages using CSS.
+- If you find a bug anywhere, you can fix it.
+- You can add a feature once you get approval from the community.
 
 # File Structure
 
@@ -21,7 +22,7 @@ If you find a bug anywhere, you can fix it.
 ├── contribution.md                    Contribution file
 ```
 
-# Setup
+# How can you make your first **Pull Request**
 
 1. Fork this repository using the **Fork** option at the top-right corner of this page. This will create your own copy of this repository. You'll be redirected to your forked repository. Copy the link of this repository (which will look like `https://github.com/<your-username>/website-welcome/`) as you'll need it in the step 2.
 
@@ -32,7 +33,7 @@ If you find a bug anywhere, you can fix it.
 git clone <link which you copied in the step 1>
 ```
 
-3. Add the original repository as a remote repository, so that you can anytime pull the latest changes from the main repository which is being deployed, this needs to be done only for the first time.
+3. Add the original repository as a remote repository, so that you can anytime pull the latest changes from the main repository which is being deployed. This needs to be done only for the first time.
 ``` 
 git remote add upstream https://github.com/Real-Dev-Squad/website-welcome/ 
 ```
@@ -53,15 +54,23 @@ git checkout -b develop
 
 5. Perform the tasks you wanted to, can be anything, ranging from fixing simple typo to re-designing the whole page!
 
-6. Now you have made the changes, though they are saved in your system, Git doesn't know what changes you've done. So you have **commit** your changes. First step is to add the files which you want to add to the staging area, the dot after **add** in the first command tells Git to check for changes in all the files. The second step is about committing your changes. The message part is short description of your commit, like "fixed the css for homepage".
+6. Now you have made the changes, though they are saved in your system, Git doesn't know what changes you've done. So you have to **commit** your changes. First step is to add the files which you want to add to the staging area, the dot after **add** in the first command tells Git to check for changes in all the files. The second step is about committing your changes. The message part is short description of your commit, like "merge branch".
 ``` 
 git add .
 git commit -m "Write message about your commit" 
 ```
 
-7. Now your branch (develop, in my case) has the changes you made, once you're sure that your code is stable, it's time to merge the changes into the main branch of your local machine. The first command takes you to the main branch and the second command helps merge the other branch with the main branch.
+7. Now your branch (develop, in my case) has the changes you made, once you're sure that your code is stable, it's time to merge the changes into the main branch of your local machine. The following command takes you to the main branch:
 ``` 
 git checkout main
+```
+
+It's recommended that you have the latest copy of the original repo into your main before you merge your changes into it. So pull the latest changes again:
+```
+git pull upstream main
+```
+Now you can merge your branch into the main branch.
+```
 git merge <branch-name>
 ```
 
@@ -79,6 +88,6 @@ git push origin
 
 ![how-to-open-pull-request](https://i.imgur.com/NMAeWc2.png)
 
-10. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit **Pull Request** again, your commits will be added to the pull request you had opened earlier (if it is NOT closed).
+10. Wait for it to get reviewed, make the changes required (if any) , commit your changes and hit **Pull Request** again, your commits will be added to the same pull request you had opened earlier (if it is NOT closed).
 
-11. Congratulations on making your first Pull Request!
+11. Congratulations on making your first Pull Request! 🎉
