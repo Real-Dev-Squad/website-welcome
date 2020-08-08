@@ -23,6 +23,7 @@ nav li a:hover,a:focus{
     background-color: transparent;
     border-bottom: none;
     font-weight: 400;
+
   }
 
 nav li a:active {
@@ -62,6 +63,7 @@ nav a {
   }
 nav li:hover{
     background-color:#041187;
+    transition: .4s all ease-in-out;
 
   }
 
