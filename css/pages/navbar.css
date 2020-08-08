@@ -5,35 +5,32 @@
  .nav-container {
     margin-top:10px;
     width: 100%;
-    
-  }
+}
   
- nav {
+nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15);
-    
-    
-  }
+ }
 
-  nav .menu {
+nav .menu {
     grid-column: 2;
     align-self: center;
     padding: 2%;
   }
 
-  nav li a:hover,a:focus{
+nav li a:hover,a:focus{
     background-color: transparent;
     border-bottom: none;
     font-weight: 400;
   }
 
-  nav li a:active {
+nav li a:active {
   background: transparent;
   color: white;
+  font-weight: 400;
 
-  }
-
+}
 
 #nav-toggle, .burger-menu {
     display: none;
@@ -49,40 +46,34 @@ nav li{
    margin-right: 10px;
    padding: 10px 5px;
    border-radius:5px;
-
-
 }
 
 nav a {
     color:#000000;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-weight: 400;
     transition: .2s all ease-in-out;
+    padding: 12px 10px ;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
    
   }
-  nav li:hover{
+nav li:hover{
     background-color:#041187;
 
   }
- nav li:hover a{
+
+nav li:hover a{
     color: white;
     
   }
 
 
-.menu a {
-    padding: 12px 10px ;
-    
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-  }
 
   
-  .burger-menu {
+.burger-menu {
     grid-column: 1;
     align-self: center;
     padding: 4px;
@@ -91,27 +82,20 @@ nav a {
     
   }
 
-  @media only screen and (max-width: 1150px) {
-    .burger-menu {
+@media only screen and (max-width: 1150px) {
+  .burger-menu {
       display: inline-block;
       width: 40px;
-     
-
-    }
-      
-
-    
-    nav li{
+     }
+  
+  nav li{
           margin-bottom:24px;
           list-style: none;
           display:inline-block;
           text-align: center;
-
-
-
-    }
-
-    #nav-toggle:checked ~ .menu {
+        }
+  
+  #nav-toggle:checked ~ .menu {
       display: grid;
       grid-row: 2;
       grid-column:2;
@@ -121,6 +105,7 @@ nav a {
     .menu {
       display: none;
     }
+  
   }
 
       
