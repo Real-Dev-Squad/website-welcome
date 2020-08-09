@@ -11,15 +11,19 @@
 <body>
 
   <h1> Frequently Asked Questions </h1>
+  <div class="searchBar">
+	<label for="searchKey">Search</label>
+	<input  type="text" placeholder="Enter Search Keyword" id="searchKey" onkeyup="searchKeyword()"></input>
+   </div>
   <h2 class="topic">About RDS </h2> 
 
   <section class="questions-group">
-
+	<div class="question-set">
     <h3 id="aboutRDS" class="question">What is Real Dev Squad? </h3>
     <h3 class ="answer">Real Dev Squad is a community of developers, where we come together to learn, use that in building projects, prepare for interviews, help each-other, put those projects online and try to help the set of new developers or freshers, helping them get better jobs and higher salaries with quality work. We come from all walks of lives and all kinds of background, with one thing in common: Wanting to work with others and improve ourselves.</h3>
-
+	</div>
     
-
+	<div class="question-set">
     <h3 id="ContributeToRDS" class="question">How do I contribute to RDS? </h3>
     <h3 class="answer">As of now we're having 4 projects. Every project and the corresponding tech stack is mentioned below :
      <ul>
@@ -29,25 +33,54 @@
        <li><a href="https://github.com/Real-Dev-Squad/website-emberjs">Main App</a> : Ember</li>
      </ul>
     </h3>
-
+	</div>
+	<div class="question-set">
     <h3 id="JoinDiscord" class="question">I get what is the squad about, but how do I join the squad?</h3>
     <h3 class="answer">We communicate over a Discord channel. If you wish to join the Discord channel, please contact any of our <a href="https://members.realdevsquad.com/">members</a> to get invitation link.</h3>
-
+	</div>
   </section>
 
   <h2 class="topic">Git Related Questions </h2>
+  <div class="question-set">
   <section class="questions-group">
 
     <h3 class="question">I don't know Git. Can I still contribute? </h3>
     <h3></h3>
-
+	</div>
   </section>
   
 
   <footer>
     <p class="info-repo">The contents of this website are deployed from this <a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank" rel="noopener noreferrer">open source repository</a></p>
   </footer>
-
+	<script>
+	function searchKeyword()
+	{
+	 
+		var input,filter, vQestionset, vCounter, vQuestions;
+		input  = document.getElementById("searchKey");
+		filter = input.value.toUpperCase();
+		console.log(filter);
+		vQestionset = document.getElementsByClassName("question-set");
+		
+		for( vCounter = 0;  vCounter < vQestionset.length; vCounter++)
+		{
+		
+			var vQuestions = vQestionset[vCounter].getElementsByClassName("question");
+			str= vQuestions[0].innerText;
+			if (str.toUpperCase().indexOf(filter) > -1)
+			{
+			   console.log(vQuestions[0].innerText);
+         	   vQestionset[vCounter].style.display = "block";
+			}
+			else
+			{
+			   console.log(vQuestions[0].innerText);
+			   vQestionset[vCounter].style.display = "none";
+			}
+		}
+	}
+  </script>
 </body>
 
 </html>
