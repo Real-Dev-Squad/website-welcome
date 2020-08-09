@@ -28,6 +28,10 @@ div {
   margin-bottom: 40px;
 }
 
+.category-img{
+  width: 65%;
+}
+
 ul {
   text-align: left;
   font-weight: 500;
@@ -49,7 +53,7 @@ ol {
 
 @media only screen and (max-width: 650px) {
   .category-img {
-    width: 91%;
+    width: 90%;
   }
 }
 
