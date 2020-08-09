@@ -1,9 +1,39 @@
-body{
- font-family: Arial, Helvetica, sans-serif;
- font-weight: 500;
- padding-left: 20px;
+.main-heading{
+  text-align: left;
+  font-weight: 600;
+  padding: 10px;
 }
-  
-.main-title{
-    color:darkgreen;
+body{
+    margin-left: 5%;
+}
+
+.discord-info{
+  text-align: left;
+  font-weight: 500;
+  margin-left: 2%;
+
+}
+.get-started{
+  text-align: left;
+  font-weight: 550;
+  padding: 10px;
+}
+
+ul{
+    text-align: left;
+    font-weight: 500;
+    margin-left: 2%;
+    padding:10px
+    
+}
+
+ol{
+   margin-left:4%;
+   font-weight: 500;
+   padding: 10px;
+}
+
+.category-img{
+    display: block;
+    margin-left: 2%;
 }
