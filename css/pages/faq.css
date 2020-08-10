@@ -41,6 +41,28 @@ h1 {
 	
 }
 
+.hideTopic
+{
+  display : none;
+}
+
+.showTopic 
+{
+  display : block;
+}
+
+.SearchData
+{
+  display : none;
+}
+
+.searchBar, .searchresult
+{
+  padding:20px;
+  border:orange;
+ 
+}
+
 ul {
 	margin-left: 5%;
 }
