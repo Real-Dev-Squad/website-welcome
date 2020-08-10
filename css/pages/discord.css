@@ -18,7 +18,6 @@
 .discord > *{
   text-align: left;
   font-weight: 500;
-  /* margin-left: 2%; */
   font-size: 1em;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -31,7 +30,6 @@
   
   text-align: left;
   font-weight: 500;
-  /* margin-left: 2%; */
   font-size: 1em;
   margin-block-start: 1em;
     margin-block-end: 1em;
