@@ -5,13 +5,19 @@
  .nav-container {
     margin-top:10px;
     width: 100%;
+    
+
 }
   
 nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15);
- }
+    width:100%;
+    position: fixed;
+    top:0;
+
+}
 
 nav .menu {
     grid-column: 2;
