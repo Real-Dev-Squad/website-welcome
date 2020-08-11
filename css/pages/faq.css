@@ -1,61 +1,119 @@
 html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-section {
-    border:2px solid blue;
-    padding: 2%;
-    width :80%;
+  position: relative;
+  min-height: 100%;
 }
 
 .question {
-  font-weight: 400;
+font-weight: 400;
 }
 
 .answer {
-  font-weight: 100;
-  margin-left: 2%;
-  margin-right: 10%;
+font-weight: 100;
+margin-left: 2%;
+margin-right: 10%;
 }
 
 h1 {
-	text-align:center;
+text-align:center;
 }
 
 .topic {
-    margin-top:4%;
-	margin-left: 10%;
+  margin-top: 4%;
+  font-size: 1.48rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 .questions-group {
-	margin-left: 10%;
+margin-left: 10%;
 }
 
-ul {
-	margin-left: 5%;
+.faq__list{
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style: none;
 }
-
-ul li {
-	list-style-type: square;
+.faq__list li{
+  padding-left: 17px;
+  position: relative;
+  margin-bottom: 5px;
 }
-
+.faq__list li::before{
+  content: '';
+  background: url(../../img/logos/list-icon.png);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  top: 2px;
+  position: absolute;
+  left: 0;
+  background-size: cover;
+}
 footer {
-    position: relative;
-    height: 50px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+  position: relative;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
 
 a {
-    text-decoration: none;
-    color: #0000FF;
-    font-weight: 400;
+  text-decoration: none;
+  color: #0000FF;
+  font-weight: 400;
 }
 
+.faq {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 2rem;
+}
+.faq__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.faq__title h3{
+  font-weight: 400;
+  margin: 0;
+  font-size: inherit;
+
+}
+.faq__text {
+  display: none;
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgb(24 121 255);
+  word-spacing: 1px;
+}
+.faq__text p{
+  margin: 0;
+}
+.faq__btn{
+  background: transparent;
+  border-color: #e30062;
+  cursor: pointer;
+      width: 24px;
+  height: 24px;
+  padding: 0;
+  text-align: center;
+  line-height: 24px;
+  border-width: 1px;
+}
+.faq--show .faq__text{
+  display: block;
+}
+.faq--show .icon-plus::before{
+  content: "\e900";
+}
+
+@media (max-width:575.98px){
+  .faq__btn{
+      flex: 0 0 24px;
+  margin-left: 15px;
+  }
+}
