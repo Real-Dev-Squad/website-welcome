@@ -1,11 +1,43 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Roboto', sans-serif;
+  margin:0
   /*
   Thin 100
   Regular 400
   */
 }
-
+.container{
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+}
+.text-center{
+  text-align: center;
+}
+.justify-content-center{
+justify-content: center;
+}
+.col-8{
+  -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+@font-face {
+  font-family: 'rds';
+  src:  url('../../fonts/rds.eot?kckyxh');
+  src:  url('../../fonts/rds.eot?kckyxh');
+  src:  url('../../fonts/rds.eot?kckyxh#iefix') format('embedded-opentype'),
+    url('../../fonts/rds.ttf?kckyxh') format('truetype'),
+    url('../../fonts/rds.woff?kckyxh') format('woff'),
+    url('../../fonts/rds.svg?kckyxh#rds') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 a {
   outline: none;
   text-decoration: none;
