@@ -134,10 +134,11 @@ nav li:hover a{
 
 .active{
   background-color:#041187;
-  
-}  
-.active-link{
+} 
+
+li.active a{
   color:white;
-}   
+} 
+  
        
 
