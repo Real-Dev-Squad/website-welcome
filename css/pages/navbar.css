@@ -3,15 +3,27 @@
   padding:0px;
  }
  .nav-container {
-    margin-top:10px;
+    
     width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: #fff;
+    z-index:1;
+    
+
 }
   
 nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15);
- }
+    
+    
+    
+
+}
 
 nav .menu {
     grid-column: 2;
