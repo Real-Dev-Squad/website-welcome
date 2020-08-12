@@ -25,6 +25,8 @@ nav {
 
 }
 
+
+
 nav .menu {
     grid-column: 2;
     align-self: center;
@@ -130,6 +132,13 @@ nav li:hover a{
   
   }
 
-      
+.active{
+  background-color:#041187;
+} 
+
+li.active a{
+  color:white;
+} 
+  
        
 
