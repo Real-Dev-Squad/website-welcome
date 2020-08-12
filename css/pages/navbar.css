@@ -16,9 +16,6 @@ nav {
     background: #fff;
     z-index:1;
     
-    
-    
-
 }
 
 
@@ -132,7 +129,7 @@ nav li:hover a{
   background-color:#041187;
 } 
 
-li.active a{
+ li.active a{
   color:white;
 } 
   
