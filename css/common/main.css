@@ -1,45 +1,47 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
-  margin:0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
   /*
   Thin 100
   Regular 400
   */
 }
-.container{
+.container {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
   display: flex;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-.justify-content-center{
-justify-content: center;
+.justify-content-center {
+  justify-content: center;
 }
-.col-8{
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
 }
 @font-face {
-  font-family: 'rds';
-  src:  url('../../fonts/rds.eot?kckyxh');
-  src:  url('../../fonts/rds.eot?kckyxh');
-  src:  url('../../fonts/rds.eot?kckyxh#iefix') format('embedded-opentype'),
-    url('../../fonts/rds.ttf?kckyxh') format('truetype'),
-    url('../../fonts/rds.woff?kckyxh') format('woff'),
-    url('../../fonts/rds.svg?kckyxh#rds') format('svg');
+  font-family: "rds";
+  src: url("../../fonts/rds.eot?kckyxh");
+  src: url("../../fonts/rds.eot?kckyxh");
+  src: url("../../fonts/rds.eot?kckyxh#iefix") format("embedded-opentype"),
+    url("../../fonts/rds.ttf?kckyxh") format("truetype"),
+    url("../../fonts/rds.woff?kckyxh") format("woff"),
+    url("../../fonts/rds.svg?kckyxh#rds") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 .icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'rds';
+  font-family: "rds";
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -55,8 +57,8 @@ justify-content: center;
   content: "\e901";
 }
 
-@media(max-width:767.98px){
-  .col-8{
+@media (max-width: 767.98px) {
+  .col-8 {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -66,7 +68,8 @@ a {
   text-decoration: none;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
   background: #100170;
   color: white;
@@ -126,7 +129,7 @@ footer {
   font-size: 1.1em;
   white-space: nowrap;
   text-decoration: none;
-  box-shadow: 1px 1px 14px -3px rgba(0,0,0,0.42);
+  box-shadow: 1px 1px 14px -3px rgba(0, 0, 0, 0.42);
 }
 
 @media (min-width: 420px) {
