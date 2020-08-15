@@ -18,8 +18,9 @@
 ├── code-of-conduct.html               For code of conduct HTML page
 ├── faq.html                           For FAQs HTML page
 ├── discord.html                       For discord help HTML page
-├── readme.md                          README file for the repository
-├── contribution.md                    Contribution file
+├── navbar.html                        For the navigation bar
+├── README.md                          README file for the repository
+├── CONTRIBUTING.md                    Contribution file
 ```
 
 # How can you make your first **Pull Request**
