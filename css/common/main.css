@@ -42,8 +42,12 @@ a {
 a:focus,
 a:hover {
   border-bottom: 1px solid;
-  background: #100170;
-  color: white;
+  background:white;
+  color:#2929a3;
+  font-weight:600;
+  transition-delay:0.2s;
+  transition-property:color, font-weight, border-bottom;
+  transition-timing-function:linear;
 }
 
 a:active {
@@ -113,4 +117,8 @@ footer {
   background-color: #030c4c;
   transition: background-color 0.2s ease-in;
   outline: #041484;
+}
+
+.link-seperators {
+	color:#e20665;
 }
