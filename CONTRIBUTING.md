@@ -16,10 +16,11 @@
 │   ├── logos
 │   ├── pages
 ├── code-of-conduct.html               For code of conduct HTML page
+├── discord.html                       For the discord help HTML page    
 ├── faq.html                           For FAQs HTML page
-├── discord.html                       For discord help HTML page
-├── readme.md                          README file for the repository
-├── contribution.md                    Contribution file
+├── navbar.html                        For the navigation bar
+├── CONTRIBUTING.md                    Contribution file     
+├── README.md                          README file for the repository
 ```
 
 # How can you make your first **Pull Request**
