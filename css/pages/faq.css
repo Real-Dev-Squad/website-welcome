@@ -102,12 +102,29 @@ a {
   text-align: center;
   line-height: 24px;
   border-width: 1px;
+  position: relative;
 }
 .faq--show .faq__text {
   display: block;
 }
-.faq--show .icon-plus::before {
-  content: "\e900";
+.faq__btn:after,.faq__btn:before{
+  content: '';
+  background: #041187;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.faq__btn:after{
+  width: 16px;
+  height: 2px;
+}
+.faq__btn:before{
+  height: 16px;
+    width: 2px;
+}
+.faq--show .faq__btn::before {
+content: none;
 }
 
 @media (max-width: 575.98px) {
