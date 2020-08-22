@@ -14,3 +14,9 @@ https://welcome.realdevsquad.com/faq
 # Help with Discord 
 
 https://welcome.realdevsquad.com/discord
+
+# Code of conduct at RDS
+
+ https://welcome.realdevsquad.com/code-of-conduct.html
+
+
