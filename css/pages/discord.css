@@ -1,51 +1,36 @@
-
-
-
 .discord-wrapper {
   margin-left: 5%;
 }
 
+.welcome-title {
+  font-size: 1.5em;
+}
 .main-heading {
-
   text-align: left;
-  font-weight: 600;
-
   margin: 40px 0 30px 0;
 }
 
 .get-started {
+  margin: 40px 0 30px 0;
   text-align: left;
   font-weight: 550;
-  
-}
-.discord > *{
-  text-align: left;
-  font-weight: 500;
-  font-size: 1em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;  
-
 }
 
 .discord-info {
-  
   text-align: left;
-  font-weight: 500;
-  font-size: 1em;
   margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  word-spacing: 1px;
 }
 
-.container {
-  margin-top: 30px;
-  margin-bottom: 40px;
+p {
+  margin: 2px;
 }
 
-.category-img{
+.category-img {
+  margin-top: 6px;
   margin-left: 2px;
   width: 61%;
 }
