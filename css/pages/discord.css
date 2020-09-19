@@ -1,67 +1,147 @@
-.discord-wrapper {
-  margin-left: 5%;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.welcome-title {
-  font-size: 1.5em;
-}
-.main-heading {
-  text-align: left;
-  margin: 40px 0 30px 0;
+
+img{
+width: 80%;
+margin-bottom: 20px;
+
 }
 
-.get-started {
-  margin: 40px 0 30px 0;
-  text-align: left;
-  font-weight: 550;
+.main{
+margin-left:4%;
+margin-right: 4%;
+display: block;
+}
+.Category-name {
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #0000ff;
+  font-weight: 400;
+}
+
+.main p{
+  display: block;
+
+    
+}
+
+.discord {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.main-heading{
+  margin-top: 4%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+.aboutRDS{
+  width: 100%;
+  
 }
 
 .discord-info {
-  text-align: left;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+ 
+  padding: 1rem 0 1.5rem 0;
+  word-spacing: 1px;
+
+}
+ol{
+  padding-left: 2px;
+}
+
+#category-desc{
+  margin-top: 3px;
+}
+
+.category h3 {
+  font-weight: 400;
+  margin: 0;
+  font-size: inherit;
+}
+.channel {
+  
+  display: none;
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid black;
   word-spacing: 1px;
 }
 
-p {
-  margin: 2px;
+.channel ol{
+padding: 1;
+
+}
+.channel p {
+  margin: 0;
+}
+.expand {
+  background: transparent;
+  border-color: #e30062;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  text-align: center;
+  line-height: 24px;
+  border-width: 1px;
+  position: relative;
+}
+.show .channel {
+  display: block;
+  margin-left: 15px;
+}
+.expand:after,.expand:before{
+  content: '';
+  background: #041187;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.expand:after{
+  width: 16px;
+  height: 2px;
+}
+.expand:before{
+  height: 16px;
+    width: 2px;
+}
+.show .expand::before {
+content: none;
 }
 
-.category-img {
-  margin-top: 6px;
-  margin-left: 2px;
-  width: 61%;
-}
-
-ul {
-  text-align: left;
-  font-weight: 500;
-  margin-left: 0.5%;
-  padding: 10px;
-}
-ol {
-  margin-left: 4%;
-  font-weight: 500;
-  padding: 10px;
-}
-
-.category-name {
-  margin-top: 10px;
-}
-.channel-name {
-  margin-top: 5px;
-}
-
-@media only screen and (max-width: 650px) {
-  .category-img {
-    width: 90%;
+@media (max-width: 575.98px) {
+  .expand {
+    flex: 0 0 24px;
+    margin-left: 15px;
   }
 }
 
-@media only screen and (min-width: 651px) and (max-width: 950px) {
-  .category-img {
-    width: 85%;
-  }
-}
