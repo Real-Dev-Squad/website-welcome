@@ -1,6 +1,5 @@
-const userLogin = document.querySelector("#login-btn")
-
-const setUserName = (name) => {
+function setNameIfFound(name){
+    const userLogin = document.querySelector("#login-btn")
     if(name){
         userLogin.innerHTML = `Hello ${name}!`
     }
@@ -12,5 +11,5 @@ fetch(url, {
     "credentials": "include"
 })
 .then(res => res.json())
-.then(res => setUserName(res.first_name))
+.then(res => setNameIfFound(res.first_name))
 .catch(err => console.log(err))
