@@ -5,11 +5,15 @@ function setNameIfFound(name){
     };
 };
 
-let url = "https://staging-api.realdevsquad.com/users/self";
-
-fetch(url, {
+function fetchData(){
+    let url = "https://staging-api.realdevsquad.com/users/self";
+    
+    fetch(url,{
     "credentials": "include"
-})
-.then(res => res.json())
-.then(res => setNameIfFound(res.first_name))
-.catch(err => console.log(err));
+    })
+    .then(res => res.json())
+    .then(res => setNameIfFound(res.first_name))
+    .catch(err => console.log(err));
+}
+
+window.addEventListener('DOMContentLoaded', fetchData);
