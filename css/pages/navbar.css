@@ -18,6 +18,11 @@ nav {
     
 }
 
+#login-btn {
+  float: right;
+  text-transform: capitalize;
+}
+
 
 
 nav .menu {
@@ -90,6 +95,7 @@ nav li:hover a{
 
     
   }
+
 
 @media only screen and (max-width: 1150px) {
   .burger-menu {
