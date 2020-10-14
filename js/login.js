@@ -1,7 +1,7 @@
 function setNameIfFound(name){
     const userLogin = document.querySelector("#login-btn");
     if(name){
-        userLogin.innerHTML = `Hello ${name}!`;
+        userLogin.innerHTML = `Hello, ${name}!`;
     };
 };
 
