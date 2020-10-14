@@ -19,8 +19,6 @@ nav {
 }
 
 #login-btn {
-  float: right;
-  text-transform: capitalize;
   position: fixed;
   top:12px;
   right:10px;
