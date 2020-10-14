@@ -9,8 +9,8 @@ function fetchData(){
     let url = "https://staging-api.realdevsquad.com/users/self";
     
     fetch(url,{
-        "credentials": "include"
-        })
+    "credentials": "include"
+    })
     .then(res => res.json())
     .then(res => setNameIfFound(res.first_name))
     .catch(err => console.log(err));
