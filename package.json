@@ -4,7 +4,9 @@
   "description": "https://welcome.realdevsquad.com/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sasswatch": "sass --watch scss/:css/",
+    "sassprod": "sass scss/:css/ --style compressed"
   },
   "repository": {
     "type": "git",
