@@ -1,0 +1,25 @@
+.block{
+    padding: 3.5rem 0;
+    &__title{
+        font-weight: 400;
+        color: #041187;
+        font-size: 2.125rem;
+        margin:0 0 2rem 0;
+    }
+    &--center{
+        text-align: center;
+    }
+    &__content{
+        *{
+            margin-top:0;
+        }
+        p{
+            font-size: 1.125rem;
+        }
+    }
+    &--bg-gray{
+        background: #f2f2f2;
+    }
+
+   
+}
