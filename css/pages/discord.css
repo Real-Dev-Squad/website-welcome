@@ -1,82 +1,210 @@
-
-
-
-.discord-wrapper {
-  margin-left: 5%;
+.d-flex, .jacenter, .block--hero-inner .container, .header__container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.main-heading {
-
-  text-align: left;
-  font-weight: 600;
-
-  margin: 40px 0 30px 0;
+.jacenter, .block--hero-inner .container, .header__container {
+  align-items: center;
+  justify-content: center;
 }
 
-.get-started {
-  text-align: left;
-  font-weight: 550;
-  
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #d1d1d1;
+  background: #ededed;
+  border-radius: 4px;
 }
-.discord > *{
-  text-align: left;
-  font-weight: 500;
-  font-size: 1em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;  
-
+.btn--border {
+  background: transparent;
 }
-
-.discord-info {
-  
-  text-align: left;
-  font-weight: 500;
-  font-size: 1em;
-  margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.btn--border-primary {
+  border-color: #041287;
+}
+.btn--border-primary:hover {
+  background: #e40062;
+  color: #ffffff;
+  border-color: #e40062;
 }
 
-.container {
-  margin-top: 30px;
-  margin-bottom: 40px;
+.header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 9;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+}
+.header__container {
+  justify-content: space-between;
+}
+.header__logo-link {
+  display: inline-block;
+  padding: 5px;
+}
+.header__logo-link img {
+  width: 60px;
+}
+.header__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+.header__list li {
+  display: inline-block;
+  padding: 0 0.75rem;
+}
+.header__list a {
+  display: inline-block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid transparent;
+}
+.header__list a:hover, .header__list a:focus {
+  border-color: #00084d;
 }
 
-.category-img{
-  margin-left: 2px;
-  width: 61%;
+.block {
+  padding: 3.5rem 0;
+}
+.block__title {
+  font-weight: 400;
+  color: #041187;
+  font-size: 2.125rem;
+  margin: 0 0 2rem 0;
+}
+.block--center {
+  text-align: center;
+}
+.block__content * {
+  margin-top: 0;
+}
+.block__content p {
+  font-size: 1.125rem;
+}
+.block--bg-gray {
+  background: #f2f2f2;
 }
 
-ul {
-  text-align: left;
-  font-weight: 500;
-  margin-left: 0.5%;
-  padding: 10px;
+@keyframes moveLeftBounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-ol {
-  margin-left: 4%;
-  font-weight: 500;
-  padding: 10px;
+@keyframes animationFramesOne {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  20% {
+    transform: translate(73px, -1px) rotate(36deg);
+  }
+  40% {
+    transform: translate(141px, 72px) rotate(72deg);
+  }
+  60% {
+    transform: translate(83px, 122px) rotate(108deg);
+  }
+  80% {
+    transform: translate(-40px, 72px) rotate(144deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes rotateme {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.block--hero-inner {
+  position: relative;
+  height: 300px;
+  background: url(../../img/common/bg-top-inner.png) no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  overflow: hidden;
+}
+.block--hero-inner .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
 }
 
-.category-name {
-  margin-top: 10px;
+.hero__title {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
 }
-.channel-name {
-  margin-top: 5px;
+.hero__shape {
+  position: absolute;
+}
+.hero__shape--1 {
+  top: 40px;
+  right: 84px;
+  max-width: 40px;
+  z-index: 1;
+  animation: rotateme 25s linear infinite;
+}
+.hero__shape--2 {
+  top: 55px;
+  right: 95px;
+  max-width: 25px;
+  animation: rotateme 25s linear infinite;
+}
+.hero__shape--3 {
+  top: 160px;
+  left: 350px;
+  animation: animationFramesOne 15s infinite linear;
+}
+.hero__shape--4 {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: animationFramesOne 25s infinite linear;
+  animation: animationFramesOne 25s infinite linear;
+}
+.hero__shape--5 {
+  top: 70px;
+  right: 50px;
+  animation: animationFramesOne 25s infinite linear;
+}
+.hero__shape--6 {
+  left: 20px;
+  bottom: 30px;
+  animation: rotateme 25s linear infinite;
+  max-width: 50px;
+}
+.hero__shape--7 {
+  bottom: 1rem;
+  right: 1rem;
+  animation: moveLeftBounce 3s linear infinite;
+}
+.hero__shape--8 {
+  top: 10px;
+  left: 10px;
+  animation: animationFramesOne 25s infinite linear;
 }
 
-@media only screen and (max-width: 650px) {
-  .category-img {
-    width: 90%;
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.list-reset li {
+  margin: 0 0 0.75rem 0;
+}
+
+@media (max-width: 767.98px) {
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
-@media only screen and (min-width: 651px) and (max-width: 950px) {
-  .category-img {
-    width: 85%;
-  }
-}
+/*# sourceMappingURL=discord.css.map */
