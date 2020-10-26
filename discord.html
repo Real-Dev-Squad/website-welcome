@@ -22,6 +22,10 @@
           </a>
         </div>
         <div class="header__center">
+          <span class="header__mobile-toggle">
+            <span></span>
+            <span></span>
+          </span>
           <ul class="header__list">
             <li><a href="index.html">Home</a></li>
             <li><a href="code-of-conduct.html">Code of Conduct</a></li>
@@ -29,9 +33,16 @@
             <li class="active"><a href="discord.html">Discord</a></li>
           </ul>
         </div>
-        <div class="header__rigth">
+        <div class="header__right">
           <a href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
-            class="btn btn--border btn--border-primary">Login</a>
+            class="btn btn--border btn--border-primary header__login-btn">
+            Login
+          </a>
+          <button class="btn header__menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
 
       </div>
@@ -281,7 +292,7 @@
     <p class="info-repo">The contents of this website are deployed from this <a
         href="https://github.com/Real-Dev-Squad/website-welcome" target="_self">open source repository</a></p>
   </footer>
-
+<script src="js/common.js"></script>
 </body>
 
 </html>

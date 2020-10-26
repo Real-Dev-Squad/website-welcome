@@ -13,6 +13,7 @@
   border: 2px solid #d1d1d1;
   background: #ededed;
   border-radius: 4px;
+  display: inline-block;
 }
 .btn--border {
   background: transparent;
@@ -49,9 +50,19 @@
   list-style: none;
   display: flex;
 }
+@media (max-width: 575.98px) {
+  .header__list {
+    flex-direction: column;
+  }
+}
 .header__list li {
   display: inline-block;
   padding: 0 0.75rem;
+}
+@media (max-width: 575.98px) {
+  .header__list li {
+    display: block;
+  }
 }
 .header__list a {
   display: inline-block;
@@ -60,6 +71,101 @@
 }
 .header__list a:hover, .header__list a:focus {
   border-color: #00084d;
+}
+@media (max-width: 575.98px) {
+  .header__list a {
+    display: block;
+  }
+}
+.header__menu-toggle {
+  height: 39px;
+  width: 39px;
+  position: relative;
+  padding: 0.469rem 0.40625rem;
+  background: transparent;
+  border-color: #041287;
+}
+.header__menu-toggle.active span {
+  margin: 0;
+}
+.header__menu-toggle.active span:first-child {
+  transform: rotate(45deg);
+}
+.header__menu-toggle.active span:nth-child(2) {
+  display: none;
+}
+.header__menu-toggle.active span:last-child {
+  transform: rotate(-45deg);
+  top: -1px;
+}
+@media (min-width: 576px) {
+  .header__menu-toggle {
+    display: none;
+  }
+}
+.header__menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  position: relative;
+  background-color: #563d7c;
+}
+.header__menu-toggle span + span {
+  margin-top: 7px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .header__login-btn {
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .header__center {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    box-shadow: 0 0 23px -2px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    border-radius: 4px;
+    padding: 30px;
+    background: #fff;
+    top: 15px;
+    z-index: 9;
+  }
+  .header__center.open-menu {
+    display: block;
+  }
+}
+.header__mobile-toggle {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+@media (min-width: 576px) {
+  .header__mobile-toggle {
+    display: none;
+  }
+}
+.header__mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  position: relative;
+  background-color: #563d7c;
+}
+.header__mobile-toggle span:first-child {
+  transform: rotate(-45deg);
+}
+.header__mobile-toggle span:last-child {
+  transform: rotate(45deg);
+  top: -1px;
 }
 
 .block {
