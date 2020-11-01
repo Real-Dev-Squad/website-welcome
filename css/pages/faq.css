@@ -5,6 +5,7 @@ html {
 
 .question {
   font-weight: 400;
+  cursor: pointer;
 }
 
 .answer {
@@ -81,8 +82,9 @@ a {
 .faq__title h3 {
   font-weight: 400;
   margin: 0;
-  font-size: inherit;
+  font-size: inherit; 
 }
+
 .faq__text {
   display: none;
   padding: 1rem 0 1.5rem 0;

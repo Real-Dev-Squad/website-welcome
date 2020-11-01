@@ -1,4 +1,4 @@
-const faqButtons = document.querySelectorAll('.faq__btn');
+const faqButtons = document.querySelectorAll('.faq__btn,.question');
 const faqs = document.querySelectorAll('.faq');
 faqButtons.forEach( function(btn){
     btn.addEventListener('click', function (e) {
@@ -11,4 +11,4 @@ faqButtons.forEach( function(btn){
         faq.classList.toggle('faq--show');
     })
    
-})
+}) 
