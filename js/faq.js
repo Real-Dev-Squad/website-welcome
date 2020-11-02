@@ -1,7 +1,7 @@
-const faqButtons = document.querySelectorAll('.faq__btn,.question');
+const buttonAndQuestion = document.querySelectorAll('.faq__btn,.question');
 const faqs = document.querySelectorAll('.faq');
-faqButtons.forEach( function(btn){
-    btn.addEventListener('click', function (e) {
+buttonAndQuestion.forEach( function(btnq){
+    btnq.addEventListener('click', function (e) {
         const faq = e.target.closest('.faq');
         faqs.forEach(function (item) {
             if (item !== faq) {
@@ -11,4 +11,4 @@ faqButtons.forEach( function(btn){
         faq.classList.toggle('faq--show');
     })
    
-}) 
+})
