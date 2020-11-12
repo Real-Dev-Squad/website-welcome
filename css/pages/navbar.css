@@ -2,8 +2,7 @@
   margin:0px;
   padding:0px;
  }
- 
-  
+   
 nav {
     display: grid;
     grid-template-columns: 0.3fr 2fr 1fr;
@@ -41,14 +40,12 @@ nav li a:hover,a:focus{
     background-color: transparent;
     border-bottom: none;
     font-weight: 400;
-
   }
 
 nav li a:active {
   background: transparent;
   color: white;
   font-weight: 400;
-
 }
 
 #nav-toggle, .burger-menu {
@@ -89,17 +86,12 @@ nav li:hover a{
     color: white;
     
   }
-
-
-
   
 .burger-menu {
     grid-column: 2;
     align-self: center;
     padding: 4px;
     margin-left: 10px;
-
-    
   }
 
 
@@ -117,18 +109,17 @@ nav li:hover a{
 
   
   nav li{
-          margin-bottom:24px;
-          list-style: none;
-          display:inline-block;
-          text-align: center;
-          width:100%;
-        }
+      margin-bottom:24px;
+      list-style: none;
+      display:inline-block;
+      text-align: center;
+      width:100%;
+      }
   
   #nav-toggle:checked ~ .menu {
       display: grid;
       grid-row: 2;
       grid-column:2;
-
     }
 
     .menu {
@@ -143,7 +134,4 @@ nav li:hover a{
 
  li.active a{
   color:white;
-} 
-  
-       
-
+}
