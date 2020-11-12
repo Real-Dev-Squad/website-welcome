@@ -6,7 +6,7 @@
   
 nav {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.3fr 2fr 1fr;
     box-shadow: 0 1.5px 10px 0 rgba(0,0,0,0.14);
     width: 100%;
     position:fixed;
@@ -25,7 +25,11 @@ nav {
   padding: 0px 5px;
 }
 
-
+nav .homeLogo
+{
+  grid-column: 1 ;
+  margin: 10px ;
+}
 
 nav .menu {
     grid-column: 2;
@@ -90,7 +94,7 @@ nav li:hover a{
 
   
 .burger-menu {
-    grid-column: 1;
+    grid-column: 2;
     align-self: center;
     padding: 4px;
     margin-left: 10px;
