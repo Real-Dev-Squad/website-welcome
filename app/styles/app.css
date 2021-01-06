@@ -1,0 +1,12 @@
+@import "signup.css";
+
+body {
+  font-family: "Roboto", sans-serif, serif;
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

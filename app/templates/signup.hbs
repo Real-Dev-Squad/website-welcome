@@ -1,0 +1,27 @@
+<form class="form">
+  <h2>{{this.title}}</h2>
+  {{#each this.fields as |field|}}
+    <FormInput
+      @id={{field.id}}
+      @for={{field.for}}
+      @label={{field.label}}
+      @type={{field.type}}
+      @value=''
+      @errorMessage={{field.errorMessage}}
+      @required={{field.required}}
+      @showError={{field.showError}}
+      @onChange={{this.handleFieldChange}}
+      @validator={{field.validator}}
+    />
+  {{/each}}
+  <button
+    class={{if this.isSubmitDisabled 'submitButton disabledButton' 'submitButton'}}
+    type="submit"
+    disabled={{this.isSubmitDisabled}}
+    {{on 'click' (fn this.handleSubmit)}}
+  >
+    Submit
+  </button>
+</form>
+
+{{outlet}}
