@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "ember serve",
-    "build": "ember build --environment=production && cp _redirects dist/_redirects",
+    "build": "ember build --environment production && cp _redirects dist/_redirects",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
     "lint:hbs": "ember-template-lint .",
@@ -21,7 +21,8 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "test:ember:server": "ember test --server"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -55,6 +56,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
+    "ntl": "^5.1.0",
     "prettier": "^2.2.1",
     "qunit": "^2.13.0",
     "qunit-dom": "^1.6.0"
