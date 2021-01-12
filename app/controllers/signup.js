@@ -3,8 +3,7 @@ import { tracked } from "@glimmer/tracking";
 import { action, set } from "@ember/object";
 import HistoryLocation from "@ember/routing/history-location";
 
-// const BASE_URL = "https://staging-api.realdevsquad.com";
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://staging-api.realdevsquad.com";
 
 export default class SignupController extends Controller {
   @tracked isSubmitDisabled = true;
@@ -85,13 +84,13 @@ export default class SignupController extends Controller {
       id: "yoe",
       label: "yoe",
       type: "number",
-      errorMessage: "Number of yoe is required",
+      errorMessage: "Number of years of experience is required",
       required: true,
       showError: false,
     },
     {
       id: "company_name",
-      label: "Company Name ",
+      label: "Company Name / College Name ",
       type: "text",
       errorMessage: "",
       required: false,
@@ -109,7 +108,7 @@ export default class SignupController extends Controller {
       id: "github_id",
       label: "Github_id ",
       type: "text",
-      errorMessage: "GitHub_id username is required",
+      errorMessage: "GitHub username is required",
       required: true,
       showError: false,
     },
@@ -117,7 +116,7 @@ export default class SignupController extends Controller {
       id: "linkedin_id",
       label: "linkedin_id ",
       type: "text",
-      errorMessage: "linkedin_id username is required",
+      errorMessage: "linkedIn username is required",
       required: true,
       showError: false,
     },
@@ -125,7 +124,7 @@ export default class SignupController extends Controller {
       id: "twitter_id",
       label: "twitter_id ",
       type: "text",
-      errorMessage: "twitter_id handle is required",
+      errorMessage: "Twitter handle is required",
       required: true,
       showError: false,
     },
