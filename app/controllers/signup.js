@@ -7,6 +7,7 @@ const BASE_URL = 'https://staging-api.realdevsquad.com';
 
 export default class SignupController extends Controller {
   @tracked isSubmitDisabled = true;
+
   @tracked title = 'Account Details';
   @tracked formData = {
     first_name: '',
