@@ -14,13 +14,14 @@ export default class SignupController extends Controller {
     last_name: '',
     username: '',
     email: '',
-    phone_number: '',
+    phone: '',
     yoe: '',
     company_name: '',
     designation: '',
     github_id: '',
     linkedin_id: '',
     twitter_id: '',
+    website: ''
   };
 
   @tracked formErrors = {
@@ -28,13 +29,14 @@ export default class SignupController extends Controller {
     last_name: false,
     username: false,
     email: false,
-    phone_number: false,
+    phone: false,
     yoe: false,
     company_name: false,
     designation: false,
     github_id: false,
     linkedin_id: false,
     twitter_id: false,
+    website: false
   };
 
   @tracked fields = [
@@ -72,14 +74,14 @@ export default class SignupController extends Controller {
       validator: this.emailValidator,
     },
     {
-      id: 'phone_number',
+      id: 'phone',
       label: 'Phone Number',
       type: 'string',
       value: '+91-',
       errorMessage: 'Enter a valid phone number',
       required: false,
       showError: false,
-      validator: this.phone_numberValidator,
+      validator: this.phoneValidator,
     },
     {
       id: 'yoe',
@@ -164,15 +166,15 @@ export default class SignupController extends Controller {
     }
   }
 
-  @action phoneNumberValidator(phone_number) {
-    if (typeof phone_number !== 'string') {
+  @action phoneNumberValidator(phone) {
+    if (typeof phone !== 'string') {
       return false;
     }
 
     const pattern = /^(0|[+91]{3})?[7-9][0-9]{9}$/;
-    const index = this.fields.findIndex((field) => field.id === 'phone_number');
+    const index = this.fields.findIndex((field) => field.id === 'phone');
 
-    if (pattern.test(phone_number)) {
+    if (pattern.test(phone)) {
       set(this.fields[index], 'showError', false);
     } else {
       set(this.fields[index], 'showError', true);
