@@ -1,54 +1,60 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
+import HistoryLocation from '@ember/routing/history-location';
+
+const BASE_URL = 'https://staging-api.realdevsquad.com';
 
 export default class SignupController extends Controller {
-  @tracked isSubmitDisabled = true
-  @tracked title = 'Account Details'
+  @tracked isSubmitDisabled = true;
+
+  @tracked title = 'Account Details';
   @tracked formData = {
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     username: '',
     email: '',
-    phoneNumber: '',
-    experience: '',
-    companyName: '',
+    phone: '',
+    yoe: '',
+    company_name: '',
     designation: '',
-    github: '',
-    linkedIn: '',
-    twitter: '',
+    github_id: '',
+    linkedin_id: '',
+    twitter_id: '',
+    website: ''
   };
 
   @tracked formErrors = {
-    firstName: false,
-    lastName: false,
+    first_name: false,
+    last_name: false,
     username: false,
     email: false,
-    phoneNumber: false,
-    experience: false,
-    companyName: false,
+    phone: false,
+    yoe: false,
+    company_name: false,
     designation: false,
-    github: false,
-    linkedIn: false,
-    twitter: false,
+    github_id: false,
+    linkedin_id: false,
+    twitter_id: false,
+    website: false
   };
 
   @tracked fields = [
     {
-      id: 'firstName',
+      id: 'first_name',
       label: 'First Name',
       type: 'text',
       errorMessage: 'First name is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
-      id: 'lastName',
+      id: 'last_name',
       label: 'Last Name',
       type: 'text',
       errorMessage: 'Last name is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
       id: 'username',
@@ -56,7 +62,7 @@ export default class SignupController extends Controller {
       type: 'text',
       errorMessage: 'Username is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
       id: 'email',
@@ -65,33 +71,33 @@ export default class SignupController extends Controller {
       errorMessage: 'Valid Email is required',
       required: true,
       showError: false,
-      validator: this.emailValidator
+      validator: this.emailValidator,
     },
     {
-      id: 'phoneNumber',
+      id: 'phone',
       label: 'Phone Number',
       type: 'string',
       value: '+91-',
       errorMessage: 'Enter a valid phone number',
       required: false,
       showError: false,
-      validator: this.phoneNumberValidator
+      validator: this.phoneValidator,
     },
     {
-      id: 'experience',
-      label: 'Experience',
+      id: 'yoe',
+      label: 'yoe',
       type: 'number',
-      errorMessage: 'Number of experience is required',
+      errorMessage: 'Number of years of experience is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
-      id: 'companyName',
-      label: 'Company Name ',
+      id: 'company_name',
+      label: 'Company Name / College Name ',
       type: 'text',
       errorMessage: '',
       required: false,
-      showError: false
+      showError: false,
     },
     {
       id: 'designation',
@@ -99,31 +105,31 @@ export default class SignupController extends Controller {
       type: 'text',
       errorMessage: '',
       required: false,
-      showError: false
+      showError: false,
     },
     {
-      id: 'github',
-      label: 'Github ',
+      id: 'github_id',
+      label: 'Github_id ',
       type: 'text',
       errorMessage: 'GitHub username is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
-      id: 'linkedIn',
-      label: 'LinkedIn ',
+      id: 'linkedin_id',
+      label: 'linkedin_id ',
       type: 'text',
-      errorMessage: 'LinkedIn username is required',
+      errorMessage: 'linkedIn username is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
-      id: 'twitter',
-      label: 'Twitter ',
+      id: 'twitter_id',
+      label: 'twitter_id ',
       type: 'text',
       errorMessage: 'Twitter handle is required',
       required: true,
-      showError: false
+      showError: false,
     },
     {
       id: 'website',
@@ -131,44 +137,44 @@ export default class SignupController extends Controller {
       type: 'text',
       errorMessage: '',
       required: false,
-      showError: false
+      showError: false,
     },
-  ]
+  ];
 
   @action handleFieldChange(name, value) {
-    const index = this.fields.findIndex(field => field.id === name)
-    
-    set(this.formData, name, value)
-    
+    const index = this.fields.findIndex((field) => field.id === name);
+    set(this.formData, name, value);
+
     if (this.fields[index].required && !value) {
-      this.isSubmitDisabled = true
-      return set(this.fields[index], 'showError', true)
+      this.isSubmitDisabled = true;
+      set(this.fields[index], 'showError', true);
     } else if (!this.fields[index].validator) {
-      return set(this.fields[index], 'showError', false)
+      set(this.fields[index], 'showError', false);
     }
 
-    const anyErrors = this.fields.reduce((prev, field) => {
-      if (prev) {
-        return prev
-      }
+    const anyErrors = this.fields.map((field) => {
       if (field.required && this.formData[field.id] === '') {
-        return true
+        return true;
       }
-      return false
-    }, false)
+      return false;
+    });
 
-    if (anyErrors) {
-      this.isSubmitDisabled = true
+    if (anyErrors.filter(Boolean).length) {
+      this.isSubmitDisabled = true;
+    } else {
+      this.isSubmitDisabled = false;
     }
   }
 
-  @action phoneNumberValidator(phoneNumber) {
-    if (typeof phoneNumber !== 'string'){ return false }
+  @action phoneNumberValidator(phone) {
+    if (typeof phone !== 'string') {
+      return false;
+    }
 
-    const pattern=/^(0|[+91]{3})?[7-9][0-9]{9}$/;
-    const index = this.fields.findIndex((field) => field.id === 'phoneNumber')
+    const pattern = /^(0|[+91]{3})?[7-9][0-9]{9}$/;
+    const index = this.fields.findIndex((field) => field.id === 'phone');
 
-    if (pattern.test(phoneNumber)) {
+    if (pattern.test(phone)) {
       set(this.fields[index], 'showError', false);
     } else {
       set(this.fields[index], 'showError', true);
@@ -177,18 +183,39 @@ export default class SignupController extends Controller {
 
   @action emailValidator(email) {
     if (typeof email !== 'string') return false;
-    
-    const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-    const index = this.fields.findIndex((field) => field.type === 'email')
+
+    const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const index = this.fields.findIndex((field) => field.type === 'email');
 
     if (pattern.test(email)) {
       set(this.fields[index], 'showError', false);
     } else {
       set(this.fields[index], 'showError', true);
     }
+    return;
   }
 
-  @action handleSubmit() {
+  @action async handleSubmit(e) {
     // submit
+    // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
+    e.preventDefault();
+    try {
+      const response = await fetch(`${BASE_URL}/users/self`, {
+        method: 'PATCH',
+        body: JSON.stringify(this.formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+      const data = await response.json();
+      const { statusCode } = data;
+      if (statusCode === 204) {
+        return window.open('https://www.realdevsquad.com/goto', '_self');
+      }
+      alert('Something went wrong');
+    } catch (error) {
+      console.log('Error : ', error);
+    }
   }
 }
