@@ -18,7 +18,6 @@ export default class SignupController extends Controller {
     yoe: '',
     company_name: '',
     designation: '',
-    github_id: '',
     linkedin_id: '',
     twitter_id: '',
     website: ''
@@ -33,7 +32,6 @@ export default class SignupController extends Controller {
     yoe: false,
     company_name: false,
     designation: false,
-    github_id: false,
     linkedin_id: false,
     twitter_id: false,
     website: false
@@ -58,7 +56,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'username',
-      label: 'Choose a username',
+      label: 'Username for Real Dev Squad',
       type: 'text',
       errorMessage: 'Username is required',
       required: true,
@@ -85,7 +83,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'yoe',
-      label: 'yoe',
+      label: 'Years of Experience',
       type: 'number',
       errorMessage: 'Number of years of experience is required',
       required: true,
@@ -93,7 +91,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'company_name',
-      label: 'Company Name / College Name ',
+      label: 'Company Name / College Name',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -101,31 +99,23 @@ export default class SignupController extends Controller {
     },
     {
       id: 'designation',
-      label: 'Designation ',
+      label: 'Designation',
       type: 'text',
       errorMessage: '',
       required: false,
       showError: false,
     },
     {
-      id: 'github_id',
-      label: 'Github_id ',
-      type: 'text',
-      errorMessage: 'GitHub username is required',
-      required: true,
-      showError: false,
-    },
-    {
       id: 'linkedin_id',
-      label: 'linkedin_id ',
+      label: 'LinkedIn ID (Not the full URL)',
       type: 'text',
-      errorMessage: 'linkedIn username is required',
+      errorMessage: 'LinkedIn username is required',
       required: true,
       showError: false,
     },
     {
       id: 'twitter_id',
-      label: 'twitter_id ',
+      label: 'Twitter username (Not the full URL)',
       type: 'text',
       errorMessage: 'Twitter handle is required',
       required: true,
@@ -133,7 +123,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'website',
-      label: 'Website ',
+      label: 'Website (Optional)',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -211,11 +201,12 @@ export default class SignupController extends Controller {
       const data = await response.json();
       const { statusCode } = data;
       if (statusCode === 204) {
-        return window.open('https://www.realdevsquad.com/goto', '_self');
+        window.open('https://www.realdevsquad.com/goto', '_self');
+      } else {
+        alert('Something went wrong');
       }
-      alert('Something went wrong');
     } catch (error) {
-      console.log('Error : ', error);
+      console.error('Error : ', error);
     }
   }
 }
