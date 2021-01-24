@@ -198,12 +198,12 @@ export default class SignupController extends Controller {
         },
         credentials: 'include',
       });
-      const data = await response.json();
-      const { statusCode } = data;
-      if (statusCode === 204) {
-        window.open('https://www.realdevsquad.com/goto', '_self');
+
+      const { status } = response;
+      if (status === 204) {
+        window.open('https://realdevsquad.com/goto', '_self');
       } else {
-        alert('Something went wrong');
+        alert('Something went wrong. Please check console errors.');
       }
     } catch (error) {
       console.error('Error : ', error);
