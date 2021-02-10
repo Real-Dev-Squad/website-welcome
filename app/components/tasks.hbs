@@ -1,0 +1,84 @@
+<div class="tasks-container">
+  {{#if @showActiveTasks}}
+    <div id="active">
+      <h2>Active Task</h2>
+      <div class="tasks-details">
+        {{#each @activeTasks as |task|}}
+          <div class="task-card">
+            <span>{{task.title}}</span>
+            <span>{{task.purpose}}</span>
+            <div class="dates-container">
+              <div class="ends-on">
+                <span>Ends On</span> : {{task.endsOn}}
+              </div>
+              <div class="started-on">
+                <span>Started On</span> : {{task.startedOn}}
+              </div>
+            </div>
+            <div class="status-container">
+              <select name="percentage-complete" id="percentCompleted" {{on "change" @onChange}}>
+                <option value="">Percentage Completed</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="60">60</option>
+                <option value="80">80</option>
+                <option value="100">100</option>
+              </select>
+              <select name="task-status" id="status" {{on "change" @onChange}}>
+                <option value="">Select Status</option>
+                <option value="active">Blocked</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="update-task__btn">
+              <button {{on "click" (fn @onSubmit task.id)}}>Update Task</button>
+            </div>
+            <div class="progress-bar__container">
+              <div class="progress-bar">
+                <div class="bar" data-size="40" style="width: 20%;">
+                  <span class="perc"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if @showBlockedTasks}}
+    <div id="blocked">
+      <h2>Blocked Tasks</h2>
+      <div class="tasks-details">
+        {{#each @blockedTasks as |task|}}
+          <div class="task-card">
+            {{task.title}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if @showPendingTasks}}
+    <div id="pending">
+      <h2>Pending Tasks</h2>
+      <div class="tasks-details">
+        {{#each @pendingTasks as |task|}}
+          <div class="task-card">
+            {{task.title}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+  {{#if @showCompletedTasks}}
+    <div id="completed">
+      <h2>Completed Task</h2>
+      <div class="tasks-details">
+        {{#each model.activeTask as |task|}}
+          <div class="task-card">
+            {{task.title}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+</div>

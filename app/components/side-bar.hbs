@@ -1,0 +1,20 @@
+<div class="sidebar">
+  <button class="dropdown-btn" {{on "click" @toggleDropDown}}>Tasks
+    <i class="fa fa-caret-down"></i>
+  </button>
+  {{#if @showDropDown}}
+    <div class="dropdown-container show">
+      <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
+      <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
+      <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
+      <a href="#" {{on "click" @toggleCompletedTasks}}>Completed</a>
+    </div>
+  {{else}}
+    <div class="dropdown-container close">
+      <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
+      <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
+      <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
+      <a href="#" {{on "click" @toggleCompletedTasks}}>Completed</a>
+    </div>
+  {{/if}}
+</div>

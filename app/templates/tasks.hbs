@@ -1,0 +1,25 @@
+{{page-title "My Tasks"}}
+
+<div  class="tasks-screen_wrapper">
+
+  <SideBar
+    @showDropDown={{this.showDropDown}}
+    @toggleDropDown={{this.toggleDropDown}}
+    @toggleActiveTasks={{this.toggleActiveTasks}}
+    @toggleBlockedTasks={{this.toggleBlockedTasks}}
+    @togglePendingTasks={{this.togglePendingTasks}}
+    @toggleCompletedTasks={{this.toggleCompletedTasks}}
+  />
+  <Tasks
+    @activeTasks={{@model.activeTasks}}
+    @pendingTasks={{@model.pendingTasks}}
+    @blockedTasks={{@model.blockedTasks}}
+    @completedTasks={{this.completedTasksList}}
+    @showActiveTasks={{this.showActiveTasks}}
+    @showBlockedTasks={{this.showBlockedTasks}} 
+    @showPendingTasks={{this.showPendingTasks}}
+    @showCompletedTasks={{this.showCompletedTasks}}
+    @onChange={{this.handleInputChange}}
+    @onSubmit={{this.handleUpdateTask}}
+/>
+</div>
