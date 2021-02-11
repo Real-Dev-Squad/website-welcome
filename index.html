@@ -1,54 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Real Dev Squad</title>
-  <link rel="stylesheet" href="./css/common/main.css">
-  <link rel="stylesheet" href="css/pages/navbar.css">
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
- <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico"/>
- <meta name="theme-color" content="#e30062">
-</head>
-<body>
-  <main>
-    <nav>
-     <input type="checkbox" id="nav-toggle">
-      <label for="nav-toggle" class="burger-menu">
-        <img src="img/logos/burger.jpg" width="35px" height="auto" alt="">
-      </label>
-      <ul class="menu">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="discord.html">Discord</a></li>
-      </ul>
-      <div id="login-btn">
-        <a href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97">Login</a>
-      </div>
-    </nav>
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <h1 class="welcome-title"> Welcome to Real Dev Squad </h1>
+    <title>Welcome to Real Dev Squad</title>
+    <link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
+    <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
 
-    <img class="logo-img" src="img/logos/Real-Dev-Squad@1x.png" alt="Real Dev Squad logo" />
-    <h3 class="info-note"> To know how this page is getting developed, join our Discord Channel. Contact one of our existing <a href="https://members.realdevsquad.com/">members</a> for the invitation link.</h3>
-    <p class="info-note">
-      <a href="https://instagram.com/realdevsquad" target="_blank">Instagram</a>&nbsp;
-	  <span class="link-seperators">|</span>
-      <a href="https://www.linkedin.com/company/real-dev-squad/" target="_blank">LinkedIn</a>&nbsp;
-	  <span class="link-seperators">|</span>
-      <a href="https://twitter.com/realdevsquad" target="_blank">Twitter</a>&nbsp;
-	  <span class="link-seperators">|</span>
-      <a href="https://www.facebook.com/Real-Dev-Squad-108713777585062" target="_blank">Facebook</a>
-	  <span class="link-seperators">|</span>
-    </p>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#e30062" />
+  </head>
 
-  </main>
+  <body>
+    <header>
+      <nav>
+        <!-- in case of small screens, show a dropdown -->
+        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
+        <label for="nav-toggle" class="burger-menu">
+          <img src="img/logos/burger.jpg" width="35px" height="auto" alt="RDS logo" />
+        </label>
 
-  <footer>
-    <p class="info-repo">The contents of this website are deployed from this <a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank" rel="noopener noreferrer">open sourced repo</a></p>
-  </footer>
-<script src="js/login.js"></script>
-</body>
+        <ul class="menu">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="discord.html">Discord</a></li>
+        </ul>
+
+        <div class="login-btn">
+          <a
+            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+          >
+            Login
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="welcome-title">Welcome to Real Dev Squad</h1>
+
+      <img
+        class="logo-img"
+        src="img/logos/Real-Dev-Squad@1x.png"
+        alt="Real Dev Squad logo"
+      />
+      <h3 class="info-note">
+        To know how this page is getting developed, join our Discord Channel. Contact one
+        of our existing <a href="https://members.realdevsquad.com/">members</a> for the
+        invitation link.
+      </h3>
+      <p class="info-note">
+        <a href="https://instagram.com/realdevsquad" target="_blank">Instagram</a>&nbsp;
+        <span class="link-seperators">&vert;</span>
+
+        &nbsp;
+        <a href="https://www.linkedin.com/company/real-dev-squad/" target="_blank">
+          LinkedIn
+        </a>
+        <span class="link-seperators">&vert;</span>
+
+        &nbsp;
+        <a href="https://twitter.com/realdevsquad" target="_blank">Twitter</a>&nbsp;
+        <span class="link-seperators">&vert;</span>
+
+        &nbsp;
+        <a href="https://www.facebook.com/Real-Dev-Squad-108713777585062" target="_blank">
+          Facebook
+        </a>
+      </p>
+    </main>
+
+    <footer>
+      <p class="info-repo">
+        The contents of this website are deployed from this
+        <a
+          href="https://github.com/Real-Dev-Squad/website-welcome"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          open sourced repo
+        </a>
+      </p>
+    </footer>
+
+    <script type="text/javascript" src="./js/login.js"></script>
+  </body>
 </html>

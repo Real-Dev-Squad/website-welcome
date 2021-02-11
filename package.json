@@ -1,22 +1,21 @@
 {
   "name": "website-welcome",
   "version": "1.0.0",
-  "description": "https://welcome.realdevsquad.com/",
-  "main": "index.js",
+  "description": "Welcome website of RealDevSquad",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashishmangla0/website-welcome.git"
+    "url": "git+https://github.com/Real-Dev-Squad/website-welcome.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "RealDevSquad",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ashishmangla0/website-welcome/issues"
+    "url": "https://github.com/Real-Dev-Squad/website-welcome/issues"
   },
-  "homepage": "https://github.com/ashishmangla0/website-welcome#readme",
+  "homepage": "https://github.com/Real-Dev-Squad/website-welcome#readme",
   "devDependencies": {
     "sass": "^1.27.0"
   }

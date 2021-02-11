@@ -1,6 +1,8 @@
 *,
 ::after,
 ::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -99,7 +101,11 @@ a:active {
 }
 
 footer {
-  margin: 200px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
 }
 
 .info-repo {
