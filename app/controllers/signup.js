@@ -1,7 +1,6 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
-import HistoryLocation from '@ember/routing/history-location';
 
 const BASE_URL = 'https://staging-api.realdevsquad.com';
 
@@ -20,7 +19,7 @@ export default class SignupController extends Controller {
     designation: '',
     linkedin_id: '',
     twitter_id: '',
-    website: ''
+    website: '',
   };
 
   @tracked formErrors = {
@@ -34,7 +33,7 @@ export default class SignupController extends Controller {
     designation: false,
     linkedin_id: false,
     twitter_id: false,
-    website: false
+    website: false,
   };
 
   @tracked fields = [
@@ -189,10 +188,15 @@ export default class SignupController extends Controller {
     // submit
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
+    let reqBody = this.formData;
+    if (!this.formData.website) {
+      const { website, ...body } = this.formData;
+      reqBody = body;
+    }
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
-        body: JSON.stringify(this.formData),
+        body: JSON.stringify(reqBody),
         headers: {
           'Content-Type': 'application/json',
         },
