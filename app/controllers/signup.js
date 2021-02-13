@@ -190,8 +190,7 @@ export default class SignupController extends Controller {
     e.preventDefault();
     let reqBody = this.formData;
     if (!this.formData.website) {
-      const { website, ...body } = this.formData;
-      reqBody = body;
+      delete this.formData.website;
     }
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
