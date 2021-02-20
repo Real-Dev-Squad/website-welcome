@@ -47,5 +47,6 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.BASE_API_URL = 'https://staging-api.realdevsquad.com';
   return ENV;
 };
