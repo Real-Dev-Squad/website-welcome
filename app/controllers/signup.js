@@ -1,8 +1,9 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
+import ENV from 'website-my/config/environment';
 
-const BASE_URL = 'https://staging-api.realdevsquad.com';
+const BASE_URL = ENV.BASE_API_URL;
 
 export default class SignupController extends Controller {
   @tracked isSubmitDisabled = true;
