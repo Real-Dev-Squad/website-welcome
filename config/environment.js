@@ -23,6 +23,8 @@ module.exports = function (environment) {
     },
   };
 
+  ENV.BASE_API_URL = 'https://api.realdevsquad.com';
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -47,6 +49,5 @@ module.exports = function (environment) {
     // here you can enable a production-specific feature
   }
 
-  ENV.BASE_API_URL = 'https://staging-api.realdevsquad.com';
   return ENV;
 };
