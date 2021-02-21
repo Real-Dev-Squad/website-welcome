@@ -6,7 +6,7 @@ function setNameIfFound(name){
 };
 
 function fetchData(){
-    let url = "https://staging-api.realdevsquad.com/users/self";
+    let url = "https://api.realdevsquad.com/users/self";
     
     fetch(url,{
     "credentials": "include"

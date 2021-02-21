@@ -1,14 +1,21 @@
-const faqButtons = document.querySelectorAll('.faq__btn');
-const faqs = document.querySelectorAll('.faq');
-faqButtons.forEach( function(btn){
-    btn.addEventListener('click', function (e) {
-        const faq = e.target.closest('.faq');
-        faqs.forEach(function (item) {
-            if (item !== faq) {
-                item.classList.remove('faq--show');
-            }
-        });
-        faq.classList.toggle('faq--show');
-    })
-   
-})
+const faqTitles = document.querySelectorAll(".faq__title");
+
+faqTitles.forEach(faqTitle => {
+  faqTitle.addEventListener("click", event => {
+    
+    const currentlyActiveFaqTitle = document.querySelector(".faq__title.show");
+    if(currentlyActiveFaqTitle && currentlyActiveFaqTitle!==faqTitle) {
+      currentlyActiveFaqTitle.classList.toggle("show");
+      currentlyActiveFaqTitle.nextElementSibling.style.maxHeight = 0;
+    }
+
+    faqTitle.classList.toggle("show");
+    const faqText = faqTitle.nextElementSibling ;
+    if(faqTitle.classList.contains("show")) {
+      faqText.style.maxHeight = faqText.scrollHeight + "px";
+    }
+    else {
+      faqText.style.maxHeight = 0;
+    }
+  });
+});

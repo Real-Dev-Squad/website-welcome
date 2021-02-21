@@ -3,32 +3,30 @@
   text-align: left;
   font-weight: 550;
   padding: 20px;
- }
-
-
- .coc-list {
+}
+.coc-list {
   width:90%;
   text-align: left;
   font-weight: 400;
   margin-left: 1%;
- }
- .coc-list-elements {
+}
+.coc-list-elements {
    margin-left:4%;
    padding: 5px;
    font-weight: 500;
- }
+}
 
- @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .coc-list {
     width: unset;
     text-align: left;
     font-weight: 400;
     /* padding: 20px; */
-   }
-   .coc-list-elements {
-     padding: 5px;
-     font-weight: 500;
-     margin-left: 6%;
-   }
+  }
+  .coc-list-elements {
+    padding: 5px;
+    font-weight: 500;
+    margin-left: 6%;
+  }
 
- }
+}

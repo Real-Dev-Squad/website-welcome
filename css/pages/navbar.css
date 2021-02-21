@@ -6,7 +6,7 @@
   
 nav {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.6fr 2fr 0.6fr;
     box-shadow: 0 1.5px 10px 0 rgba(0,0,0,0.14);
     width: 100%;
     position:fixed;
@@ -30,7 +30,7 @@ nav {
 nav .menu {
     grid-column: 2;
     align-self: center;
-    padding: 2%;
+    padding: 1.6%;
   }
 
 nav li a:hover,a:focus{
@@ -106,7 +106,7 @@ nav li:hover a{
      }
 
   nav ul{
-    width:95%;
+    width:98%;
     margin:0 auto;
   }
 
