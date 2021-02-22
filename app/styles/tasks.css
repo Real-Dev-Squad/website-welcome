@@ -1,6 +1,7 @@
 .tasks-screen_wrapper {
   display: flex;
   flex-direction: row;
+  color: black;
 }
 
 .tasks-container {
@@ -16,10 +17,11 @@
   width: 50%;
   margin: auto;
   padding: 8px;
+  margin-top: 2em;
 }
 
 .dates-container {
-  text-align: left;
+  text-align: center;
 }
 
 /* progress bar */
@@ -89,4 +91,27 @@
   cursor: pointer;
   padding: 4px;
   border-radius: 5px;
+}
+
+.task-title, .task-purpose, .started-on {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .tasks-screen_wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .task-card{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .status-container{
+    flex-direction: column;
+  }
 }
