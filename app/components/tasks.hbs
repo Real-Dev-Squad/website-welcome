@@ -5,7 +5,7 @@
       <div class="tasks-details">
         {{#each @activeTasks as |task|}}
           <div class="task-card">
-            <TaskDetails @task={{task}}></TaskDetails>
+            <Task-Details @task={{task}}></Task-Details>
             <div class="status-container">
               <select name="percentage-complete" id="percentCompleted" {{on "change" @onChange}}>
                 <option value="">Percentage Completed</option>
@@ -13,16 +13,16 @@
                 <option value="40">40</option>
                 <option value="60">60</option>
                 <option value="80">80</option>
-                <option value="100">100</option>
               </select>
               <select name="task-status" id="status" {{on "change" @onChange}}>
                 <option value="">Select Status</option>
-                <option value="active">Blocked</option>
+                <option value="pending">Pending</option>
+                <option value="blocked">Blocked</option>
                 <option value="completed">Completed</option>
               </select>
             </div>
             <div class="update-task__btn">
-              <button type="button" {{on "click" (fn @onSubmit task.id)}}>Update Task</button>
+              <button type="button" {{on "click" (fn @onSubmit task.id )}}>Update Task</button>
             </div>
             <div class="progress-bar__container">
               <div class="progress-bar">
@@ -42,7 +42,25 @@
       <div class="tasks-details">
         {{#each @blockedTasks as |task|}}
           <div class="task-card">
-            <TaskDetails @task={{task}}></TaskDetails>
+            <Task-Details @task={{task}}></Task-Details>
+            <div class="status-container">
+              <select name="task-status" id="status" {{on "change" @onChange}}>
+                <option value="">Select Status</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="update-task__btn">
+              <button type="button" {{on "click" (fn @onSubmit task.id )}}>Update Task</button>
+            </div>
+            <div class="progress-bar__container">
+              <div class="progress-bar">
+                <div class="bar" data-size="40" style="width: {{task.percentCompleted}}%;">
+                  <span class="perc"></span>
+                </div>
+              </div>
+            </div>
           </div>
         {{/each}}
       </div>
@@ -54,7 +72,25 @@
       <div class="tasks-details">
         {{#each @pendingTasks as |task|}}
           <div class="task-card">
-            <TaskDetails @task={{task}}></TaskDetails>
+            <Task-Details @task={{task}}></Task-Details>
+            <div class="status-container">
+              <select name="task-status" id="status" {{on "change" @onChange}}>
+                <option value="">Select Status</option>
+                <option value="active">Active</option>
+                <option value="blocked">Blocked</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <div class="update-task__btn">
+              <button type="button" {{on "click" (fn @onSubmit task.id )}}>Update Task</button>
+            </div>
+            <div class="progress-bar__container">
+              <div class="progress-bar">
+                <div class="bar" data-size="40" style="width: {{task.percentCompleted}}%;">
+                  <span class="perc"></span>
+                </div>
+              </div>
+            </div>
           </div>
         {{/each}}
       </div>
@@ -66,7 +102,7 @@
       <div class="tasks-details">
         {{#each @completedTasks as |task|}}
           <div class="task-card">
-            <TaskDetails @task={{task}} @isCompletedTask={{true}}></TaskDetails>
+            <Task-Details @task={{task}} @isCompletedTask={{true}}></Task-Details>
           </div>
         {{/each}}
       </div>

@@ -14,6 +14,6 @@ export default class TasksRoute extends Route {
     const blockedTasks = tasks.filter((task) => task.status === 'blocked');
     const pendingTasks = tasks.filter((task) => task.status === 'pending');
 
-    return { activeTasks, blockedTasks, pendingTasks };
+    return { tasks, activeTasks, blockedTasks, pendingTasks };
   };
 }

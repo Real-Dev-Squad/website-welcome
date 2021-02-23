@@ -12,6 +12,9 @@ export default class TasksController extends Controller {
   @tracked showBlockedTasks = false;
   @tracked showCompletedTasks = false;
   @tracked activeTasksList = this.model.activeTasks;
+  @tracked blockedTasksList = this.model.blockedTasks;
+  @tracked pendingTasksList = this.model.pendingTasks;
+  @tracked allTasksList = this.model.tasks;
 
   @tracked completedTasksList = [];
   @tracked fields = [];
@@ -80,19 +83,28 @@ export default class TasksController extends Controller {
         const { status } = response;
 
         if (status === 204) {
-          this.activeTasksList.forEach((task) => {
-            if (task.id === taskid) {
-              if (taskData.status && taskData.status != task.status) {
-                set(task, 'status', taskData.status);
-              }
-              if (
-                taskData.percentCompleted &&
-                taskData.percentCompleted != task.percentCompleted
-              ) {
-                set(task, 'percentCompleted', taskData.percentCompleted);
-              }
-            }
-          });
+          const indexOfSelectedTask = this.allTasksList.findIndex(
+            (task) => task.id === taskid
+          );
+          const selectedTask = this.allTasksList[indexOfSelectedTask];
+
+          if (taskData.status && taskData.status != selectedTask.status)
+            set(selectedTask, 'status', taskData.status);
+          if (
+            taskData.percentCompleted &&
+            taskData.percentCompleted != selectedTask.percentCompleted
+          )
+            set(selectedTask, 'percentCompleted', taskData.percentCompleted);
+
+          this.activeTasksList.setObjects(
+            this.allTasksList.filterBy('status', 'active')
+          );
+          this.pendingTasksList.setObjects(
+            this.allTasksList.filterBy('status', 'pending')
+          );
+          this.blockedTasksList.setObjects(
+            this.allTasksList.filterBy('status', 'blocked')
+          );
         }
       } catch (err) {
         console.error('Error : ', err);
