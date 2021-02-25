@@ -33,8 +33,13 @@
   z-index: 9;
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
 }
+
 .header__container {
-  justify-content: space-between;
+  /* justify-content: space-between; */
+
+  /* edit */
+  display: flex;
+  justify-content: space-around;
 }
 .header__logo-link {
   display: inline-block;
@@ -48,6 +53,7 @@
   margin: 0;
   list-style: none;
   display: flex;
+  align-items: center;
 }
 .header__list li {
   display: inline-block;
