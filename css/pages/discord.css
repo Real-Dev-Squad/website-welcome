@@ -1,3 +1,69 @@
+.active {
+  background-color: #041287;
+}
+
+li.active a {
+  color: white;
+}
+
+nav .menu {
+  grid-column: 2;
+  align-self: center;
+  padding: 1.6%;
+}
+
+nav li ul li a:hover,a:focus{
+  background-color: transparent;
+  border-bottom: none;
+  font-weight: 400;
+
+}
+
+nav li a:active {
+background: transparent;
+color: white;
+font-weight: 400;
+
+}
+
+#nav-toggle, .burger-menu {
+  display: none;
+}
+
+nav ul{
+text-align: center;
+}
+
+nav li{
+ list-style: none;
+ display:inline;
+ margin-right: 10px;
+ padding: 10px 5px;
+ border-radius:5px;
+}
+
+nav a {
+  color:#000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: .2s all ease-in-out;
+  padding: 12px 10px ;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+ 
+}
+nav li:hover{
+  background-color:#041187;
+  transition: .4s all ease-in-out;
+
+}
+
+nav li:hover a{
+  color: white;
+  
+}
 .d-flex, .jacenter, .block--hero-inner .container, .header__container {
   display: flex;
   flex-wrap: wrap;

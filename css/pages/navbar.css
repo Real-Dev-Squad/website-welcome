@@ -18,11 +18,32 @@ nav {
     
 }
 
+.header__logo-wrap {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+}
+
 #login-btn {
-  position: fixed;
-  top:12px;
-  right:10px;
-  padding: 0px 5px;
+  align-self: center;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #d1d1d1;
+  background: #ededed;
+  border-radius: 4px;
+}
+.btn--border {
+  background: transparent;
+}
+.btn--border-primary {
+  border-color: #041287;
+}
+.btn--border-primary:hover {
+  background: #e40062;
+  color: #ffffff;
+  border-color: #e40062;
 }
 
 
@@ -31,9 +52,13 @@ nav .menu {
     grid-column: 2;
     align-self: center;
     padding: 1.6%;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; */
   }
 
-nav li a:hover,a:focus{
+nav li ul li a:hover,a:focus{
     background-color: transparent;
     border-bottom: none;
     font-weight: 400;
