@@ -3,7 +3,7 @@ html {
   min-height: 100%;
 }
 
-a {
+#faq a {
   text-decoration: none;
   color: #0000ff;
   font-weight: 400;

@@ -6,23 +6,35 @@
 		<title>Code of Conduct</title>
 		<link rel="stylesheet" href="./css/common/main.css"></link>
 		<link rel="stylesheet" href="./css/pages/coc.css"></link>
-		<link rel="stylesheet" href="css/pages/navbar.css">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="img/logos/favicon.ico"/>
 	</HEAD>
 	<BODY>
-		<nav>
-          <input type="checkbox" id="nav-toggle">
-          <label for="nav-toggle" class="burger-menu">
-           <img src="img/logos/burger.jpg" width="35px" height="auto" alt="">
-          </label>
-           <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="code-of-conduct.html">Code of Conduct</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="discord.html">Discord</a></li>
-           </ul>
-        </nav>
+		<header class="header">
+			<nav role="navigation">
+			  <div class="container header__container">
+				<div class="header__logo-wrap">
+				  <a class="header__logo-link" href="/">
+					<img src="img/logos/logo-header.png" alt="the Real Dev squad logo" aria-label="the Real Dev squad logo"
+					  role="logo">
+				  </a>
+				</div>
+				<div class="header__center">
+				  <ul class="header__list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="code-of-conduct.html">Code of Conduct</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li class="active"><a href="discord.html">Discord</a></li>
+				  </ul>
+				</div>
+				<div class="header__rigth">
+				  <a href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+					class="btn btn--border btn--border-primary">Login</a>
+				</div>
+		
+			  </div>
+			</nav>
+		  </header>
         
 
 		<h1 class="welcome-title">Code of conduct at RDS</h1>
@@ -40,5 +52,6 @@
 		<footer >
 			<p class="info-repo">The contents of this website are deployed from this <a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank" rel="nopener norefer"> open source repository </a></p>
 		</footer>
+		<script src="js/login.js"></script>
 	</BODY>
 </HTML>
