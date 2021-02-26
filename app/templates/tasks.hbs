@@ -1,7 +1,6 @@
 {{page-title "My Tasks"}}
 
 <div  class="tasks-screen_wrapper">
-
   <SideBar
     @showDropDown={{this.showDropDown}}
     @toggleDropDown={{this.toggleDropDown}}
@@ -19,7 +18,7 @@
     @showBlockedTasks={{this.showBlockedTasks}} 
     @showPendingTasks={{this.showPendingTasks}}
     @showCompletedTasks={{this.showCompletedTasks}}
-    @onChange={{this.handleInputChange}}
+    @onTaskChange={{this.onTaskChange}}
     @onSubmit={{this.handleUpdateTask}}
-/>
+  />
 </div>

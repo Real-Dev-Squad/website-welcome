@@ -17,7 +17,7 @@ export default class TasksController extends Controller {
   @tracked allTasksList = this.model.tasks;
 
   @tracked completedTasksList = [];
-  @tracked fields = [];
+  @tracked fieldsToBeUpdated = {};
   @tracked collection = null;
 
   @action toggleDropDown() {
@@ -60,18 +60,16 @@ export default class TasksController extends Controller {
     })();
   }
 
-  @action handleInputChange(e) {
-    this.fields[e.target.id] = e.target.value;
+  @action onTaskChange(key, value) {
+    this.fieldsToBeUpdated[key] = value;
   }
 
-  @action async handleUpdateTask(taskid) {
-    const taskData = {
-      percentCompleted: this.fields['percentCompleted'],
-      status: this.fields['status'],
-    };
+  @action async handleUpdateTask(e) {
+    const taskId = e.target.id;
+    const taskData = this.fieldsToBeUpdated;
     if (taskData.status || taskData.percentCompleted) {
       try {
-        const response = await fetch(`${API_BASE_URL}/tasks/${taskid}`, {
+        const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
           method: 'PATCH',
           body: JSON.stringify(taskData),
           headers: {
@@ -84,7 +82,7 @@ export default class TasksController extends Controller {
 
         if (status === 204) {
           const indexOfSelectedTask = this.allTasksList.findIndex(
-            (task) => task.id === taskid
+            (task) => task.id === taskId
           );
           const selectedTask = this.allTasksList[indexOfSelectedTask];
 
