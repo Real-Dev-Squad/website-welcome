@@ -1,4 +1,4 @@
-.d-flex, .jacenter, .block--hero-inner .container, .header__container {
+/* .d-flex, .jacenter, .block--hero-inner .container, .header__container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -35,9 +35,6 @@
 }
 
 .header__container {
-  /* justify-content: space-between; */
-
-  /* edit */
   display: flex;
   justify-content: space-around;
 }
@@ -66,7 +63,7 @@
 }
 .header__list a:hover, .header__list a:focus {
   border-color: #00084d;
-}
+} */
 
 .block {
   padding: 3.5rem 0;
