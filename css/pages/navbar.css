@@ -28,12 +28,9 @@ nav {
 
 
 nav .menu {
-    grid-column: 2;   
+    grid-column: 2;
     align-self: center;
     padding: 1.6%;
-    width: 100%;
-    display: flex;
-    justify-content:space-between;
   }
 
 nav li a:hover,a:focus{
@@ -64,7 +61,6 @@ nav li{
    margin-right: 10px;
    padding: 10px 5px;
    border-radius:5px;
-   width: 25%;
 }
 
 nav a {
