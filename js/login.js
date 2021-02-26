@@ -1,19 +1,19 @@
-function setNameIfFound(name){
-    const userLogin = document.querySelector("#login-btn");
-    if(name){
-        userLogin.innerHTML = `Hello, ${name}!`;
-    };
-};
-
-function fetchData(){
-    let url = "https://api.realdevsquad.com/users/self";
-    
-    fetch(url,{
-    "credentials": "include"
-    })
-    .then(res => res.json())
-    .then(res => setNameIfFound(res.first_name))
-    .catch(err => console.log(err));
+function setNameIfFound(name) {
+  const userLogin = document.querySelector("#login-btn");
+  if (name) {
+    userLogin.innerHTML = `Hello, ${name}!`;
+  }
 }
 
-window.addEventListener('DOMContentLoaded', fetchData);
+function fetchData() {
+  let url = "https://api.realdevsquad.com/users/self";
+
+  fetch(url, {
+    credentials: "include",
+  })
+    .then((res) => res.json())
+    .then((res) => setNameIfFound(res.first_name))
+    .catch((err) => console.log(err));
+}
+
+window.addEventListener("DOMContentLoaded", fetchData);
