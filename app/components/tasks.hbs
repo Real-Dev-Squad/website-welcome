@@ -48,16 +48,4 @@
       </div>
     </div>
   {{/if}}
-  {{#if @showCompletedTasks}}
-    <div id="completed">
-      <h2>Completed Tasks</h2>
-      <div class="tasks-details">
-        {{#each @completedTasks as |task|}}
-          <div class="task-card">
-            <Task-Details @task={{task}} @isCompletedTask={{true}}></Task-Details>
-          </div>
-        {{/each}}
-      </div>
-    </div>
-  {{/if}}
 </div>

@@ -10,13 +10,11 @@ export default class TasksController extends Controller {
   @tracked showActiveTasks = true;
   @tracked showPendingTasks = false;
   @tracked showBlockedTasks = false;
-  @tracked showCompletedTasks = false;
   @tracked activeTasksList = this.model.activeTasks;
   @tracked blockedTasksList = this.model.blockedTasks;
   @tracked pendingTasksList = this.model.pendingTasks;
   @tracked allTasksList = this.model.tasks;
 
-  @tracked completedTasksList = [];
   @tracked fieldsToBeUpdated = {};
   @tracked collection = null;
 
@@ -27,37 +25,19 @@ export default class TasksController extends Controller {
   @action toggleActiveTasks() {
     this.showActiveTasks = true;
     this.showBlockedTasks = false;
-    this.showCompletedTasks = false;
     this.showPendingTasks = false;
   }
 
   @action togglePendingTasks() {
     this.showActiveTasks = false;
     this.showBlockedTasks = false;
-    this.showCompletedTasks = false;
     this.showPendingTasks = true;
   }
 
   @action toggleBlockedTasks() {
     this.showActiveTasks = false;
     this.showBlockedTasks = true;
-    this.showCompletedTasks = false;
     this.showPendingTasks = false;
-  }
-
-  @action toggleCompletedTasks() {
-    this.showActiveTasks = false;
-    this.showBlockedTasks = false;
-    this.showCompletedTasks = true;
-    this.showPendingTasks = false;
-    (async () => {
-      const response = await fetch(
-        `${API_BASE_URL}/tasks/self?completed=true`,
-        { credentials: 'include' }
-      );
-      this.completedTasksList = await response.json();
-      console.log(this.completedTasksList);
-    })();
   }
 
   @action onTaskChange(key, value) {

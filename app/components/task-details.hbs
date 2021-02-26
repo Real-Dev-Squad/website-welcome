@@ -2,11 +2,9 @@
   <div class="task-title"><b>Title: </b>{{@task.title}}</div>
   <div class="task-purpose"><b>Purpose: </b>{{@task.purpose}}</div>
   <div class="dates-container">
-    {{#unless @isCompletedTask}}
-      <div class="ends-on">
-        <div><b>Ends On: </b>{{@task.endsOn}}</div>
-      </div>
-    {{/unless}}
+    <div class="ends-on">
+      <div><b>Ends On: </b>{{@task.endsOn}}</div>
+    </div>
     <div class="started-on">
       <div><b>Started On:</b> {{@task.startedOn}}</div>
     </div>

@@ -7,14 +7,12 @@
       <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
       <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
       <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
-      <a href="#" {{on "click" @toggleCompletedTasks}}>Completed</a>
     </div>
   {{else}}
     <div class="dropdown-container close">
       <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
       <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
       <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
-      <a href="#" {{on "click" @toggleCompletedTasks}}>Completed</a>
     </div>
   {{/if}}
 </div>
