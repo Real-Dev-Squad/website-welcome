@@ -1,12 +1,12 @@
 function setNameIfFound(name) {
-  const userLogin = document.querySelector("#login-btn");
+  const userLogin = document.querySelector(".login-btn");
   if (name) {
     userLogin.innerHTML = `Hello, ${name}!`;
   }
 }
 
 function fetchData() {
-  let url = "https://api.realdevsquad.com/users/self";
+  const url = "https://api.realdevsquad.com/users/self";
 
   fetch(url, {
     credentials: "include",
