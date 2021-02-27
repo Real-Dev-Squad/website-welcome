@@ -1,7 +1,10 @@
 # website-my
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A personal dashboard website where you can do profile related stuff!
+Currently you can:
+- Fill in your profile details
+- View your notifications
+- View and update your tasks
 
 ## Prerequisites
 
@@ -22,10 +25,9 @@ You will need the following things properly installed on your computer.
 
 * `npm run dev`
 * (or `ember s`)
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* Visit your app at [http://localhost](http://localhost).
+* Visit your tests at [http://localhost/tests](http://localhost/tests).
 
-> ℹ️ Use `npx` command to run the installed ember version locally.
 
 ### Code Generators
 
@@ -33,7 +35,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `npm test`
+* `npm run test`
 * `npm run test:ember`
 * `npm run test:ember:server`
 * (or `ember test` and `ember test --server`)
@@ -46,9 +48,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `npm run lint`: To allow the linter to check for problems
+* `npm run lint:fix`: To allow linter to fix the auto-fixable problems
 
 ### Building
 
