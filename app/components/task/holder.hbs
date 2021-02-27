@@ -23,7 +23,7 @@
   </div>
   <div class="progress-bar__container">
     <div class="progress-bar">
-      <div class="bar" data-size="40" style="width: {{@task.percentCompleted}}%;">
+      <div {{! template-lint-disable }} class="bar" data-size="40" style="width: {{@task.percentCompleted}}%;">
         <span class="perc"></span>
       </div>
     </div>
