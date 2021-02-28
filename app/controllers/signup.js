@@ -117,10 +117,10 @@ export default class SignupController extends Controller {
     },
     {
       id: 'instagram_id',
-      label: 'Instagram ID (Not the full URL)',
+      label: 'Instagram ID',
       type: 'text',
-      errorMessage: 'Instagram username is required',
-      required: true,
+      errorMessage: '',
+      required: false,
       showError: false,
     },
     {
