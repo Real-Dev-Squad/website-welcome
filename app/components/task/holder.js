@@ -13,4 +13,8 @@ export default class TasksHolderComponent extends Component {
     const { value } = e.target;
     this.args.onChange('status', value);
   }
+
+  availablePercentOptions = [20, 40, 60, 80];
+
+  availableStatusOptions = ['active', 'pending', 'blocked', 'completed']
 }

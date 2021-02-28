@@ -27,13 +27,6 @@
   color: white;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-
 .dropdown-btn {
   height: auto;
   padding: 6px 8px 6px 16px;

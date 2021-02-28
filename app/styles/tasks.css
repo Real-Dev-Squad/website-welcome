@@ -64,15 +64,6 @@
   }
 }
 
-.perc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-weight: bold;
-}
-
 /* Status Container */
 
 .status-container {
@@ -85,6 +76,7 @@
   padding: 4px;
   border-radius: 5px;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .update-task__btn button {

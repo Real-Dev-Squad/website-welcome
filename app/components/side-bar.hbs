@@ -1,18 +1,9 @@
 <div class="sidebar">
-  <button class="dropdown-btn" type="button" {{on "click" @toggleDropDown}}>Tasks
-    <i class="fa fa-caret-down"></i>
-  </button>
-  {{#if @showDropDown}}
-    <div class="dropdown-container show">
+  <button class="dropdown-btn" type="button" {{on "click" @toggleDropDown}}>Tasks 
+  <FaIcon @icon="caret-down" @fixedWidth={{true}} />  </button>
+    <div class="dropdown-container {{if @showDropDown "show" "close"}}">
       <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
       <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
       <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
     </div>
-  {{else}}
-    <div class="dropdown-container close">
-      <a href="#" {{on "click" @toggleActiveTasks}}>Active</a>
-      <a href="#" {{on "click" @toggleBlockedTasks}}>Blocked</a>
-      <a href="#" {{on "click" @togglePendingTasks}}>Yet to start</a>
-    </div>
-  {{/if}}
 </div>

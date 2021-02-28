@@ -1,30 +1,27 @@
 <div class="task-card">
   <Task-Details @task={{@task}} />
   <div class="status-container">
-    {{#if @allowChangePercentage}}
+    {{#if @isAllowedPercentageChange}}
       <select name="percentage-complete" id="percentCompleted" {{on "change" this.onPercentageChange}}>
         <option value="">Percentage Completed</option>
-        <option value="20">20</option>
-        <option value="40">40</option>
-        <option value="60">60</option>
-        <option value="80">80</option>
+        {{#each this.availablePercentOptions as |percent| }}
+          <option value={{percent}}>{{percent}}</option>
+        {{/each}}
       </select>
     {{/if}}
     <select name="task-status" id="status" {{on "change" this.onStatusChange}}>
-      <option value="">Select Status</option>
-      <option value="active">Active</option>
-      <option value="pending">Pending</option>
-      <option value="blocked">Blocked</option>
-      <option value="completed">Completed</option>
+      <option value="">status</option>
+      {{#each this.availableStatusOptions as |status| }}
+          <option value={{status}}>{{status}}</option>
+      {{/each}}
     </select>
   </div>
   <div class="update-task__btn">
-    <button type="button" id={{@task.id}} {{on "click" @onSubmit}}>Update Task</button>
+    <button type="button" {{on "click" (fn @onTaskUpdate @task.id)}}>Update Task</button>
   </div>
   <div class="progress-bar__container">
     <div class="progress-bar">
       <div {{! template-lint-disable }} class="bar" data-size="40" style="width: {{@task.percentCompleted}}%;">
-        <span class="perc"></span>
       </div>
     </div>
   </div>

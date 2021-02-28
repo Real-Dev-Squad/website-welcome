@@ -7,10 +7,10 @@
           <Task::Holder
             @task={{task}}
             @onChange={{@onTaskChange}}
-            @allowChangePercentage={{true}}
+            @isAllowedPercentageChange={{true}}
             @onStausChange={{this.onStatusChange}}
             @onPercentageChange={{this.onPercentageChange}}
-            @onSubmit={{@onSubmit}}
+            @onTaskUpdate={{@onTaskUpdate}}
           />
         {{/each}}
       </div>
@@ -26,7 +26,7 @@
             @onChange={{@onTaskChange}}
             @onStausChange={{this.onStatusChange}}
             @onPercentageChange={{this.onPercentageChange}}
-            @onSubmit={{@onSubmit}}
+            @onTaskUpdate={{@onTaskUpdate}}
           />
         {{/each}}
       </div>
@@ -42,7 +42,7 @@
             @onChange={{@onTaskChange}}
             @onStausChange={{this.onStatusChange}}
             @onPercentageChange={{this.onPercentageChange}}
-            @onSubmit={{@onSubmit}}
+            @onTaskUpdate={{@onTaskUpdate}}
           />
         {{/each}}
       </div>

@@ -44,8 +44,7 @@ export default class TasksController extends Controller {
     this.fieldsToBeUpdated[key] = value;
   }
 
-  @action async handleUpdateTask(e) {
-    const taskId = e.target.id;
+  @action async handleUpdateTask(taskId) {
     const taskData = this.fieldsToBeUpdated;
     if (taskData.status || taskData.percentCompleted) {
       try {
