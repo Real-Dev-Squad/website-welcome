@@ -10,10 +10,6 @@ faqTitles.forEach(function (eachBtn) {
     target2.classList.toggle('minus-hidden');
   })
 })
-
-faqTitles.forEach(faqTitle => {
-  faqTitle.addEventListener("click", event => {
-
     const currentlyActiveFaqTitle = document.querySelector(".faq__title.show");
     if (currentlyActiveFaqTitle && currentlyActiveFaqTitle !== faqTitle) {
       currentlyActiveFaqTitle.classList.toggle("show");
