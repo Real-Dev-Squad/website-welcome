@@ -19,6 +19,7 @@ export default class SignupController extends Controller {
     company_name: '',
     designation: '',
     linkedin_id: '',
+    instagram_id: '',
     twitter_id: '',
     website: '',
   };
@@ -33,6 +34,7 @@ export default class SignupController extends Controller {
     company_name: false,
     designation: false,
     linkedin_id: false,
+    instagram_id: false,
     twitter_id: false,
     website: false,
   };
@@ -110,6 +112,14 @@ export default class SignupController extends Controller {
       label: 'LinkedIn ID (Not the full URL)',
       type: 'text',
       errorMessage: 'LinkedIn username is required',
+      required: true,
+      showError: false,
+    },
+    {
+      id: 'instagram_id',
+      label: 'Instagram ID (Not the full URL)',
+      type: 'text',
+      errorMessage: 'Instagram username is required',
       required: true,
       showError: false,
     },
