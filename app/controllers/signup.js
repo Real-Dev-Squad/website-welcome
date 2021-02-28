@@ -220,11 +220,11 @@ export default class SignupController extends Controller {
       });
 
       const { status } = response;
-      // if (status === 204) {
-      //   window.open('https://realdevsquad.com/goto', '_self');
-      // } else {
-      //   alert('Something went wrong. Please check console errors.');
-      // }
+      if (status === 204) {
+        window.open('https://realdevsquad.com/goto', '_self');
+      } else {
+        alert('Something went wrong. Please check console errors.');
+      }
     } catch (error) {
       console.error('Error : ', error);
     }
