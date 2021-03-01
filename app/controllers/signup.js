@@ -75,7 +75,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'phone',
-      label: 'Phone Number',
+      label: 'Phone Number (Optional)',
       type: 'string',
       value: '+91-',
       errorMessage: 'Enter a valid phone number',
@@ -93,7 +93,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'company_name',
-      label: 'Company Name / College Name',
+      label: 'Company Name / College Name (Optional)',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -101,7 +101,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'designation',
-      label: 'Designation',
+      label: 'Designation (Optional)',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -117,7 +117,7 @@ export default class SignupController extends Controller {
     },
     {
       id: 'instagram_id',
-      label: 'Instagram ID',
+      label: 'Instagram ID (Optional)',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -195,18 +195,24 @@ export default class SignupController extends Controller {
     return;
   }
 
+  removeEmptyFields(reqObject) {
+    for (const field in reqObject) {
+      if (!reqObject[field]) {
+        delete reqObject[field];
+      }
+    }
+    return reqObject;
+  }
+
   @action async handleSubmit(e) {
     // submit
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
-    let reqBody = this.formData;
-    if (!this.formData.website) {
-      delete this.formData.website;
-    }
+    const cleanReqObject = this.removeEmptyFields(this.formData);
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
-        body: JSON.stringify(reqBody),
+        body: JSON.stringify(cleanReqObject),
         headers: {
           'Content-Type': 'application/json',
         },
