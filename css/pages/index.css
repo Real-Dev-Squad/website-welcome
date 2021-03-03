@@ -1,7 +1,42 @@
+*{
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 750px;
   text-align: center;
   font-size: 1.5em;
+}
+
+.cards-title
+{
+  margin-bottom: 2rem;
+}
+
+.cards
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card{
+  border: 1px solid #f3efef;
+  box-shadow: 0 1.5px 10px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 2px;
+  width: 14rem;
+}
+
+.content
+{
+  padding: 18px 5px 18px 5px;
+}
+
+.card a{
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5rem;
+  text-align: center;
+  color: #000000;
 }
 
 .social-handles {
