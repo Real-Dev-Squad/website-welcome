@@ -147,4 +147,16 @@ footer a {
   color: #e20665;
 }
 
+@media screen and (max-width: 720px) {
+  .info-repo {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .info-repo {
+    font-size: 0.5rem;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
