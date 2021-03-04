@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discord</title>
+    <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
     <link rel="stylesheet" href="./css/common/main.css" />
     <link rel="stylesheet" href="./css/pages/discord.css" />
     <link
@@ -14,35 +15,39 @@
   </head>
 
   <body>
-    <header class="header">
-      <nav role="navigation">
-        <div class="container header__container">
-          <div class="header__logo-wrap">
-            <a class="header__logo-link" href="/">
-              <img
-                src="img/logos/logo-header.png"
-                alt="the Real Dev squad logo"
-                aria-label="the Real Dev squad logo"
-                role="logo"
-              />
-            </a>
-          </div>
-          <div class="header__center">
-            <ul class="header__list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li class="active"><a href="discord.html">Discord</a></li>
-            </ul>
-          </div>
-          <div class="header__rigth">
+    <header>
+      <nav>
+        <!-- in case of small screens, show a dropdown -->
+        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
+        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
+
+        <ul class="menu">
+          <li>
+            <a class="nav-logo" href="https://realdevsquad.com/"
+              ><img
+                class="nav-logo-img"
+                src="./img/logos/Real-Dev-Squad@1x.png"
+                alt="Real Dev Squad logo"
+            /></a>
+            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
+          </li>
+          <li>
+            <a class="active" href="https://welcome.realdevsquad.com/"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
+          <li><a href="https://members.realdevsquad.com/">Members</a></li>
+          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
+          <li><a href="https://status.realdevsquad.com/">Status</a></li>
+          <li class="login-btn">
             <a
               href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
-              class="btn btn--border btn--border-primary"
-              >Login</a
             >
-          </div>
-        </div>
+              Login
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main role="main">
@@ -86,21 +91,22 @@
           </h2>
           <div class="block__content">
             <p>
-              <a href="https://discord.com/new">Discord</a> is a chat app, similar to apps
-              such as Skype, or app widely used for professional communications like
-              Slack.
+              <a href="https://discord.com/new">Discord</a> is a chat app,
+              similar to apps such as Skype, or app widely used for professional
+              communications like Slack.
             </p>
             <p>
-              It’s geared towards multiple users, providing them with ways to find each
-              other, coordinate and talk while using it.
+              It’s geared towards multiple users, providing them with ways to
+              find each other, coordinate and talk while using it.
             </p>
             <p>
-              It supports video calls, voice chat, and text, allowing users to get in
-              touch however they please.
+              It supports video calls, voice chat, and text, allowing users to
+              get in touch however they please.
             </p>
             <p>
-              We have created different <strong>channels</strong> based on the task making
-              things much easier to keep information straight & segregated.
+              We have created different <strong>channels</strong> based on the
+              task making things much easier to keep information straight &
+              segregated.
             </p>
           </div>
         </div>
@@ -114,12 +120,15 @@
             <div class="col-6 col-xs-12">
               <h2 class="block__title">Lets get started with Discord</h2>
               <div class="block__content">
-                <p>Discord has the server named <strong>Real Dev Squad.</strong></p>
+                <p>
+                  Discord has the server named <strong>Real Dev Squad.</strong>
+                </p>
                 <p>There are multiple categories inside it</p>
                 <ul class="list list-reset">
                   <li class="category-name">
-                    <strong>Live: </strong>Which lets you connect with the members.You can
-                    seperatly get connected on call with members of specific channel.
+                    <strong>Live: </strong>Which lets you connect with the
+                    members.You can seperatly get connected on call with members
+                    of specific channel.
                   </li>
 
                   <li class="category-name">
@@ -134,31 +143,33 @@
                         general:It carries general discussions.
                       </li>
                       <li class="channel-name">
-                        newcomers:All info related to new commers are floated in it.
+                        newcomers:All info related to new commers are floated in
+                        it.
                       </li>
                       <li class="channel-name">
                         progress-updates:All info related to current ongoing
                         task,discussions are posted here.
                       </li>
                       <li class="channel-name">
-                        support:In case you are stuck on need some help everyone is there
-                        to help you keep running.
+                        support:In case you are stuck on need some help everyone
+                        is there to help you keep running.
                       </li>
                     </ol>
                   </li>
 
                   <li class="category-name">
-                    <strong>Text:</strong> Contains multiple other channels in it.
+                    <strong>Text:</strong> Contains multiple other channels in
+                    it.
                   </li>
 
                   <li class="category-name">
-                    <strong>Learning:</strong> It contains different technology related
-                    channels plus channel for interview preparation.
+                    <strong>Learning:</strong> It contains different technology
+                    related channels plus channel for interview preparation.
                   </li>
 
                   <li class="category-name">
-                    <strong>Dev groups:</strong> It contains channels for different
-                    projects.
+                    <strong>Dev groups:</strong> It contains channels for
+                    different projects.
                   </li>
 
                   <li class="category-name">
@@ -176,7 +187,9 @@
     <footer>
       <p class="info-repo">
         The contents of this website are deployed from this
-        <a href="https://github.com/Real-Dev-Squad/website-welcome" target="_self"
+        <a
+          href="https://github.com/Real-Dev-Squad/website-welcome"
+          target="_self"
           >open source repository</a
         >
       </p>
