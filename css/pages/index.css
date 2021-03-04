@@ -3,13 +3,13 @@
 }
 
 .container {
-  max-width: 750px;
+  max-width: 85%;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .cards-title {
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .cards {
@@ -21,54 +21,36 @@
   border: 1px solid #f3efef;
   box-shadow: 0 1.5px 10px 0 rgba(0, 0, 0, 0.14);
   border-radius: 2px;
-  width: 14rem;
+  width: 30%;
   padding: 18px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card a {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 0.8em;
   text-align: center;
   color: #000000;
 }
 
 .social-handles {
   margin: 3em 0;
+  font-size: 1em;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .container {
-    max-width: 650px;
-    font-size: 1em;
+    max-width: 95%;
+    font-size: 0.9rem;
   }
   .card {
-    width: 8rem;
-    padding: 5px;
-  }
-  .card a {
-    font-size: 14px;
+    padding: 10px;
   }
   .logo-img {
     margin: 0;
   }
-  .social-handles {
-    font-size: 1rem;
-  }
 }
 
-@media screen and (max-width: 430px) {
-  .container {
-    max-width: 350px;
-    font-size: 0.7em;
-  }
-  .card {
-    width: 5rem;
-    padding: 2px 0px;
-  }
-  .card a {
-    font-size: 8px;
-  }
-  .social-handles {
-    font-size: 0.7rem;
-  }
-}
+
