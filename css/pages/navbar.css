@@ -79,6 +79,9 @@ nav .menu {
   .nav-logo {
     display: none;
   }
+  .nav-home {
+    display: flex;
+  }
   nav {
     padding: 1em;
     background-color: #1d1283;
