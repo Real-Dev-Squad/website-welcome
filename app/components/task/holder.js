@@ -1,5 +1,8 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import ENV from 'website-my/config/environment';
+
+const { ACTIVE, BLOCKED, COMPLETED, PENDING } = ENV.TASK_STATUS;
 
 export default class TasksHolderComponent extends Component {
   @action
@@ -16,5 +19,5 @@ export default class TasksHolderComponent extends Component {
 
   availablePercentOptions = [20, 40, 60, 80];
 
-  availableStatusOptions = ['active', 'pending', 'blocked', 'completed'];
+  availableStatusOptions = [ACTIVE, BLOCKED, COMPLETED, PENDING];
 }

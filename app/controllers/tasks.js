@@ -4,6 +4,7 @@ import { action, set } from '@ember/object';
 import ENV from 'website-my/config/environment';
 
 const API_BASE_URL = ENV.BASE_API_URL;
+const { ACTIVE, BLOCKED, COMPLETED, PENDING } = ENV.TASK_STATUS;
 
 export default class TasksController extends Controller {
   @tracked showDropDown = false;
@@ -15,7 +16,7 @@ export default class TasksController extends Controller {
   }
 
   @tracked tasksByStatus = {};
-  taskStatusList = ['active', 'pending', 'blocked'];
+  taskStatusList = [ACTIVE, BLOCKED, PENDING];
 
   filterTasksByStatus(allTasks, status) {
     return allTasks.filter((task) => task.status === status);
@@ -30,7 +31,7 @@ export default class TasksController extends Controller {
     });
   }
 
-  defaultTaskType = 'active';
+  defaultTaskType = ACTIVE;
   @tracked tasksToShow = this.allTasks.filter(
     (task) => task.status === this.defaultTaskType
   );
@@ -46,7 +47,7 @@ export default class TasksController extends Controller {
 
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
-    if (taskData.status === 'completed') {
+    if (taskData.status === COMPLETED) {
       taskData.percentCompleted = '100';
     }
     if (taskData.status || taskData.percentCompleted) {
