@@ -1,51 +1,14 @@
 <div class="tasks-container">
-  {{#if @showActiveTasks}}
-    <div id="active">
-      <h2>Active Tasks</h2>
-      <div class="tasks-details">
-        {{#each @activeTasks as |task|}}
-          <Task::Holder
-            @task={{task}}
-            @onChange={{@onTaskChange}}
-            @isAllowedPercentageChange={{true}}
-            @onStausChange={{this.onStatusChange}}
-            @onPercentageChange={{this.onPercentageChange}}
-            @onTaskUpdate={{@onTaskUpdate}}
-          />
-        {{/each}}
-      </div>
+  <h2 class="task-title">{{@tasksToShow.[0].status}} Tasks</h2>
+  {{#each @tasksToShow as |task|}}
+    <div class="tasks-details">
+      <Task::Holder
+        @task={{task}}
+        @onChange={{@onTaskFieldChange}}
+        @onStausChange={{this.onStatusChange}}
+        @onPercentageChange={{this.onPercentageChange}}
+        @onTaskUpdate={{@onTaskUpdate}}
+      />
     </div>
-  {{/if}}
-  {{#if @showBlockedTasks}}
-    <div id="blocked">
-      <h2>Blocked Tasks</h2>
-      <div class="tasks-details">
-        {{#each @blockedTasks as |task|}}
-          <Task::Holder
-            @task={{task}}
-            @onChange={{@onTaskChange}}
-            @onStausChange={{this.onStatusChange}}
-            @onPercentageChange={{this.onPercentageChange}}
-            @onTaskUpdate={{@onTaskUpdate}}
-          />
-        {{/each}}
-      </div>
-    </div>
-  {{/if}}
-  {{#if @showPendingTasks}}
-    <div id="pending">
-      <h2>Pending Tasks</h2>
-      <div class="tasks-details">
-        {{#each @pendingTasks as |task|}}
-          <Task::Holder
-            @task={{task}}
-            @onChange={{@onTaskChange}}
-            @onStausChange={{this.onStatusChange}}
-            @onPercentageChange={{this.onPercentageChange}}
-            @onTaskUpdate={{@onTaskUpdate}}
-          />
-        {{/each}}
-      </div>
-    </div>
-  {{/if}}
+  {{/each}}
 </div>

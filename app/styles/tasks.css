@@ -4,6 +4,10 @@
   color: black;
 }
 
+.task-title {
+  text-transform: capitalize;
+}
+
 .tasks-container {
   padding: 8px;
   width: 80%;

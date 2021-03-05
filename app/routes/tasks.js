@@ -8,12 +8,8 @@ export default class TasksRoute extends Route {
     const response = await fetch(`${API_BASE_URL}/tasks/self`, {
       credentials: 'include',
     });
-    const tasks = await response.json();
+    const allTasks = await response.json();
 
-    const activeTasks = tasks.filter((task) => task.status === 'active');
-    const blockedTasks = tasks.filter((task) => task.status === 'blocked');
-    const pendingTasks = tasks.filter((task) => task.status === 'pending');
-
-    return { tasks, activeTasks, blockedTasks, pendingTasks };
+    return allTasks;
   };
 }

@@ -13,6 +13,7 @@
   color: #818181;
   padding: 16px;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 /* Active/current link */

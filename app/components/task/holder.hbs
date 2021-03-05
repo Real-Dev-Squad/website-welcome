@@ -1,7 +1,7 @@
 <div class="task-card">
   <Task-Details @task={{@task}} />
   <div class="status-container">
-    {{#if @isAllowedPercentageChange}}
+    {{#if (eq @task.status "active")}}
       <select name="percentage-complete" id="percentCompleted" {{on "change" this.onPercentageChange}}>
         <option value="">Percentage Completed</option>
         {{#each this.availablePercentOptions as |percent| }}

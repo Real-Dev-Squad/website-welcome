@@ -7,45 +7,45 @@ const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
   @tracked showDropDown = false;
-  @tracked showActiveTasks = true;
-  @tracked showPendingTasks = false;
-  @tracked showBlockedTasks = false;
-  @tracked activeTasksList = this.model.activeTasks;
-  @tracked blockedTasksList = this.model.blockedTasks;
-  @tracked pendingTasksList = this.model.pendingTasks;
-  @tracked allTasksList = this.model.tasks;
-
-  @tracked fieldsToBeUpdated = {};
-  @tracked collection = null;
+  @tracked taskFields = {};
+  @tracked allTasks = this.model;
 
   @action toggleDropDown() {
     this.showDropDown = !this.showDropDown;
   }
 
-  @action toggleActiveTasks() {
-    this.showActiveTasks = true;
-    this.showBlockedTasks = false;
-    this.showPendingTasks = false;
+  @tracked tasksByStatus = {};
+  taskStatusList = ['active', 'pending', 'blocked'];
+
+  filterTasksByStatus(allTasks, status) {
+    return allTasks.filter((task) => task.status === status)
   }
 
-  @action togglePendingTasks() {
-    this.showActiveTasks = false;
-    this.showBlockedTasks = false;
-    this.showPendingTasks = true;
+  seperateTasksByStatus() {
+    this.taskStatusList.forEach((status) => {
+      this.tasksByStatus[status] = this.filterTasksByStatus(
+        this.allTasks,
+        status
+      );
+    });
   }
 
-  @action toggleBlockedTasks() {
-    this.showActiveTasks = false;
-    this.showBlockedTasks = true;
-    this.showPendingTasks = false;
+  defaultTaskType = 'active';
+  @tracked tasksToShow = this.allTasks.filter(
+    (task) => task.status === this.defaultTaskType
+  );
+
+  @action toggleTasks(taskType) {
+    this.seperateTasksByStatus();
+    this.tasksToShow = this.tasksByStatus[taskType];
   }
 
   @action onTaskChange(key, value) {
-    this.fieldsToBeUpdated[key] = value;
+    this.taskFields[key] = value;
   }
 
   @action async handleUpdateTask(taskId) {
-    const taskData = this.fieldsToBeUpdated;
+    const taskData = this.taskFields;
     if (taskData.status || taskData.percentCompleted) {
       try {
         const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
@@ -60,10 +60,11 @@ export default class TasksController extends Controller {
         const { status } = response;
 
         if (status === 204) {
-          const indexOfSelectedTask = this.allTasksList.findIndex(
+          const indexOfSelectedTask = this.allTasks.findIndex(
             (task) => task.id === taskId
           );
-          const selectedTask = this.allTasksList[indexOfSelectedTask];
+          const selectedTask = this.allTasks[indexOfSelectedTask];
+          const statusOfSelectedTask = selectedTask.status;
 
           if (taskData.status && taskData.status != selectedTask.status)
             set(selectedTask, 'status', taskData.status);
@@ -73,15 +74,7 @@ export default class TasksController extends Controller {
           )
             set(selectedTask, 'percentCompleted', taskData.percentCompleted);
 
-          this.activeTasksList.setObjects(
-            this.allTasksList.filterBy('status', 'active')
-          );
-          this.pendingTasksList.setObjects(
-            this.allTasksList.filterBy('status', 'pending')
-          );
-          this.blockedTasksList.setObjects(
-            this.allTasksList.filterBy('status', 'blocked')
-          );
+          this.toggleTasks(statusOfSelectedTask);
         }
       } catch (err) {
         console.error('Error : ', err);

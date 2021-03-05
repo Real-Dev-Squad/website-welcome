@@ -2,19 +2,13 @@
 
 <div  class="tasks-screen_wrapper">
   <SideBar
+    @taskStatusList={{this.taskStatusList}}
     @showDropDown={{this.showDropDown}}
     @toggleDropDown={{this.toggleDropDown}}
-    @toggleActiveTasks={{this.toggleActiveTasks}}
-    @toggleBlockedTasks={{this.toggleBlockedTasks}}
-    @togglePendingTasks={{this.togglePendingTasks}}
+    @toggleTasks={{this.toggleTasks}}
   />
   <Tasks
-    @activeTasks={{this.activeTasksList}}
-    @pendingTasks={{this.pendingTasksList}}
-    @blockedTasks={{this.blockedTasksList}}
-    @showActiveTasks={{this.showActiveTasks}}
-    @showBlockedTasks={{this.showBlockedTasks}} 
-    @showPendingTasks={{this.showPendingTasks}}
+    @tasksToShow={{this.tasksToShow}}
     @onTaskChange={{this.onTaskChange}}
     @onTaskUpdate={{this.handleUpdateTask}}
   />
