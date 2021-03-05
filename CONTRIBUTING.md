@@ -25,6 +25,8 @@
 
 # How can you make your first **Pull Request**
 
+**Note**: Steps 1, 2 and 3 are **one-time** steps required for setup. If you have already cloned the repo and added upstream, consider following this documentation from step 4.
+ 
 1. **Forking repository**
 
 
