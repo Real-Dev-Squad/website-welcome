@@ -18,7 +18,7 @@ export default class TasksController extends Controller {
   taskStatusList = ['active', 'pending', 'blocked'];
 
   filterTasksByStatus(allTasks, status) {
-    return allTasks.filter((task) => task.status === status)
+    return allTasks.filter((task) => task.status === status);
   }
 
   seperateTasksByStatus() {
@@ -46,6 +46,9 @@ export default class TasksController extends Controller {
 
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
+    if (taskData.status === 'completed') {
+      taskData.percentCompleted = '100';
+    }
     if (taskData.status || taskData.percentCompleted) {
       try {
         const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {

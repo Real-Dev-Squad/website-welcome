@@ -5,16 +5,16 @@ export default class TasksHolderComponent extends Component {
   @action
   onPercentageChange(e) {
     const { value } = e.target;
-    this.args.onChange('percentCompleted', value);
+    this.args.onTaskChange('percentCompleted', value);
   }
 
   @action
   onStatusChange(e) {
     const { value } = e.target;
-    this.args.onChange('status', value);
+    this.args.onTaskChange('status', value);
   }
 
   availablePercentOptions = [20, 40, 60, 80];
 
-  availableStatusOptions = ['active', 'pending', 'blocked', 'completed']
+  availableStatusOptions = ['active', 'pending', 'blocked', 'completed'];
 }
