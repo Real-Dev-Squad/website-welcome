@@ -94,6 +94,7 @@ a:active {
 
 footer {
   position: relative;
+  margin-top: 40px;
   bottom: 0;
   width: 100%;
   padding: 1em;
@@ -146,5 +147,12 @@ footer a {
 .link-seperators {
   color: #e20665;
 }
+
+@media screen and (max-width: 780px) {
+  .info-repo {
+    font-size: 0.7rem;
+  }
+}
+
 
 /*# sourceMappingURL=main.css.map */
