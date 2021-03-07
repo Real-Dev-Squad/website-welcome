@@ -26,15 +26,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card a {
   font-weight: 600;
   font-size: 0.8em;
   text-align: center;
   color: #000000;
 }
 
+.card:hover {
+  border: 1px solid #f3efef;
+  background-color: rgba(5, 18, 130,0.7);
+  color:white;
+  box-shadow: 0 1.5px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  width: 30%;
+  padding: 18px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.83em;
+  text-align: center;
+
+}
 .social-handles {
   margin: 3em 0;
   font-size: 1em;
