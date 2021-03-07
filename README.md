@@ -1,10 +1,6 @@
 # website-my
 
 A personal dashboard website where you can do profile related stuff!
-Currently you can:
-- Fill in your profile details
-- View your notifications
-- View and update your tasks
 
 ## Prerequisites
 
