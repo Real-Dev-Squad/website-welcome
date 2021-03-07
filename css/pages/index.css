@@ -26,7 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   font-weight: 600;
   font-size: 0.8em;
   text-align: center;
@@ -34,11 +33,13 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 20px -9px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.65);
+  color: #000000;
 }
 
-.card a:active {
+.card:active {
   background-color: #fff;
+  color: #929292;
 }
 
 .social-handles {
