@@ -7,6 +7,7 @@ const BASE_URL = ENV.BASE_API_URL;
 
 export default class SignupController extends Controller {
   @tracked isSubmitDisabled = true;
+  @tracked isSubmitClicked = false;
 
   @tracked title = 'Account Details';
   @tracked formData = {
@@ -209,6 +210,7 @@ export default class SignupController extends Controller {
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
     const cleanReqObject = this.removeEmptyFields(this.formData);
+    this.isSubmitClicked = true;
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
@@ -223,10 +225,12 @@ export default class SignupController extends Controller {
       if (status === 204) {
         window.open('https://realdevsquad.com/goto', '_self');
       } else {
-        alert('Something went wrong. Please check console errors.');
+        // alert('Something went wrong. Please check console errors.');
       }
     } catch (error) {
       console.error('Error : ', error);
+    }finally{
+      this.isSubmitClicked = false;
     }
   }
 }
