@@ -1,9 +1,14 @@
-.d-flex, .jacenter, .block--hero-inner .container, .header__container {
+.d-flex,
+.jacenter,
+.block--hero-inner .container,
+.header__container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.jacenter, .block--hero-inner .container, .header__container {
+.jacenter,
+.block--hero-inner .container,
+.header__container {
   align-items: center;
   justify-content: center;
 }
@@ -58,7 +63,8 @@
   padding: 0.75rem 0;
   border-bottom: 1px solid transparent;
 }
-.header__list a:hover, .header__list a:focus {
+.header__list a:hover,
+.header__list a:focus {
   border-color: #00084d;
 }
 

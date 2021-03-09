@@ -4,7 +4,6 @@
 
 https://welcome.realdevsquad.com/
 
-
 # Want to contribute or Learn how to?
 
 Read about our Contributing Process: [Here](CONTRIBUTING.md)
@@ -13,10 +12,10 @@ Read about our Contributing Process: [Here](CONTRIBUTING.md)
 
 https://welcome.realdevsquad.com/faq
 
-# Help with Discord 
+# Help with Discord
 
 https://welcome.realdevsquad.com/discord
 
 # Code of conduct at RDS
 
- https://welcome.realdevsquad.com/code-of-conduct.html
+https://welcome.realdevsquad.com/code-of-conduct.html
