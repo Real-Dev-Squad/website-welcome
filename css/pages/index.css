@@ -19,20 +19,27 @@
 
 .card {
   border: 1px solid #f3efef;
-  box-shadow: 0 1.5px 10px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 15px -9px rgba(0, 0, 0, 0.65);
   border-radius: 2px;
   width: 30%;
   padding: 18px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card a {
   font-weight: 600;
   font-size: 0.8em;
   text-align: center;
   color: #000000;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.65);
+  color: #000000;
+}
+
+.card:active {
+  background-color: #fff;
+  color: #929292;
 }
 
 .social-handles {
@@ -52,5 +59,3 @@
     margin: 0;
   }
 }
-
-
