@@ -64,37 +64,17 @@ h1 {
   padding-top: 1rem;
 }
 
-.faq__btn {
+.faq-btn {
+  height: 25px;
+  width: 25px;
+  font-size: 2rem;
   background: transparent;
-  border-color: #e30062;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  text-align: center;
-  line-height: 24px;
-  border-width: 1px;
-  position: relative;
-}
-
-.faq__btn:after,
-.faq__btn:before {
-  content: "";
-  background: #041187;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.faq__btn:after {
-  width: 16px;
-  height: 2px;
-}
-
-.faq__btn:before {
-  height: 16px;
-  width: 2px;
+  color:#041187;
+  border:1px solid #e30062;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .faq__list {
