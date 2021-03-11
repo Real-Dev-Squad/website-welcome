@@ -3,7 +3,7 @@ html {
   min-height: 100%;
 }
 
-#faq a {
+a {
   text-decoration: none;
   color: #0000ff;
   font-weight: 400;
@@ -31,7 +31,7 @@ h1 {
 .faq__title h3 {
   font-weight: 400;
   margin: 0;
-  font-size: inherit; 
+  font-size: inherit;
   cursor: pointer;
 }
 
@@ -77,24 +77,25 @@ h1 {
   position: relative;
 }
 
-.faq__btn:after,.faq__btn:before{
-  content: '';
+.faq__btn:after,
+.faq__btn:before {
+  content: "";
   background: #041187;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.faq__btn:after{
+.faq__btn:after {
   width: 16px;
   height: 2px;
 }
 
-.faq__btn:before{
+.faq__btn:before {
   height: 16px;
   width: 2px;
-} 
+}
 
 .faq__list {
   margin: 10px 0 0 0;
