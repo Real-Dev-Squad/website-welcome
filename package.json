@@ -1,0 +1,16 @@
+{
+  "name": "website-welcome",
+  "version": "1.0.0",
+  "description": "Welcome website of Real Dev Squad",
+  "main": "index.js",
+  "scripts": {
+    "check": "prettier --check .",
+    "fix": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
