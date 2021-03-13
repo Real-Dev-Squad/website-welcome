@@ -42,6 +42,7 @@ git clone <link which you copied in the step 1>
 ```
 
 Once you have cloned the repository, now you should go into the folder containing the repository. You can do that with:
+
 ```
 cd website-welcome
 ```

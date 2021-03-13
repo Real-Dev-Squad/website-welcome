@@ -19,17 +19,38 @@
   <body>
     <header>
       <nav>
-        <input type="checkbox" id="nav-toggle" />
-        <label for="nav-toggle" class="burger-menu">
-          <img src="img/logos/burger.jpg" width="35px" height="auto" alt="" />
-        </label>
+        <!-- in case of small screens, show a dropdown -->
+        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
+        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
 
         <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-          <li class="active"><a href="faq.html">FAQ</a></li>
-          <li><a href="discord.html">Discord</a></li>
+          <li>
+            <a class="nav-logo" href="https://realdevsquad.com/"
+              ><img
+                class="nav-logo-img"
+                src="./img/logos/Real-Dev-Squad@1x.png"
+                alt="Real Dev Squad logo"
+            /></a>
+            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
+          </li>
+          <li>
+            <a class="active" href="https://welcome.realdevsquad.com/"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
+          <li><a href="https://members.realdevsquad.com/">Members</a></li>
+          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
+          <li><a href="https://status.realdevsquad.com/">Status</a></li>
         </ul>
+
+        <div class="login-btn">
+          <a
+            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+          >
+            Login
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -75,14 +96,21 @@
 
               <!-- prettier-ignore -->
               <ul class="faq__list">
-                <li><a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank" rel="noopener noreferrer">Welcome</a> : HTML, CSS, Javascript</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-www" target="_blank" rel="noopener noreferrer">Main Site</a> : HTML, CSS, Javascript</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-members" target="_blank" rel="noopener noreferrer">Members</a> : Next.js</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-crypto" target="_blank" rel="noopener noreferrer">Crypto</a> : Next.js</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-status" target="_blank" rel="noopener noreferrer">Status</a> : Next.js, TypeScript</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-my" target="_blank" rel="noopener noreferrer">My Site</a> : Ember</li>
-                <li><a href="https://github.com/Real-Dev-Squad/website-backend" target="_blank" rel="noopener noreferrer">Backend</a> : Node.js</li>
-                </ul>
+              <li><a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank"
+                  rel="noopener noreferrer">Welcome</a> : HTML, CSS, Javascript</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-www" target="_blank" rel="noopener noreferrer">Main
+                  Site</a> : HTML, CSS, Javascript</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-members" target="_blank"
+                  rel="noopener noreferrer">Members</a> : Next.js</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-crypto" target="_blank"
+                  rel="noopener noreferrer">Crypto</a> : Next.js</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-status" target="_blank"
+                  rel="noopener noreferrer">Status</a> : Next.js, TypeScript</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-my" target="_blank" rel="noopener noreferrer">My
+                  Site</a> : Ember</li>
+              <li><a href="https://github.com/Real-Dev-Squad/website-backend" target="_blank"
+                  rel="noopener noreferrer">Backend</a> : Node.js</li>
+            </ul>
             </div>
           </div>
 

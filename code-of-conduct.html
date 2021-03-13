@@ -15,22 +15,42 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <nav>
-        <input type="checkbox" id="nav-toggle" />
-        <label for="nav-toggle" class="burger-menu">
-          <img src="./img/logos/burger.jpg" width="35px" alt="" />
-        </label>
+        <!-- in case of small screens, show a dropdown -->
+        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
+        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
 
         <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li class="active">
-            <a href="code-of-conduct.html">Code of Conduct</a>
+          <li>
+            <a class="nav-logo" href="https://realdevsquad.com/"
+              ><img
+                class="nav-logo-img"
+                src="./img/logos/Real-Dev-Squad@1x.png"
+                alt="Real Dev Squad logo"
+            /></a>
+            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
           </li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="discord.html">Discord</a></li>
+          <li>
+            <a class="active" href="https://welcome.realdevsquad.com/"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
+          <li><a href="https://members.realdevsquad.com/">Members</a></li>
+          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
+          <li><a href="https://status.realdevsquad.com/">Status</a></li>
         </ul>
+
+        <div class="login-btn">
+          <a
+            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+          >
+            Login
+          </a>
+        </div>
       </nav>
     </header>
 
