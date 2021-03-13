@@ -41,6 +41,11 @@ Clone your forked repository, this will download your copy of repository in your
 git clone <link which you copied in the step 1>
 ```
 
+Once you have cloned the repository, now you should go into the folder containing the repository. You can do that with:
+```
+cd website-welcome
+```
+
 3. **Adding remote repository**
 
 Add the Real Dev Squad repository as a remote repository, so that you can anytime pull the latest changes from the Real Dev Squad repository which is being deployed. This needs to be done only for the first time.

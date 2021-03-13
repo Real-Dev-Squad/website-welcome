@@ -13,7 +13,13 @@
         "tags": ["minus"]
       },
       "attrs": [{}],
-      "properties": { "order": 2, "id": 1, "name": "minus", "prevSize": 32, "code": 59648 },
+      "properties": {
+        "order": 2,
+        "id": 1,
+        "name": "minus",
+        "prevSize": 32,
+        "code": 59648
+      },
       "setIdx": 0,
       "setId": 0,
       "iconIdx": 0
@@ -30,7 +36,13 @@
         "tags": ["plus"]
       },
       "attrs": [{}],
-      "properties": { "order": 3, "id": 0, "name": "plus", "prevSize": 32, "code": 59649 },
+      "properties": {
+        "order": 3,
+        "id": 0,
+        "name": "plus",
+        "prevSize": 32,
+        "code": 59649
+      },
       "setIdx": 0,
       "setId": 0,
       "iconIdx": 1
@@ -56,7 +68,13 @@
       "showMetadata": true,
       "showVersion": true
     },
-    "imagePref": { "prefix": "icon-", "png": true, "useClassSelector": true, "color": 0, "bgColor": 16777215 },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215
+    },
     "historySize": 50
   }
 }
