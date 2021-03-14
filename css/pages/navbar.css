@@ -27,13 +27,12 @@ nav li a {
   color: #ffffff;
   font-weight: bolder;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px 14px 14px;
   text-decoration: none;
 }
 
 nav li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #87d870;
 }
 
 .active {
@@ -48,7 +47,7 @@ nav li a:hover {
   letter-spacing: 2px;
   top: 0px;
   right: 8px;
-  padding: 14px 16px;
+  padding: 24px 16px 14px;
 }
 
 .login-btn a {
@@ -64,8 +63,8 @@ nav .menu {
   align-self: center;
 }
 .nav-logo-img {
-  width: 35px;
-  height: 35px;
+  width: 60px;
+  height: 60px;
 }
 .nav-logo {
   padding: 5px 8px;
