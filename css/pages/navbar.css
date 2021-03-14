@@ -44,21 +44,19 @@ nav li a:hover {
   position: absolute;
   text-align: right;
   font-weight: bold;
+  color: #ffffff;
   letter-spacing: 2px;
   top: 0px;
   right: 8px;
   padding: 14px 16px;
 }
+
 .login-btn a {
   display: block;
   border-radius: 0.5rem;
   color: #ffffff;
   font-weight: bolder;
   text-decoration: none;
-}
-.login-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
 }
 
 nav .menu {
