@@ -66,6 +66,8 @@ export default class SignupController extends Controller {
       errorMessage: 'Username is required',
       required: true,
       showError: false,
+      validator: this.userNameValidator,
+      helpMsg: `Your username should start with your first name having first letter capital. Spaces are are not allowed but hyphens are. Example: If your name is John Doe, then your username can be 'John-doe'`,
     },
     {
       id: 'email',
@@ -152,6 +154,14 @@ export default class SignupController extends Controller {
     },
   ];
 
+  timerId = undefined;
+
+  //Debounce Function
+  debounce(func, delay) {
+    clearTimeout(this.timerId);
+    this.timerId = setTimeout(func, delay);
+  }
+
   @action handleFieldChange(name, value) {
     const index = this.fields.findIndex((field) => field.id === name);
     set(this.formData, name, value);
@@ -175,6 +185,38 @@ export default class SignupController extends Controller {
     } else {
       this.isSubmitDisabled = false;
     }
+  }
+
+  async checkUserName(userName) {
+    if (!userName) {
+      return set(this.fields[2], 'errorMessage', 'Username cannot be empty');
+    }
+    try {
+      const response = await fetch(
+        `${BASE_URL}/users/isUsernameAvailable/${userName}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
+        }
+      );
+      const data = await response.json();
+      const { isUsernameAvailable } = data;
+      set(this.fields[2], 'showError', !isUsernameAvailable);
+      set(
+        this.fields[2],
+        'errorMessage',
+        `${userName} is not available, Choose another username!`
+      );
+    } catch (error) {
+      console.error('Error : ', error);
+    }
+  }
+
+  @action async userNameValidator(userName) {
+    this.debounce(() => this.checkUserName(userName), 500);
   }
 
   @action phoneNumberValidator(phone) {
@@ -238,6 +280,8 @@ export default class SignupController extends Controller {
       }
     } catch (error) {
       console.error('Error : ', error);
+    } finally {
+      this.isSubmitClicked = false;
     }
   }
 }

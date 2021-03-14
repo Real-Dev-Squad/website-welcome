@@ -14,8 +14,9 @@
       @errorMessage={{field.errorMessage}}
       @required={{field.required}}
       @showError={{field.showError}}
+      @helpMsg={{field.helpMsg}}
       @onChange={{this.handleFieldChange}}
-      {{!-- @validator={{field.validator}} --}}
+      @validator={{field.validator}}
     />
     {{/let}}
   {{/each}}
