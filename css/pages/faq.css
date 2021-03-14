@@ -67,14 +67,13 @@ h1 {
 .faq-btn {
   height: 25px;
   width: 25px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   background: transparent;
-  color:#041187;
-  border:1px solid #e30062;
+  color: #041187;
+  border: 1px solid #e30062;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .faq__list {
