@@ -67,7 +67,7 @@ export default class SignupController extends Controller {
       required: true,
       showError: false,
       validator: this.userNameValidator,
-      helpMsg: `Your username should start with your first name having first letter capital. Spaces are are not allowed but hyphens are. Example: If your name is John Doe, then your username can be 'John-doe'`,
+      helpMsg: `Your username should start with your first name. Spaces are are not allowed but hyphens are. Example: If your name is John Doe, then your username can be 'john' or 'john-doe'`,
     },
     {
       id: 'email',
@@ -192,8 +192,9 @@ export default class SignupController extends Controller {
       return set(this.fields[2], 'errorMessage', 'Username cannot be empty');
     }
     try {
+      const lowerCaseUsername = userName.toLowerCase();
       const response = await fetch(
-        `${BASE_URL}/users/isUsernameAvailable/${userName}`,
+        `${BASE_URL}/users/isUsernameAvailable/${lowerCaseUsername}`,
         {
           method: 'GET',
           headers: {
@@ -262,6 +263,7 @@ export default class SignupController extends Controller {
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
     const cleanReqObject = this.removeEmptyFields(this.formData);
+    cleanReqObject.username = cleanReqObject.username.toLowerCase();
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
