@@ -92,7 +92,7 @@ export default class SignupController extends Controller {
       showError: false,
     },
     {
-      id: 'company_name',
+      id: 'company',
       label: 'Company Name / College Name (Optional)',
       type: 'text',
       errorMessage: '',

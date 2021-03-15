@@ -12,7 +12,7 @@ module('Integration | Component | form-input', function (hooks) {
 
     await render(hbs`<FormInput />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), ':');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | form-input', function (hooks) {
       </FormInput>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), ':');
   });
 });
