@@ -22,9 +22,11 @@ https://welcome.realdevsquad.com/code-of-conduct.html
 
 # Running the project
 
+- Kindly refer this before you start : https://github.com/Real-Dev-Squad/website-welcome/blob/develop/CONTRIBUTING.md
+
 - Run `npm install` after opening the repository in your editor. This will install all the necessary packages for the project which are mentioned in the `package.json` file of the project.
 
 # Scripts used in project
 
 - `npm run check` checks the formatting of all the files in the project. This script runs in a pre-commit hook. It will warn about the improper formatting present in the file.
-- `npm run fix` can be run for fixing the formatting before commiting your changes.
+- `npm run fix` can be run for fixing the formatting before commiting your changes or to solve the formatting errors one may get while commiting the changes.
