@@ -4,7 +4,7 @@
     @id={{@id}}
     @type={{@type}}
     @value={{@value}}
-    @placeholder=""
+    @placeholder={{@placeholder}}
     @class={{if @showError 'input errorBorder' 'input'}}
     {{on 'input' (fn this.inputFieldChanged)}}
   />
