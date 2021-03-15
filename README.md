@@ -27,4 +27,4 @@ https://welcome.realdevsquad.com/code-of-conduct.html
 # Scripts used in project
 
 - `npm run check` checks the formatting of all the files in the project. This script runs in a pre-commit hook. It will warn about the improper formatting present in the file.
-- `npm run fix` can be run for fixing the formatting before commiting your changes. 
+- `npm run fix` can be run for fixing the formatting before commiting your changes.
