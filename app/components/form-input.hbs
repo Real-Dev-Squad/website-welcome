@@ -8,6 +8,9 @@
     @class={{if @showError 'input errorBorder' 'input'}}
     {{on 'input' (fn this.inputFieldChanged)}}
   />
+   {{#if @helpMsg}}
+    <em class="help-msg">{{@helpMsg}}</em>
+   {{/if}}
   {{#if @showError}}
     <p class="error">{{@errorMessage}}</p>
   {{/if}}
