@@ -142,7 +142,7 @@ git push origin <branch-name>
 
 For example, if the branch name is `feat/login-form`, we enter `git push origin feat/login-form`
 
-The **origin** refers to your GitHub fork. You can check it by entering `git remote -v`, you should the link to your fork against **origin**.
+The **origin** refers to your GitHub fork. You can check it by entering `git remote -v`, you should see the link to your fork against **origin**.
 
 10. **Making a pull request**
 
