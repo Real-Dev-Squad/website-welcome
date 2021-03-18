@@ -91,6 +91,9 @@ nav .menu {
     font-size: 25px;
     line-height: 0;
   }
+  .login-btn{
+    top: -10px;
+  }
   .nav-logo {
     display: none;
   }
@@ -116,6 +119,7 @@ nav .menu {
   .menu {
     display: none;
   }
+
 }
 
 li.active a {
