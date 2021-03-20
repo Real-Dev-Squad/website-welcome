@@ -11,6 +11,9 @@ faqTitles.forEach((faqTitle) => {
     faqTitle.classList.toggle("show");
     const faqText = faqTitle.nextElementSibling;
     if (faqTitle.classList.contains("show")) {
+      faqTitles.forEach((faqTitle) => {
+        faqTitle.childNodes[3].innerHTML = "+";  
+      });
       faqTitle.childNodes[3].innerHTML = "-";
       faqText.style.maxHeight = faqText.scrollHeight + "px";
     } else {
