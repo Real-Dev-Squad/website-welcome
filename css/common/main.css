@@ -17,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -27,9 +26,14 @@ img {
 }
 
 .container {
-  max-width: 750px;
-  padding: 0 15px;
+   padding: 0 15px;
   margin: 0 auto;
+}
+
+@media (min-width: 1200px){
+.container{
+    max-width: 1140px;
+}
 }
 
 .text-center {
@@ -127,18 +131,21 @@ footer {
 footer a {
   color: blue;
 }
+.col-6{
+  padding: 0 15px;
+}
+.col-6{
+  max-width: 50%;
+  flex : 0 0 50%;
 
+}
 @media (min-width: 420px) {
   .cta-button {
     font-size: 1.7em;
   }
 }
 
-@media screen and (min-width: 750px) {
-  .container {
-    width: 750px;
-  }
-}
+
 .cta-button:hover {
   background-color: #030c4c;
   transition: background-color 0.2s ease-in;
@@ -155,4 +162,6 @@ footer a {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+.channel-info{
+  margin-left: 15px;
+}
