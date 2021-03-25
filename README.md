@@ -30,3 +30,5 @@ https://welcome.realdevsquad.com/code-of-conduct.html
 
 - `npm run check` checks the formatting of all the files in the project. This script runs in a pre-commit hook. It will warn about the improper formatting present in the file.
 - `npm run fix` can be run for fixing the formatting before commiting your changes or to solve the formatting errors one may get while commiting the changes.
+
+### Note: If you get CORS error for API calls during development, please consider reading [this](https://github.com/Real-Dev-Squad/website-code-docs/tree/main/docs/dev/https-dev-url-cors) documentation.
