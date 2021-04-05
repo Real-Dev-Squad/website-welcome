@@ -284,7 +284,6 @@ export default class SignupController extends Controller {
       }
     } catch (error) {
       console.error('Error : ', error);
-
     } finally {
       this.isSubmitClicked = false;
     }
