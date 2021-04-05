@@ -45,6 +45,7 @@ export default class SignupController extends Controller {
       id: 'first_name',
       label: 'First Name',
       type: 'text',
+      placeholder: 'Darth',
       errorMessage: 'First name is required',
       required: true,
       showError: false,
@@ -53,6 +54,7 @@ export default class SignupController extends Controller {
       id: 'last_name',
       label: 'Last Name',
       type: 'text',
+      placeholder: 'Vader',
       errorMessage: 'Last name is required',
       required: true,
       showError: false,
@@ -61,41 +63,47 @@ export default class SignupController extends Controller {
       id: 'username',
       label: 'Username for Real Dev Squad',
       type: 'text',
+      placeholder: 'e.g anakin, or some other unique username',
       errorMessage: 'Username is required',
       required: true,
       showError: false,
+      validator: this.userNameValidator,
+      helpMsg: `Your username should start with your first name. Spaces are are not allowed but hyphens are. Example: If your name is John Doe, then your username can be 'john' or 'john-doe'`,
     },
     {
       id: 'email',
       label: 'Email',
       type: 'email',
+      placeholder: 'lukespapa@gmail.com',
       errorMessage: 'Valid Email is required',
       required: true,
       showError: false,
       validator: this.emailValidator,
     },
-    {
-      id: 'phone',
-      label: 'Phone Number (Optional)',
-      type: 'string',
-      value: '+91-',
-      errorMessage: 'Enter a valid phone number',
-      required: false,
-      showError: false,
-      validator: this.phoneValidator,
-    },
+    // {
+    //   id: 'phone',
+    //   label: 'Phone Number (Optional)',
+    //   type: 'string',
+    //   value: '+91-',
+    //   errorMessage: 'Enter a valid phone number',
+    //   required: false,
+    //   showError: false,
+    //   validator: this.phoneValidator,
+    // },
     {
       id: 'yoe',
       label: 'Years of Experience',
       type: 'number',
+      placeholder: 'How many years have you worked?',
       errorMessage: 'Number of years of experience is required',
       required: true,
       showError: false,
     },
     {
-      id: 'company_name',
+      id: 'company',
       label: 'Company Name / College Name (Optional)',
       type: 'text',
+      placeholder: 'Where do you currently work? Death Star? Rebel Base?',
       errorMessage: '',
       required: false,
       showError: false,
@@ -103,6 +111,7 @@ export default class SignupController extends Controller {
     {
       id: 'designation',
       label: 'Designation (Optional)',
+      placeholder: 'Supreme Commander',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -111,6 +120,7 @@ export default class SignupController extends Controller {
     {
       id: 'linkedin_id',
       label: 'LinkedIn ID (Not the full URL)',
+      placeholder: 'anakin-skywalker-007 i.e just the ID part',
       type: 'text',
       errorMessage: 'LinkedIn username is required',
       required: true,
@@ -119,6 +129,7 @@ export default class SignupController extends Controller {
     {
       id: 'instagram_id',
       label: 'Instagram ID (Optional)',
+      placeholder: 'ForceWielder77',
       type: 'text',
       errorMessage: '',
       required: false,
@@ -127,6 +138,7 @@ export default class SignupController extends Controller {
     {
       id: 'twitter_id',
       label: 'Twitter username (Not the full URL)',
+      placeholder: 'anakin7',
       type: 'text',
       errorMessage: 'Twitter handle is required',
       required: true,
@@ -135,12 +147,21 @@ export default class SignupController extends Controller {
     {
       id: 'website',
       label: 'Website (Optional)',
+      placeholder: 'Your portfolio website if any. e.g mysonisajedi.com',
       type: 'text',
       errorMessage: '',
       required: false,
       showError: false,
     },
   ];
+
+  timerId = undefined;
+
+  //Debounce Function
+  debounce(func, delay) {
+    clearTimeout(this.timerId);
+    this.timerId = setTimeout(func, delay);
+  }
 
   @action handleFieldChange(name, value) {
     const index = this.fields.findIndex((field) => field.id === name);
@@ -165,6 +186,39 @@ export default class SignupController extends Controller {
     } else {
       this.isSubmitDisabled = false;
     }
+  }
+
+  async checkUserName(userName) {
+    if (!userName) {
+      return set(this.fields[2], 'errorMessage', 'Username cannot be empty');
+    }
+    try {
+      const lowerCaseUsername = userName.toLowerCase();
+      const response = await fetch(
+        `${BASE_URL}/users/isUsernameAvailable/${lowerCaseUsername}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
+        }
+      );
+      const data = await response.json();
+      const { isUsernameAvailable } = data;
+      set(this.fields[2], 'showError', !isUsernameAvailable);
+      set(
+        this.fields[2],
+        'errorMessage',
+        `${userName} is not available, Choose another username!`
+      );
+    } catch (error) {
+      console.error('Error : ', error);
+    }
+  }
+
+  @action async userNameValidator(userName) {
+    this.debounce(() => this.checkUserName(userName), 500);
   }
 
   @action phoneNumberValidator(phone) {
@@ -211,6 +265,7 @@ export default class SignupController extends Controller {
     e.preventDefault();
     const cleanReqObject = this.removeEmptyFields(this.formData);
     this.isSubmitClicked = true;
+    cleanReqObject.username = cleanReqObject.username.toLowerCase();
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
@@ -229,7 +284,8 @@ export default class SignupController extends Controller {
       }
     } catch (error) {
       console.error('Error : ', error);
-    }finally{
+
+    } finally {
       this.isSubmitClicked = false;
     }
   }
