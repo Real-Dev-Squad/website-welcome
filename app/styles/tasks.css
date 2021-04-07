@@ -15,12 +15,17 @@
 .task-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #f4f4f4;
   border-radius: 10px;
+  box-shadow: 0 0 15px -7px rgba(0,0,0,.65);
   width: 50%;
   margin: auto;
-  padding: 8px;
+  padding: 1rem;
   margin-top: 2em;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
 }
 
 .dates-info {
