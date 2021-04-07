@@ -1,6 +1,6 @@
 <div class="task-card">
   <Task-Details @task={{@task}} />
-  <div class="status-container">
+  <div class="task-card__status">
     {{#if (eq @task.status "active")}}
       <select name="percentage-complete" id="percentCompleted" {{on "change" this.onPercentageChange}}>
         <option value="">Percentage Completed</option>
@@ -16,10 +16,10 @@
       {{/each}}
     </select>
   </div>
-  <div class="update-task__btn">
+  <div class="task-card__btn">
     <button type="button" {{on "click" (fn @onTaskUpdate @task.id)}}>Update Task</button>
   </div>
-  <div class="progress-bar__container">
+  <div class="progress-bar-container">
     <div class="progress-bar">
       <div class="bar percent-{{@task.percentCompleted}}">
       </div>

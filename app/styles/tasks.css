@@ -1,9 +1,9 @@
-.tasks-screen_wrapper {
+.tasks-page {
   display: flex;
   color: black;
 }
 
-.task-title {
+.tasks-container__title {
   text-transform: capitalize;
 }
 
@@ -23,7 +23,7 @@
   margin-top: 2em;
 }
 
-.dates-container {
+.dates-info {
   text-align: center;
 }
 
@@ -85,26 +85,26 @@
 
 /* Status Container */
 
-.status-container {
+.task-card__status {
   display: flex;
   justify-content: space-evenly;
   padding: 16px 0;
 }
 
-.status-container select {
+.task-card__status select {
   padding: 4px;
   border-radius: 5px;
   cursor: pointer;
   text-transform: capitalize;
 }
 
-.update-task__btn button {
+.task-card__btn button {
   cursor: pointer;
   padding: 4px;
   border-radius: 5px;
 }
 
-.task-title, .task-purpose, .started-on {
+.task-details__title, .task-details__purpose, .dates-info__start {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -112,7 +112,7 @@
 
 
 @media screen and (max-width: 800px) {
-  .tasks-screen_wrapper {
+  .tasks-page {
     flex-direction: column;
     align-items: center;
   }
@@ -122,7 +122,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .status-container{
+  .task-card__status{
     flex-direction: column;
   }
 }

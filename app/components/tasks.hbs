@@ -1,7 +1,7 @@
 <div class="tasks-container">
-  <h2 class="task-title">{{@tasksToShow.[0].status}} Tasks</h2>
+  <h2 class="tasks-container__title">{{@tasksToShow.[0].status}} Tasks</h2>
   {{#each @tasksToShow as |task|}}
-    <div class="tasks-details">
+    <div class="tasks-container__details">
       <Task::Holder
         @task={{task}}
         @onTaskChange={{@onTaskChange}}

@@ -1,8 +1,8 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import ENV from 'website-my/config/environment';
+import TASK_STATUS from 'website-my/constants/tasks';
 
-const { ACTIVE, BLOCKED, COMPLETED, PENDING } = ENV.TASK_STATUS;
+const { ACTIVE, BLOCKED, COMPLETED, PENDING } = TASK_STATUS;
 
 export default class TasksHolderComponent extends Component {
   @action

@@ -2,9 +2,10 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
 import ENV from 'website-my/config/environment';
+import TASK_STATUS from 'website-my/constants/tasks';
 
 const API_BASE_URL = ENV.BASE_API_URL;
-const { ACTIVE, BLOCKED, COMPLETED, PENDING } = ENV.TASK_STATUS;
+const { ACTIVE, BLOCKED, COMPLETED, PENDING } = TASK_STATUS;
 
 export default class TasksController extends Controller {
   @tracked showDropDown = false;

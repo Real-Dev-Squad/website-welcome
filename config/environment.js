@@ -25,13 +25,6 @@ module.exports = function (environment) {
 
   ENV.BASE_API_URL = 'https://api.realdevsquad.com';
 
-  ENV.TASK_STATUS = {
-    ACTIVE: 'active',
-    BLOCKED: 'blocked',
-    COMPLETED: 'completed',
-    PENDING: 'pending',
-  };
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

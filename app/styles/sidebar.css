@@ -28,7 +28,7 @@
   color: white;
 }
 
-.dropdown-btn {
+.sidebar__dropdown-btn {
   height: auto;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -43,16 +43,16 @@
   outline: none;
 }
 
-.dropdown-container {
+.sidebar__dropdown-container {
   padding-left: 8px;
   height: auto;
 }
 
-.dropdown-container.close {
+.sidebar__dropdown-container.close {
   display: none;
 }
 
-.dropdown-container.show {
+.sidebar__dropdown-container.show {
   display: block;
 }
 
