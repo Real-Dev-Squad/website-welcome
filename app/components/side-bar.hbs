@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <button class="sidebar__dropdown-btn" type="button" {{on "click" @toggleDropDown}}>Tasks 
+  <FaIcon @icon="caret-down" @fixedWidth={{true}} />  </button>
+  <div class="sidebar__dropdown-container {{if @showDropDown "show" "close"}}">
+    {{#each @taskStatusList as |status|}}
+      <a href="#" {{on "click" (fn @toggleTasks status)}}>{{status}}</a>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,133 @@
+.tasks-page {
+  display: flex;
+  color: black;
+}
+
+.tasks-container__title {
+  text-transform: capitalize;
+}
+
+.tasks-container {
+  padding: 8px;
+  width: 80%;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 15px -7px rgba(0,0,0,.65);
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 2em;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+}
+
+.dates-info {
+  text-align: center;
+}
+
+/* progress bar */
+
+.progress-bar {
+  background-color: #BFADA3;
+  height: 15px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+  margin-top: 16px;
+  position: relative;
+}
+
+.percent-20 {
+  width: 20%;
+}
+
+.percent-40 {
+  width: 40%;
+}
+
+.percent-60 {
+  width: 60%;
+}
+
+.percent-80 {
+  width: 80%;
+}
+
+.bar {
+  height: 100%;
+  background-color: #041484;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .2) 50%,
+    rgba(255, 255, 255, .2) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 30px 30px;
+  animation: move 2s linear infinite;
+  box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+  transition: width 2s ease-out;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+/* Status Container */
+
+.task-card__status {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px 0;
+}
+
+.task-card__status select {
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.task-card__btn button {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.task-details__title, .task-details__purpose, .dates-info__start {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .tasks-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .task-card{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .task-card__status{
+    flex-direction: column;
+  }
+}

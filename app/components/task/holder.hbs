@@ -1,0 +1,28 @@
+<div class="task-card">
+  <Task-Details @task={{@task}} />
+  <div class="task-card__status">
+    {{#if (eq @task.status "active")}}
+      <select name="percentage-complete" id="percentCompleted" {{on "change" this.onPercentageChange}}>
+        <option value="">Percentage Completed</option>
+        {{#each this.availablePercentOptions as |percent| }}
+          <option value={{percent}}>{{percent}}</option>
+        {{/each}}
+      </select>
+    {{/if}}
+    <select name="task-status" id="status" {{on "change" this.onStatusChange}}>
+      <option value="">status</option>
+      {{#each this.availableStatusOptions as |status| }}
+          <option value={{status}}>{{status}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="task-card__btn">
+    <button type="button" {{on "click" (fn @onTaskUpdate @task.id)}}>Update Task</button>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar">
+      <div class="bar percent-{{@task.percentCompleted}}">
+      </div>
+    </div>
+  </div>
+</div>
