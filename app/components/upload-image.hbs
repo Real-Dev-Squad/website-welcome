@@ -14,12 +14,13 @@
       type="file"
       id="image"
       accept="image/png, image/jpeg"
+      disabled={{this.isImageUploading}}
       {{on 'change' this.handelBrowseImage}}
     />
     <p>
       or
     </p>
-    <label class="image-form__button" for="image">
+    <label class="image-form__button {{if this.isImageUploading "image-form__button_disabled"}}" for="image">
       Browse
     </label>
   </form>
@@ -32,7 +33,11 @@
     disabled={{this.isImageUploading}}
     {{on 'click' this.onSubmit}}
   >
+  {{#if this.isImageUploading}}
+    <Spinner />
+  {{else}}
     Upload
+  {{/if}}
   </button>
   <p
     class="{{if
@@ -44,3 +49,4 @@
     {{this.statusMessage}}
   </p>
 {{/if}}
+

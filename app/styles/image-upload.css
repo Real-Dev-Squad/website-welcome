@@ -19,7 +19,7 @@
 }
 
 .image-form__text {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 10px 0;
 }
 
@@ -28,10 +28,14 @@
   padding: 10px;
   background: #ccc;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin: 10px 0;
+}
+
+.image-form__button_disabled {
+  background: #ddd;
 }
 
 .image-form__button:hover {
@@ -52,19 +56,19 @@
 .upload-button {
   display: block;
   margin: 10px auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 5px;
   font-weight: 600;
 }
 
 .message-text__success {
   color: green;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bolder;
 }
 .message-text__failure {
   color: red;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bolder;
 }
 
