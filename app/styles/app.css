@@ -1,5 +1,6 @@
 @import "signup.css";
 @import "notification.css";
+@import "image-upload.css";
 
 body {
   font-family: "Roboto", sans-serif, serif;
@@ -11,4 +12,3 @@ body {
   margin: 0;
   padding: 0;
 }
- 

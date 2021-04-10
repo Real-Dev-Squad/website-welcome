@@ -1,0 +1,46 @@
+<div
+  class="drop-area {{if this.overDropZone 'drop-area__highlight'}}"
+  {{on 'drop' this.handleDrop}}
+  {{on 'dragover' this.handleDragOver}}
+  {{on 'dragenter' this.handleDragEnter}}
+  {{on 'dragleave' this.handleDragLeave}}
+>
+  <form class="image-form">
+    <p class="image-form__text">
+      Drag and drop file here
+    </p>
+    <input
+      class="image-form__input"
+      type="file"
+      id="image"
+      accept="image/png, image/jpeg"
+      {{on 'change' this.handelBrowseImage}}
+    />
+    <p>
+      or
+    </p>
+    <label class="image-form__button" for="image">
+      Browse
+    </label>
+  </form>
+</div>
+{{#if this.isImageSelected}}
+  <img class="image-preview" src="{{this.image}}" alt="preview" />
+  <button
+    class="upload-button"
+    type="button"
+    disabled={{this.isImageUploading}}
+    {{on 'click' this.onSubmit}}
+  >
+    Upload
+  </button>
+  <p
+    class="{{if
+        this.imageUploadSuccess
+        'message-text__success'
+        'message-text__failure'
+      }}"
+  >
+    {{this.statusMessage}}
+  </p>
+{{/if}}

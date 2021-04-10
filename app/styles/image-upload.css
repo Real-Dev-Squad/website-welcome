@@ -1,0 +1,80 @@
+.drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 480px;
+  font-family: sans-serif;
+  margin: 100px auto;
+  padding: 20px;
+  transition: 0.3s ease-out;
+}
+
+.drop-area__highlight {
+  border-color: purple;
+  background-color: gainsboro;
+  transition: background-color 0.5s ease-in;
+}
+
+.image-form {
+  margin-bottom: 10px;
+}
+
+.image-form__text {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.image-form__button {
+  display: inline-block;
+  padding: 10px;
+  background: #ccc;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.image-form__button:hover {
+  background: #ddd;
+}
+
+.image-form__input {
+  display: none;
+}
+
+.image-preview {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  border: solid black;
+}
+
+.upload-button {
+  display: block;
+  margin: 10px auto;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.message-text__success {
+  color: green;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.message-text__failure {
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .drop-area {
+    width: auto;
+    margin: 20px;
+  }
+
+  .image-preview {
+    width: 90%;
+  }
+}
