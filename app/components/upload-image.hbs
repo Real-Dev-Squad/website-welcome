@@ -1,52 +1,61 @@
-<div
-  class="drop-area {{if this.overDropZone 'drop-area__highlight'}}"
-  {{on 'drop' this.handleDrop}}
-  {{on 'dragover' this.handleDragOver}}
-  {{on 'dragenter' this.handleDragEnter}}
-  {{on 'dragleave' this.handleDragLeave}}
->
-  <form class="image-form">
-    <p class="image-form__text">
-      Drag and drop file here
-    </p>
-    <input
-      class="image-form__input"
-      type="file"
-      id="image"
-      accept="image/png, image/jpeg"
+<div class="image-upload">
+  <div
+    class="drop-area {{if this.overDropZone 'drop-area__highlight'}}"
+    {{on 'drop' this.handleDrop}}
+    {{on 'dragover' this.handleDragOver}}
+    {{on 'dragenter' this.handleDragEnter}}
+    {{on 'dragleave' this.handleDragLeave}}
+  >
+    <form class="image-form">
+      <p class="image-form__text">
+        {{#if this.isImageSelected}}
+          You have selected{{this.imageFileName}}
+        {{else}}
+          Drag and drop file here
+          <p class="image-form__text">
+            or
+          </p>
+        {{/if}}
+      </p>
+      <input
+        class="image-form__input"
+        type="file"
+        id="image"
+        accept="image/png, image/jpeg"
+        disabled={{this.isImageUploading}}
+        {{on 'change' this.handelBrowseImage}}
+      />
+      <label
+        class="image-form__button
+          {{if this.isImageUploading 'image-form__button_disabled'}}"
+        for="image"
+      >
+        Browse
+      </label>
+    </form>
+  </div>
+  {{#if this.isImageSelected}}
+    <img class="image-preview" src="{{this.image}}" alt="preview" />
+    <button
+      class="upload-button"
+      type="button"
       disabled={{this.isImageUploading}}
-      {{on 'change' this.handelBrowseImage}}
-    />
-    <p>
-      or
+      {{on 'click' this.onSubmit}}
+    >
+      {{#if this.isImageUploading}}
+        <Spinner />
+      {{else}}
+        Upload
+      {{/if}}
+    </button>
+    <p
+      class="{{if
+          this.imageUploadSuccess
+          'message-text__success'
+          'message-text__failure'
+        }}"
+    >
+      {{this.statusMessage}}
     </p>
-    <label class="image-form__button {{if this.isImageUploading "image-form__button_disabled"}}" for="image">
-      Browse
-    </label>
-  </form>
-</div>
-{{#if this.isImageSelected}}
-  <img class="image-preview" src="{{this.image}}" alt="preview" />
-  <button
-    class="upload-button"
-    type="button"
-    disabled={{this.isImageUploading}}
-    {{on 'click' this.onSubmit}}
-  >
-  {{#if this.isImageUploading}}
-    <Spinner />
-  {{else}}
-    Upload
   {{/if}}
-  </button>
-  <p
-    class="{{if
-        this.imageUploadSuccess
-        'message-text__success'
-        'message-text__failure'
-      }}"
-  >
-    {{this.statusMessage}}
-  </p>
-{{/if}}
-
+</div>

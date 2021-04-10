@@ -5,22 +5,19 @@ import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | upload-image', function (hooks) {
   setupRenderingTest(hooks);
-
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<UploadImage />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <UploadImage>
-        template block text
-      </UploadImage>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    // Set upload url
+    this.set('uploadUrl', 'http://localhost:3000/test');
+    this.set('formDataKeyName', 'profile');
+    await render(
+      hbs`<UploadImage @uploadUrl={{this.uploadUrl}}  @formKeyName = {{this.formDataKeyName}}/>`
+    );
+    assert.dom('.image-upload').exists();
+    assert.dom('.image-upload').hasText('Drag and drop file here or Browse');
+    assert
+      .dom('.image-form__input')
+      .hasProperty('type', 'file')
+      .hasProperty('id', 'image')
+      .hasProperty('accept', 'image/png, image/jpeg');
   });
 });

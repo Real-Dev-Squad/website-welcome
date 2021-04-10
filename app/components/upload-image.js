@@ -10,7 +10,9 @@ export default class UploadImageComponent extends Component {
   @tracked isImageUploading = false;
   @tracked imageUploadSuccess = false;
   @tracked statusMessage;
+  @tracked imageFileName;
   uploadUrl = this.args.uploadUrl;
+  formKeyName = this.args.formKeyName;
 
   @action handleDrop(e) {
     this.preventDefaults(e);
@@ -21,8 +23,8 @@ export default class UploadImageComponent extends Component {
   }
 
   @action handelBrowseImage(e) {
-    const [imageFile] = e.target.files;
-    this.updateImage(imageFile);
+    const [file] = e.target.files;
+    this.updateImage(file);
     this.setImageSelected(true);
   }
 
@@ -30,8 +32,9 @@ export default class UploadImageComponent extends Component {
     this.setStatusMessage('');
     const reader = new FileReader();
     if (file) {
-      this.updateFormData(file);
+      this.updateFormData(file, this.formKeyName);
       reader.readAsDataURL(file);
+      this.imageFileName = file.name;
     }
     reader.onload = () => {
       const image = reader.result;
@@ -75,7 +78,7 @@ export default class UploadImageComponent extends Component {
       .catch((err) => {
         this.setImageUploadSuccess(false);
         this.setStatusMessage(
-          'Error occured, please try again later or contact administrator. Create a issue on the repo with logs'
+          'Error occured, please try again and if the issue still exists contact administrator and create a issue on the repo with logs'
         );
         console.error(err);
       })
@@ -84,9 +87,9 @@ export default class UploadImageComponent extends Component {
       });
   }
 
-  updateFormData(file) {
+  updateFormData(file, key) {
     const formData = new FormData();
-    formData.append('profile', file);
+    formData.append(key, file);
     this.formData = formData;
   }
 

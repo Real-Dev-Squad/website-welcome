@@ -7,11 +7,7 @@ module('Integration | Component | spinner', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Spinner />`);
-
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
@@ -20,7 +16,10 @@ module('Integration | Component | spinner', function (hooks) {
         template block text
       </Spinner>
     `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), '');
+    assert.dom('.fa').exists();
+    assert.dom('.fa').hasNoText();
+    assert.dom('.fa-spinner').exists();
+    assert.dom('.fa-spin').exists();
   });
 });
