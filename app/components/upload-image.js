@@ -61,7 +61,7 @@ export default class UploadImageComponent extends Component {
     this.uploadImage(this.formData);
   }
 
-  async uploadImage(data) {
+  uploadImage(data) {
     const url = this.uploadUrl;
     this.setImageUploading(true);
     fetch(`${url}`, {
