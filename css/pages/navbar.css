@@ -39,7 +39,7 @@ nav li a:hover {
   color: #87d870;
 }
 
-.login-btn {
+.user-self-info {
   position: absolute;
   text-align: right;
   font-weight: bold;
@@ -50,8 +50,9 @@ nav li a:hover {
   padding: 24px 16px 14px;
 }
 
-.login-btn a {
+.user-self-info .login-btn a {
   display: block;
+  float: right;
   border-radius: 0.5rem;
   color: #ffffff;
   font-weight: bolder;
@@ -123,4 +124,58 @@ nav .menu {
 
 li.active a {
   color: white;
+}
+
+.user-self-info img {
+  width: 3em;
+  height: 3em;
+  float: left;
+  border-radius: 50%;
+}
+
+.content-wrapper {
+  margin: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-inline-start: 80%;
+}
+
+nav .login-btn {
+  margin-top: 25px;
+  font-size: 25px;
+  float: right;
+}
+
+nav .login-btn-text {
+  font-size: 22px;
+  border-radius: 6px;
+  padding: 0.3rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+nav .logo {
+  width: 15px;
+  height: 15px;
+}
+
+nav .user-profile-pic {
+  font-size: 20px;
+  margin-top: 10px;
+  width: 3em;
+  height: 3em;
+  float: left;
+  border-radius: 50%;
+}
+nav .user-greet-msg {
+  display: none;
+  font-size: 18px;
+  margin-top: 10px;
+  font-size: 1em;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px;
 }
