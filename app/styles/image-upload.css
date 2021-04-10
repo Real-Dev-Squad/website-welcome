@@ -40,7 +40,7 @@
   margin: 10px 0;
 }
 
-.image-form__button_disabled {
+.image-form__button--disabled {
   background: #ddd;
 }
 

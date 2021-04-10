@@ -15,14 +15,14 @@ export default class UploadImageComponent extends Component {
   formKeyName = this.args.formKeyName;
 
   @action handleDrop(e) {
-    this.preventDefaults(e);
+    this.preventDefaults(e); // This is used to prevent opening of image in new tab while drag and drop
     const [file] = e.dataTransfer.files;
     this.updateImage(file);
     this.setImageSelected(true);
     this.setOverDropZone(false);
   }
 
-  @action handelBrowseImage(e) {
+  @action handleBrowseImage(e) {
     const [file] = e.target.files;
     this.updateImage(file);
     this.setImageSelected(true);
@@ -73,7 +73,7 @@ export default class UploadImageComponent extends Component {
         const status = res.status;
         const data = await res.json();
         const message = data.message;
-        this.handelResponseStatusMessage(status, message);
+        this.handleResponseStatusMessage(status, message);
       })
       .catch((err) => {
         this.setImageUploadSuccess(false);
@@ -93,7 +93,7 @@ export default class UploadImageComponent extends Component {
     this.formData = formData;
   }
 
-  handelResponseStatusMessage(status, message) {
+  handleResponseStatusMessage(status, message) {
     if (status === 200) {
       this.setImageUploadSuccess(true);
     } else {

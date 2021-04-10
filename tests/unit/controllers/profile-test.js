@@ -1,12 +1,12 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('Unit | Controller | upload-image', function (hooks) {
+module('Unit | Controller | profile', function (hooks) {
   setupTest(hooks);
 
   // TODO: Replace this with your real tests.
   test('it exists', function (assert) {
-    let controller = this.owner.lookup('controller:upload-image');
+    let controller = this.owner.lookup('controller:profile');
     assert.ok(controller);
     assert.equal(
       controller.imageUploadUrl,

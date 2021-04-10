@@ -12,26 +12,26 @@
           You have selected{{this.imageFileName}}
         {{else}}
           Drag and drop file here
-          <p class="image-form__text">
+          <span class="image-form__text">
             or
-          </p>
+          </span>
         {{/if}}
       </p>
+      <label
+        class="image-form__button
+          {{if this.isImageUploading 'image-form__button--disabled'}}"
+        for="image"
+      >
+        Browse
+      </label>
       <input
         class="image-form__input"
         type="file"
         id="image"
         accept="image/png, image/jpeg"
         disabled={{this.isImageUploading}}
-        {{on 'change' this.handelBrowseImage}}
+        {{on 'change' this.handleBrowseImage}}
       />
-      <label
-        class="image-form__button
-          {{if this.isImageUploading 'image-form__button_disabled'}}"
-        for="image"
-      >
-        Browse
-      </label>
     </form>
   </div>
   {{#if this.isImageSelected}}
