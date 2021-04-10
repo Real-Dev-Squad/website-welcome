@@ -7,6 +7,7 @@ const BASE_URL = ENV.BASE_API_URL;
 
 export default class SignupController extends Controller {
   @tracked isSubmitDisabled = true;
+  @tracked isSubmitClicked = false;
 
   @tracked title = 'Account Details';
   @tracked formData = {
@@ -16,7 +17,7 @@ export default class SignupController extends Controller {
     email: '',
     phone: '',
     yoe: '',
-    company_name: '',
+    company: '',
     designation: '',
     linkedin_id: '',
     instagram_id: '',
@@ -31,7 +32,7 @@ export default class SignupController extends Controller {
     email: false,
     phone: false,
     yoe: false,
-    company_name: false,
+    company: false,
     designation: false,
     linkedin_id: false,
     instagram_id: false,
@@ -263,6 +264,7 @@ export default class SignupController extends Controller {
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
     const cleanReqObject = this.removeEmptyFields(this.formData);
+    this.isSubmitClicked = true;
     cleanReqObject.username = cleanReqObject.username.toLowerCase();
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {

@@ -34,6 +34,9 @@
       type="submit"
       {{on 'click' (fn this.handleSubmit)}}
       >
+      {{#if this.isSubmitClicked}}
+        <i class="fa fa-spinner fa-spin"></i>
+      {{/if}}
         Submit
     </button>
   {{/if}}

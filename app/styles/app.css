@@ -1,6 +1,8 @@
 @import "signup.css";
 @import "notification.css";
 @import "image-upload.css";
+@import "tasks.css";
+@import "sidebar.css";
 
 body {
   font-family: "Roboto", sans-serif, serif;

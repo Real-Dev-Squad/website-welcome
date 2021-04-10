@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('signup');
   this.route('notifications');
   this.route('upload-image');
+  this.route('tasks');
 });
