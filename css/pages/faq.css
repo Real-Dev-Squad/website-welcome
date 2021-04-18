@@ -89,7 +89,7 @@ h1 {
 }
 
 .faq__list li::before {
-  content: "";
+  content: '';
   background: url(../../img/logos/list-icon.png);
   width: 15px;
   height: 15px;

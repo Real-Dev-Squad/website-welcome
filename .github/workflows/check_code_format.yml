@@ -1,5 +1,5 @@
 #  This workflow will run the npm run check script to check if the formatting of the code is correct or not.
-name : Code format check with Prettier
+name: Code format check with Prettier
 on:
   push:
     branches:
@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [14.x]
