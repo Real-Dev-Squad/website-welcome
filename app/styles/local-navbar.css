@@ -1,0 +1,8 @@
+.local-navbar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.local-navbar__link a{
+  text-decoration: none;
+}
