@@ -29,6 +29,7 @@ nav li a {
   text-align: center;
   padding: 24px 14px 14px;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 nav li a:hover {
