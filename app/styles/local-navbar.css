@@ -6,3 +6,7 @@
 .local-navbar__link a{
   text-decoration: none;
 }
+
+.local-navbar__link a:hover{
+  text-decoration: underline;
+}
