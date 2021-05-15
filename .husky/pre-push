@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "\nStarting test's, \nhold on tight\!, let's  hope all goes smooth  ☠ ☠ \n"
+echo "\nStarting test's, \nhold on tight!, let's  hope all goes smooth  ☠ ☠ \n"
 
 npm test
