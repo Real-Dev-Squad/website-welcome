@@ -33,6 +33,8 @@ nav li a {
 
 nav li a:hover {
   color: #87d870;
+  transition-delay: 250ms;
+
 }
 
 .active {
