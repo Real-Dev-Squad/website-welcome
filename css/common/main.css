@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   position: relative;
   font-size: 16px;
@@ -26,14 +26,14 @@ img {
 }
 
 .container {
-   padding: 0 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-@media (min-width: 1200px){
-.container{
+@media (min-width: 1200px) {
+  .container {
     max-width: 1140px;
-}
+  }
 }
 
 .text-center {
@@ -131,20 +131,18 @@ footer {
 footer a {
   color: blue;
 }
-.col-6{
+.col-6 {
   padding: 0 15px;
 }
-.col-6{
+.col-6 {
   max-width: 50%;
-  flex : 0 0 50%;
-
+  flex: 0 0 50%;
 }
 @media (min-width: 420px) {
   .cta-button {
     font-size: 1.7em;
   }
 }
-
 
 .cta-button:hover {
   background-color: #030c4c;
@@ -162,6 +160,6 @@ footer a {
   }
 }
 
-.channel-info{
+.channel-info {
   margin-left: 15px;
 }
