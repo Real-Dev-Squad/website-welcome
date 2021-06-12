@@ -1,11 +1,11 @@
-@import "signup.css";
-@import "notification.css";
-@import "image-upload.css";
-@import "tasks.css";
-@import "sidebar.css";
+@import 'signup.css';
+@import 'notification.css';
+@import 'image-upload.css';
+@import 'tasks.css';
+@import 'sidebar.css';
 
 body {
-  font-family: "Roboto", sans-serif, serif;
+  font-family: 'Roboto', sans-serif, serif;
   font-size: 15px;
 }
 
@@ -13,4 +13,14 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.footer {
+  font-weight: lighter;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  position: fixed;
+  height: 40px;
+  bottom: 0;
 }
