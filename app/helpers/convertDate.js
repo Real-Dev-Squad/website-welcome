@@ -2,7 +2,7 @@ import { helper } from '@ember/component/helper';
 
 const calc = (interval, cycle) => Math.floor(cycle / interval);
 
-function convertDate([timestamp], { timeNow = Date.now() }) {
+const timeDifference = (timestamp, timeNow) => {
   const timeInSec = Math.abs(Math.floor(timeNow - timestamp * 1000) / 1000);
   const mins = calc(60, timeInSec);
   const hours = calc(60, mins);
@@ -39,10 +39,25 @@ function convertDate([timestamp], { timeNow = Date.now() }) {
     result = '';
     cycle = 'few seconds';
   }
+  return { result: result, cycle: cycle };
+};
 
-  if (timestamp * 1000 > timeNow)
-    return `in ${result} ${cycle}${result > 1 ? 's' : ''}`;
-  return `${result} ${cycle}${result > 1 ? 's ago' : ' ago'}`;
+function convertDate([timestamp], { end_date, timeNow = Date.now() }) {
+  if (end_date == 1 && timestamp * 1000 < timeNow) {
+    const time_value = timeDifference(timestamp, timeNow);
+    return `Overdue by ${time_value.result} ${time_value.cycle}${
+      time_value.result > 1 ? 's' : ''
+    }`;
+  } else {
+    const time_value = timeDifference(timestamp, timeNow);
+    if (timestamp * 1000 < timeNow)
+      return `${time_value.result} ${time_value.cycle}${
+        time_value.result > 1 ? 's ago' : ' ago'
+      }`;
+    return `in ${time_value.result} ${time_value.cycle}${
+      time_value.result > 1 ? 's' : ''
+    }`;
+  }
 }
 
 export default helper(convertDate);

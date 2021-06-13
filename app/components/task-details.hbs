@@ -3,10 +3,10 @@
   <p class="task-details__purpose"><b>Purpose: </b>{{@task.purpose}}</p>
   <div class="dates-info">
     <div class="dates-info__end">
-      <p><b>Ends On: </b>{{convertDate @task.endsOn}}</p>
+      <p><b>Deadline: </b>{{convertDate @task.endsOn end_date=1}}</p>
     </div>
     <div class="dates-info__start">
-      <p><b>Started On:</b> {{convertDate @task.startedOn}}</p>
+      <p><b>Started: </b> {{convertDate @task.startedOn end_date=0}}</p>
     </div>
   </div>
 </div>
