@@ -39,7 +39,7 @@ const timeDifference = (timestamp, timeNow) => {
     result = '';
     cycle = 'few seconds';
   }
-  return { result: result, cycle: cycle };
+  return { result, cycle };
 };
 
 function convertDate([timestamp], { end_date, timeNow = Date.now() }) {
