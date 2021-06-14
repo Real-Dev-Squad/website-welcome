@@ -48,16 +48,15 @@ function convertDate([timestamp], { end_date, timeNow = Date.now() }) {
     return `Overdue by ${time_value.result} ${time_value.cycle}${
       time_value.result > 1 ? 's' : ''
     }`;
-  } else {
-    const time_value = timeDifference(timestamp, timeNow);
-    if (timestamp * 1000 < timeNow)
-      return `${time_value.result} ${time_value.cycle}${
-        time_value.result > 1 ? 's ago' : ' ago'
-      }`;
-    return `in ${time_value.result} ${time_value.cycle}${
-      time_value.result > 1 ? 's' : ''
-    }`;
   }
+  const time_value = timeDifference(timestamp, timeNow);
+  if (timestamp * 1000 < timeNow)
+    return `${time_value.result} ${time_value.cycle}${
+      time_value.result > 1 ? 's ago' : ' ago'
+    }`;
+  return `in ${time_value.result} ${time_value.cycle}${
+    time_value.result > 1 ? 's' : ''
+  }`;
 }
 
 export default helper(convertDate);
