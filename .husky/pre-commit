@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "Linting your code, please wait⏳\n"
+echo "Checking for linting problems, please wait⏳\n"
 
 npm run lint
