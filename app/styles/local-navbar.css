@@ -1,6 +1,7 @@
 .local-navbar {
   display: flex;
   justify-content: space-around;
+  margin: 10px;
 }
 
 .local-navbar__link a{
@@ -9,4 +10,14 @@
 
 .local-navbar__link a:hover{
   text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+  .local-navbar {
+    flex-direction: column;
+  }
+
+  .local-navbar__link {
+    margin-top: 10px;
+  }
 }
