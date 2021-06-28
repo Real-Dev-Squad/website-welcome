@@ -66,7 +66,7 @@ export default class UploadImageComponent extends Component {
     this.setImageUploading(true);
     fetch(`${url}`, {
       method: 'POST',
-      credentials: 'same-origin',
+      credentials: 'include',
       body: data,
     })
       .then(async (res) => {
