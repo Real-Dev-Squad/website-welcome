@@ -67,6 +67,10 @@
   font-weight: 600;
 }
 
+.upload-button:hover{
+  cursor: pointer;
+}
+
 .message-text__success {
   color: green;
   font-size: 1.25rem;
