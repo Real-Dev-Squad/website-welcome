@@ -5,15 +5,31 @@
 @import "sidebar.css";
 @import "local-navbar.css";
 
-body {
+html, body {
   font-family: 'Roboto', sans-serif, serif;
   font-size: 15px;
+  height: 100%;
+  background-color: white;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.main-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.greeting {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .footer {
