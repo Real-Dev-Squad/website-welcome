@@ -1,0 +1,25 @@
+.local-navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  box-shadow:0px 1px 1px #b1afb1;
+}
+
+.local-navbar__link a{
+  text-decoration: none;
+}
+
+.local-navbar__link a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+  .local-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .local-navbar__link {
+    margin-top: 10px;
+  }
+}
