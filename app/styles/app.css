@@ -4,6 +4,7 @@
 @import "tasks.css";
 @import "sidebar.css";
 @import "local-navbar.css";
+@import "profile.css";
 
 html, body {
   font-family: 'Roboto', sans-serif, serif;

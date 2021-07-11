@@ -1,6 +1,7 @@
 .tasks-page {
   display: flex;
   color: black;
+  margin-top: 40px;
 }
 
 .tasks-container__title {
@@ -10,6 +11,7 @@
 .tasks-container {
   padding: 8px;
   width: 80%;
+  text-align: center;
 }
 
 .task-card {
