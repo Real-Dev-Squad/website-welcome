@@ -53,7 +53,7 @@ export default class TasksController extends Controller {
     }
     if (taskData.status || taskData.percentCompleted) {
       try {
-        const response = await fetch(`${API_BASE_URL}/tasks/${taskId}`, {
+        const response = await fetch(`${API_BASE_URL}/tasks/self/${taskId}`, {
           method: 'PATCH',
           body: JSON.stringify(taskData),
           headers: {
