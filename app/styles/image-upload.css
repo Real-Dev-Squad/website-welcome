@@ -59,8 +59,11 @@
 .image-preview {
   width: 50%;
   height: auto;
+  max-height: 200px;
   border-radius: 10px;
   border: solid black;
+  display: block;
+  margin: auto;
 }
 
 .upload-button {

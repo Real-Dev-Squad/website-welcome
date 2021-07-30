@@ -36,9 +36,7 @@ html, body {
 .footer {
   font-weight: lighter;
   text-align: center;
-  vertical-align: middle;
   width: 100%;
-  position: fixed;
   height: 40px;
-  bottom: 0;
+  margin-top: 200px;
 }
