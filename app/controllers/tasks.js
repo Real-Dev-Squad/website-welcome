@@ -32,6 +32,14 @@ export default class TasksController extends Controller {
     });
   }
 
+  cleanReqBody(object) {
+    const cleanReqObj = {
+      ...object,
+      percentCompleted: parseInt(object.percentCompleted),
+    };
+    return cleanReqObj;
+  }
+
   defaultTaskType = ACTIVE;
   @tracked tasksToShow = this.allTasks.filter(
     (task) => task.status === this.defaultTaskType
@@ -49,13 +57,14 @@ export default class TasksController extends Controller {
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
     if (taskData.status === COMPLETED) {
-      taskData.percentCompleted = '100';
+      taskData.percentCompleted = 100;
     }
+    const cleanBody = this.cleanReqBody(taskData);
     if (taskData.status || taskData.percentCompleted) {
       try {
         const response = await fetch(`${API_BASE_URL}/tasks/self/${taskId}`, {
           method: 'PATCH',
-          body: JSON.stringify(taskData),
+          body: JSON.stringify(cleanBody),
           headers: {
             'Content-Type': 'application/json',
           },
