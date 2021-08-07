@@ -36,7 +36,6 @@ h1 {
 }
 
 .faq__title {
-  text-transform: capitalize;
   justify-content: space-between;
   min-height: 2.5rem;
   font-weight: bold;
