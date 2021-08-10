@@ -60,3 +60,179 @@
     margin: 0;
   }
 }
+/* Arnab's code */
+body {
+  margin: 0;
+}
+.first-screen {
+  background-color: #041187;
+  width: 100%;
+  box-sizing: border-box;
+}
+.first-screen header {
+  position: relative;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#logo {
+  width: 5em;
+  height: 5em;
+  position: relative;
+  top: 1.5em;
+  left: 3em;
+}
+.signIn-button {
+  width: 16em;
+  height: 2.5em;
+  text-align: center;
+  background-color: #041187;
+  color: #fff;
+  border: 0.2em solid #fff;
+  border-radius: 0.6em;
+  position: relative;
+  top: 2.8em;
+  right: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav {
+  width: 44%;
+  height: 1.6em;
+  position: relative;
+  top: 1.3em;
+  display: flex;
+  align-self: center;
+  font-family: 'roboto';
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+a.nav-text.welcome {
+  color: #88d870;
+  border-bottom: 0.12em solid #88d870;
+}
+.nav-text {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08em;
+}
+.welcome-image {
+  width: 34%;
+  height: 30%;
+  float: right;
+  position: relative;
+  left: -6em;
+  top: 4em;
+}
+#first-line {
+  font-size: 4.3em;
+  line-height: -3em;
+  width: 9em;
+  height: 1em;
+  display: inline-block;
+  position: relative;
+  top: 0.8em;
+  left: 0.8em;
+}
+#welcomeTxt {
+  font-family: 'raleway';
+  color: #e30062;
+}
+#to-theTxt {
+  font-family: 'raleway';
+  color: #fff;
+  font-weight: 400;
+}
+#realDevSquadTxt {
+  color: #fff;
+  font-family: 'raleway';
+  font-weight: 700;
+  font-size: 2.3em;
+  line-height: 0.6em;
+  position: relative;
+  left: 0.8em;
+  top: 1.2em;
+}
+div.heading-container {
+  flex-direction: column;
+  display: inline-block;
+  position: relative;
+  top: 5em;
+  left: 2em;
+}
+.social-handles {
+  color: #fff;
+}
+.element-separator {
+  color: #e30062;
+  font-size: 5px;
+}
+.handles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 2em;
+  width: 32em;
+  position: relative;
+  left: 5em;
+  top: 6.9em;
+}
+.social-handles {
+  font-family: 'roboto';
+  font-weight: 500;
+  margin: 0;
+  text-decoration: none;
+}
+.handles-logos {
+  position: relative;
+  bottom: 3px;
+  left: -5px;
+}
+.separator {
+  height: 1.5em;
+  width: 0.2em;
+  position: relative;
+  bottom: 0.2em;
+}
+.news-feeds-container {
+  width: 76%;
+  height: 3.5rem;
+  position: relative;
+  top: -2em;
+  left: 10em;
+  border-radius: 0.6em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'poppins';
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.new {
+  width: 5rem;
+  height: 2.8rem;
+  background: linear-gradient(130deg, #f3036b, #dc7faf, #e30062);
+  color: #091133;
+  font-family: 'poppins';
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4em;
+}
+#check-them-out {
+  font-size: 1.1em;
+}
+#arrow-icon {
+  position: relative;
+  right: 3.5rem;
+  height: 2em;
+}
+#gitButtonLogo {
+  position: relative;
+  bottom: 3px;
+}
