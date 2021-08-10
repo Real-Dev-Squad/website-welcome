@@ -1,6 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "\nStarting tests, \nhold on tight!, let's  hope all goes smooth  ☠ ☠ \n"
-
-npm test
+echo "Pushing your changes to remote repository 🚀✨"
