@@ -72,10 +72,10 @@ div.heading-container {
   position: relative;
   top: 5em;
   left: 2em;
+  font-family: 'raleway';
 }
 #first-line {
   font-size: 4.3em;
-  line-height: -3em;
   width: 9em;
   height: 1em;
   display: inline-block;
@@ -84,17 +84,14 @@ div.heading-container {
   left: 0.8em;
 }
 #welcome-text {
-  font-family: 'raleway';
   color: #e30062;
 }
 #to-the-text {
-  font-family: 'raleway';
   color: #fff;
   font-weight: 400;
 }
 #real-dev-squad-text {
   color: #fff;
-  font-family: 'raleway';
   font-weight: 700;
   font-size: 2.3em;
   line-height: 0.6em;
