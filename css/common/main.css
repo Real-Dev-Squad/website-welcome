@@ -13,12 +13,12 @@ body {
   font-size: 16px;
 }
 
-main {
+/* main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-}
+} */
 
 img {
   max-width: 100%;
@@ -26,8 +26,9 @@ img {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0px;
   margin: 0 auto;
+  background-color: antiquewhite;
 }
 
 @media (min-width: 1200px) {
@@ -72,12 +73,6 @@ a:active {
   color: white;
 }
 
-.welcome-title {
-  margin: 1em 0;
-  text-align: center;
-  font-weight: 400;
-}
-
 .logo-img {
   width: 300px;
   margin: 2em;
@@ -97,19 +92,7 @@ a:active {
   color: #041484;
 }
 
-footer {
-  position: relative;
-  margin-top: 40px;
-  bottom: 0;
-  width: 100%;
-  padding: 1em;
-  text-align: center;
-}
 
-.info-repo {
-  margin: 0 auto;
-  text-align: center;
-}
 
 .cta-button__container {
   text-align: center;
@@ -162,4 +145,79 @@ footer a {
 
 .channel-info {
   margin-left: 15px;
+}
+
+/* last screen code */
+
+.sample {
+  padding: 3rem 0;
+}
+
+.event-title {
+  width: auto;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #e30062;
+}
+
+.upcoming-event {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.api-event {
+  margin: 15px 5px;
+  font-size: 20px;
+  border-bottom: 1px solid;
+  color: #604af0;
+}
+
+.previous-event {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.events-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.events {
+  color: #604af0;
+  border-bottom: 1px solid;
+  margin: 0 0.25rem;
+}
+.video-holder {
+  width: 100%;
+  background-color: #f7f4f4;
+  padding: 3rem 28rem;
+}
+
+.video-holder > .video-text {
+  margin: 0 auto 40px;
+  font-size: 2rem;
+  text-align: center;
+}
+.rectangle {
+  background-color: white;
+  margin-top: 5rem;
+}
+
+footer {
+  position: relative;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+.info-repo {
+  margin: 2rem auto;
+  text-align: center;
 }
