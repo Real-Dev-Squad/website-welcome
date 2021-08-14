@@ -1,115 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Real Dev Squad</title>
+    <link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/pages/index.css" />
+    <link rel="icon" type="image/x-icon" href="./img/logos/favicon.ico" />
 
-  <title>Welcome to Real Dev Squad</title>
-  <link rel="stylesheet" type="text/css" href="./css/common/main.css" />
-  <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
-  <link rel="stylesheet" type="text/css" href="./css/pages/index.css" />
-  <link rel="icon" type="image/x-icon" href="./img/logos/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#e30062" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
-  <meta name="theme-color" content="#e30062" />
-</head>
+  <body>
+    <header>
+      <nav>
+        <!-- in case of small screens, show a dropdown -->
+        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
+        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
 
-<body>
-  <header>
-    <nav>
-      <!-- in case of small screens, show a dropdown -->
-      <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
-      <label for="nav-toggle" class="burger-menu"> &#9776;</label>
+        <ul class="menu">
+          <li>
+            <a class="nav-logo" href="https://realdevsquad.com/"
+              ><img
+                class="nav-logo-img"
+                src="./img/logos/Real-Dev-Squad@1x.png"
+                alt="Real Dev Squad logo"
+            /></a>
+            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
+          </li>
+          <li>
+            <a class="active" href="https://welcome.realdevsquad.com/"
+              >Welcome</a
+            >
+          </li>
+          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
+          <li><a href="https://members.realdevsquad.com/">Members</a></li>
+          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
+          <li><a href="https://status.realdevsquad.com/">Status</a></li>
+        </ul>
 
-      <ul class="menu">
-        <li>
-          <a class="nav-logo" href="https://realdevsquad.com/"><img class="nav-logo-img"
-              src="./img/logos/Real-Dev-Squad@1x.png" alt="Real Dev Squad logo" /></a>
-          <a class="nav-home" href="https://realdevsquad.com/">Home</a>
-        </li>
-        <li>
-          <a class="active" href="https://welcome.realdevsquad.com/">Welcome</a>
-        </li>
-        <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
-        <li><a href="https://members.realdevsquad.com/">Members</a></li>
-        <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
-        <li><a href="https://status.realdevsquad.com/">Status</a></li>
-      </ul>
+        <div class="login-btn">
+          <a
+            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+          >
+            Login
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div>
+      <div class="sample">
+        <h1 class="event-title">You can check out all our events below</h1>
+        <div class="upcoming-event">
+          <h3>Upcoming Events:</h3>
+        </div>
+        <div class="cards">
+          <a class="api-event" href="./event-APIs-made-Easier-April-2021.html"
+            >APIs made easier</a
+          >
+        </div>
 
-      <div class="login-btn">
-        <a href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97">
-          Login
-        </a>
+        <div class="previous-event">
+          <h3>Previous Events:</h3>
+        </div>
+
+        <div class="events-box">
+          <a class="events" href="./event-dynamic-programming-october-2020.html"
+            >Dynamic Programming</a
+          >&nbsp;
+          <span class="link-seperators">&vert;</span>
+
+          &nbsp;
+          <a class="events" href="./event-nodejs-workshop-october-2020.html">
+            NodeJS Workshop Part1
+          </a>
+          <span class="link-seperators">&vert;</span>
+
+          &nbsp;
+          <a class="events" href="./event-web-mini-conf-july-2020.html"
+            >Web-Mini-Conf-July-2020</a
+          >&nbsp;
+          <span class="link-seperators">&vert;</span>
+
+          &nbsp;
+          <a class="events" href="./event-react-hooks-july-2020.html">
+            React Hooks Session
+          </a>
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <a class="events" href="./event-ssr-correctly-august-2020.html">
+            SSR the right way
+          </a>
+        </div>
       </div>
-    </nav>
-  </header>
-  <div>
-    <div class="sample">
-      <h1 class="event-title">You can check out all our events below</h1>
-      <div class="upcoming-event">
-        <h3>Upcoming Events:</h3>
+      <div class="video-holder">
+        <div class="video-text">Check out what Real Dev Squad is :</div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/8UPjK1wLnTk?controls=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
       </div>
-      <div class="cards">
-        <a class="api-event" href="./event-APIs-made-Easier-April-2021.html">APIs made easier</a>
-      </div>
-
-      <div class="previous-event">
-        <h3>Previous Events:</h3>
-      </div>
-
-
-      <div class="events-box">
-        <a class="events" href="./event-dynamic-programming-october-2020.html">Dynamic Programming</a>&nbsp;
-        <span class="link-seperators">&vert;</span>
-
-        &nbsp;
-        <a class="events" href="./event-nodejs-workshop-october-2020.html">
-          NodeJS Workshop Part1
-        </a>
-        <span class="link-seperators">&vert;</span>
-
-        &nbsp;
-        <a class="events" href="./event-web-mini-conf-july-2020.html">Web-Mini-Conf-July-2020</a>&nbsp;
-        <span class="link-seperators">&vert;</span>
-
-        &nbsp;
-        <a class="events" href="./event-react-hooks-july-2020.html">
-          React Hooks Session
-        </a>
-        &nbsp;
-        <span class="link-seperators">&vert;</span>
-        <a class="events" href="./event-ssr-correctly-august-2020.html">
-          SSR the right way
-        </a>
+      <div class="rectangle">
+        <img
+          class="footer-img"
+          src="./img/shapes/Rectangle.png"
+          alt="Real Dev Squad logo"
+        />
       </div>
     </div>
-    <div class="video-holder">
-      <div class="video-text">Check out what Real Dev Squad is :</div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8UPjK1wLnTk?controls=0" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div class="rectangle">
-      <img class="footer-img" src="./img/shapes/Rectangle.png" alt="Real Dev Squad logo">
-    </div>
-  </div>
-  <footer>
-    <h3 class="info-note">
-      To know how this page is getting developed, join our Discord Channel.
-      Contact one of the existing
-      <a href="https://members.realdevsquad.com" target="_blank" rel="noopener noreferrer">members.</a>
-    </h3>
-    <p class="info-repo">
-      The contents of this website are deployed from this
-      <a href="https://github.com/Real-Dev-Squad/website" target="_blank" rel="noopener noreferrer">
-        open sourced repo
-      </a>
-    </p>
-  </footer>
+    <footer>
+      <h3 class="info-note">
+        To know how this page is getting developed, join our Discord Channel.
+        Contact one of the existing
+        <a
+          href="https://members.realdevsquad.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >members.</a
+        >
+      </h3>
+      <p class="info-repo">
+        The contents of this website are deployed from this
+        <a
+          href="https://github.com/Real-Dev-Squad/website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          open sourced repo
+        </a>
+      </p>
+    </footer>
 
-  <script type="text/javascript" src="./js/login.js"></script>
-</body>
-
+    <script type="text/javascript" src="./js/login.js"></script>
+  </body>
 </html>
