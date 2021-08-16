@@ -6,10 +6,12 @@
 body {
   margin: 0;
 }
+
 .first-screen {
   background-color: #041187;
   width: 100%;
 }
+
 .first-screen header {
   position: relative;
   height: 30%;
@@ -17,6 +19,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
 #logo {
   width: 5em;
   height: 5em;
@@ -24,6 +27,7 @@ body {
   top: 1.5em;
   left: 3em;
 }
+
 .main-nav {
   width: 44%;
   height: 1.6em;
@@ -35,15 +39,18 @@ body {
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+
 .nav-text {
   color: #fff;
   text-decoration: none;
   font-size: 1.08em;
 }
+
 a.nav-text.welcome {
   color: #88d870;
   border-bottom: 0.12em solid #88d870;
 }
+
 .sign-in-button {
   width: 16em;
   height: 2.5em;
@@ -59,6 +66,7 @@ a.nav-text.welcome {
   justify-content: center;
   align-items: center;
 }
+
 #gitButtonLogo {
   width: 1.5em;
   height: 1.7em;
@@ -66,14 +74,15 @@ a.nav-text.welcome {
   left: 0.5em;
   border-radius: 20%;
 }
+
 div.heading-container {
-  flex-direction: column;
   display: inline-block;
   position: relative;
   top: 5em;
   left: 2em;
   font-family: 'raleway';
 }
+
 #first-line {
   font-size: 4.3em;
   width: 9em;
@@ -83,13 +92,16 @@ div.heading-container {
   top: 0.8em;
   left: 0.8em;
 }
+
 #welcome-text {
   color: #e30062;
 }
+
 #to-the-text {
   color: #fff;
   font-weight: 400;
 }
+
 #real-dev-squad-text {
   color: #fff;
   font-weight: 700;
@@ -99,6 +111,7 @@ div.heading-container {
   left: 0.8em;
   top: 1.2em;
 }
+
 .handles-container {
   display: flex;
   justify-content: center;
@@ -110,6 +123,7 @@ div.heading-container {
   left: 5em;
   top: 6.9em;
 }
+
 .social-handles {
   font-family: 'roboto';
   font-weight: 500;
@@ -117,17 +131,20 @@ div.heading-container {
   text-decoration: none;
   color: #fff;
 }
+
 .handles-logos {
   position: relative;
   bottom: 3px;
   left: -5px;
 }
+
 .separator {
   height: 1.5em;
   width: 0.2em;
   position: relative;
   bottom: 0.2em;
 }
+
 .welcome-image {
   width: 34%;
   height: 30%;
@@ -137,6 +154,7 @@ div.heading-container {
   top: 4em;
   margin-bottom: 10em;
 }
+
 .news-feeds-container {
   width: 76%;
   height: 3.5rem;
@@ -148,30 +166,32 @@ div.heading-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: 'poppins';
-  font-size: 1em;
+  font: 1em 'poppins';
   box-sizing: border-box;
 }
+
 .new {
   width: 5rem;
   height: 2.8rem;
   background: linear-gradient(130deg, #f3036b, #dc7faf, #e30062);
   color: #091133;
-  font-family: 'poppins';
-  font-size: 1.05rem;
+  font: 1.05rem 'poppins';
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.4em;
 }
+
 #check-them-out {
   font-size: 1.1em;
 }
+
 #arrow-icon {
   position: relative;
   right: 3.5rem;
   height: 2em;
 }
+
 /* .container {
   width: 750px;
   text-align: center;
