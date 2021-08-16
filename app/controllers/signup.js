@@ -250,10 +250,14 @@ export default class SignupController extends Controller {
     return;
   }
 
-  removeEmptyFields(reqObject) {
+  sanitizeRequestObject(reqObject) {
     for (const field in reqObject) {
       if (!reqObject[field]) {
         delete reqObject[field];
+      } else if (field === 'yoe') {
+        reqObject[field] = parseInt(reqObject[field]);
+      } else if (field === 'username') {
+        reqObject[field] = reqObject[field].toLowerCase();
       }
     }
     return reqObject;
@@ -263,9 +267,9 @@ export default class SignupController extends Controller {
     // submit
     // https://github.com/Real-Dev-Squad/website-api-contracts/tree/main/users#patch-usersself
     e.preventDefault();
-    const cleanReqObject = this.removeEmptyFields(this.formData);
+    const cleanReqObject = this.sanitizeRequestObject(this.formData);
     this.isSubmitClicked = true;
-    cleanReqObject.username = cleanReqObject.username.toLowerCase();
+
     try {
       const response = await fetch(`${BASE_URL}/users/self`, {
         method: 'PATCH',
