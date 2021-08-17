@@ -1,8 +1,10 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+if [[ "$NODE_ENV" != "production" ]]; then
+    . "$(dirname "$0")/_/husky.sh"
 
-echo "\n 🚧 Dependencies are being installed, please wait for a while. ⏳\n"
+    echo "\n 🚧 Dependencies are being installed, please wait for a while. ⏳\n"
 
-npm install
+    npm install
 
-echo "\nCongratulations, you are good to go! ⚡⚡⚡\n"
+    echo "\nCongratulations, you are good to go! ⚡⚡⚡\n"
+fi
