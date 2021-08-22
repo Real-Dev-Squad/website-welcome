@@ -215,7 +215,9 @@ div.handles-container {
 }
 
 /* second screen css */
-.second-screen {
+
+.cards-title {
+  margin: 5% auto 4%;
   width: 100%;
   text-align: center;
 }
@@ -231,6 +233,8 @@ div.handles-container {
   font-size: 58px;
   line-height: 66%;
   font-family: 'raleway';
+  line-height: 66%;
+  font: normal 600 250% 'raleway';
 }
 
 .cards-title {
@@ -269,6 +273,10 @@ div.handles-container {
 #card3 {
   padding-left: 2%;
   padding-right: 2%;
+  padding: 2%;
+  margin-right: 7%;
+  width: 18%;
+  font: normal bolder 90% 'Roboto';
 }
 
 .card:hover {
@@ -294,10 +302,11 @@ div.handles-container {
   font-size: 34px;
   letter-spacing: 1px;
   color: #091133;
-  line-height: 55px;
+  line-height: 55%;
   text-align: left;
   width: 50%;
   margin-top: 5%;
+  font: normal bold 140% 'Poppins';
 }
 
 .info-note-link {
