@@ -45,6 +45,10 @@ body {
   font-size: 1.08em;
 }
 
+.nav-text:hover {
+  color: #88d870;
+}
+
 a.nav-text.welcome {
   color: #88d870;
   border-bottom: 0.12em solid #88d870;
@@ -189,10 +193,4 @@ div.heading-container {
   position: relative;
   right: 2.5rem;
   height: 2em;
-}
-
-/* new code */
-
-.nav-text:hover {
-  color: #88d870;
 }
