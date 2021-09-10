@@ -1,6 +1,6 @@
 export const LABEL_TEXT = {
-  firstName: 'What is your First Name?',
-  lastName: 'And what is your Last Name?',
+  firstName: 'What is your first name?',
+  lastName: 'And what is your last name?',
   username: 'Now choose your awesome username!',
 };
 

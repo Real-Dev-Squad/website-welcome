@@ -29,7 +29,7 @@ export default class SignupController extends Controller {
     else this.isButtonDisabled = true;
   }
 
-  @action registerUser() {
+  @action signup() {
     const user = {
       first_name: this.userDetails.firstName,
       last_name: this.userDetails.lastName,
