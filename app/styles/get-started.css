@@ -1,0 +1,80 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 80vh;
+  width: 70%;
+  margin: auto;
+}
+
+.landing__main-heading {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+
+.landing__sub-heading {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.landing > * {
+  padding: 0.75rem;
+}
+
+.landing__features-lists {
+  list-style: none;
+}
+
+.landing__features-list {
+  padding: 0.25rem;
+  font-size: 1.2rem;
+  text-align: left;
+  width: 30%;
+  margin: auto;
+}
+
+.get-started__btn button {
+  background-color: #041484;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .landing {
+    width: 80%;
+  }
+
+  .landing__features-list {
+    width: 50%;
+  }
+
+  .get-started__btn button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 568px) {
+  .landing {
+    width: 100%;
+  }
+
+  .landing__features-list {
+    width: 70%;
+  }
+
+  .get-started__btn button {
+    width: 70%;
+  }
+}
