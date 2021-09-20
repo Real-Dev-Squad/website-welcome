@@ -292,15 +292,12 @@ div.handles-container {
     height: 1.5px;
     background-color: #fff;
   }
-  .hamburger-lines.active {
-    background-color: #041187;
-  }
 
   nav.main-nav {
     width: 100vw;
-    height: 53vh;
+    height: 70vh;
     left: 0em;
-    top: 4.5em;
+    top: 0em;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -570,7 +567,6 @@ div.handles-container {
     height: 120px;
     left: 1.5em;
   }
-
   .new-tag {
     width: 3rem;
     height: 1.3rem;
