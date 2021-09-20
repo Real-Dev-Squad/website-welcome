@@ -1,14 +1,13 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
-
-.first-screen {
+div.first-screen {
   background-color: #041187;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .first-screen header {
@@ -19,12 +18,13 @@ body {
   justify-content: space-between;
 }
 
-#logo {
-  width: 5em;
-  height: 5em;
+a.logo-link {
+  width: 6em;
+  height: 6em;
   position: relative;
-  top: 1.5em;
-  left: 3em;
+  top: 1.2em;
+  left: 3.5em;
+  border-radius: 50%;
 }
 
 .main-nav {
@@ -32,6 +32,7 @@ body {
   height: 1.6em;
   position: relative;
   top: 1.3em;
+  right: 30.5em;
   display: flex;
   align-self: center;
   font-family: 'roboto';
@@ -43,6 +44,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 1.08em;
+  position: relative;
 }
 
 .nav-text:hover {
@@ -63,11 +65,17 @@ a.nav-text.welcome {
   border: 0.2em solid #fff;
   border-radius: 0.6em;
   position: relative;
-  top: 2.8em;
-  right: 3em;
+  top: 1.5em;
+  right: 3.7em;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+#btn-text1 {
+  position: relative;
+  left: -5px;
 }
 
 #git-logo {
@@ -81,8 +89,8 @@ a.nav-text.welcome {
 div.heading-container {
   display: inline-block;
   position: relative;
-  top: 5em;
-  left: 2em;
+  top: 100px;
+  left: 52px;
   font-family: 'raleway';
 }
 
@@ -115,7 +123,7 @@ div.heading-container {
   top: 1.2em;
 }
 
-.handles-container {
+div.handles-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,8 +131,8 @@ div.heading-container {
   height: 2em;
   width: 32em;
   position: relative;
-  left: 5em;
-  top: 6.9em;
+  left: 8.1em;
+  top: 12.9em;
 }
 
 .social-handles {
@@ -135,17 +143,22 @@ div.heading-container {
   color: #fff;
 }
 
+.social-handles:hover {
+  color: #fff;
+}
+
 .handles-logos {
   position: relative;
   bottom: 3px;
-  left: -5px;
+  left: 4px;
 }
 
 .separator {
   height: 1.5em;
   width: 0.2em;
   position: relative;
-  bottom: 0.2em;
+  left: 0.4em;
+  bottom: 0.15em;
 }
 
 .welcome-image {
@@ -153,17 +166,17 @@ div.heading-container {
   height: 30%;
   float: right;
   position: relative;
-  left: -6em;
-  top: 4em;
-  margin-bottom: 10em;
+  right: 125px;
+  top: -7em;
+  margin-bottom: -2em;
 }
 
 .news-feeds-container {
   width: 76%;
   height: 3.5rem;
   position: relative;
-  top: -2em;
-  left: 9em;
+  bottom: 30px;
+  left: 150px;
   border-radius: 0.6em;
   background-color: #fff;
   display: flex;
@@ -187,10 +200,342 @@ div.heading-container {
 
 #checkout-tag {
   font-size: 1.1em;
+  right: 0.5em;
 }
 
 #arrow-icon {
   position: relative;
-  right: 2.5rem;
+  right: -0.5rem;
   height: 2em;
+}
+
+@media (max-width: 1024px) {
+  a.logo-link {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+  }
+
+  .main-nav {
+    width: 30em;
+    height: 3.6em;
+    position: relative;
+    right: 22em;
+    font-size: 15.5px;
+    background-color: #041187;
+  }
+
+  .sign-in-button {
+    width: 13em;
+    height: 2.2em;
+    top: 2em;
+    right: 3em;
+  }
+
+  div.heading-container {
+    top: 54px;
+    left: 5px;
+    font-size: 14.5px;
+  }
+
+  div.handles-container {
+    width: 30em;
+    left: 4.2em;
+    top: 9.5em;
+  }
+
+  .welcome-image {
+    right: 68px;
+  }
+
+  .news-feeds-container {
+    width: 84%;
+    left: 80px;
+  }
+
+  #arrow-icon {
+    right: -0.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-screen header {
+    height: 20vh;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    left: -43.4em;
+    top: 1.5em;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hamburger-lines {
+    display: block;
+    width: 23px;
+    height: 1.5px;
+    background-color: #fff;
+  }
+
+  nav.main-nav {
+    width: 100vw;
+    height: 70vh;
+    left: 0em;
+    top: 0em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+
+  .nav-text {
+    color: #041187;
+    left: 1.5em;
+    top: 1em;
+    width: 75px;
+  }
+
+  a.nav-text.welcome {
+    border-style: none;
+  }
+
+  .sign-in-button {
+    top: 0.5em;
+    right: 0.8em;
+  }
+
+  a.logo-link {
+    left: 21em;
+    top: 5.5em;
+    width: 7em;
+    height: 7em;
+  }
+
+  #welcome-text {
+    display: block;
+    position: relative;
+    left: 3em;
+  }
+
+  #to-the-text {
+    display: block;
+    position: relative;
+    left: 4em;
+  }
+
+  #real-dev-squad-text {
+    display: block;
+    position: relative;
+    left: 1.9em;
+  }
+
+  .welcome-image {
+    display: block;
+    right: 14em;
+    top: 7.2em;
+    width: 39%;
+    margin-bottom: 25em;
+  }
+
+  div.handles-container {
+    left: 8.8em;
+    top: 28.9em;
+  }
+
+  .news-feeds-container {
+    flex-direction: column;
+    width: 60%;
+    height: 150px;
+    bottom: -30.5em;
+    left: 9.7em;
+    margin: 10px 0px 7px 0;
+  }
+
+  .new-tag {
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    border-radius: 0.2em;
+  }
+
+  div #dash {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .hamburger {
+    left: -23em;
+    top: 1.2em;
+  }
+
+  .sign-in-button {
+    top: 0.3em;
+    right: 0em;
+  }
+
+  a.logo-link {
+    left: 11em;
+    top: 5em;
+    width: 6em;
+    height: 6em;
+  }
+
+  #btn-text2 {
+    display: none;
+  }
+
+  div.heading-container {
+    top: 50px;
+    left: -35px;
+    font-size: 9.5px;
+  }
+
+  #welcome-text {
+    right: 5em;
+    width: 63%;
+  }
+
+  div.handles-container {
+    left: 3.5em;
+    top: 26.4em;
+    width: 19em;
+  }
+
+  .social-handles {
+    display: none;
+  }
+
+  .handles-logos {
+    width: 37px;
+    height: 37px;
+  }
+
+  .separator {
+    height: 0.2em;
+  }
+
+  .welcome-image {
+    right: 4.2em;
+    top: 5em;
+    width: 66%;
+    margin-bottom: 13em;
+  }
+
+  .news-feeds-container {
+    width: 68%;
+    left: 4.3em;
+    bottom: 22px;
+  }
+
+  .sign-in-button {
+    width: 7em;
+  }
+}
+
+@media (max-width: 375px) {
+  .hamburger {
+    left: -20.3em;
+  }
+
+  .sign-in-button {
+    top: 0.1em;
+  }
+
+  a.logo-link {
+    left: 9em;
+  }
+
+  div.heading-container {
+    left: -34px;
+    font-size: 8.5px;
+  }
+
+  .welcome-inage {
+    right: 4em;
+  }
+
+  div.handles-container {
+    left: 2em;
+    top: 24.4em;
+  }
+
+  .handles-logos {
+    width: 32px;
+    height: 32px;
+  }
+
+  .news-feeds-container {
+    width: 76%;
+    left: 2.9em;
+  }
+}
+
+@media (max-width: 320px) {
+  .hamburger {
+    left: -17em;
+    top: 1em;
+    height: 18px;
+  }
+
+  .sign-in-button {
+    top: 0em;
+    width: 7em;
+    font-size: 11px;
+  }
+
+  a.logo-link {
+    left: 7em;
+    top: 4em;
+    width: 5.5em;
+    height: 4.5em;
+  }
+
+  div.heading-container {
+    top: 25px;
+    left: -35px;
+    font-size: 7.5px;
+  }
+
+  .welcome-image {
+    top: 3em;
+    right: 3.35em;
+    margin-bottom: 10em;
+  }
+
+  div.handles-container {
+    left: 1.7em;
+    top: 19.6em;
+    width: 16em;
+  }
+  .news-feeds-container {
+    width: 85%;
+    height: 120px;
+    left: 1.5em;
+  }
+  .new-tag {
+    width: 3rem;
+    height: 1.3rem;
+    font-size: 13px;
+  }
+  .news-feeds-txt {
+    font-size: 15px;
+  }
+}
+
+.main-nav-active {
+  transform: translateY(0%);
 }
