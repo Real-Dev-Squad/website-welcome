@@ -7,7 +7,6 @@ export default class SignupRoute extends Route {
       credentials: 'include',
     });
     const userData = await response.json();
-
     if (response.status === 401) {
       alert('You have not logged in. Please login first to fill this form.');
       window.open(

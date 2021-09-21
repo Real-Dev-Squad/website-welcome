@@ -1,12 +1,14 @@
-@import "signup.css";
-@import "notification.css";
-@import "image-upload.css";
-@import "tasks.css";
-@import "sidebar.css";
-@import "local-navbar.css";
-@import "profile.css";
+@import 'signup.css';
+@import 'notification.css';
+@import 'image-upload.css';
+@import 'tasks.css';
+@import 'sidebar.css';
+@import 'local-navbar.css';
+@import 'profile.css';
+@import 'get-started.css';
 
-html, body {
+html,
+body {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif, serif;
