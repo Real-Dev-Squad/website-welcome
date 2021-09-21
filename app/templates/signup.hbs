@@ -1,45 +1,74 @@
 {{page-title "Sign Up"}}
 
-<form class="form">
-  <h2>{{this.title}}</h2>
-  {{#each this.fields as |field|}}
-  {{#let this.formData as | myFormData |}}
-    <FormInput
-      @id={{field.id}}
-      @for={{field.for}}
-      @label={{field.label}}
-      @type={{field.type}}
-      @value={{get myFormData field.id}}
-      @placeholder={{field.placeholder}}
-      @errorMessage={{field.errorMessage}}
-      @required={{field.required}}
-      @showError={{field.showError}}
-      @helpMsg={{field.helpMsg}}
-      @onChange={{this.handleFieldChange}}
-      @validator={{field.validator}}
-    />
-    {{/let}}
-  {{/each}}
-  {{#if this.isSubmitDisabled }}
-    <button
-      class='submitButton disabledButton'
-      type="submit"
-      disabled={{true}}
-    >
-      Submit
-    </button>
+{{#if this.dev}}
+  {{#if this.state}}
+    {{#if (eq this.state "get-started")}}
+      <SignUp::GetStarted
+        @changeRouteParams={{this.changeRouteParams}}
+        @state={{this.state}}
+      />
+    {{else if (eq this.state "thank-you")}}
+      <SignUp::GetStarted
+        @changeRouteParams={{this.changeRouteParams}}
+        @state={{this.state}}
+      />
     {{else}}
-      <button
-      class='submitButton'
-      type="submit"
-      {{on 'click' (fn this.handleSubmit)}}
-      >
-      {{#if this.isSubmitClicked}}
-        <i class="fa fa-spinner fa-spin"></i>
-      {{/if}}
-        Submit
-    </button>
+      <SignUp::Form
+        @changeRouteParams={{this.changeRouteParams}}
+        @register={{this.signup}}
+        @userDetails={{this.userDetails}}
+        @onChange={{this.handleInputChange}}
+        @state={{this.state}}
+        @isSubmitClicked={{this.isSubmitClicked}}
+        @isButtonDisabled={{this.isButtonDisabled}}
+      />
+    {{/if}}
   {{/if}}
-</form>
+{{else}}
+  <form class="form">
+    <h2>{{this.title}}</h2>
+    {{#each this.fields as |field|}}
+    {{#let this.formData as | myFormData |}}
+      <FormInput
+        @id={{field.id}}
+        @for={{field.for}}
+        @label={{field.label}}
+        @type={{field.type}}
+        @value={{get myFormData field.id}}
+        @placeholder={{field.placeholder}}
+        @errorMessage={{field.errorMessage}}
+        @required={{field.required}}
+        @showError={{field.showError}}
+        @helpMsg={{field.helpMsg}}
+        @onChange={{this.handleFieldChange}}
+        @validator={{field.validator}}
+      />
+      {{/let}}
+    {{/each}}
+    {{#if this.isSubmitDisabled }}
+      <button
+        class='submitButton disabledButton'
+        type="submit"
+        disabled={{true}}
+      >
+        Submit
+      </button>
+      {{else}}
+        <button
+        class='submitButton'
+        type="submit"
+        {{on 'click' (fn this.handleSubmit)}}
+        >
+        {{#if this.isSubmitClicked}}
+          <i class="fa fa-spinner fa-spin"></i>
+        {{/if}}
+          Submit
+      </button>
+    {{/if}}
+  </form>
 
-{{outlet}}
+  {{outlet}}
+{{/if}}
+<div class="login-register__error">
+  <p> {{this.errorMessage}} </p>
+</div>

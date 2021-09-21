@@ -1,0 +1,25 @@
+
+<div class="landing">
+  <h2 class="landing__main-heading">
+    {{this.mainHeading}}
+  </h2>
+  <h3 class="landing__sub-heading">
+    {{this.subHeading}}
+  </h3>
+  {{#if (eq @state "get-started")}}
+    <ul class="landing__features-lists">
+      <li class="landing__features-list">Use Features</li>
+      <li class="landing__features-list">Display yourself on the (members) page</li>
+    </ul>
+  {{/if}}
+
+  <div class="get-started__btn">
+    <SignUp::Button
+      @clickHandler={{@changeRouteParams}}
+      @state={{@state}}
+      @disabled={{false}}
+    >
+      {{if (eq @state "get-started") "Get Started" "Let's Go"}}
+    </SignUp::Button>
+  </div>
+</div>
