@@ -48,12 +48,12 @@ a.logo-link {
 }
 
 .nav-text:hover {
-  color: #88d870;
+  color: #34bb0b;
 }
 
 a.nav-text.welcome {
-  color: #88d870;
-  border-bottom: 0.12em solid #88d870;
+  color: #34bb0b;
+  border-bottom: 0.12em solid #34bb0b;
 }
 
 .sign-in-button {
@@ -102,7 +102,7 @@ div.handles-container {
   height: 2em;
   width: 32em;
   position: relative;
-  left: 8.1em;
+  left: 8.6em;
   top: 12.9em;
 }
 
@@ -121,14 +121,14 @@ div.handles-container {
 .handles-logos {
   position: relative;
   bottom: 3px;
-  left: 4px;
+  right: 10px;
 }
 
 .separator {
   height: 1.5em;
   width: 0.2em;
   position: relative;
-  left: 0.4em;
+  right: 0.15em;
   bottom: 0.15em;
 }
 
@@ -173,7 +173,6 @@ div.handles-container {
 
   .main-nav {
     width: 30em;
-    height: 3.6em;
     position: relative;
     right: 22em;
     font-size: 15.5px;
@@ -195,8 +194,12 @@ div.handles-container {
 
   div.handles-container {
     width: 30em;
-    left: 4.2em;
+    left: 4.6em;
     top: 9.5em;
+  }
+
+  .handles-logos {
+    right: 7px;
   }
 
   .welcome-image {
@@ -218,6 +221,10 @@ div.handles-container {
     height: 20vh;
   }
 
+  header.active {
+    background: white;
+  }
+
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -226,7 +233,7 @@ div.handles-container {
     flex-direction: column;
     justify-content: space-around;
     height: 24px;
-    left: -43.4em;
+    left: -44em;
     top: 1.5em;
     cursor: pointer;
     position: relative;
@@ -240,27 +247,34 @@ div.handles-container {
     height: 1.5px;
     background-color: #fff;
   }
+  .hamburger-lines.actve {
+    background-color: #041187;
+  }
 
   nav.main-nav {
     width: 100vw;
-    height: 70vh;
+    height: 53vh;
     left: 0em;
-    top: 0em;
+    top: 4.5em;
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #fff;
-    transform: translateY(-100%);
+    transform: translateY(-125%);
     transition: transform 0.5s ease-in;
     z-index: 1;
   }
 
+  .main-nav.active {
+    transform: translateY(0%);
+  }
+
   .nav-text {
     color: #041187;
-    left: 1.5em;
-    top: 1em;
-    width: 75px;
+    left: 4.5em;
+    width: 85px;
+    font-size: 1.3em;
   }
 
   a.nav-text.welcome {
@@ -324,10 +338,17 @@ div.handles-container {
     height: 1.8rem;
     font-size: 1rem;
     border-radius: 0.2em;
+    position: relative;
+    top: 4px;
   }
 
   div #dash {
     display: none;
+  }
+
+  #arrow-icon {
+    right: 0em;
+    bottom: 0.3em;
   }
 }
 
@@ -343,7 +364,7 @@ div.handles-container {
   }
 
   a.logo-link {
-    left: 11em;
+    left: 10em;
     top: 5em;
     width: 6em;
     height: 6em;
@@ -359,13 +380,18 @@ div.handles-container {
     font-size: 9.5px;
   }
 
+  .nav-text {
+    left: 3.5em;
+    font-size: 1.2em;
+  }
+
   #welcome-text {
     right: 5em;
     width: 63%;
   }
 
   div.handles-container {
-    left: 3.5em;
+    left: 4.1em;
     top: 26.4em;
     width: 19em;
   }
@@ -412,6 +438,7 @@ div.handles-container {
 
   a.logo-link {
     left: 9em;
+    top: 5em;
   }
 
   div.heading-container {
@@ -419,12 +446,20 @@ div.handles-container {
     font-size: 8.5px;
   }
 
+  nav.main-nav {
+    top: 4.05em;
+  }
+
+  .nav-text {
+    left: 3.2em;
+  }
+
   .welcome-inage {
     right: 4em;
   }
 
   div.handles-container {
-    left: 2em;
+    left: 2.6em;
     top: 24.4em;
   }
 
@@ -461,8 +496,12 @@ div.handles-container {
 
   div.heading-container {
     top: 25px;
-    left: -35px;
-    font-size: 7.5px;
+    left: -63px;
+    font-size: 8.5px;
+  }
+
+  nav.main-nav {
+    top: 3.5em;
   }
 
   .welcome-image {
@@ -472,25 +511,28 @@ div.handles-container {
   }
 
   div.handles-container {
-    left: 1.7em;
-    top: 19.6em;
-    width: 16em;
+    left: 1.95em;
+    top: 19.5em;
+    width: 17em;
   }
+
   .news-feeds-container {
     width: 85%;
     height: 120px;
     left: 1.5em;
   }
+
   .new-tag {
     width: 3rem;
     height: 1.3rem;
     font-size: 13px;
   }
+
   .news-feeds-txt {
     font-size: 15px;
   }
-}
 
-.main-nav-active {
-  transform: translateY(0%);
+  #checkout-tag {
+    font-size: 1em;
+  }
 }
