@@ -16,8 +16,7 @@ const navSlide = () => {
   const nav = document.querySelector('nav.main-nav');
 
   burger.addEventListener('click', () => {
-    console.log(nav.classList);
-    nav.classList.toggle('.main-nav-active');
+    nav.classList.toggle('active');
   });
 };
 navSlide();
