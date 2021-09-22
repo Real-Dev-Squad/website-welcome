@@ -270,10 +270,6 @@ div.handles-container {
     height: 20vh;
   }
 
-  header.active {
-    background: white;
-  }
-
   .hamburger {
     display: flex;
     flex-direction: column;
