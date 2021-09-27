@@ -47,6 +47,10 @@ a.logo-link {
   position: relative;
 }
 
+.nav-text:visited {
+  color: #fff;
+}
+
 .nav-text:hover {
   color: #34bb0b;
 }
@@ -143,7 +147,7 @@ div.handles-container {
   color: #fff;
 }
 
-.social-handles:hover {
+.social-handles:visited {
   color: #fff;
 }
 
