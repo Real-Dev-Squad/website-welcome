@@ -247,7 +247,7 @@ div.handles-container {
     height: 1.5px;
     background-color: #fff;
   }
-  .hamburger-lines.actve {
+  .hamburger-lines.active {
     background-color: #041187;
   }
 
@@ -261,7 +261,7 @@ div.handles-container {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #fff;
-    transform: translateY(-125%);
+    transform: translateY(-143%);
     transition: transform 0.5s ease-in;
     z-index: 1;
   }
@@ -275,6 +275,10 @@ div.handles-container {
     left: 4.5em;
     width: 85px;
     font-size: 1.3em;
+  }
+
+  .nav-text:visited {
+    color: #041187;
   }
 
   a.nav-text.welcome {
@@ -313,7 +317,7 @@ div.handles-container {
 
   .welcome-image {
     display: block;
-    right: 14em;
+    right: 14.6em;
     top: 7.2em;
     width: 39%;
     margin-bottom: 25em;
@@ -410,7 +414,7 @@ div.handles-container {
   }
 
   .welcome-image {
-    right: 4.2em;
+    right: 4.6em;
     top: 5em;
     width: 66%;
     margin-bottom: 13em;
