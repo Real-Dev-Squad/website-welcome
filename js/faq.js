@@ -1,11 +1,11 @@
 const faqTitles = document.querySelectorAll('.faq__title');
 const faqLinks = document.querySelectorAll('.faq_link');
 
-var currentLocation = window.location.hash;
+const currentLocation = window.location.hash;
 
 faqLinks.forEach((faqLink) => {
   const faqLinkValue = faqLink.hash;
-  if(currentLocation === faqLinkValue){
+  if (currentLocation === faqLinkValue) {
     const ancTag = document.querySelector(`a[href="${faqLinkValue}"]`);
     const faqNode = ancTag.parentNode.parentNode;
     faqNode.classList.toggle('show');
