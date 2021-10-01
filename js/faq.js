@@ -1,13 +1,13 @@
 const faqTitles = document.querySelectorAll('.faq__title');
-const faqLinks = document.querySelectorAll('.user_FAQ');
+const faqLinks = document.querySelectorAll('.faq_link');
 
 var currentLocation = window.location.hash;
 
 faqLinks.forEach((faqLink) => {
   const faqLinkValue = faqLink.hash;
   if(currentLocation === faqLinkValue){
-    const ancTag = document.querySelector(`a[href="${faqLinkValue}"]`);
-    const faqNode = ancTag.parentNode.parentNode;
+    const anctag = document.querySelector(`a[href="${faqLinkValue}"]`);
+    const faqNode = anctag.parentNode.parentNode;
     faqNode.classList.toggle('show');
     const faqText = faqNode.nextElementSibling;
     faqNode.childNodes[3].innerHTML = '-';
