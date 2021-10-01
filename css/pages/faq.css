@@ -51,6 +51,10 @@ h1 {
   right: 1rem;
 }
 
+.user_FAQ{
+  color: black;
+}
+
 .faq__text {
   word-spacing: 1px;
   max-height: 0;
