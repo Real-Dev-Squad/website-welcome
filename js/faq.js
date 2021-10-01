@@ -6,8 +6,8 @@ var currentLocation = window.location.hash;
 faqLinks.forEach((faqLink) => {
   const faqLinkValue = faqLink.hash;
   if(currentLocation === faqLinkValue){
-    const anctag = document.querySelector(`a[href="${faqLinkValue}"]`);
-    const faqNode = anctag.parentNode.parentNode;
+    const ancTag = document.querySelector(`a[href="${faqLinkValue}"]`);
+    const faqNode = ancTag.parentNode.parentNode;
     faqNode.classList.toggle('show');
     const faqText = faqNode.nextElementSibling;
     faqNode.childNodes[3].innerHTML = '-';
