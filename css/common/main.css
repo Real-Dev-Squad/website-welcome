@@ -13,13 +13,6 @@ body {
   font-size: 16px;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-} */
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -147,7 +140,7 @@ footer a {
 
 /* last screen code */
 
-.sample {
+.events-container {
   padding: 3rem 0;
 }
 
@@ -193,7 +186,8 @@ footer a {
 .video-holder {
   width: 100%;
   background-color: #f7f4f4;
-  padding: 3rem 28rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .video-holder > .video-text {
