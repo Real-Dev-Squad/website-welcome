@@ -70,7 +70,7 @@ a.nav-text.welcome {
   border-radius: 0.6em;
   position: relative;
   top: 1.5em;
-  right: 3.7em;
+  right: 4.7em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@ div.handles-container {
   height: 30%;
   float: right;
   position: relative;
-  right: 125px;
+  right: 188px;
   top: -7em;
   margin-bottom: -2em;
 }
@@ -180,7 +180,7 @@ div.handles-container {
   height: 3.5rem;
   position: relative;
   bottom: 30px;
-  left: 150px;
+  left: 132px;
   border-radius: 0.6em;
   background-color: #fff;
   display: flex;
