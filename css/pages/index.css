@@ -270,6 +270,10 @@ div.handles-container {
     height: 20vh;
   }
 
+  header.active {
+    background: white;
+  }
+
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -292,12 +296,15 @@ div.handles-container {
     height: 1.5px;
     background-color: #fff;
   }
+  .hamburger-lines.actve {
+    background-color: #041187;
+  }
 
   nav.main-nav {
     width: 100vw;
-    height: 70vh;
+    height: 53vh;
     left: 0em;
-    top: 0em;
+    top: 4.5em;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -567,6 +574,7 @@ div.handles-container {
     height: 120px;
     left: 1.5em;
   }
+
   .new-tag {
     width: 3rem;
     height: 1.3rem;
