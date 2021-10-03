@@ -98,6 +98,35 @@ div.heading-container {
   font-family: 'raleway';
 }
 
+#first-line {
+  font-size: 4.3em;
+  width: 9em;
+  height: 1em;
+  display: inline-block;
+  position: relative;
+  top: 0.8em;
+  left: 0.8em;
+}
+
+#welcome-text {
+  color: #e30062;
+}
+
+#to-the-text {
+  color: #fff;
+  font-weight: 400;
+}
+
+#real-dev-squad-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.3em;
+  line-height: 0.6em;
+  position: relative;
+  left: 0.8em;
+  top: 1.2em;
+}
+
 div.handles-container {
   display: flex;
   justify-content: center;
@@ -154,7 +183,23 @@ div.handles-container {
   left: 150px;
   border-radius: 0.6em;
   background-color: #fff;
-  color: #929292;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font: 1em 'poppins';
+  box-sizing: border-box;
+}
+
+.new-tag {
+  width: 5rem;
+  height: 2.8rem;
+  background: linear-gradient(130deg, #f3036b, #dc7faf, #e30062);
+  color: #091133;
+  font: 1.05rem 'poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4em;
 }
 
 #checkout-tag {
