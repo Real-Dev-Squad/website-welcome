@@ -4,10 +4,12 @@ const currentLocation = window.location.hash;
 
 faqTitles.forEach((faqTitle) => {
   faqTitle.addEventListener('click', (event) => {
-    const currentlyActiveFaqTitle = document.querySelector('.faq__title.show');
+    var currentlyActiveFaqTitle = document.querySelector('.faq__title.show');
+    console.log(faqTitle);
+    console.log(currentlyActiveFaqTitle);
     if (currentlyActiveFaqTitle && currentlyActiveFaqTitle !== faqTitle) {
       currentlyActiveFaqTitle.classList.toggle('show');
-      currentlyActiveFaqTitle.nextElementSibling.style.maxHeight = 0;
+      currentlyActiveFaqTitle.parentElement.nextElementSibling.style.maxHeight = 0;
     }
 
     faqTitle.classList.toggle('show');
@@ -17,6 +19,7 @@ faqTitles.forEach((faqTitle) => {
       faqTitles.forEach((faqTitle) => {
         faqTitle.childNodes[3].innerHTML = '+';
       });
+
       faqTitle.childNodes[3].innerHTML = '-';
       faqText.style.maxHeight = faqText.scrollHeight + 'px';
     } else {
