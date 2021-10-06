@@ -5,8 +5,6 @@ const currentLocation = window.location.hash;
 faqTitles.forEach((faqTitle) => {
   faqTitle.addEventListener('click', (event) => {
     var currentlyActiveFaqTitle = document.querySelector('.faq__title.show');
-    console.log(faqTitle);
-    console.log(currentlyActiveFaqTitle);
     if (currentlyActiveFaqTitle && currentlyActiveFaqTitle !== faqTitle) {
       currentlyActiveFaqTitle.classList.toggle('show');
       currentlyActiveFaqTitle.parentElement.nextElementSibling.style.maxHeight = 0;
