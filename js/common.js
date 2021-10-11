@@ -11,12 +11,13 @@ window.addEventListener('DOMContentLoaded', () => {
   headerMobileToggle.addEventListener('click', handleHeaderClick);
 });
 
-const navSlide = () => {
-  const burger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav.main-nav');
+const hamBurgerBtn = document.querySelector('.hamburger');
+const nav = document.querySelector('nav.main-nav');
 
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
+const navSlide = () => {
+  nav.classList.toggle('active');
 };
-navSlide();
+
+window.addEventListener('DOMContentLoaded', () => {
+  hamBurgerBtn.addEventListener('click', navSlide);
+});
