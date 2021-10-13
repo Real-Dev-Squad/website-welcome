@@ -21,9 +21,6 @@ faqLinks.forEach((faqLink) => {
       faqLink.firstElementChild.lastElementChild.innerHTML = '+';
     }
   });
-});
-
-faqLinks.forEach((faqLink) => {
   const faqLinkValue = faqLink.hash;
   if (currentLocation === faqLinkValue) {
     const ancTag = document.querySelector(`a[href="${faqLinkValue}"]`);
