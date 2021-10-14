@@ -12,10 +12,10 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 const hamBurgerBtn = document.querySelector('.hamburger');
-const nav = document.querySelector('nav.main-nav');
+const navElementsContainer = document.querySelector('nav.main-nav');
 
 const navSlide = () => {
-  nav.classList.toggle('active');
+  navElementsContainer.classList.toggle('active');
 };
 
 window.addEventListener('DOMContentLoaded', () => {
