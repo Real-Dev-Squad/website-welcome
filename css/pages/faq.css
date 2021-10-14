@@ -79,6 +79,14 @@ h1 {
   align-items: center;
 }
 
+.faq-btn::before {
+  content: '+';
+}
+
+.faq-btn.show::before {
+  content: '-';
+}
+
 .faq__list {
   margin: 10px 0 0 0;
   padding: 0;
