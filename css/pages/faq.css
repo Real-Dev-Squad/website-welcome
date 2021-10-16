@@ -51,6 +51,10 @@ h1 {
   right: 1rem;
 }
 
+.question {
+  color: black;
+}
+
 .faq__text {
   word-spacing: 1px;
   max-height: 0;
@@ -73,6 +77,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.faq-btn::before {
+  content: '+';
+}
+
+.faq-btn.show::before {
+  content: '-';
 }
 
 .faq__list {
