@@ -12,13 +12,15 @@ faqLinks.forEach((faqLink) => {
       currentlyActiveFaqLink.nextElementSibling.style.maxHeight = 0;
     }
 
+    const faqExpandIcon = faqLink.firstElementChild.lastElementChild;
+
     faqLink.classList.toggle('show');
-    faqLink.firstElementChild.lastElementChild.classList.toggle('show');
+    faqExpandIcon.classList.toggle('show');
     const faqText = faqLink.nextElementSibling;
 
     if (
       faqLink.classList.contains('show') &&
-      faqLink.firstElementChild.lastElementChild.classList.contains('show')
+      faqExpandIcon.classList.contains('show')
     ) {
       faqText.style.maxHeight = faqText.scrollHeight + 'px';
     } else {
