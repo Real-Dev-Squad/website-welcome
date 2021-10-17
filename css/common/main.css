@@ -25,11 +25,6 @@ img {
   vertical-align: middle;
 }
 
-/* .container { 
-  padding: 0 15px;
-  margin: 0 auto;
-}  */
-
 @media (min-width: 1200px) {
   .container {
     max-width: 100%;
@@ -70,12 +65,6 @@ a:active {
   background: #f20a67;
   color: white;
 }
-
-/* .welcome-title {
-  margin: 1em 0;
-  text-align: center;
-  font-weight: 400;
-} */
 
 .logo-img {
   width: 300px;
