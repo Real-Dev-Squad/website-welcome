@@ -1,10 +1,36 @@
 {{page-title 'Profile'}}
+
+<form class="form">
+  <h1>{{this.title}}</h1>
+
+  {{#each this.fields as |field|}}
+  <FormInput 
+    @id={{field.id}} 
+    @for={{field.for}} 
+    @label={{field.label}} 
+    @type={{field.type}} 
+    @value={{get @modelfield.id}} 
+    @placeholder={{field.placeholder}} 
+    @showError={{field.showError}} 
+    @helpMsg={{field.helpMsg}} 
+    @onChange={{this.handleFieldChange}}
+    @validator={{field.validator}} 
+    @disabled={{field.disabled}} />
+  {{/each}}
+
+  <button class='submitButton' type="submit" {{on 'click' (fn this.handleSubmit)}}>
+    {{#if this.isSubmitClicked}}
+    <i class="fa fa-spinner fa-spin"></i>
+    {{/if}}
+    Submit
+  </button>
+</form>
+
 <div class="profile-container">
   <h1>
     Upload Image
   </h1>
-  <UploadImage
-    @uploadUrl={{this.imageUploadUrl}}
-    @formKeyName={{this.formDataKeyName}}
-  />
+  <UploadImage 
+    @uploadUrl={{this.imageUploadUrl}} 
+    @formKeyName={{this.formDataKeyName}} />
 </div>

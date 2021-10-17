@@ -1,3 +1,8 @@
+h1 {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 20px;
+}
 
 .container {
   width: 100%;
@@ -7,14 +12,13 @@
 }
 
 .form {
-  width: 60vw;
-  max-width: 40rem;
+  width: 70vw;
+  max-width: 45rem;
   min-width: 300px;
   margin: 40px auto;
-  padding: 1em 1.5em;
-  border: 1px solid #f4f4f4;
-  border-radius: 2%;
-  box-shadow: 0 0 15px -7px rgba(0, 0, 0, 0.65);
+  padding: 3em 1.5em;
+  background-color: rgb(231, 231, 231);
+  border-radius: 8px;
 }
 
 .field {
@@ -29,6 +33,7 @@
 .field label {
   font-size: 1rem;
   font-weight: bold;
+  padding: 10px 0;
 }
 
 .field input {
@@ -42,7 +47,7 @@
   border: none;
 }
 
-.field > .error {
+.field>.error {
   font-size: 0.8rem;
   color: #e74c3c;
 }
@@ -94,7 +99,7 @@
   margin: auto;
 }
 
-.user-details > * {
+.user-details>* {
   padding: 2rem;
 }
 
@@ -135,7 +140,7 @@
   .user-details {
     width: 80%;
   }
-} 
+}
 
 @media (max-width: 568px) {
   .user-details {

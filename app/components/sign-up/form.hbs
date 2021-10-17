@@ -1,9 +1,9 @@
 <div class="user-details">
-  <h2 class="user-details__heading">
+  <h2 class="user-details__heading" data-test-signup-form-label>
     {{this.label}}
   </h2>
   <div class="user-details__field">
-    <Input @value={{get @userDetails @state}} type="text" placeholder="Darth" {{on 'input' this.inputFieldChanged}} />
+    <Input @value={{get @userDetails @state}} type="text" placeholder="Darth" {{on 'input' this.inputFieldChanged}} data-test-signup-form-input/>
   </div>
 
   <div class="signup-action__btn">

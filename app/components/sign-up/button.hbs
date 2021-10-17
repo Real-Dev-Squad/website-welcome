@@ -1,11 +1,12 @@
 <button
+  data-test-signup-button
   type="button"
   class="{{if @disabled 'btn-disabled'}}"
   disabled={{@disabled}}
   {{on "click" this.buttonClickHandler}}
 >
   {{#if @isSubmitClicked}}
-    <i class="fa fa-spinner fa-spin"></i>
+    <i class="fa fa-spinner fa-spin" data-test-signup-button-spinner></i>
   {{/if}}
   {{yield}}
 </button>

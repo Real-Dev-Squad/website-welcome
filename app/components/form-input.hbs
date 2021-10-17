@@ -5,6 +5,7 @@
     @type={{@type}}
     @value={{@value}}
     @placeholder={{@placeholder}}
+    @disabled={{@disabled}}
     @class={{if @showError 'input errorBorder' 'input'}}
     {{on 'input' (fn this.inputFieldChanged)}}
   />
