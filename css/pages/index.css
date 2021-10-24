@@ -1,62 +1,586 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
-.container {
-  width: 750px;
-  text-align: center;
-  font-size: 1.5rem;
+div.first-screen {
+  background-color: #041187;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-.cards-title {
-  margin-bottom: 32px;
-  color: #e20665;
-}
-
-.cards {
+.first-screen header {
+  position: relative;
+  height: 30%;
   display: flex;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-.card {
-  border: 1px solid #f3efef;
-  box-shadow: 0 0 15px -9px rgba(0, 0, 0, 0.65);
-  border-radius: 2px;
-  width: 30%;
-  padding: 18px 15px;
+a.logo-link {
+  width: 6em;
+  height: 6em;
+  position: relative;
+  top: 1.2em;
+  left: 3.5em;
+  border-radius: 50%;
+}
+
+.main-nav {
+  width: 44%;
+  height: 1.6em;
+  position: relative;
+  top: 1.3em;
+  right: 30.5em;
+  display: flex;
+  align-self: center;
+  font-family: 'roboto';
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.nav-text {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08em;
+  position: relative;
+}
+
+.nav-text:visited {
+  color: #fff;
+}
+
+.nav-text:hover {
+  color: #34bb0b;
+}
+
+a.nav-text.welcome {
+  color: #34bb0b;
+  border-bottom: 0.12em solid #34bb0b;
+}
+
+.sign-in-button {
+  width: 16em;
+  height: 2.5em;
+  text-align: center;
+  background-color: #041187;
+  color: #fff;
+  border: 0.2em solid #fff;
+  border-radius: 0.6em;
+  position: relative;
+  top: 1.5em;
+  right: 4.7em;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
-  font-size: 0.8em;
-  text-align: center;
-  color: #000000;
+  cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.65);
-  color: #000000;
+#btn-text1 {
+  position: relative;
+  left: -5px;
 }
 
-.card:active {
-  background-color: #fff;
-  color: #929292;
+#git-logo {
+  width: 1.5em;
+  height: 1.7em;
+  position: relative;
+  left: 0.5em;
+  border-radius: 20%;
+}
+
+div.heading-container {
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left: 52px;
+  font-family: 'raleway';
+}
+
+#first-line {
+  font-size: 4.3em;
+  width: 9em;
+  height: 1em;
+  display: inline-block;
+  position: relative;
+  top: 0.8em;
+  left: 0.8em;
+}
+
+#welcome-text {
+  color: #e30062;
+}
+
+#to-the-text {
+  color: #fff;
+  font-weight: 400;
+}
+
+#real-dev-squad-text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.3em;
+  line-height: 0.6em;
+  position: relative;
+  left: 0.8em;
+  top: 1.2em;
+}
+
+div.handles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 2em;
+  width: 32em;
+  position: relative;
+  left: 8.6em;
+  top: 12.9em;
 }
 
 .social-handles {
-  margin: 3em 0;
-  font-size: 1em;
+  font-family: 'roboto';
+  font-weight: 500;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
 }
 
-@media screen and (max-width: 780px) {
-  .container {
-    max-width: 95%;
-    font-size: 0.9rem;
+.social-handles:visited {
+  color: #fff;
+}
+
+.handles-logos {
+  position: relative;
+  bottom: 3px;
+  right: 10px;
+}
+
+.separator {
+  height: 1.5em;
+  width: 0.2em;
+  position: relative;
+  right: 0.15em;
+  bottom: 0.15em;
+}
+
+.welcome-image {
+  width: 34%;
+  height: 30%;
+  float: right;
+  position: relative;
+  right: 127px;
+  top: -7em;
+  margin-bottom: -2em;
+}
+
+.news-feeds-container {
+  width: 76%;
+  height: 3.5rem;
+  position: relative;
+  bottom: 30px;
+  left: 132px;
+  border-radius: 0.6em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font: 1em 'poppins';
+  box-sizing: border-box;
+}
+
+.new-tag {
+  width: 5rem;
+  height: 2.8rem;
+  background: linear-gradient(130deg, #f3036b, #dc7faf, #e30062);
+  color: #091133;
+  font: 1.05rem 'poppins';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4em;
+}
+
+#checkout-tag {
+  font-size: 1.1em;
+  right: 0.5em;
+}
+
+#arrow-icon {
+  position: relative;
+  right: -0.5rem;
+  height: 2em;
+}
+
+@media (max-width: 1024px) {
+  a.logo-link {
+    width: 5em;
+    height: 5em;
+    left: 3em;
   }
-  .card {
-    padding: 10px;
+
+  .main-nav {
+    width: 30em;
+    position: relative;
+    right: 22em;
+    font-size: 15.5px;
+    background-color: #041187;
   }
-  .logo-img {
-    margin: 0;
+
+  .sign-in-button {
+    width: 13em;
+    height: 2.2em;
+    top: 2em;
+    right: 3em;
+  }
+
+  div.heading-container {
+    top: 54px;
+    left: 5px;
+    font-size: 14.5px;
+  }
+
+  div.handles-container {
+    width: 30em;
+    left: 4.6em;
+    top: 9.5em;
+  }
+
+  .handles-logos {
+    right: 7px;
+  }
+
+  .welcome-image {
+    right: 68px;
+  }
+
+  .news-feeds-container {
+    width: 84%;
+    left: 80px;
+  }
+
+  #arrow-icon {
+    right: -0.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-screen header {
+    height: 20vh;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    left: -44em;
+    top: 1.5em;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hamburger-lines {
+    display: block;
+    width: 23px;
+    height: 1.5px;
+    background-color: #fff;
+  }
+  .hamburger-lines.active {
+    background-color: #041187;
+  }
+
+  nav.main-nav {
+    width: 100vw;
+    height: 53vh;
+    left: 0em;
+    top: 4.5em;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    transform: translateY(-143%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+
+  .main-nav.active {
+    transform: translateY(0%);
+  }
+
+  .nav-text {
+    color: #041187;
+    left: 4.5em;
+    width: 85px;
+    font-size: 1.3em;
+  }
+
+  .nav-text:visited {
+    color: #041187;
+  }
+
+  a.nav-text.welcome {
+    border-style: none;
+  }
+
+  .sign-in-button {
+    top: 0.5em;
+    right: 0.8em;
+  }
+
+  a.logo-link {
+    left: 21em;
+    top: 5.5em;
+    width: 7em;
+    height: 7em;
+  }
+
+  #welcome-text {
+    display: block;
+    position: relative;
+    left: 3em;
+  }
+
+  #to-the-text {
+    display: block;
+    position: relative;
+    left: 4em;
+  }
+
+  #real-dev-squad-text {
+    display: block;
+    position: relative;
+    left: 1.9em;
+  }
+
+  .welcome-image {
+    display: block;
+    right: 14.6em;
+    top: 7.2em;
+    width: 39%;
+    margin-bottom: 25em;
+  }
+
+  div.handles-container {
+    left: 8.8em;
+    top: 28.9em;
+  }
+
+  .news-feeds-container {
+    flex-direction: column;
+    width: 60%;
+    height: 150px;
+    bottom: -30.5em;
+    left: 9.7em;
+    margin: 10px 0px 7px 0;
+  }
+
+  .new-tag {
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    border-radius: 0.2em;
+    position: relative;
+    top: 4px;
+  }
+
+  div #dash {
+    display: none;
+  }
+
+  #arrow-icon {
+    right: 0em;
+    bottom: 0.3em;
+  }
+}
+
+@media (max-width: 425px) {
+  .hamburger {
+    left: -23em;
+    top: 1.2em;
+  }
+
+  .sign-in-button {
+    top: 0.3em;
+    right: 0em;
+  }
+
+  a.logo-link {
+    left: 10em;
+    top: 4em;
+    width: 6em;
+    height: 6em;
+  }
+
+  #btn-text2 {
+    display: none;
+  }
+
+  div.heading-container {
+    top: 50px;
+    left: -35px;
+    font-size: 9.5px;
+  }
+
+  .nav-text {
+    left: 3.5em;
+    font-size: 1.2em;
+  }
+
+  #welcome-text {
+    right: 5em;
+    width: 63%;
+  }
+
+  div.handles-container {
+    left: 4.1em;
+    top: 26.4em;
+    width: 19em;
+  }
+
+  .social-handles {
+    display: none;
+  }
+
+  .handles-logos {
+    width: 37px;
+    height: 37px;
+  }
+
+  .separator {
+    height: 0.2em;
+  }
+
+  .welcome-image {
+    right: 4.6em;
+    top: 5em;
+    width: 66%;
+    margin-bottom: 13em;
+  }
+
+  .news-feeds-container {
+    width: 68%;
+    left: 4.3em;
+    bottom: 22px;
+  }
+
+  .sign-in-button {
+    width: 7em;
+  }
+}
+
+@media (max-width: 375px) {
+  .hamburger {
+    left: -20.3em;
+  }
+
+  .sign-in-button {
+    top: 0.1em;
+  }
+
+  a.logo-link {
+    left: 9em;
+  }
+
+  div.heading-container {
+    left: -34px;
+    font-size: 8.5px;
+  }
+
+  nav.main-nav {
+    top: 4.05em;
+  }
+
+  .nav-text {
+    left: 3.2em;
+  }
+
+  .welcome-inage {
+    right: 4em;
+  }
+
+  div.handles-container {
+    left: 2.6em;
+    top: 24.4em;
+  }
+
+  .handles-logos {
+    width: 32px;
+    height: 32px;
+  }
+
+  .news-feeds-container {
+    width: 76%;
+    left: 2.9em;
+  }
+}
+
+@media (max-width: 320px) {
+  .hamburger {
+    left: -17em;
+    top: 1em;
+    height: 18px;
+  }
+
+  .sign-in-button {
+    top: 0em;
+    width: 7em;
+    font-size: 11px;
+  }
+
+  a.logo-link {
+    left: 7em;
+    top: 3em;
+    width: 5.5em;
+    height: 4.5em;
+  }
+
+  div.heading-container {
+    top: 25px;
+    left: -63px;
+    font-size: 8.5px;
+  }
+
+  nav.main-nav {
+    top: 3.5em;
+  }
+
+  .welcome-image {
+    top: 3em;
+    right: 3.35em;
+    margin-bottom: 10em;
+  }
+
+  div.handles-container {
+    left: 1.95em;
+    top: 19.5em;
+    width: 17em;
+  }
+
+  .news-feeds-container {
+    width: 85%;
+    height: 120px;
+    left: 1.5em;
+  }
+
+  .new-tag {
+    width: 3rem;
+    height: 1.3rem;
+    font-size: 13px;
+  }
+
+  .news-feeds-txt {
+    font-size: 15px;
+  }
+
+  #checkout-tag {
+    font-size: 1em;
   }
 }

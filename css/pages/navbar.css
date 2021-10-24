@@ -101,10 +101,6 @@ nav .menu {
   .nav-home {
     display: flex;
   }
-  nav {
-    padding: 1em;
-    background-color: #1d1283;
-  }
 
   nav ul {
     margin-top: 1rem;

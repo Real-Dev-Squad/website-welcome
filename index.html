@@ -10,109 +10,198 @@
     <link rel="stylesheet" type="text/css" href="./css/pages/index.css" />
     <link rel="icon" type="image/x-icon" href="./img/logos/favicon.ico" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@400;700;800&family=Roboto:wght@100;400;500;700&display=swap"
       rel="stylesheet"
     />
     <meta name="theme-color" content="#e30062" />
   </head>
-
   <body>
-    <header>
-      <nav>
-        <!-- in case of small screens, show a dropdown -->
-        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
-        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
+    <div class="first-screen">
+      <header>
+        <a
+          href="https://www.realdevsquad.com/"
+          target="_blank"
+          class="logo-link"
+        >
+          <img
+            id="logo"
+            src="../img/re-designed-images/RDS-logo.png"
+            alt="logo"
+          />
+        </a>
 
-        <ul class="menu">
-          <li>
-            <a class="nav-logo" href="https://realdevsquad.com/"
-              ><img
-                class="nav-logo-img"
-                src="./img/logos/Real-Dev-Squad@1x.png"
-                alt="Real Dev Squad logo"
-            /></a>
-            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
-          </li>
-          <li>
-            <a class="active" href="https://welcome.realdevsquad.com/"
-              >Welcome</a
-            >
-          </li>
-          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
-          <li><a href="https://members.realdevsquad.com/">Members</a></li>
-          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
-          <li><a href="https://status.realdevsquad.com/">Status</a></li>
-        </ul>
+        <div class="hamburger">
+          <div class="hamburger-lines"></div>
+          <div class="hamburger-lines"></div>
+          <div class="hamburger-lines"></div>
+        </div>
 
+        <nav class="main-nav">
+          <a
+            class="nav-text welcome"
+            href="https://welcome.realdevsquad.com/"
+            target="_blank"
+            >Welcome</a
+          >
+          <a
+            class="nav-text"
+            href="https://www.realdevsquad.com/events.html"
+            target="_blank"
+            >Events</a
+          >
+          <a
+            class="nav-text"
+            href="https://members.realdevsquad.com/"
+            target="_blank"
+            >Members</a
+          >
+          <a
+            class="nav-text"
+            href="https://crypto.realdevsquad.com/"
+            target="_blank"
+            >Crypto</a
+          >
+          <a
+            class="nav-text"
+            href="https://status.realdevsquad.com/"
+            target="_blank"
+            >Status</a
+          >
+        </nav>
         <div class="login-btn">
           <a
             href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
           >
-            Login
+            <button class="sign-in-button">
+              <span id="btn-text1">SignIn</span
+              ><span id="btn-text2">with Github</span>
+              <img
+                id="git-logo"
+                src="../img/re-designed-images/github-logo.png"
+                alt="Github logo"
+              />
+            </button>
           </a>
         </div>
-      </nav>
-    </header>
+      </header>
 
-    <main>
-      <div class="container">
-        <h1 class="welcome-title">Welcome to Real Dev Squad!🎉</h1>
+      <div class="heading-container">
+        <h2 id="first-line">
+          <span id="welcome-text">Welcome</span>
+          <span id="to-the-text">to the</span>
+        </h2>
 
-        <div class="cards-title">
-          <h3>Check out our Docs ⬇️</h3>
-        </div>
-        <div class="cards">
-          <a class="card" href="./faq.html">FAQ</a>
-          <a class="card" href="./discord.html">Discord</a>
-          <a class="card" href="./code-of-conduct.html">Code of Conduct</a>
-        </div>
-
-        <p class="info-note social-handles">
-          <a
-            href="https://instagram.com/realdevsquad"
-            target="_blank"
-            rel="nonreferrer"
-            >Instagram</a
-          >&nbsp;
-          <span class="link-seperators">&vert;</span>
-
-          &nbsp;
-          <a
-            href="https://www.linkedin.com/company/real-dev-squad/"
-            target="_blank"
-            rel="nonreferrer"
-          >
-            LinkedIn
-          </a>
-          <span class="link-seperators">&vert;</span>
-
-          &nbsp;
-          <a
-            href="https://twitter.com/realdevsquad"
-            target="_blank"
-            rel="nonreferrer"
-            >Twitter</a
-          >&nbsp;
-          <span class="link-seperators">&vert;</span>
-
-          &nbsp;
-          <a
-            href="https://www.facebook.com/Real-Dev-Squad-108713777585062"
-            target="_blank"
-            rel="nonreferrer"
-          >
-            Facebook
-          </a>
-        </p>
-        <h3 class="info-note">
-          To know how this page is getting developed, join our Discord Channel.
-          Contact one of our existing
-          <a href="https://members.realdevsquad.com/">members</a> for the
-          invitation link.
-        </h3>
+        <h1><span id="real-dev-squad-text">Real Dev Squad</span></h1>
       </div>
-    </main>
+      <div class="handles-container">
+        <a
+          href="https://www.linkedin.com/company/real-dev-squad/"
+          target="_blank"
+          class="social-handles"
+          id="linkedIn"
+          >LinkedIn
+        </a>
+        <a
+          href="https://www.linkedin.com/company/real-dev-squad/"
+          target="_blank"
+        >
+          <img
+            src="../img/re-designed-images/linkedIn-logo.png"
+            alt="LinkedIn logo"
+            class="handles-logos"
+          />
+        </a>
+
+        <span
+          ><img
+            src="../img/re-designed-images/separator-icon.png"
+            alt="separator icon"
+            class="separator"
+        /></span>
+        <a
+          href="https://twitter.com/realdevsquad?lang=en"
+          target="_blank"
+          class="social-handles"
+          id="twitter"
+          >Twitter
+        </a>
+        <a href="https://twitter.com/realdevsquad?lang=en" target="_blank">
+          <img
+            src="../img/re-designed-images/twitter-logo.png"
+            alt="Twitter logo"
+            class="handles-logos"
+          />
+        </a>
+
+        <span
+          ><img
+            src="../img/re-designed-images/separator-icon.png"
+            alt="separator icon"
+            class="separator"
+        /></span>
+        <a
+          href="https://www.facebook.com/Real-Dev-Squad-108713777585062/"
+          target="_blank"
+          class="social-handles"
+          id="facebook"
+          >Facebook
+        </a>
+        <a
+          href="https://www.facebook.com/Real-Dev-Squad-108713777585062/"
+          target="_blank"
+        >
+          <img
+            src="../img/re-designed-images/facebook-logo.png"
+            alt="Facebook logo"
+            class="handles-logos"
+          />
+        </a>
+
+        <span
+          ><img
+            src="../img/re-designed-images/separator-icon.png"
+            alt="separator icon"
+            class="separator"
+        /></span>
+        <a
+          href="https://www.instagram.com/realdevsquad/?hl=en"
+          target="_blank"
+          class="social-handles"
+          id="instagram"
+          >Instagram
+        </a>
+        <a href="https://www.instagram.com/realdevsquad/?hl=en" target="_blank">
+          <img
+            src="../img/re-designed-images/instagram-logo.png"
+            alt="Instagram logo"
+            class="handles-logos"
+          />
+        </a>
+      </div>
+
+      <img
+        class="welcome-image"
+        src="../img/re-designed-images/welcome-image.png"
+        alt="welcome-image"
+      />
+      <div class="news-feeds-container">
+        <div class="new-tag">New</div>
+        <span class="news-feeds-txt">1 Year Aniversary</span>
+        <span id="dash">--</span>
+        <span class="news-feeds-txt">New Features Available for YOU!</span>
+        <a id="checkout-tag" href="https://www.realdevsquad.com/releases"
+          >Check them out
+          <img
+            id="arrow-icon"
+            src="../img/re-designed-images/arrow-icon.png"
+            alt="arrow icon"
+          />
+        </a>
+      </div>
+    </div>
 
     <footer>
       <p class="info-repo">
@@ -128,5 +217,6 @@
     </footer>
 
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
   </body>
 </html>
