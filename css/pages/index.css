@@ -216,12 +216,6 @@ div.handles-container {
 
 /* second screen css */
 
-.cards-title {
-  margin: 5% auto 4%;
-  width: 100%;
-  text-align: center;
-}
-
 .docs-heading {
   color: #091133;
   width: 100%;
@@ -229,16 +223,12 @@ div.handles-container {
   justify-content: center;
   align-items: center;
   letter-spacing: 10%;
-  font-weight: 600;
-  font-size: 58px;
   line-height: 66%;
-  font-family: 'raleway';
-  line-height: 66%;
-  font: normal 600 250% 'raleway';
+  font: 700 54px 'raleway';
 }
 
 .cards-title {
-  margin-top: 120px;
+  margin-top: 110px;
   margin-bottom: 65px;
   width: 100%;
 }
@@ -254,16 +244,14 @@ div.handles-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 1.6em;
   text-align: center;
   letter-spacing: 1px;
   background-color: #e30062;
   color: #ffffff;
-  font-family: 'Roboto';
   padding: 3%;
   margin-right: 7%;
   width: 18%;
+  font: 700 1.6em 'Roboto';
 }
 
 #card1 {
@@ -273,10 +261,6 @@ div.handles-container {
 #card3 {
   padding-left: 2%;
   padding-right: 2%;
-  padding: 2%;
-  margin-right: 7%;
-  width: 18%;
-  font: normal bolder 90% 'Roboto';
 }
 
 .card:hover {
@@ -296,17 +280,13 @@ div.handles-container {
 }
 
 .info-note {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 34px;
   letter-spacing: 1px;
   color: #091133;
   line-height: 55%;
   text-align: left;
   width: 50%;
   margin-top: 5%;
-  font: normal bold 140% 'Poppins';
+  font: bold 200% 'Poppins';
 }
 
 .info-note-link {
