@@ -25,14 +25,9 @@ img {
   vertical-align: middle;
 }
 
-.container {
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 100%;
   }
 }
 
@@ -61,7 +56,6 @@ a {
 
 a:focus,
 a:hover {
-  color: #00084d;
   transition-delay: 0.2s;
   transition-property: color, border-bottom, background;
   transition-timing-function: linear;
@@ -72,21 +66,9 @@ a:active {
   color: white;
 }
 
-.welcome-title {
-  margin: 1em 0;
-  text-align: center;
-  font-weight: 400;
-}
-
 .logo-img {
   width: 300px;
   margin: 2em;
-}
-
-.info-note {
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
 }
 
 .highlighted-text {

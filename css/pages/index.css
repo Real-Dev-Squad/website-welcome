@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-div.first-screen {
+/* first screen css */
+.first-screen {
   background-color: #041187;
   width: 100vw;
   overflow-x: hidden;
@@ -18,7 +19,7 @@ div.first-screen {
   justify-content: space-between;
 }
 
-a.logo-link {
+.logo-link {
   width: 6em;
   height: 6em;
   position: relative;
@@ -63,7 +64,6 @@ a.nav-text.welcome {
 .sign-in-button {
   width: 16em;
   height: 2.5em;
-  text-align: center;
   background-color: #041187;
   color: #fff;
   border: 0.2em solid #fff;
@@ -80,6 +80,7 @@ a.nav-text.welcome {
 #btn-text1 {
   position: relative;
   left: -5px;
+  justify-content: center;
 }
 
 #git-logo {
@@ -91,7 +92,6 @@ a.nav-text.welcome {
 }
 
 div.heading-container {
-  display: inline-block;
   position: relative;
   top: 100px;
   left: 52px;
@@ -180,13 +180,14 @@ div.handles-container {
   height: 3.5rem;
   position: relative;
   bottom: 30px;
-  left: 132px;
+  left: 140px;
   border-radius: 0.6em;
   background-color: #fff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   font: 1em 'poppins';
+  font-weight: bold;
   box-sizing: border-box;
 }
 
@@ -211,6 +212,92 @@ div.handles-container {
   position: relative;
   right: -0.5rem;
   height: 2em;
+}
+
+/* second screen css */
+
+.docs-heading {
+  color: #091133;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 10%;
+  line-height: 66%;
+  font: 700 54px 'raleway';
+}
+
+.cards-title {
+  margin-top: 110px;
+  margin-bottom: 65px;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  border: 1px solid #f3efef;
+  height: 110px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #e30062;
+  color: #ffffff;
+  padding: 3%;
+  margin-right: 7%;
+  width: 18%;
+  font: 700 1.6em 'Roboto';
+}
+
+#card1 {
+  margin-left: 15%;
+}
+
+#card3 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.65);
+}
+
+.info-note-div {
+  margin-top: 5%;
+  background-color: #f7f4f4;
+  padding: 7% 10%;
+  width: 100%;
+  display: flex;
+}
+
+.info-note-span {
+  flex: 50%;
+}
+
+.info-note {
+  letter-spacing: 1px;
+  color: #091133;
+  line-height: 55%;
+  text-align: left;
+  width: 50%;
+  margin-top: 5%;
+  font: bold 200% 'Poppins';
+}
+
+.info-note-link {
+  color: #e30062;
+}
+
+.info-note-img {
+  float: right;
+  width: 80%;
+  display: flex;
+  margin-top: -10%;
 }
 
 @media (max-width: 1024px) {
@@ -262,6 +349,43 @@ div.handles-container {
 
   #arrow-icon {
     right: -0.5em;
+  }
+
+  .docs-heading {
+    font-size: 30px;
+  }
+
+  .cards-title {
+    margin-top: 20%;
+  }
+
+  .cards {
+    display: block;
+    margin-left: 75px;
+  }
+  .card {
+    width: 70%;
+    height: 25%;
+    margin-bottom: 4%;
+    font-size: 1.3em;
+  }
+
+  #card1 {
+    margin-left: 0px;
+  }
+
+  .info-note-div {
+    display: block;
+  }
+
+  .info-note {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .info-note-img {
+    margin-top: 10px;
+    margin-right: 35px;
   }
 }
 
