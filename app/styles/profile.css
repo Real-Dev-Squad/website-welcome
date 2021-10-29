@@ -5,3 +5,10 @@
   align-items: center;
   padding-top: 40px;
 }
+
+.image-upload-link {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 40px auto;
+ }

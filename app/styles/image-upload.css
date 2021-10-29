@@ -57,9 +57,7 @@
 }
 
 .image-preview {
-  width: 50%;
-  height: auto;
-  max-height: 200px;
+  max-height: 500px;
   border-radius: 10px;
   border: solid black;
   display: block;

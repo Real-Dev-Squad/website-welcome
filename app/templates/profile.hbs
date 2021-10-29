@@ -1,20 +1,21 @@
 {{page-title 'Profile'}}
 
+<a class="image-upload-link" href="#image-upload">Click here to upload image</a>
 <form class="form">
   <h1>{{this.title}}</h1>
 
   {{#each this.fields as |field|}}
-  <FormInput 
-    @id={{field.id}} 
-    @for={{field.for}} 
-    @label={{field.label}} 
-    @type={{field.type}} 
-    @value={{get @modelfield.id}} 
-    @placeholder={{field.placeholder}} 
-    @showError={{field.showError}} 
-    @helpMsg={{field.helpMsg}} 
+  <FormInput
+    @id={{field.id}}
+    @for={{field.for}}
+    @label={{field.label}}
+    @type={{field.type}}
+    @value={{get @modelfield.id}}
+    @placeholder={{field.placeholder}}
+    @showError={{field.showError}}
+    @helpMsg={{field.helpMsg}}
     @onChange={{this.handleFieldChange}}
-    @validator={{field.validator}} 
+    @validator={{field.validator}}
     @disabled={{field.disabled}} />
   {{/each}}
 
@@ -30,7 +31,8 @@
   <h1>
     Upload Image
   </h1>
-  <UploadImage 
-    @uploadUrl={{this.imageUploadUrl}} 
+  <p>( Max size 2MB )</p>
+  <UploadImage
+    @uploadUrl={{this.imageUploadUrl}}
     @formKeyName={{this.formDataKeyName}} />
 </div>
