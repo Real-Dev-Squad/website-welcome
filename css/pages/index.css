@@ -300,7 +300,6 @@ div.handles-container {
 }
 
 @media (max-width: 1024px) {
-
   a.logo-link {
     width: 5em;
     height: 5em;
@@ -716,7 +715,6 @@ div.handles-container {
   .footer-img {
     width: 100%;
   }
-  
 }
 
 /*third screen*/
@@ -744,15 +742,14 @@ div.handles-container {
   text-align: center;
 }
 
-.event{
+.event {
   display: block;
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 
-
 @media (max-width: 1024px) {
-  .event{
+  .event {
     display: block;
     margin-top: 10px;
     text-align: center;
@@ -789,24 +786,23 @@ div.handles-container {
   background-color: #f7f4f4;
 }
 
-.video-content{
+.video-content {
   text-align: center;
   margin: 0 450px;
 }
 
 @media (max-width: 1024px) {
-  .video-content{
+  .video-content {
     text-align: center;
-  margin: 50px;
+    margin: 50px;
   }
 }
 
 @media (max-width: 667px) {
-  .video-content{
-  margin: 10px;
+  .video-content {
+    margin: 10px;
   }
 }
-
 
 .video-content > .video-text {
   margin: 0 auto 40px;
@@ -824,8 +820,6 @@ div.handles-container {
   background-color: white;
   margin-top: 2rem;
 }
-
-
 
 footer {
   position: relative;
@@ -846,4 +840,3 @@ footer {
     width: 100%;
   }
 }
-
