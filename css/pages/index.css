@@ -299,6 +299,113 @@ div.handles-container {
   margin-top: -10%;
 }
 
+/*third screen*/
+
+.event-screen {
+  padding: 3rem 0;
+}
+
+.event-title {
+  width: auto;
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+  color: #e30062;
+}
+
+.upcoming-event {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.event {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.api-event {
+  margin: 15px 5px;
+  font-size: 20px;
+  color: #604af0;
+}
+
+.previous-event {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.events-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.events {
+  color: #604af0;
+  margin: 0 0.25rem;
+}
+
+.video-holder {
+  margin: 20px auto 20px;
+  padding: 15px 0px;
+  background-color: #f7f4f4;
+}
+
+.video-content {
+  text-align: center;
+  margin: 0 450px;
+}
+
+@media (max-width: 667px) {
+  .video-content {
+    margin: 10px;
+  }
+}
+
+.video-content > .video-text {
+  margin: 0 auto 40px;
+  font-size: 34px;
+  text-align: center;
+}
+
+.video-content > iframe {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.rectangle {
+  background-color: white;
+  margin-top: 2rem;
+}
+
+footer {
+  position: relative;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .footer-img {
+    width: 100%;
+  }
+  .event-screen {
+    max-width: 100%;
+  }
+}
+@media (max-width: 667px) {
+  .footer-img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
   a.logo-link {
     width: 5em;
@@ -385,6 +492,17 @@ div.handles-container {
   .info-note-img {
     margin-top: 10px;
     margin-right: 35px;
+  }
+
+  .event {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .video-content {
+    text-align: center;
+    margin: 20px;
   }
 
   @media (min-width: 1200px) {
@@ -528,6 +646,10 @@ div.handles-container {
     right: 0em;
     bottom: 0.3em;
   }
+
+  .footer-img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -603,6 +725,10 @@ div.handles-container {
   .sign-in-button {
     width: 7em;
   }
+
+  .footer-img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 375px) {
@@ -648,6 +774,9 @@ div.handles-container {
   .news-feeds-container {
     width: 76%;
     left: 2.9em;
+  }
+  .footer-img {
+    width: 100%;
   }
 }
 
@@ -715,127 +844,6 @@ div.handles-container {
   .footer-img {
     width: 100%;
   }
-}
-
-/*third screen*/
-
-.event-screen {
-  padding: 3rem 0;
-}
-
-@media (min-width: 1200px) {
-  .event-screen {
-    max-width: 100%;
-  }
-}
-.event-title {
-  width: auto;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-  color: #e30062;
-}
-
-.upcoming-event {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  text-align: center;
-}
-
-.event {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .event {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-  }
-}
-
-.api-event {
-  margin: 15px 5px;
-  font-size: 20px;
-  color: #604af0;
-}
-
-.previous-event {
-  font-size: 1.5rem;
-  margin-top: 2.5rem;
-  text-align: center;
-}
-
-.events-box {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-.events {
-  color: #604af0;
-  margin: 0 0.25rem;
-}
-
-.video-holder {
-  margin: 20px auto 20px;
-  padding: 15px 0px;
-  background-color: #f7f4f4;
-}
-
-.video-content {
-  text-align: center;
-  margin: 0 450px;
-}
-
-@media (max-width: 1024px) {
-  .video-content {
-    text-align: center;
-    margin: 50px;
-  }
-}
-
-@media (max-width: 667px) {
-  .video-content {
-    margin: 10px;
-  }
-}
-
-.video-content > .video-text {
-  margin: 0 auto 40px;
-  font-size: 34px;
-  text-align: center;
-}
-
-.video-content > iframe {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-}
-
-.rectangle {
-  background-color: white;
-  margin-top: 2rem;
-}
-
-footer {
-  position: relative;
-  margin-top: 40px;
-  bottom: 0;
-  width: 100%;
-  padding: 1em;
-  text-align: center;
-}
-
-@media (min-width: 1200px) {
-  .footer-img {
-    width: 100%;
-  }
-}
-@media (max-width: 667px) {
   .footer-img {
     width: 100%;
   }
