@@ -327,7 +327,7 @@ div.handles-container {
 
 .api-event {
   margin: 15px 5px;
-  font-size: 20px;
+  font-size: 30px;
   color: #604af0;
 }
 
@@ -339,6 +339,7 @@ div.handles-container {
 
 .events-box {
   margin-top: 1rem;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -373,7 +374,8 @@ div.handles-container {
 }
 
 .video-content > iframe {
-  margin: 0 auto;
+  margin: 100px auto;
+  text-align: center;
   display: block;
   width: 100%;
 }
