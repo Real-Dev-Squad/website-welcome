@@ -252,6 +252,7 @@ div.handles-container {
   margin-right: 7%;
   width: 18%;
   font: 700 1.6em 'Roboto';
+  text-decoration: none;
 }
 
 #card1 {
@@ -291,6 +292,7 @@ div.handles-container {
 
 .info-note-link {
   color: #e30062;
+  text-decoration: none;
 }
 
 .info-note-img {
@@ -329,6 +331,11 @@ div.handles-container {
   margin: 15px 5px;
   font-size: 30px;
   color: #604af0;
+}
+
+.link-seperators{
+  color: #e30062;
+  font-weight: bold;
 }
 
 .previous-event {
