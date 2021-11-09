@@ -33,7 +33,7 @@ img {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 80%;
   }
 }
 
@@ -87,7 +87,7 @@ a:active {
 .info-note {
   text-align: center;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .highlighted-text {
