@@ -327,6 +327,7 @@ div.handles-container {
 
 .upcoming-event {
   font-size: 1.5rem;
+  font-family: raleway;
   margin-top: 2.5rem;
   text-align: center;
 }
@@ -341,6 +342,7 @@ div.handles-container {
   margin: 15px 5px;
   font-size: 1rem;
   color: #604af0;
+  font-family: raleway;
 }
 
 .link-seperators {
@@ -351,6 +353,7 @@ div.handles-container {
 
 .previous-event {
   font-size: 1.5rem;
+  font-family: raleway;
   margin-top: 2.5rem;
   text-align: center;
 }
