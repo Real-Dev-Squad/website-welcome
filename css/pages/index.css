@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.index-body {
+body {
   font-family: raleway;
 }
 
@@ -97,9 +97,8 @@ a.nav-text.welcome {
 
 div.heading-container {
   position: relative;
-  top: 100px;
-  left: 52px;
-  font-family: 'raleway';
+  top: 6.25rem;
+  left: 3.25rem;
 }
 
 #first-line {
@@ -157,8 +156,8 @@ div.handles-container {
 
 .handles-logos {
   position: relative;
-  bottom: 3px;
-  right: 10px;
+  bottom: 0.06rem;
+  right: 0.62rem;
 }
 
 .separator {
@@ -174,7 +173,7 @@ div.handles-container {
   height: 30%;
   float: right;
   position: relative;
-  right: 127px;
+  right: 7.93rem;
   top: -7em;
   margin-bottom: -2em;
 }
@@ -183,8 +182,8 @@ div.handles-container {
   width: 76%;
   height: 3.5rem;
   position: relative;
-  bottom: 30px;
-  left: 140px;
+  bottom: 1.875rem;
+  left: 8.75rem;
   border-radius: 0.6em;
   background-color: #fff;
   display: flex;
@@ -207,7 +206,7 @@ div.handles-container {
   border-radius: 0.4em;
 }
 
-#news-feeds-txt {
+.news-feeds-txt {
   font-size: 1.1em;
 }
 
@@ -222,7 +221,6 @@ div.handles-container {
 }
 
 #arrow-icon {
-  right: 0em;
   margin-left: 0.6rem;
   bottom: 0.5em;
   top: 0.3rem;
@@ -239,12 +237,12 @@ div.handles-container {
   align-items: center;
   letter-spacing: 10%;
   line-height: 66%;
-  font: 700 54px 'raleway';
+  font: 700 3.37rem 'raleway';
 }
 
 .cards-title {
-  margin-top: 110px;
-  margin-bottom: 65px;
+  margin-top: 6.87rem;
+  margin-bottom: 4.06rem;
   width: 100%;
 }
 
@@ -254,8 +252,8 @@ div.handles-container {
 
 .card {
   border: 1px solid #f3efef;
-  height: 110px;
-  border-radius: 18px;
+  height: 6.875rem;
+  border-radius: 1.12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,22 +331,20 @@ div.handles-container {
 
 .upcoming-event {
   font-size: 1.5rem;
-  font-family: raleway;
   margin-top: 2.5rem;
   text-align: center;
 }
 
 .event {
   display: block;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   text-align: center;
 }
 
 .api-event {
-  margin: 15px 5px;
-  font-size: 1rem;
+  margin: 0.93rem 0.31rem;
   color: #604af0;
-  font-family: raleway;
+  font-size: 1.2rem;
 }
 
 .link-seperators {
@@ -359,7 +355,6 @@ div.handles-container {
 
 .previous-event {
   font-size: 1.5rem;
-  font-family: raleway;
   margin-top: 2.5rem;
   text-align: center;
 }
@@ -375,7 +370,7 @@ div.handles-container {
 .events {
   color: #604af0;
   margin: 0 0.25rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .video-holder {
@@ -386,27 +381,27 @@ div.handles-container {
 
 .video-content {
   text-align: center;
-  margin: 0 450px;
+  margin: 0 28.12rem;
 }
 
 @media (max-width: 667px) {
   .video-content {
-    margin: 10px;
+    margin: 0.6rem;
   }
 }
 
 .video-content > .video-text {
-  margin: 45px auto 0px;
-  font-size: 45px;
-  font-weight: 500;
+  margin: 2.8rem auto 0px;
+  font-size: 2.8rem;
+  font-weight: 700;
   text-align: center;
 }
 
 .video-content > iframe {
-  margin: 40px auto;
+  margin: 2.5rem auto;
   text-align: center;
-  width: 516px;
-  height: 400px;
+  width: 32rem;
+  height: 25rem;
   display: block;
   width: 100%;
 }
@@ -418,7 +413,7 @@ div.handles-container {
 
 footer {
   position: relative;
-  margin-top: 40px;
+  margin-top: 2.5rem;
   bottom: 0;
   width: 100%;
   padding: 1em;
@@ -450,7 +445,7 @@ footer {
     width: 30em;
     position: relative;
     right: 22em;
-    font-size: 15.5px;
+    font-size: 0.97rem;
     background-color: #041187;
   }
 
@@ -464,7 +459,7 @@ footer {
   div.heading-container {
     top: 54px;
     left: 5px;
-    font-size: 14.5px;
+    font-size: 0.9rem;
   }
 
   div.handles-container {
@@ -474,7 +469,7 @@ footer {
   }
 
   .handles-logos {
-    right: 7px;
+    right: 0.437rem;
   }
 
   .welcome-image {
@@ -519,13 +514,13 @@ footer {
   }
 
   .info-note-img {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     margin-right: 35px;
   }
 
   .event {
     display: block;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     text-align: center;
   }
 
@@ -652,10 +647,10 @@ footer {
   .news-feeds-container {
     flex-direction: column;
     width: 60%;
-    height: 150px;
+    height: 9.37rem;
     bottom: -30.5em;
     left: 9.7em;
-    margin: 10px 0px 7px 0;
+    margin: 0.625rem 0rem 0.437rem 0;
   }
 
   .new-tag {
@@ -699,7 +694,7 @@ footer {
   }
 
   div.heading-container {
-    top: 50px;
+    top: 3.12rem;
     left: -35px;
     font-size: 9.5px;
   }
@@ -725,8 +720,8 @@ footer {
   }
 
   .handles-logos {
-    width: 37px;
-    height: 37px;
+    width: 2.31rem;
+    height: 2.31rem;
   }
 
   .separator {
@@ -792,8 +787,8 @@ footer {
   }
 
   .handles-logos {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
   }
 
   .news-feeds-container {
@@ -805,17 +800,17 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20rem) {
   .hamburger {
     left: -17em;
     top: 1em;
-    height: 18px;
+    height: 1.125rem;
   }
 
   .sign-in-button {
     top: 0em;
     width: 7em;
-    font-size: 11px;
+    font-size: 0.687rem;
   }
 
   a.logo-link {
@@ -849,18 +844,14 @@ footer {
 
   .news-feeds-container {
     width: 85%;
-    height: 120px;
+    height: 7.5rem;
     left: 1.5em;
   }
 
   .new-tag {
     width: 3rem;
     height: 1.3rem;
-    font-size: 13px;
-  }
-
-  .news-feeds-txt {
-    font-size: 1.1em;
+    font-size: 0.812rem;
   }
 
   .footer-img {
