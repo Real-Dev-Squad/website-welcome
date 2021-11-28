@@ -6,8 +6,6 @@
 
 .index-body {
   font-family: raleway;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* first screen css */
@@ -209,18 +207,26 @@ div.handles-container {
   border-radius: 0.4em;
 }
 
+#news-feeds-txt {
+  font-size: 1.1em;
+}
+
 #checkout-tag {
   font-size: 1.1em;
   right: 0.5em;
+  bottom: 1.2em;
   text-decoration: none;
+  color: #0000ff;
+  display: inherit;
+  align-items: center;
 }
 
 #arrow-icon {
-  position: relative;
-  right: -0.5rem;
-  left: 0.2rem;
+  right: 0em;
+  margin-left: 0.6rem;
+  bottom: 0.5em;
   top: 0.3rem;
-  height: 1.2em;
+  height: 1.9em;
 }
 
 /* second screen css */
@@ -390,14 +396,17 @@ div.handles-container {
 }
 
 .video-content > .video-text {
-  margin: 0 auto 40px;
-  font-size: 34px;
+  margin: 45px auto 0px;
+  font-size: 45px;
+  font-weight: 500;
   text-align: center;
 }
 
 .video-content > iframe {
-  margin: 100px auto;
+  margin: 40px auto;
   text-align: center;
+  width: 516px;
+  height: 315px;
   display: block;
   width: 100%;
 }
@@ -475,10 +484,6 @@ footer {
   .news-feeds-container {
     width: 84%;
     left: 80px;
-  }
-
-  #arrow-icon {
-    right: -0.5em;
   }
 
   .docs-heading {
@@ -664,11 +669,6 @@ footer {
 
   div #dash {
     display: none;
-  }
-
-  #arrow-icon {
-    right: 0em;
-    bottom: 0.3em;
   }
 
   .footer-img {
