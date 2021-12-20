@@ -1,0 +1,21 @@
+<div class="input-field__container">
+  <label for={{@for}}>{{@label}}:</label>
+  <input
+    id={{@id}}
+    type={{@type}}
+    value={{@value}}
+    placeholder={{@placeholder}}
+    disabled={{@disabled}}
+    class="input-field {{if @showError 'error-border'}}"
+    {{on 'input' (fn this.handleInputFieldChange)}}
+  />
+
+  {{#if @helpMsg}}
+    <em class="help-msg">{{@helpMsg}}</em>
+  {{/if}}
+
+  {{#if @showError}}
+    <p class="error">{{@errorMessage}}</p>
+  {{/if}}
+
+</div>

@@ -6,6 +6,7 @@
 @import 'local-navbar.css';
 @import 'profile.css';
 @import 'get-started.css';
+@import 'components/input-field.css';
 
 html,
 body {

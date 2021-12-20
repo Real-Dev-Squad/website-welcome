@@ -7,20 +7,26 @@ module('Integration | Component | form-input', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<FormInput />`);
-
-    assert.equal(this.element.textContent.trim(), ':');
-
-    // Template block usage:
+    // Assemble
     await render(hbs`
-      <FormInput>
-        template block text
-      </FormInput>
+      <FormInput />
     `);
 
-    assert.equal(this.element.textContent.trim(), ':');
+    // Assert
+    assert.dom('input').exists();
+  });
+
+  test('it shows the error', async function (assert) {
+    // Assemble
+    await render(hbs`
+      <FormInput
+        @errorMessage={{'SAMPLE ERROR'}}
+        @required={{true}}
+        @showError={{true}}
+      />
+    `);
+
+    // Assert
+    assert.dom('.error').exists();
   });
 });
