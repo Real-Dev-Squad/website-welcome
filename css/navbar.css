@@ -1,0 +1,55 @@
+nav {
+  font-family: 'roboto';
+  font-weight: 700;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+.rds-logo {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+.nav-element {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 55px 40px;
+}
+
+.nav-element.active-tab {
+  color: #87d870;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+.nav-element:hover {
+  color: #87d870;
+}
+
+.btn-login {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 50  px 40px;
+}
+
+.btn-login-text {
+  border-radius: 6px;
+  padding: 5px;
+  background-color: #1d1283;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+}
