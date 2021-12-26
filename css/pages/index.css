@@ -230,7 +230,7 @@ div.handles-container {
 }
 
 .cards {
-  width:60%;
+  width: 60%;
   margin: 20px auto;
   display: flex;
   justify-content: space-around;
@@ -258,8 +258,7 @@ div.handles-container {
   line-height: 2.5rem;
   font-weight: 600;
   color: #091133;
-  background-color:#F6F4F4;
-  
+  background-color: #f6f4f4;
 }
 
 .info-note {
@@ -276,10 +275,9 @@ div.handles-container {
 }
 
 .info-note-link {
-  color:#E30062;
+  color: #e30062;
   text-decoration: none;
 }
-
 
 /*third screen*/
 .event-screen {
@@ -289,10 +287,11 @@ div.handles-container {
 
 .event-heading {
   font-size: 2.5rem;
-  color:#e30062;
+  color: #e30062;
 }
 
-.upcoming-event, .previous-event {
+.upcoming-event,
+.previous-event {
   color: #091133;
   padding: 30px 0px 10px 0px;
   font-size: 1.5rem;
@@ -317,7 +316,7 @@ div.handles-container {
 }
 
 .video-holder {
-  background-color: #F6F4F4;
+  background-color: #f6f4f4;
   padding-bottom: 40px;
 }
 
@@ -345,7 +344,7 @@ footer {
 
 iframe {
   width: 45%;
-  height:316px
+  height: 316px;
 }
 
 @media (min-width: 1200px) {
@@ -439,7 +438,7 @@ iframe {
   .card {
     font-size: 1.1rem;
   }
-  
+
   .info-note-section {
     margin: 20px 0px;
     display: flex;
@@ -470,7 +469,8 @@ iframe {
     font: 2rem;
   }
 
-  .upcoming-event, .previous-event {
+  .upcoming-event,
+  .previous-event {
     padding: 20px 0px 10px 0px;
     font-size: 1.3rem;
   }
@@ -641,11 +641,11 @@ iframe {
 
   .card {
     padding: 15px 0px;
-    width:85%;
+    width: 85%;
     font-size: 1rem;
     margin: 10px 0px;
   }
-  
+
   .info-note-section {
     margin: 25px 0px;
     display: flex;
@@ -672,7 +672,8 @@ iframe {
     font-size: 1.5rem;
   }
 
-  .upcoming-event, .previous-event {
+  .upcoming-event,
+  .previous-event {
     padding: 20px 0px 10px 0px;
     font-size: 1.2rem;
   }
@@ -685,7 +686,7 @@ iframe {
     width: 85%;
     height: 200px;
   }
-  
+
   .hamburger {
     left: -23em;
     top: 1.2em;
@@ -768,7 +769,7 @@ iframe {
   .second-screen {
     margin: 20px 0px;
   }
-  
+
   .info-note-section {
     margin: 20px 0px;
     display: flex;
@@ -834,7 +835,6 @@ iframe {
 }
 
 @media (max-width: 320px) {
-
   iframe {
     height: 150px;
   }
