@@ -1,0 +1,46 @@
+.heading h2 {
+  color: #0034a5;
+  margin: 50px 0 40px;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.buttons__idle {
+  font-size: 1.25rem;
+  color: #e49504;
+  font-weight: 700;
+  border: 3px solid #e49504;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.buttons__active {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #16a334;
+  border: 3px solid #16a334;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.buttons--small {
+  font-weight: 700;
+  color: #0034a5;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}

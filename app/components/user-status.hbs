@@ -1,0 +1,22 @@
+<div class="heading">
+  {{#each this.currentUserStatus as |currentStatus|}}
+    {{#if (eq @status currentStatus.status)}}
+      <h2 data-test-status>{{currentStatus.message}}</h2>
+    {{/if}}
+  {{/each}}
+</div>
+
+<div class="buttons">
+  {{#each this.currentUserStatus as |currentStatus|}}
+    {{#if (eq @status currentStatus.status)}}
+      {{#if (not-eq @status 'ooo')}}
+        <button class={{currentStatus.class}} type="button" data-test-button disabled={{@isStatusUpdating}} {{on "click" (fn @onUpdateStatus currentStatus.firstAvailableStatus )}}>
+          <span data-test-button-text>{{currentStatus.firstStatusMessage}}</span>
+        </button>
+      {{/if}}
+      <button class="buttons--small" type="button" disabled={{@isStatusUpdating}} {{on "click" (fn @onUpdateStatus currentStatus.secondAvailableStatus )}}>
+        <span>{{currentStatus.secondStatusMessage}}</span>
+      </button>
+    {{/if}}
+  {{/each}}
+</div>
