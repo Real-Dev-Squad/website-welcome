@@ -216,7 +216,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
- .event-screen {
+  .event-screen {
     max-width: 100%;
   }
 
