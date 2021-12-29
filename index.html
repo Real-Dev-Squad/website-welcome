@@ -35,13 +35,13 @@
     <div class="first-screen">
       <header>
         <div class="hamburger">
-          <div class="hamburger-lines"></div>
-          <div class="hamburger-lines"></div>
-          <div class="hamburger-lines"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
 
         <nav class="main-nav">
-          <ul>
+          <ul class="nav-menu">
             <li>
               <a href="https://www.realdevsquad.com/" class="logo-link">
                 <img
@@ -53,51 +53,78 @@
             </li>
             <li>
               <a
+                class="home-tab nav-element"
+                href="https://www.realdevsquad.com/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
                 class="nav-element active-tab"
                 href="https://welcome.realdevsquad.com/"
-                >Welcome</a
               >
+                Welcome
+              </a>
             </li>
             <li>
               <a
                 class="nav-element"
                 href="https://www.realdevsquad.com/events.html"
-                >Events</a
               >
+                Events
+              </a>
             </li>
             <li>
-              <a class="nav-element" href="https://members.realdevsquad.com/"
-                >Members</a
-              >
+              <a class="nav-element" href="https://members.realdevsquad.com/">
+                Members
+              </a>
             </li>
             <li>
-              <a class="nav-element" href="https://crypto.realdevsquad.com/"
-                >Crypto</a
-              >
+              <a class="nav-element" href="https://crypto.realdevsquad.com/">
+                Crypto
+              </a>
             </li>
             <li>
-              <a class="nav-element" href="https://status.realdevsquad.com/"
-                >Status</a
-              >
+              <a class="nav-element" href="https://status.realdevsquad.com/">
+                Status
+              </a>
             </li>
           </ul>
         </nav>
-        <a
-          class="btn-login"
-          href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
-        >
-          <button class="btn-login-text">
-            <span class="btn-text1">Sign In</span>
-            <span class="btn-text2">with GitHub</span>
-            <img
-              src="img/re-designed-images/github-logo.png"
-              height="15px"
-              width="15px"
-              alt="GitHub_Logo"
-            />
-          </button>
-        </a>
+        <div class="nav-login">
+          <a
+            class="btn-login"
+            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+          >
+            <button class="btn-login-text">
+              <span class="btn-text1">Sign In</span>
+              <span class="btn-text2">with GitHub</span>
+              <img
+                src="img/re-designed-images/github-logo.png"
+                alt="GitHub_Icon"
+                height="15px"
+                width="15px"
+              />
+            </button>
+          </a>
+
+          <div class="user-greet">
+            <a href="https://my.realdevsquad.com/">
+              <div class="user-greet-msg">Hello, User!</div>
+              <img class="user-profile-pic" />
+            </a>
+          </div>
+        </div>
       </header>
+
+      <img
+        class="rds-logo-banner"
+        src="../img/re-designed-images/RDS-logo-2x.png"
+        alt="RDS_Logo"
+        height="150px"
+        width="150px"
+      />
 
       <div class="heading-handles-container">
         <span class="welcome-text">
@@ -116,17 +143,17 @@
               id="linkedIn"
             >
               LinkedIn
+              <img
+                src="../img/re-designed-images/linkedIn-logo.png"
+                alt="LinkedIn_Logo"
+              />
             </a>
-            <img
-              src="../img/re-designed-images/linkedIn-logo.png"
-              alt="LinkedIn_Logo"
-            />
 
             <span>
               <img
                 src="../img/re-designed-images/separator-icon.png"
                 alt="Separator_Icon"
-                class="link-separator"
+                class="separator"
               />
             </span>
 
@@ -194,22 +221,20 @@
       </div>
 
       <div class="news-feeds-container">
-        <div class="news-feed-wrapper">
-          <span class="new-tag">New</span>
-          <span class="news-feeds-txt">1 Year Anniversary</span>
-          <span class="dash">--</span>
-          <span class="news-feeds-txt">New Features Available for YOU!</span>
-          <a class="checkout-tag" href="https://www.realdevsquad.com/releases">
-            Check them out
-          </a>
-          <img
-            class="arrow-icon"
-            src="../img/re-designed-images/arrow-icon.png"
-            alt="Arrow_Icon"
-            height="30px"
-            width="30px"
-          />
-        </div>
+        <span class="new-tag">New</span>
+        <span class="news-feeds-txt">1 Year Anniversary</span>
+        <span class="dash">--</span>
+        <span class="news-feeds-txt">New Features Available for YOU!</span>
+        <a class="checkout-tag" href="https://www.realdevsquad.com/releases">
+          Check them out
+        </a>
+        <img
+          class="arrow-icon"
+          src="../img/re-designed-images/arrow-icon.png"
+          alt="Arrow_Icon"
+          height="30px"
+          width="30px"
+        />
       </div>
       <div class="spacing"></div>
     </div>
@@ -346,5 +371,6 @@
 
     <script type="text/javascript" src="./js/login.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/navbar.js"></script>
   </body>
 </html>
