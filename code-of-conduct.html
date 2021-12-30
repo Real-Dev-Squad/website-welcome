@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Code of Conduct</title>
-    <link rel="stylesheet" type="text/css" href="./css/common/main.css" />
-    <link rel="stylesheet" type="text/css" href="./css/pages/coc.css" />
-    <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/coc.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
     <link rel="icon" type="image/x-icon" href="./img/logos/favicon.ico" />
 
     <link
@@ -18,40 +18,88 @@
 
   <body>
     <header>
-      <nav>
-        <!-- in case of small screens, show a dropdown -->
-        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
-        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
+      <div class="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
 
-        <ul class="menu">
+      <nav class="main-nav">
+        <ul class="nav-menu">
           <li>
-            <a class="nav-logo" href="https://realdevsquad.com/"
-              ><img
-                class="nav-logo-img"
-                src="./img/logos/Real-Dev-Squad@1x.png"
-                alt="Real Dev Squad logo"
-            /></a>
-            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
+            <a href="https://www.realdevsquad.com/" class="logo-link">
+              <img
+                class="rds-logo"
+                src="../img/re-designed-images/RDS-logo.png"
+                alt="RDS_Logo"
+              />
+            </a>
           </li>
           <li>
-            <a class="active" href="https://welcome.realdevsquad.com/"
-              >Welcome</a
+            <a
+              class="home-tab nav-element"
+              href="https://www.realdevsquad.com/"
             >
+              Home
+            </a>
           </li>
-          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
-          <li><a href="https://members.realdevsquad.com/">Members</a></li>
-          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
-          <li><a href="https://status.realdevsquad.com/">Status</a></li>
+          <li>
+            <a
+              class="nav-element active-tab"
+              href="https://welcome.realdevsquad.com/"
+            >
+              Welcome
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-element"
+              href="https://www.realdevsquad.com/events.html"
+            >
+              Events
+            </a>
+          </li>
+          <li>
+            <a class="nav-element" href="https://members.realdevsquad.com/">
+              Members
+            </a>
+          </li>
+          <li>
+            <a class="nav-element" href="https://crypto.realdevsquad.com/">
+              Crypto
+            </a>
+          </li>
+          <li>
+            <a class="nav-element" href="https://status.realdevsquad.com/">
+              Status
+            </a>
+          </li>
         </ul>
+      </nav>
+      <div class="nav-login">
+        <a
+          class="btn-login"
+          href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+        >
+          <button class="btn-login-text">
+            <span class="btn-text1">Sign In</span>
+            <span class="btn-text2">with GitHub</span>
+            <img
+              src="img/re-designed-images/github-logo.png"
+              alt="GitHub_Icon"
+              height="15px"
+              width="15px"
+            />
+          </button>
+        </a>
 
-        <div class="login-btn">
-          <a
-            href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
-          >
-            Login
+        <div class="user-greet">
+          <a href="https://my.realdevsquad.com/">
+            <div class="user-greet-msg">Hello, User!</div>
+            <img class="user-profile-pic" />
           </a>
         </div>
-      </nav>
+      </div>
     </header>
 
     <main>
@@ -117,5 +165,6 @@
       </p>
     </footer>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/navbar.js"></script>
   </body>
 </html>
