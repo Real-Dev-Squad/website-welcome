@@ -27,6 +27,7 @@ h2 {
   justify-content: center;
 }
 
+.seperators,
 .rds-logo-banner {
   display: none;
 }
@@ -47,15 +48,22 @@ h2 {
 
 .welcome-image {
   width: 35%;
+  margin: 20px;
 }
 
 .handles-container a {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+.social-icon {
+  padding: 5px;
 }
 
 .news-feeds-container {
@@ -177,6 +185,7 @@ h2 {
 }
 
 .link-seperators {
+  font-size: 20px;
   color: #e30062;
   font-weight: 900;
 }
@@ -235,8 +244,7 @@ footer {
 @media (max-width: 1024px) {
   .rds-logo-banner {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto 0px auto;
   }
 
   h1 {
@@ -282,6 +290,13 @@ footer {
 
   .news-feeds-container {
     flex-direction: column;
+  }
+
+  .new-tag,
+  .news-feeds-txt,
+  .checkout-tag,
+  .arrow-icon {
+    margin: 5px;
   }
 
   .second-screen {
@@ -365,13 +380,23 @@ footer {
     font-size: 2rem;
   }
 
+  .handles-container {
+    display: inline-flex;
+  }
+
   .handles-container a {
     font-size: 0;
     margin: 5px 10px;
   }
 
-  .separator {
+  .link-seperators {
     display: none;
+  }
+
+  .seperators {
+    color: #e30062;
+    display: block;
+    font-weight: 900;
   }
 
   .second-screen {
