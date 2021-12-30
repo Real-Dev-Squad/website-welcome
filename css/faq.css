@@ -1,16 +1,12 @@
-*,
-::after,
-::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
+  font: 16px 'Roboto', sans-serif;
   position: relative;
-  font-size: 16px;
 }
 
 main {
@@ -147,14 +143,8 @@ footer {
   margin-top: 40px;
   bottom: 0;
   width: 100%;
-  padding: 1em;
+  padding: 15px;
   text-align: center;
-}
-
-.info-note {
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.25rem;
 }
 
 .welcome-title {
@@ -163,7 +153,7 @@ footer {
   font-weight: 400;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 625px) {
   .faq__btn {
     flex: 0 0 24px;
     margin-left: 15px;

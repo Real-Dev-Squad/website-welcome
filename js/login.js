@@ -1,18 +1,26 @@
 const setUserGreeting = (username, firstName) => {
   if (username) {
-    const userLoginEl = document.querySelector('.btn-login');
+    const userLoginEl = document.querySelectorAll('.btn-login');
 
-    const greetingEl = document.querySelector('.user-greet');
-    const msgGreetMsgEl = document.querySelector('.user-greet-msg');
-    const userImgEl = document.querySelector('.user-profile-pic');
+    const greetingEl = document.querySelectorAll('.user-greet');
+    const msgGreetMsgEl = document.querySelectorAll('.user-greet-msg');
+    const userImgEl = document.querySelectorAll('.user-profile-pic');
 
     const greetMsg = `Hello, ${firstName}!`;
-    msgGreetMsgEl.innerText = greetMsg;
+    msgGreetMsgEl.forEach((element) => {
+      element.innerText = greetMsg;
+    });
     const userImgURL = `https://raw.githubusercontent.com/Real-Dev-Squad/website-static/main/members/${username}/img.png`;
-    userImgEl.src = userImgURL;
+    userImgEl.forEach((element) => {
+      element.src = userImgURL;
+    });
 
-    greetingEl.style.display = 'block';
-    userLoginEl.style.display = 'none';
+    greetingEl.forEach((element) => {
+      element.style.display = 'block';
+    });
+    userLoginEl.forEach((element) => {
+      element.style.display = 'none';
+    });
   }
 };
 
