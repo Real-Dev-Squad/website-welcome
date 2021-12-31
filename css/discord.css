@@ -45,10 +45,17 @@ a {
   color: #05117c;
   font-size: 2.125rem;
   margin-top: 3.5rem;
+  width: 100%;
+}
+
+.rds-name {
+  color: #e30062;
 }
 
 .discord-info-para {
   margin-top: 2rem;
+  margin-left: 10rem;
+  width: 80%;
 }
 
 .discord-info-para p {
@@ -63,7 +70,8 @@ a {
   font-weight: 400;
   color: #030f79;
   font-size: 2.125rem;
-  margin: 2.5rem 0 2rem 0;
+  margin: 2rem 0;
+  width: 100%;
 }
 
 .rds-channels-list {
@@ -211,6 +219,12 @@ footer {
   animation: animationFramesOne 25s infinite linear;
 }
 
+@media (max-width: 1024px) {
+  .discord-info-para {
+    margin-left: 6rem;
+  }
+}
+
 @media (max-width: 768px) {
   .end-block {
     display: flex;
@@ -226,6 +240,18 @@ footer {
   .get-started-heading {
     margin-left: 5.5rem;
   }
+  .discord-info-para {
+    margin-left: 5rem;
+  }
+}
+
+@media (max-width: 625px) {
+  .get-started-heading {
+    margin-left: 0rem;
+  }
+  .discord-info-para {
+    margin-left: 2rem;
+  }
 }
 
 @media (max-width: 375px) {
@@ -235,7 +261,8 @@ footer {
   }
 
   .new-heading {
-    margin: 2.5rem 1rem;
+    width: 97%;
+    margin-bottom: 2rem;
   }
 
   .end-block {
