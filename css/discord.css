@@ -263,6 +263,18 @@ footer {
   .new-heading {
     width: 97%;
     margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 0.6rem;
+  }
+
+  .help-heading {
+    font-size: 20px;
+    margin-right: 0.4rem;
+  }
+
+  .animation-heading {
+    font-size: 2rem;
   }
 
   .end-block {
@@ -281,5 +293,11 @@ footer {
 
   .get-started-heading {
     margin-left: 0rem;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .server-heading {
+    display: block;
   }
 }
