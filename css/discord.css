@@ -248,9 +248,26 @@ footer {
 @media (max-width: 625px) {
   .get-started-heading {
     margin-left: 0rem;
+    font-size: 20px;
+    font-weight: 700;
   }
   .discord-info-para {
     margin-left: 2rem;
+  }
+  .new-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-left: 0.6rem;
+  }
+  .help-heading {
+    font-size: 20px;
+    margin-right: 0.4rem;
+  }
+  .animation-heading {
+    font-size: 2rem;
+  }
+  .server-heading {
+    display: block;
   }
 }
 
