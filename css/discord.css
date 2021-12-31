@@ -229,8 +229,13 @@ footer {
 }
 
 @media (max-width: 375px) {
-  .discord-info-para p {
+  .discord-info-para {
     font-size: 1rem;
+    margin: 1rem 2rem;
+  }
+
+  .new-heading {
+    margin: 2.5rem 1rem;
   }
 
   .end-block {
@@ -243,7 +248,8 @@ footer {
   }
 
   .image-div {
-    width: 75%;
+    width: 80%;
+    margin-top: 1rem;
   }
 
   .get-started-heading {

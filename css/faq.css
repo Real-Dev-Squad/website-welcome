@@ -165,3 +165,9 @@ footer {
     max-width: 80%;
   }
 }
+
+@media (max-width: 375px) {
+  .question {
+    width: 90%;
+  }
+}
