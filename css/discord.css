@@ -45,7 +45,7 @@ a {
   color: #05117c;
   font-size: 2.125rem;
   margin-top: 3.5rem;
-  width: 100%;
+  width: 95%;
 }
 
 .rds-name {
@@ -71,7 +71,10 @@ a {
   color: #030f79;
   font-size: 2.125rem;
   margin: 2rem 0;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
 }
 
 .rds-channels-list {
@@ -237,9 +240,6 @@ footer {
     flex: 0 0 100%;
     min-width: 80%;
   }
-  .get-started-heading {
-    margin-left: 5.5rem;
-  }
   .discord-info-para {
     margin-left: 5rem;
   }
@@ -247,7 +247,6 @@ footer {
 
 @media (max-width: 625px) {
   .get-started-heading {
-    margin-left: 2.5rem;
     font-size: 20px;
     font-weight: 700;
   }
@@ -309,7 +308,6 @@ footer {
   }
 
   .get-started-heading {
-    margin-left: 0rem;
     font-size: 20px;
     font-weight: 700;
   }
