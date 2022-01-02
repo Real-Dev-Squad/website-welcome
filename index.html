@@ -3,116 +3,364 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e30062" />
 
     <title>Welcome to Real Dev Squad</title>
-    <link rel="stylesheet" type="text/css" href="./css/common/main.css" />
-    <link rel="stylesheet" type="text/css" href="./css/pages/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="./css/pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="./img/logos/favicon.ico" />
 
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@400;700;800&family=Roboto:wght@100;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
       rel="stylesheet"
     />
-    <meta name="theme-color" content="#e30062" />
+
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <!-- in case of small screens, show a dropdown -->
-        <input type="checkbox" id="nav-toggle" aria-controls="navbar toggle" />
-        <label for="nav-toggle" class="burger-menu"> &#9776;</label>
+    <div class="first-screen">
+      <header>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
 
-        <ul class="menu">
-          <li>
-            <a class="nav-logo" href="https://realdevsquad.com/"
-              ><img
-                class="nav-logo-img"
-                src="./img/logos/Real-Dev-Squad@1x.png"
-                alt="Real Dev Squad logo"
-            /></a>
-            <a class="nav-home" href="https://realdevsquad.com/">Home</a>
-          </li>
-          <li>
-            <a class="active" href="https://welcome.realdevsquad.com/"
-              >Welcome</a
-            >
-          </li>
-          <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
-          <li><a href="https://members.realdevsquad.com/">Members</a></li>
-          <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
-          <li><a href="https://status.realdevsquad.com/">Status</a></li>
-        </ul>
-
-        <div class="login-btn">
+        <nav class="main-nav">
+          <ul class="nav-menu">
+            <li>
+              <a href="https://www.realdevsquad.com/" class="logo-link">
+                <img
+                  class="rds-logo"
+                  src="img/logos/RDS-logo.png"
+                  alt="RDS_Logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                class="home-tab nav-element"
+                href="https://www.realdevsquad.com/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-element active-tab"
+                href="https://welcome.realdevsquad.com/"
+              >
+                Welcome
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-element"
+                href="https://www.realdevsquad.com/events.html"
+              >
+                Events
+              </a>
+            </li>
+            <li>
+              <a class="nav-element" href="https://members.realdevsquad.com/">
+                Members
+              </a>
+            </li>
+            <li>
+              <a class="nav-element" href="https://crypto.realdevsquad.com/">
+                Crypto
+              </a>
+            </li>
+            <li>
+              <a class="nav-element" href="https://status.realdevsquad.com/">
+                Status
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-login">
           <a
+            class="btn-login"
             href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
           >
-            Login
+            <button class="btn-login-text">
+              <span class="btn-text1">Sign In</span>
+              <span class="btn-text2">with GitHub</span>
+              <img
+                src="img/icons/github-logo.png"
+                alt="GitHub_Icon"
+                height="15px"
+                width="15px"
+              />
+            </button>
           </a>
+
+          <div class="user-greet">
+            <a href="https://my.realdevsquad.com/">
+              <div class="user-greet-msg">Hello, User!</div>
+              <img class="user-profile-pic" />
+            </a>
+          </div>
         </div>
-      </nav>
-    </header>
+      </header>
 
-    <main>
-      <div class="container">
-        <h1 class="welcome-title">Welcome to Real Dev Squad!🎉</h1>
+      <img
+        class="rds-logo-banner"
+        src="img/logos/RDS-logo-2x.png"
+        alt="RDS_Logo"
+        height="150px"
+        width="150px"
+      />
 
-        <div class="cards-title">
-          <h3>Check out our Docs ⬇️</h3>
-        </div>
-        <div class="cards">
-          <a class="card" href="./faq.html">FAQ</a>
-          <a class="card" href="./discord.html">Discord</a>
-          <a class="card" href="./code-of-conduct.html">Code of Conduct</a>
-        </div>
+      <div class="heading-handles-container">
+        <span class="welcome-text">
+          <h2>
+            <span class="welcome">Welcome</span>
+            <span class="to-the">to the</span>
+          </h2>
+          <h1>
+            <span>Real Dev Squad</span>
+          </h1>
+          <div class="handles-container">
+            <a
+              href="https://www.linkedin.com/company/real-dev-squad/"
+              target="_blank"
+              class="social-handles"
+              id="linkedIn"
+            >
+              LinkedIn
+              <img
+                class="social-icon"
+                src="img/icons/linkedIn-logo.png"
+                alt="LinkedIn_Logo"
+              />
+            </a>
 
-        <p class="info-note social-handles">
-          <a
-            href="https://instagram.com/realdevsquad"
-            target="_blank"
-            rel="nonreferrer"
-            >Instagram</a
-          >&nbsp;
-          <span class="link-seperators">&vert;</span>
+            <span class="link-seperators">&vert;</span>
+            <span class="seperators">&bull;</span>
 
-          &nbsp;
-          <a
-            href="https://www.linkedin.com/company/real-dev-squad/"
-            target="_blank"
-            rel="nonreferrer"
-          >
-            LinkedIn
-          </a>
-          <span class="link-seperators">&vert;</span>
+            <a
+              href="https://twitter.com/realdevsquad?lang=en"
+              target="_blank"
+              class="social-handles"
+              id="twitter"
+            >
+              Twitter
+              <img
+                class="social-icon"
+                src="img/icons/twitter-logo.png"
+                alt="Twitter_Logo"
+              />
+            </a>
 
-          &nbsp;
-          <a
-            href="https://twitter.com/realdevsquad"
-            target="_blank"
-            rel="nonreferrer"
-            >Twitter</a
-          >&nbsp;
-          <span class="link-seperators">&vert;</span>
+            <span class="link-seperators">&vert;</span>
+            <span class="seperators">&bull;</span>
 
-          &nbsp;
-          <a
-            href="https://www.facebook.com/Real-Dev-Squad-108713777585062"
-            target="_blank"
-            rel="nonreferrer"
-          >
-            Facebook
-          </a>
-        </p>
-        <h3 class="info-note">
+            <a
+              href="https://www.facebook.com/Real-Dev-Squad-108713777585062/"
+              target="_blank"
+              class="social-handles"
+              id="facebook"
+            >
+              Facebook
+              <img
+                class="social-icon"
+                src="img/icons/facebook-logo.png"
+                alt="Facebook_Logo"
+              />
+            </a>
+
+            <span class="link-seperators">&vert;</span>
+            <span class="seperators">&bull;</span>
+
+            <a
+              href="https://www.instagram.com/realdevsquad/?hl=en"
+              target="_blank"
+              class="social-handles"
+              id="instagram"
+            >
+              Instagram
+              <img
+                class="social-icon"
+                src="img/icons/instagram-logo.png"
+                alt="Instagram_Logo"
+              />
+            </a>
+          </div>
+        </span>
+        <img
+          class="welcome-image"
+          src="img/index-page/welcome-image.png"
+          alt="Welcome_Image"
+        />
+      </div>
+
+      <div class="news-feeds-container">
+        <span class="new-tag">New</span>
+        <span class="news-feeds-txt">1 Year Anniversary</span>
+        <span class="dash">--</span>
+        <span class="news-feeds-txt">New Features Available for YOU!</span>
+        <a class="checkout-tag" href="https://www.realdevsquad.com/releases">
+          Check them out
+        </a>
+        <img
+          class="arrow-icon"
+          src="img/icons/arrow-icon.png"
+          alt="Arrow_Icon"
+          height="30px"
+          width="30px"
+        />
+      </div>
+      <div class="spacing"></div>
+    </div>
+
+    <div class="second-screen">
+      <p class="docs-heading">Check Out Our Docs</p>
+
+      <div class="cards">
+        <a class="card" href="./faq.html">FAQ</a>
+        <a class="card" href="./discord.html">Discord</a>
+        <a class="card" href="./code-of-conduct.html">Code of Conduct</a>
+      </div>
+
+      <div class="info-note-section">
+        <span class="info-note">
           To know how this page is getting developed, join our Discord Channel.
           Contact one of our existing
-          <a href="https://members.realdevsquad.com/">members</a> for the
-          invitation link.
-        </h3>
+          <a class="info-note-link" href="https://members.realdevsquad.com/"
+            >members</a
+          >
+          for the invitation link or check our
+          <a class="info-note-link" href="faq.html">FAQ</a> section.
+        </span>
+        <span class="info-image">
+          <img
+            class="info-note-img"
+            src="img/index-page/mobile-marketing.png"
+            alt="infoNoteImg"
+          />
+        </span>
       </div>
-    </main>
+    </div>
+
+    <div align="center" class="last-screen">
+      <section class="event-screen">
+        <h1 class="event-heading">You can check out all our events below!!</h1>
+        <div class="upcoming-event">
+          <h3>Upcoming Events:</h3>
+        </div>
+        <div class="events stay-tune-text">Stay tuned!</div>
+
+        <div class="previous-event">
+          <h3>Previous Events:</h3>
+        </div>
+
+        <div class="events-box">
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-apis-made-easier-april-2021"
+            >APIs made Easier</a
+          >
+
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <span class="seperators">&bull;</span>
+          &nbsp;
+
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-dynamic-programming-october-2020.html"
+            >Dynamic Programming</a
+          >
+
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <span class="seperators">&bull;</span>
+          &nbsp;
+
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-nodejs-workshop-october-2020.html"
+          >
+            NodeJS Workshop Part1
+          </a>
+
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <span class="seperators">&bull;</span>
+          &nbsp;
+
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-web-mini-conf-july-2020.html"
+            >Web-Mini-Conf-July-2020</a
+          >
+
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <span class="seperators">&bull;</span>
+          &nbsp;
+
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-react-hooks-july-2020.html"
+          >
+            React Hooks Session
+          </a>
+
+          &nbsp;
+          <span class="link-seperators">&vert;</span>
+          <span class="seperators">&bull;</span>
+          &nbsp;
+
+          <a
+            class="events"
+            target="_blank"
+            href="https://www.realdevsquad.com/event-ssr-correctly-august-2020.html"
+          >
+            SSR the right way
+          </a>
+        </div>
+      </section>
+
+      <div class="video-holder">
+        <div class="video-content">
+          <div class="video-text">Check out what Real Dev Squad is :</div>
+          <iframe
+            src="https://www.youtube.com/embed/8UPjK1wLnTk?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <img
+        class="footer-img"
+        src="img/shapes/Rectangle.png"
+        alt="Special_Shape"
+      />
+    </div>
 
     <footer>
       <p class="info-repo">
@@ -122,11 +370,13 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          open sourced repo
+          open source repository
         </a>
       </p>
     </footer>
 
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/navbar.js"></script>
   </body>
 </html>

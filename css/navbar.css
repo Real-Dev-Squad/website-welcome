@@ -1,0 +1,152 @@
+nav {
+  font-family: 'roboto';
+  font-weight: 700;
+}
+
+.nav-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+.rds-logo {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+.nav-element {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 55px 40px;
+}
+
+.nav-element.active-tab {
+  color: #49a82e;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+.nav-element:hover {
+  color: #49a82e;
+}
+
+.nav-login {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 50px 40px;
+}
+
+.btn-login-text {
+  border-radius: 6px;
+  padding: 5px;
+  background-color: #1d1283;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.user-greet {
+  font-weight: 700;
+  display: none;
+  color: #ffffff;
+}
+
+.user-greet a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+}
+
+.user-profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline;
+  vertical-align: middle;
+}
+
+.user-greet-msg {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+}
+
+.home-tab {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+    background-color: white;
+    padding: 10px 0px;
+    box-shadow: 0px 10px 15px rgb(0 0 0 / 50%);
+  }
+
+  .nav-menu a {
+    color: #1d1283;
+  }
+
+  .logo-link {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+  .nav-login {
+    margin: 20px 20px;
+  }
+
+  nav li {
+    float: none;
+  }
+
+  .nav-element {
+    padding: 10px 40px;
+    margin: 10px;
+  }
+
+  .nav-element.active-tab {
+    text-decoration: none;
+  }
+
+  .nav-menu.active,
+  .home-tab {
+    display: block;
+  }
+
+  .welcome-text {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 625px) {
+  .btn-text2 {
+    display: none;
+  }
+}

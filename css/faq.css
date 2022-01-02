@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px 'Roboto', sans-serif;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -10,6 +28,15 @@ a {
 }
 
 h1 {
+  text-align: center;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -113,14 +140,34 @@ h1 {
 
 footer {
   position: relative;
-  height: 50px;
-  left: 0px;
-  margin-bottom: 0px;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
 }
 
-@media (max-width: 575.98px) {
+.welcome-title {
+  margin: 1em 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media (max-width: 625px) {
   .faq__btn {
     flex: 0 0 24px;
     margin-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .question {
+    width: 90%;
   }
 }

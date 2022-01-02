@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+main article {
+  max-width: 750px;
+}
+
+.welcome-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.coc-header {
+  text-align: center;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.coc-list {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #0000ff;
+}
+
+.coc-list-elements {
+  margin: 20px 0;
+}
+
+footer {
+  position: relative;
+  margin-top: 40px;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .coc-list-elements {
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+}
