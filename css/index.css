@@ -142,7 +142,9 @@ h2 {
 }
 
 .info-note {
-  width: 45%;
+  width: 40%;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .info-image {
@@ -188,6 +190,10 @@ h2 {
   font-size: 20px;
   color: #e30062;
   font-weight: 900;
+}
+
+.stay-tune-text {
+  color: #e30062;
 }
 
 .events {
@@ -483,6 +489,8 @@ footer {
 
   .info-note {
     width: 90%;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 
   .info-image {
