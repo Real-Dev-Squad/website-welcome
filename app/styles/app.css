@@ -8,6 +8,7 @@
 @import 'get-started.css';
 @import 'user-status.css';
 @import 'components/input-field.css';
+@import 'navbar.css';
 
 html,
 body {
