@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+nav li a {
+  margin: 10px;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 19px 16px;
+  text-decoration: none;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a:hover {
+  color: #49a82e;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1d1283;
+}
+
+.nav__menu__logo {
+  padding: 12px 20px;
+}
+
+.nav__menu__logo a {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav__user__li {
+  float: right;
+}
+
+.nav__menu__home {
+  display: none;
+}
+
+.user {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.user__greet {
+  color: #ffffff;
+  margin: 23px;
+}
+
+.user__profile__pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline;
+  vertical-align: middle;
+}
+
+.user__greet__msg {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.hamburger--toggle {
+  display: none;
+}
+
+@media screen and (max-width: 970px) {
+  .nav {
+    background: #1d1283;
+  }
+
+  .hamburger--toggle {
+    margin: 20px;
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+
+  .nav-menu {
+    background: white;
+    display: none;
+    width: 100%;
+    padding: 10px 0px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .active-nav {
+    display: block;
+  }
+
+  .nav__menu__home {
+    display: block;
+  }
+
+  nav li a {
+    padding: 10px 40px;
+    text-align: left;
+    color: #1d1283;
+    text-decoration: none;
+    display: block;
+  }
+
+  .nav__user__li,
+  .nav__menu__logo {
+    display: none;
+  }
+
+  nav li {
+    float: none;
+  }
+
+  .user__greet {
+    margin: 18px;
+  }
+}
