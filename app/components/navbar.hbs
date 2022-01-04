@@ -1,0 +1,24 @@
+<nav class="nav">
+  <button type="button" class="hamburger--toggle" {{on "click" this.toggleNav}}>
+    <i class="fas fa-bars fa-2x"></i>
+  </button>
+
+  <ul class="nav-menu {{if this.isNavOpen "active-nav" ""}}">
+    <li class="nav__menu__logo">
+      <a href={{this.HOME_PAGE_URL}}>
+        <img src="RDSLogo.png" alt="real_dev_squad" height="50px" width="50px" />
+      </a>
+    </li>
+    <li class="nav__menu__home"><a href={{this.HOME_PAGE_URL}}>Home</a></li>
+    {{#each this.RDS_APPS_MAPPING as |siteURL|}}
+      <li><a href={{siteURL.url}}>{{siteURL.siteName}}</a></li>
+    {{/each}}
+  </ul>
+
+  <div class="user">
+    <div class="user__greet">
+      <div class="user__greet__msg">Hello, {{@firstName}}!</div>
+      <img class="user__profile__pic" src={{@profilePictureURL}} alt="profile"/>
+    </div>
+  </div>
+</nav>
