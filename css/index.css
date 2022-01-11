@@ -129,6 +129,16 @@ h2 {
   font-weight: 600;
 }
 
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card:active {
+  transform: translateY(-2px);
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.8);
+}
+
 .info-note-section {
   margin: 40px 0px;
   display: flex;
