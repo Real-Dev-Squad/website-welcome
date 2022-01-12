@@ -5,11 +5,9 @@ window.addEventListener('DOMContentLoaded',(event)=>{
 
   if (checkURL == stagingURL) {
     document.getElementById("user-login").href = "https://github.com/login/oauth/authorize?client_id=c4a84431feaf604e89d1";
-    console.log("In staging");
    }
   else {
     document.getElementById("user-login").href = "https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97";
-    console.log("I prod");
   }
 
 })
