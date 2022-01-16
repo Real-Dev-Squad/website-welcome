@@ -103,7 +103,7 @@ h2 {
 
 .docs-heading {
   padding: 40px 0px;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   text-align: center;
   font-weight: 600;
   color: #091133;
@@ -113,10 +113,8 @@ h2 {
   width: 60%;
   margin: 20px auto;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 25px 50px;
 }
 
 .card {
@@ -312,12 +310,22 @@ footer {
     margin: 20px 0px;
   }
 
+  .docs-heading {
+    font-size: 1.8rem;
+  }
+
   .cards {
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .card {
+    padding: 15px 0px;
+    width: 85%;
     font-size: 1.1rem;
+    margin: 10px 0px;
   }
 
   .info-note-section {
