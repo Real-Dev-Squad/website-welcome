@@ -103,7 +103,7 @@ h2 {
 
 .docs-heading {
   padding: 40px 0px;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: 600;
   color: #091133;
@@ -113,8 +113,10 @@ h2 {
   width: 60%;
   margin: 20px auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 25px 50px;
 }
 
 .card {
