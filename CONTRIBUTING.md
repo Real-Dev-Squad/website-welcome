@@ -15,10 +15,8 @@
 ├── img                                All the images go here
 │   ├── discord-page
 |   ├── icons
-|   ├── index-page
-|   ├── logos
-│   ├── shapes
-├── js                                 All Javascript goes here
+|   ...
+├── js                                 All JavaScript goes here
 ├──.prettierrc.json                    For formatting code
 ├── code-of-conduct.html               For code of conduct HTML page
 ├── discord.html                       For the discord help HTML page
