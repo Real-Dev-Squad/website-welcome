@@ -10,17 +10,19 @@
 ```
 ├── index.html                         For homepage HTML page
 ├── css                                All the styling goes here
-│   ├── common
-│   ├── pages
 ├── img                                All the images go here
-│   ├── logos
-│   ├── pages
+│   ├── discord-page
+|   ├── icons
+|   ...
+├── js                                 All JavaScript goes here
+├──.prettierrc.json                    For formatting code
 ├── code-of-conduct.html               For code of conduct HTML page
 ├── discord.html                       For the discord help HTML page
 ├── faq.html                           For FAQs HTML page
-├── navbar.html                        For the navigation bar
 ├── CONTRIBUTING.md                    Contribution file
 ├── README.md                          README file for the repository
+├── package-lock.json                  For storing  an exact versioned dependency tree
+├── package.json                       For installing dependencies
 ```
 
 # How can you make your first **Pull Request**
