@@ -10,8 +10,6 @@
 ```
 ├── index.html                         For homepage HTML page
 ├── css                                All the styling goes here
-│   ├── common
-│   ├── pages
 ├── img                                All the images go here
 │   ├── discord-page
 |   ├── icons
@@ -23,7 +21,7 @@
 ├── faq.html                           For FAQs HTML page
 ├── CONTRIBUTING.md                    Contribution file
 ├── README.md                          README file for the repository
-├── package-lock.json                  For storing  an exact versioned dependency tree 
+├── package-lock.json                  For storing  an exact versioned dependency tree
 ├── package.json                       For installing dependencies
 ```
 
