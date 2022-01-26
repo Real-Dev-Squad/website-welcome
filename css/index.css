@@ -86,6 +86,8 @@ h2 {
 }
 
 .checkout-tag {
+  display: flex;
+  align-items: center;
   color: #1d1283;
   text-decoration: none;
   cursor: pointer;
