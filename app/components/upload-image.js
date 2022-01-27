@@ -11,6 +11,8 @@ export default class UploadImageComponent extends Component {
   @tracked imageUploadSuccess = false;
   @tracked statusMessage;
   @tracked imageFileName;
+  imageType = null;
+  imageData = null;
   uploadUrl = this.args.uploadUrl;
   formKeyName = this.args.formKeyName;
 
@@ -35,11 +37,16 @@ export default class UploadImageComponent extends Component {
       this.updateFormData(file, this.formKeyName);
       reader.readAsDataURL(file);
       this.imageFileName = file.name;
+      this.imageType = file.type;
     }
     reader.onload = () => {
       const image = reader.result;
       this.image = image;
     };
+  }
+
+  @action setImageData(data) {
+    this.imageData = data;
   }
 
   @action handleDragOver(e) {
@@ -58,7 +65,25 @@ export default class UploadImageComponent extends Component {
 
   @action onSubmit(e) {
     this.preventDefaults(e);
-    this.uploadImage(this.formData);
+    try {
+      const devMode = this.args.devMode;
+      if (devMode && this.imageData) {
+        const croppedImageFile = new File(
+          [this.imageData],
+          this.imageFileName,
+          {
+            type: this.imageType,
+          }
+        );
+        this.updateFormData(croppedImageFile, this.formKeyName);
+      }
+      this.uploadImage(this.formData);
+    } catch (err) {
+      console.error(err);
+      this.setStatusMessage(
+        'Error occured, please try again and if the issue still exists contact administrator and create a issue on the repo with logs'
+      );
+    }
   }
 
   uploadImage(data) {

@@ -32,7 +32,12 @@
     </form>
   </div>
   {{#if this.isImageSelected}}
-    <img class="image-preview" src="{{this.image}}" alt="preview" />
+    {{#if @devMode}}
+      <div class="image-cropper-preview"></div>
+      <ImageCropper @image={{this.image}} @setImageData={{this.setImageData}} @imageType={{this.imageType}}/>
+    {{else}}
+      <img class="image-preview" src="{{this.image}}" alt="preview" />
+    {{/if}}
     <button
       class="upload-button"
       type="button"
