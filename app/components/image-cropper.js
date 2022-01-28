@@ -35,8 +35,7 @@ export default class ImageCropperComponent extends Component {
   }
 
   setImageData() {
-    this.cropper.getCroppedCanvas().toBlob((blob) => {
-      this.args.setImageData(blob);
-    }, this.args.imageType);
+    const { x, y, width, height } = this.cropper.getData(true);
+    this.args.setImageCoordinates({ x, y, width, height });
   }
 }
