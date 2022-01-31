@@ -3,8 +3,6 @@ import Cropper from 'cropperjs';
 import { action } from '@ember/object';
 
 export default class ImageCropperComponent extends Component {
-  currentImageCropCordinates = null;
-
   get image() {
     if (this.cropper) {
       this.cropper.destroy();
