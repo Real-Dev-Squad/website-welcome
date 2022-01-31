@@ -278,6 +278,13 @@ footer {
     font-size: 0.9rem;
   }
 
+  .card {
+    padding: 15px 1px;
+    width: 75%;
+    font-size: 1.1rem;
+    margin: 10px 4px;
+  }
+
   .event-screen {
     max-width: 100%;
   }
