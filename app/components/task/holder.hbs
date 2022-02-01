@@ -11,6 +11,14 @@
         {{on "change" this.onPercentageChange}}
         {{on "change" (fn @onTaskUpdate @task.id)}}
       />
+      <div>
+        <label for="task-update">Change task status:</label>
+        <select id="task-update" onchange={{this.handleTaskStatusChange}}>
+          {{#each this.taskStatus as |taskStatus|}}
+            <option value={{taskStatus.key}} key={{taskStatus.key}}>{{taskStatus.label}}</option>
+          {{/each}}
+        </select>
+      </div>
       </div>
     </div>
 </div>
