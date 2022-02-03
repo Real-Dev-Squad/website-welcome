@@ -11,6 +11,7 @@ export default class UploadImageComponent extends Component {
   @tracked imageUploadSuccess = false;
   @tracked statusMessage;
   @tracked imageFileName;
+  imageCoordinates = null;
   uploadUrl = this.args.uploadUrl;
   formKeyName = this.args.formKeyName;
 
@@ -42,6 +43,10 @@ export default class UploadImageComponent extends Component {
     };
   }
 
+  @action setImageCoordinates(data) {
+    this.imageCoordinates = data;
+  }
+
   @action handleDragOver(e) {
     this.preventDefaults(e);
     this.setOverDropZone(true);
@@ -58,6 +63,10 @@ export default class UploadImageComponent extends Component {
 
   @action onSubmit(e) {
     this.preventDefaults(e);
+    const devMode = this.args.devMode;
+    if (devMode && this.imageCoordinates) {
+      this.formData.set('coordinates', JSON.stringify(this.imageCoordinates));
+    }
     this.uploadImage(this.formData);
   }
 

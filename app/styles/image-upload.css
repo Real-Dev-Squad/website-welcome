@@ -87,6 +87,26 @@
   font-weight: bolder;
 }
 
+.image-cropper-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.image-cropper {
+  display: block;
+  max-width: 100%;
+}
+
+.image-cropper-preview {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  border: 5px solid #ccc;
+  margin: 20px auto;
+}
+
+
 @media only screen and (max-device-width: 480px) {
   .drop-area {
     width: auto;
@@ -96,4 +116,10 @@
   .image-preview {
     width: 90%;
   }
+
+  .image-cropper-preview {
+    width: 300px;
+    height: 300px;
+  }
+
 }
