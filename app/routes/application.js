@@ -14,7 +14,7 @@ export default class ApplicationRoute extends Route {
       const userData = await response.json();
       if (response.status === 200 && !userData.incompleteUserDetails) {
         const firstName = userData?.first_name || defaultName;
-        const profilePictureURL = userData?.picture.url || defaultPicture;
+        const profilePictureURL = userData?.picture?.url || defaultPicture;
         return { firstName, profilePictureURL };
       } else if (response.status === 401) {
         alert('You are not logged in. Please login to continue.');
