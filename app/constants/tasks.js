@@ -3,6 +3,7 @@ const STATUS = {
   BLOCKED: 'blocked',
   COMPLETED: 'completed',
   PENDING: 'pending',
+  IN_PROGRESS: 'IN_PROGRESS',
 };
 
 const TASK_STATUSES = [

@@ -17,10 +17,6 @@ export default class TasksHolderComponent extends Component {
     this.args.onTaskChange('status', value);
   }
 
-  @action handleTaskStatusChange(e) {
-    console.log(e.target.value);
-  }
-
   taskStatus = TASK_STATUSES;
 
   availableStatusOptions = [ACTIVE, BLOCKED, COMPLETED, PENDING];

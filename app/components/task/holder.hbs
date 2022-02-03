@@ -1,24 +1,31 @@
 <div class="task-card">
   <Task-Details @task={{@task}} />
-  <div class="progress-bar-container">
-    <div class="progress-bar">
-      <input
-        id="input"
-        type="range"
-        name="percentCompleted"
-        value="{{@task.percentCompleted}}"
-        min="0" max="100" step="25"
-        {{on "change" this.onPercentageChange}}
-        {{on "change" (fn @onTaskUpdate @task.id)}}
-      />
-      <div>
-        <label for="task-update">Change task status:</label>
-        <select id="task-update" onchange={{this.handleTaskStatusChange}}>
-          {{#each this.taskStatus as |taskStatus|}}
-            <option value={{taskStatus.key}} key={{taskStatus.key}}>{{taskStatus.label}}</option>
-          {{/each}}
-        </select>
-      </div>
+  {{#if (eq @task.status 'IN_PROGRESS')}}
+    <div class="progress-bar-container">
+      <div class="progress-bar">
+        <input
+          id="input"
+          type="range"
+          name="percentCompleted"
+          value="{{@task.percentCompleted}}"
+          min="0" max="100" step="25"
+          {{on "change" this.onPercentageChange}}
+          {{on "change" (fn @onTaskUpdate @task.id)}}
+        />  
       </div>
     </div>
+  {{/if}}
+  <div>
+    <label for="task-update">Change task status:</label>
+    <select id="task-update" 
+    {{on "change" this.onStatusChange}}
+    {{on "change" (fn @onTaskUpdate @task.id)}}
+    >
+      {{#each this.taskStatus as |taskStatus|}}
+        <option value={{taskStatus.key}} key={{taskStatus.key}}>
+          {{taskStatus.label}}
+        </option>
+      {{/each}}
+    </select>
+  </div>
 </div>
