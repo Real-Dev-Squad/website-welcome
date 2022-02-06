@@ -1,12 +1,8 @@
-const STATUS = {
-  ACTIVE: 'active',
-  BLOCKED: 'blocked',
-  COMPLETED: 'completed',
-  PENDING: 'pending',
-  IN_PROGRESS: 'IN_PROGRESS',
-};
-
 const TASK_STATUSES = [
+  {
+    label: 'All',
+    key: 'all',
+  },
   {
     label: 'Available',
     key: 'AVAILABLE',
@@ -65,4 +61,4 @@ const TASK_STATUSES = [
   },
 ];
 
-export { STATUS, TASK_STATUSES };
+export { TASK_STATUSES };

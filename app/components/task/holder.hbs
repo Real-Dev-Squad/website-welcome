@@ -16,15 +16,20 @@
     </div>
   {{/if}}
   <div>
+    {{#if (eq @userSelectedTask.key 'all')}}
+      <div class="current-task-status"><strong>Current task status:</strong> {{@task.status}}</div>
+    {{/if}}
     <label for="task-update">Change task status:</label>
     <select id="task-update" 
     {{on "change" this.onStatusChange}}
     {{on "change" (fn @onTaskUpdate @task.id)}}
     >
-      {{#each this.taskStatus as |taskStatus|}}
-        <option value={{taskStatus.key}} key={{taskStatus.key}}>
-          {{taskStatus.label}}
-        </option>
+      {{#each this.availableTaskStatuses as |taskStatus|}}
+        {{#if (not-eq taskStatus.key 'all')}}
+          <option value={{taskStatus.key}}>
+            {{taskStatus.label}}
+          </option>
+        {{/if}}
       {{/each}}
     </select>
 

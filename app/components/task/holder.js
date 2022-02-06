@@ -1,8 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { STATUS, TASK_STATUSES } from 'website-my/constants/tasks';
-
-const { ACTIVE, BLOCKED, COMPLETED, PENDING } = STATUS;
+import { TASK_STATUSES } from 'website-my/constants/tasks';
 
 export default class TasksHolderComponent extends Component {
   @action
@@ -17,7 +15,5 @@ export default class TasksHolderComponent extends Component {
     this.args.onTaskChange('status', value);
   }
 
-  taskStatus = TASK_STATUSES;
-
-  availableStatusOptions = [ACTIVE, BLOCKED, COMPLETED, PENDING];
+  availableTaskStatuses = TASK_STATUSES;
 }

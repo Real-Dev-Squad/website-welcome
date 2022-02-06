@@ -8,10 +8,7 @@ const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
   taskStatuses = TASK_STATUSES;
-  DEFAULT_TASK_TYPE = {
-    label: 'In Progress',
-    key: 'IN_PROGRESS',
-  };
+  DEFAULT_TASK_TYPE = this.taskStatuses[0];
   @tracked showDropDown = true;
   @tracked taskFields = {};
   @tracked allTasks = this.model;
@@ -25,9 +22,13 @@ export default class TasksController extends Controller {
   @tracked tasksByStatus = {};
 
   calculateTasksToShowBySelectedStatus() {
-    this.tasksToShow = this.allTasks.filter(
-      (task) => task.status === this.userSelectedTask.key
-    );
+    if (this.userSelectedTask.key === 'all') {
+      this.tasksToShow = this.allTasks;
+    } else {
+      this.tasksToShow = this.allTasks.filter(
+        (task) => task.status === this.userSelectedTask.key
+      );
+    }
   }
 
   cleanReqBody(object) {
@@ -43,9 +44,7 @@ export default class TasksController extends Controller {
     this.calculateTasksToShowBySelectedStatus();
   }
 
-  @tracked tasksToShow = this.allTasks.filter(
-    (task) => task.status === this.userSelectedTask.key
-  );
+  @tracked tasksToShow = this.allTasks;
 
   @action onTaskChange(key, value) {
     this.taskFields[key] = value;
