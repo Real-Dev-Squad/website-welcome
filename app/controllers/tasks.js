@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
-import { action, set } from '@ember/object';
+import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
 import { TASK_STATUSES } from 'website-my/constants/tasks';
 
@@ -12,7 +12,7 @@ export default class TasksController extends Controller {
     label: 'In Progress',
     key: 'IN_PROGRESS',
   };
-  @tracked showDropDown = false;
+  @tracked showDropDown = true;
   @tracked taskFields = {};
   @tracked allTasks = this.model;
   @tracked isLoading = false;
@@ -72,17 +72,9 @@ export default class TasksController extends Controller {
             (task) => task.id === taskId
           );
           const selectedTask = this.allTasks[indexOfSelectedTask];
-          const statusOfSelectedTask = selectedTask.status;
-
-          if (taskData.status && taskData.status != selectedTask.status)
-            set(selectedTask, 'status', taskData.status);
-          if (
-            taskData.percentCompleted &&
-            taskData.percentCompleted != selectedTask.percentCompleted
-          )
-            set(selectedTask, 'percentCompleted', taskData.percentCompleted);
-
-          this.toggleTasks(statusOfSelectedTask);
+          const updatedTask = { ...selectedTask, ...cleanBody };
+          this.allTasks[indexOfSelectedTask] = updatedTask;
+          this.calculateTasksToShowBySelectedStatus();
         }
       } catch (err) {
         alert('Failed to update the task');
