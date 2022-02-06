@@ -27,5 +27,11 @@
         </option>
       {{/each}}
     </select>
+
+     {{#if @isLoading}}
+       <div class="loader-container">
+         <Spinner />
+       </div>
+     {{/if}}
   </div>
 </div>

@@ -2,53 +2,50 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
 import ENV from 'website-my/config/environment';
-import { STATUS } from 'website-my/constants/tasks';
+import { TASK_STATUSES } from 'website-my/constants/tasks';
 
 const API_BASE_URL = ENV.BASE_API_URL;
-const { ACTIVE, BLOCKED, COMPLETED, PENDING } = STATUS;
 
 export default class TasksController extends Controller {
+  taskStatuses = TASK_STATUSES;
+  DEFAULT_TASK_TYPE = {
+    label: 'In Progress',
+    key: 'IN_PROGRESS',
+  };
   @tracked showDropDown = false;
   @tracked taskFields = {};
   @tracked allTasks = this.model;
+  @tracked isLoading = false;
+  @tracked userSelectedTask = this.DEFAULT_TASK_TYPE;
 
   @action toggleDropDown() {
     this.showDropDown = !this.showDropDown;
   }
 
   @tracked tasksByStatus = {};
-  taskStatusList = [ACTIVE, BLOCKED, PENDING];
 
-  filterTasksByStatus(allTasks, status) {
-    return allTasks.filter((task) => task.status === status);
-  }
-
-  seperateTasksByStatus() {
-    this.taskStatusList.forEach((status) => {
-      this.tasksByStatus[status] = this.filterTasksByStatus(
-        this.allTasks,
-        status
-      );
-    });
+  calculateTasksToShowBySelectedStatus() {
+    this.tasksToShow = this.allTasks.filter(
+      (task) => task.status === this.userSelectedTask.key
+    );
   }
 
   cleanReqBody(object) {
-    const cleanReqObj = {
-      ...object,
-      percentCompleted: parseInt(object.percentCompleted),
-    };
-    return cleanReqObj;
+    const taskCompletionPercentage = object.percentCompleted;
+    if (taskCompletionPercentage) {
+      object.percentCompleted = parseInt(taskCompletionPercentage);
+    }
+    return object;
   }
 
-  defaultTaskType = ACTIVE;
+  @action changeUserSelectedTask(statusObject) {
+    this.userSelectedTask = statusObject;
+    this.calculateTasksToShowBySelectedStatus();
+  }
+
   @tracked tasksToShow = this.allTasks.filter(
-    (task) => task.status === this.defaultTaskType
+    (task) => task.status === this.userSelectedTask.key
   );
-
-  @action toggleTasks(taskType) {
-    this.seperateTasksByStatus();
-    this.tasksToShow = this.tasksByStatus[taskType];
-  }
 
   @action onTaskChange(key, value) {
     this.taskFields[key] = value;
@@ -56,12 +53,10 @@ export default class TasksController extends Controller {
 
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
-    if (taskData.status === COMPLETED) {
-      taskData.percentCompleted = 100;
-    }
     const cleanBody = this.cleanReqBody(taskData);
     if (taskData.status || taskData.percentCompleted) {
       try {
+        this.isLoading = true;
         const response = await fetch(`${API_BASE_URL}/tasks/self/${taskId}`, {
           method: 'PATCH',
           body: JSON.stringify(cleanBody),
@@ -71,9 +66,8 @@ export default class TasksController extends Controller {
           credentials: 'include',
         });
 
-        const { status } = response;
-
-        if (status === 204) {
+        if (response.ok) {
+          alert('Task updated successfully!');
           const indexOfSelectedTask = this.allTasks.findIndex(
             (task) => task.id === taskId
           );
@@ -91,7 +85,10 @@ export default class TasksController extends Controller {
           this.toggleTasks(statusOfSelectedTask);
         }
       } catch (err) {
+        alert('Failed to update the task');
         console.error('Error : ', err);
+      } finally {
+        this.isLoading = false;
       }
     }
   }
