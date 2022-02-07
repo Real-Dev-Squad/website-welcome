@@ -1,8 +1,8 @@
-<div class="task-card">
+<div class="task-card" tabindex="0">
   <Task-Details @task={{@task}} />
   {{#if (eq @task.status 'IN_PROGRESS')}}
-    <div class="progress-bar-container">
-      <div class="progress-bar">
+    <div class="task-card__progress-bar-container">
+      <div class="task-card__progress-bar-container__progress-bar">
         <input
           id="input"
           type="range"
@@ -17,7 +17,9 @@
   {{/if}}
   <div>
     {{#if (eq @userSelectedTask.key 'all')}}
-      <div class="current-task-status"><strong>Current task status:</strong> {{@task.status}}</div>
+      <div class="task-card__current-task-status">
+        <strong>Current task status:</strong> {{@task.status}}
+      </div>
     {{/if}}
     <label for="task-update">Change task status:</label>
     <select id="task-update" 
@@ -34,7 +36,7 @@
     </select>
 
      {{#if @isLoading}}
-       <div class="loader-container">
+       <div class="task-card__loader-container">
          <Spinner />
        </div>
      {{/if}}

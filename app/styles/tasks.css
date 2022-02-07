@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.tasks-container__no-tasks-found {
+  margin-top: 20px;
+}
+
 .task-card {
   display: flex;
   flex-direction: column;
@@ -47,17 +51,17 @@
   padding: 1rem;
 }
 
-.progress-bar {
+.task-card__progress-bar-container{
+  padding: 1em;
+}
+
+.task-card__progress-bar-container__progress-bar {
   background-color: #fff;
   height: 40px;
   border-radius: 25px;
   overflow: hidden;
   margin-top: 16px;
   position: relative;
-}
-
-.progress-bar-container{
-  padding: 1em;
 }
 
 input[type=range] {
@@ -189,15 +193,12 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom: 1em;
 }
 
-.current-task-status {
+.task-card__current-task-status {
   margin-bottom: 15px;
 }
 
-.no-tasks-found {
-  margin-top: 20px;
-}
 
-.loader-container {
+.task-card__loader-container {
   margin-top: 10px;
 }
 
