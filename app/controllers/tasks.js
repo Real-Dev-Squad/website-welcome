@@ -51,11 +51,11 @@ export default class TasksController extends Controller {
   }
 
   @action async handleUpdateTask(taskId) {
+    this.isLoading = true;
     const taskData = this.taskFields;
     const cleanBody = this.cleanReqBody(taskData);
     if (taskData.status || taskData.percentCompleted) {
       try {
-        this.isLoading = true;
         const response = await fetch(`${API_BASE_URL}/tasks/self/${taskId}`, {
           method: 'PATCH',
           body: JSON.stringify(cleanBody),
