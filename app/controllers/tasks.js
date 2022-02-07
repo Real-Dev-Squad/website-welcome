@@ -2,13 +2,14 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
-import { TASK_STATUSES } from 'website-my/constants/tasks';
+import { TASK_STATUS_LIST } from 'website-my/constants/tasks';
 
 const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
-  taskStatuses = TASK_STATUSES;
-  DEFAULT_TASK_TYPE = this.taskStatuses[0];
+  taskStatusList = TASK_STATUS_LIST;
+  allTasksObject = this.taskStatusList[0];
+  DEFAULT_TASK_TYPE = this.allTasksObject;
   @tracked showDropDown = true;
   @tracked taskFields = {};
   @tracked allTasks = this.model;
@@ -21,8 +22,8 @@ export default class TasksController extends Controller {
 
   @tracked tasksByStatus = {};
 
-  calculateTasksToShowBySelectedStatus() {
-    if (this.userSelectedTask.key === 'all') {
+  filterTasksByStatus() {
+    if (this.userSelectedTask.key === this.allTasksObject.key) {
       this.tasksToShow = this.allTasks;
     } else {
       this.tasksToShow = this.allTasks.filter(
@@ -41,7 +42,7 @@ export default class TasksController extends Controller {
 
   @action changeUserSelectedTask(statusObject) {
     this.userSelectedTask = statusObject;
-    this.calculateTasksToShowBySelectedStatus();
+    this.filterTasksByStatus();
   }
 
   @tracked tasksToShow = this.allTasks;
@@ -73,7 +74,7 @@ export default class TasksController extends Controller {
           const selectedTask = this.allTasks[indexOfSelectedTask];
           const updatedTask = { ...selectedTask, ...cleanBody };
           this.allTasks[indexOfSelectedTask] = updatedTask;
-          this.calculateTasksToShowBySelectedStatus();
+          this.filterTasksByStatus();
         }
       } catch (err) {
         alert('Failed to update the task');

@@ -26,7 +26,7 @@
     {{on "change" this.onStatusChange}}
     {{on "change" (fn @onTaskUpdate @task.id)}}
     >
-      {{#each this.availableTaskStatuses as |taskStatus|}}
+      {{#each this.availabletaskStatusList as |taskStatus|}}
         {{#if (not-eq taskStatus.key 'all')}}
           <option value={{taskStatus.key}}>
             {{taskStatus.label}}

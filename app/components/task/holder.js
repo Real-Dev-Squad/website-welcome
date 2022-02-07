@@ -1,9 +1,9 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { TASK_STATUSES } from 'website-my/constants/tasks';
+import { TASK_STATUS_LIST } from 'website-my/constants/tasks';
 
 export default class TasksHolderComponent extends Component {
-  availableTaskStatuses = TASK_STATUSES;
+  availabletaskStatusList = TASK_STATUS_LIST;
   @action
   onPercentageChange(e) {
     const { value } = e.target;

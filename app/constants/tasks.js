@@ -1,6 +1,6 @@
-const TASK_STATUSES = [
+const TASK_STATUS_LIST = [
   {
-    label: 'All',
+    label: 'All', // this particular object's order does matter, please check controllers/tasks
     key: 'all',
   },
   {
@@ -61,4 +61,4 @@ const TASK_STATUSES = [
   },
 ];
 
-export { TASK_STATUSES };
+export { TASK_STATUS_LIST };
