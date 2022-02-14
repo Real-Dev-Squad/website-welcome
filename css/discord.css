@@ -54,15 +54,18 @@ a {
 
 .discord-info-para {
   margin-top: 2rem;
-  margin-left: 10rem;
   width: 80%;
 }
 
 .discord-info-para p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 .center-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -222,12 +225,6 @@ footer {
   animation: animationFramesOne 25s infinite linear;
 }
 
-@media (max-width: 1024px) {
-  .discord-info-para {
-    margin-left: 6rem;
-  }
-}
-
 @media (max-width: 768px) {
   .end-block {
     display: flex;
@@ -240,18 +237,12 @@ footer {
     flex: 0 0 100%;
     min-width: 80%;
   }
-  .discord-info-para {
-    margin-left: 5rem;
-  }
 }
 
 @media (max-width: 625px) {
   .get-started-heading {
     font-size: 20px;
     font-weight: 700;
-  }
-  .discord-info-para {
-    margin-left: 2.75rem;
   }
   .new-heading {
     font-size: 1.75rem;
@@ -273,7 +264,6 @@ footer {
 @media (max-width: 375px) {
   .discord-info-para {
     font-size: 1rem;
-    margin: 1rem 2rem;
   }
 
   .new-heading {
