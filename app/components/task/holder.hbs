@@ -21,19 +21,22 @@
         <strong>Current task status:</strong> {{@task.status}}
       </div>
     {{/if}}
-    <label for="task-update">Change task status:</label>
-    <select id="task-update" 
-    {{on "change" this.onStatusChange}}
-    {{on "change" (fn @onTaskUpdate @task.id)}}
-    >
-      {{#each this.availabletaskStatusList as |taskStatus|}}
-        {{#if (not-eq taskStatus.key 'all')}}
-          <option value={{taskStatus.key}}>
-            {{taskStatus.label}}
-          </option>
-        {{/if}}
-      {{/each}}
-    </select>
+
+    {{#if (not-eq @task.status 'VERIFIED')}}
+      <label for="task-update">Change task status:</label>
+      <select id="task-update" 
+      {{on "change" this.onStatusChange}}
+      {{on "change" (fn @onTaskUpdate @task.id)}}
+      >
+        {{#each this.availabletaskStatusList as |taskStatus|}}
+          {{#if (not-eq taskStatus.key 'all')}}
+            <option value={{taskStatus.key}}>
+              {{taskStatus.label}}
+            </option>
+          {{/if}}
+        {{/each}}
+      </select>
+    {{/if}}
 
      {{#if @isLoading}}
        <div class="task-card__loader-container">
