@@ -32,10 +32,15 @@ export default class TasksController extends Controller {
     }
   }
 
-  cleanReqBody(object) {
+  constructReqBody(object) {
     const taskCompletionPercentage = object.percentCompleted;
     if (taskCompletionPercentage) {
       object.percentCompleted = parseInt(taskCompletionPercentage);
+    }
+    if (object.status === 'VERIFIED') {
+      const currentTimeInMs = Date.now();
+      const currentTimeInSecs = currentTimeInMs / 1000;
+      object.endsOn = currentTimeInSecs;
     }
     return object;
   }
@@ -54,7 +59,7 @@ export default class TasksController extends Controller {
   @action async handleUpdateTask(taskId) {
     this.isLoading = true;
     const taskData = this.taskFields;
-    const cleanBody = this.cleanReqBody(taskData);
+    const cleanBody = this.constructReqBody(taskData);
     if (taskData.status || taskData.percentCompleted) {
       try {
         const response = await fetch(`${API_BASE_URL}/tasks/self/${taskId}`, {
