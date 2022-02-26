@@ -1,5 +1,5 @@
 <div class="tasks-container">
-  <h2 class="tasks-container__title">{{@userSelectedTask.label}} Tasks</h2>
+  <h2 class="tasks-container__title">{{@userSelectedTask.displayLabel}} Tasks</h2>
   {{#if @tasksToShow.length}}
     {{#each @tasksToShow as |task|}}
       <div>

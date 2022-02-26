@@ -2,13 +2,16 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
-import { TASK_STATUS_LIST } from 'website-my/constants/tasks';
+import { TASK_KEYS, TASK_STATUS_LIST } from 'website-my/constants/tasks';
 
 const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
+  TASK_KEYS = TASK_KEYS;
   taskStatusList = TASK_STATUS_LIST;
-  allTasksObject = this.taskStatusList[0];
+  allTasksObject = this.taskStatusList.find(
+    (obj) => obj.key === this.TASK_KEYS.ALL
+  );
   DEFAULT_TASK_TYPE = this.allTasksObject;
   @tracked showDropDown = true;
   @tracked taskFields = {};
@@ -33,16 +36,18 @@ export default class TasksController extends Controller {
   }
 
   constructReqBody(object) {
+    const requestBody = { status: object.status };
     const taskCompletionPercentage = object.percentCompleted;
     if (taskCompletionPercentage) {
-      object.percentCompleted = parseInt(taskCompletionPercentage);
+      requestBody.percentCompleted = parseInt(taskCompletionPercentage);
     }
-    if (object.status === 'VERIFIED') {
+    if (object.status === this.TASK_KEYS.VERIFIED) {
       const currentTimeInMs = Date.now();
       const currentTimeInSecs = currentTimeInMs / 1000;
-      object.endsOn = currentTimeInSecs;
+      requestBody.endsOn = currentTimeInSecs;
+      requestBody.percentCompleted = 100;
     }
-    return object;
+    return requestBody;
   }
 
   @action changeUserSelectedTask(statusObject) {
@@ -80,6 +85,8 @@ export default class TasksController extends Controller {
           const updatedTask = { ...selectedTask, ...cleanBody };
           this.allTasks[indexOfSelectedTask] = updatedTask;
           this.filterTasksByStatus();
+        } else {
+          alert('Failed to update the task');
         }
       } catch (err) {
         alert('Failed to update the task');

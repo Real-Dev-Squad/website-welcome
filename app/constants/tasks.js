@@ -1,64 +1,100 @@
+const TASK_KEYS = {
+  ALL: 'ALL',
+  AVAILABLE: 'AVAILABLE',
+  ASSIGNED: 'ASSIGNED',
+  IN_PROGRESS: 'IN_PROGRESS',
+  BLOCKED: 'BLOCKED',
+  SMOKE_TESTING: 'SMOKE_TESTING',
+  COMPLETED: 'COMPLETED',
+  NEEDS_REVIEW: 'NEEDS_REVIEW',
+  IN_REVIEW: 'IN_REVIEW',
+  APPROVED: 'APPROVED',
+  MERGED: 'MERGED',
+  SANITY_CHECK: 'SANITY_CHECK',
+  REGRESSION_CHECK: 'REGRESSION_CHECK',
+  RELEASED: 'RELEASED',
+  VERIFIED: 'VERIFIED',
+};
+
+const {
+  ALL,
+  AVAILABLE,
+  ASSIGNED,
+  IN_PROGRESS,
+  BLOCKED,
+  SMOKE_TESING,
+  COMPLETED,
+  NEEDS_REVIEW,
+  IN_REVIEW,
+  APPROVED,
+  MERGED,
+  SANITY_CHECK,
+  REGRESSION_CHECK,
+  RELEASED,
+  VERIFIED,
+} = TASK_KEYS;
+
 const TASK_STATUS_LIST = [
   {
-    label: 'All', // this particular object's order does matter, please check controllers/tasks
-    key: 'all',
+    displayLabel: 'All',
+    key: ALL,
   },
   {
-    label: 'Available',
-    key: 'AVAILABLE',
+    displayLabel: 'Available',
+    key: AVAILABLE,
   },
   {
-    label: 'Assigned',
-    key: 'ASSIGNED',
+    displayLabel: 'Assigned',
+    key: ASSIGNED,
   },
   {
-    label: 'In Progress',
-    key: 'IN_PROGRESS',
+    displayLabel: 'In Progress',
+    key: IN_PROGRESS,
   },
   {
-    label: 'Blocked',
-    key: 'BLOCKED',
+    displayLabel: 'Blocked',
+    key: BLOCKED,
   },
   {
-    label: 'Smoke Testing',
-    key: 'SMOKE_TESING',
+    displayLabel: 'Smoke Testing',
+    key: SMOKE_TESING,
   },
   {
-    label: 'Completed',
-    key: 'COMPLETED',
+    displayLabel: 'Completed',
+    key: COMPLETED,
   },
   {
-    label: 'Needs Review',
-    key: 'NEEDS_REVIEW',
+    displayLabel: 'Needs Review',
+    key: NEEDS_REVIEW,
   },
   {
-    label: 'In Review',
-    key: 'IN_REVIEW',
+    displayLabel: 'In Review',
+    key: IN_REVIEW,
   },
   {
-    label: 'Approved',
-    key: 'APPROVED',
+    displayLabel: 'Approved',
+    key: APPROVED,
   },
   {
-    label: 'Merged',
-    key: 'MERGED',
+    displayLabel: 'Merged',
+    key: MERGED,
   },
   {
-    label: 'Sanity Check',
-    key: 'SANITY_CHECK',
+    displayLabel: 'Sanity Check',
+    key: SANITY_CHECK,
   },
   {
-    label: 'Regression Check',
-    key: 'REGRESSION_CHECK',
+    displayLabel: 'Regression Check',
+    key: REGRESSION_CHECK,
   },
   {
-    label: 'Released',
-    key: 'RELEASED',
+    displayLabel: 'Released',
+    key: RELEASED,
   },
   {
-    label: 'Verified',
-    key: 'VERIFIED',
+    displayLabel: 'Verified',
+    key: VERIFIED,
   },
 ];
 
-export { TASK_STATUS_LIST };
+export { TASK_KEYS, TASK_STATUS_LIST };

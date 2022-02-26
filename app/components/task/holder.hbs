@@ -1,6 +1,6 @@
 <div class="task-card" tabindex="0">
   <Task-Details @task={{@task}} />
-  {{#if (eq @task.status 'IN_PROGRESS')}}
+  {{#if (eq @task.status this.TASK_KEYS.IN_PROGRESS)}}
     <div class="task-card__progress-bar-container">
       <div class="task-card__progress-bar-container__progress-bar">
         <input
@@ -14,24 +14,24 @@
         />  
       </div>
     </div>
-  {{/if}}
+  {{/if}} 
   <div>
-    {{#if (eq @userSelectedTask.key 'all')}}
+    {{#if (eq @userSelectedTask.key this.TASK_KEYS.ALL)}}
       <div class="task-card__current-task-status">
         <strong>Current task status:</strong> {{@task.status}}
       </div>
     {{/if}}
 
-    {{#if (not-eq @task.status 'VERIFIED')}}
+    {{#if (not-eq @task.status this.TASK_KEYS.VERIFIED)}}
       <label for="task-update">Change task status:</label>
       <select id="task-update" 
       {{on "change" this.onStatusChange}}
       {{on "change" (fn @onTaskUpdate @task.id)}}
       >
         {{#each this.availabletaskStatusList as |taskStatus|}}
-          {{#if (not-eq taskStatus.key 'all')}}
+          {{#if (not-eq taskStatus.key this.TASK_KEYS.ALL)}}
             <option value={{taskStatus.key}}>
-              {{taskStatus.label}}
+              {{taskStatus.displayLabel}}
             </option>
           {{/if}}
         {{/each}}
