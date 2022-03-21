@@ -41,12 +41,6 @@ export default class TasksController extends Controller {
     if (taskCompletionPercentage) {
       requestBody.percentCompleted = parseInt(taskCompletionPercentage);
     }
-    if (object.status === this.TASK_KEYS.VERIFIED) {
-      const currentTimeInMs = Date.now();
-      const currentTimeInSecs = currentTimeInMs / 1000;
-      requestBody.endsOn = currentTimeInSecs;
-      requestBody.percentCompleted = 100;
-    }
     return requestBody;
   }
 
