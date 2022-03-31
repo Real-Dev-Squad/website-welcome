@@ -22,7 +22,7 @@ const {
   ASSIGNED,
   IN_PROGRESS,
   BLOCKED,
-  SMOKE_TESING,
+  SMOKE_TESTING,
   COMPLETED,
   NEEDS_REVIEW,
   IN_REVIEW,
@@ -57,7 +57,7 @@ const TASK_STATUS_LIST = [
   },
   {
     displayLabel: 'Smoke Testing',
-    key: SMOKE_TESING,
+    key: SMOKE_TESTING,
   },
   {
     displayLabel: 'Completed',
