@@ -97,7 +97,7 @@ nav li {
 }
 
 @media (max-width: 1024px) {
-  .nav-menu {
+  .nav-menu :not(:last-child) {
     display: none;
     background-color: white;
     padding: 10px 0px;
