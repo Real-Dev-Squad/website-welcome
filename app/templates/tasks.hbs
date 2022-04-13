@@ -5,11 +5,13 @@
     @taskStatusList={{this.taskStatusList}}
     @showDropDown={{this.showDropDown}}
     @toggleDropDown={{this.toggleDropDown}}
-    @toggleTasks={{this.toggleTasks}}
+    @changeUserSelectedTask={{this.changeUserSelectedTask}}
   />
   <Tasks
+    @userSelectedTask={{this.userSelectedTask}}
     @tasksToShow={{this.tasksToShow}}
     @onTaskChange={{this.onTaskChange}}
     @onTaskUpdate={{this.handleUpdateTask}}
+    @isLoading={{this.isLoading}}
   />
 </div>
