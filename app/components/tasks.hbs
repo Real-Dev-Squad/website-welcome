@@ -1,14 +1,20 @@
 <div class="tasks-container">
-  <h2 class="tasks-container__title">{{@tasksToShow.[0].status}} Tasks</h2>
-  {{#each @tasksToShow as |task|}}
-    <div class="tasks-container__details">
-      <Task::Holder
-        @task={{task}}
-        @onTaskChange={{@onTaskChange}}
-        @onStausChange={{this.onStatusChange}}
-        @onPercentageChange={{this.onPercentageChange}}
-        @onTaskUpdate={{@onTaskUpdate}}
-      />
-    </div>
-  {{/each}}
+  <h2 class="tasks-container__title">{{@userSelectedTask.displayLabel}} Tasks</h2>
+  {{#if @tasksToShow.length}}
+    {{#each @tasksToShow as |task|}}
+      <div>
+        <Task::Holder
+          @task={{task}}
+          @onTaskChange={{@onTaskChange}}
+          @onStausChange={{this.onStatusChange}}
+          @onPercentageChange={{this.onPercentageChange}}
+          @onTaskUpdate={{@onTaskUpdate}}
+          @isLoading={{@isLoading}}
+          @userSelectedTask={{@userSelectedTask}}
+        />
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="tasks-container__no-tasks-found">No tasks found!</div>
+  {{/if}}  
 </div>
