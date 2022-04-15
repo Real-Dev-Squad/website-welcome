@@ -5,10 +5,6 @@ import { action, set } from '@ember/object';
 const BASE_URL = ENV.BASE_API_URL;
 
 export default class ProfileController extends Controller {
-  queryParams = ['dev'];
-
-  @tracked dev = false;
-
   formDataKeyName = 'profile';
 
   get imageUploadUrl() {
