@@ -1,0 +1,66 @@
+{{page-title 'Identity'}}
+
+<h1 class="identity-heading">
+    Identity Service Verification
+</h1>
+<div class="identity-container">
+    {{#if (eq @model.profileStatus "PENDING")}}
+        <p>Verification process is Pending!</p>
+        <button type="button" {{on 'click' (fn this.handleRefresh)}}>Refresh</button>
+    {{else if (eq @model.profileStatus "VERIFIED")}}
+        <p>Verification Done!</p>
+    {{else}}
+       {{#if (eq @model.profileStatus "BLOCKED")}}
+       <p>Your previous chaincode is blocked for some reason.Please generate a new chaincode.</p>
+       {{/if}}
+        <div class="input-div">
+            <label>Profile Url</label>
+            <Input @value={{@model.profileURL}} type="text" placeholder="Profile URL" />
+            <button    
+                type="submit"
+                class="identity-Buttons edit"
+                {{on 'click' (fn this.handleEdit)}}>
+                {{#if this.isEditClicked}}
+                    <i class="fa fa-spinner fa-spin"></i>
+                {{/if}}
+                Save
+            </button> 
+        </div>
+
+        <div class="chaincode-div">
+            <label class="identity-label">
+                Generate Chaincode
+                {{#if this.isChaincodeClicked }}
+                    <label class="chaincode">{{this.Chaincode}}</label>
+
+                    <Input
+                        class='copy-button'
+                        type="button"
+                        @value='Copy'
+                        {{on 'click' (fn this.handleCopy)}} />
+
+                {{else}}
+                    <Input
+                        class='identity-Buttons'
+                        type="button"
+                        @value={{this.Chaincode}}
+                        {{on 'click' (fn this.handleGenerateChaincode)}}/>
+                {{/if}}
+            </label>
+        </div>
+
+        <label class="identity-label">
+            I have saved my profile URL, generated a chaincode<br />and successfully added that to my service.
+        <Input @type="checkbox" @checked={{this.isChecked}} />
+        </label>
+        <button
+            type="submit"
+            class="identity-verify-btn"
+            {{on 'click' (fn this.handleVerify)}}>
+            {{#if this.isVerifyClicked}}
+                <i class="fa fa-spinner fa-spin"></i>
+            {{/if}}
+            Link Chaincode
+        </button>
+    {{/if}}
+</div>
