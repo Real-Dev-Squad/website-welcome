@@ -1,26 +1,14 @@
-const icon = document.getElementById('icon');
-onload = onload();
-icon.onclick = function () {
-  const element = document.body;
-  element.classList.toggle('dark-theme');
-  if (element.classList.contains('dark-theme')) {
-    icon.src = 'img/icons/sun.png';
+document.addEventListener('DOMContentLoaded', () => {
+  if (getCookie('theme') === 'light') {
+    setCookie('theme', 'light', 30);
+    document.body.classList.remove('dark-theme');
+  } else if (getCookie('theme') === 'dark') {
     setCookie('theme', 'dark', 30);
+    document.body.classList.add('dark-theme');
   } else {
-    icon.src = 'img/icons/moon.png';
     setCookie('theme', 'light', 30);
   }
-};
-
-function onload() {
-  if (getCookie('theme') === 'light') {
-    document.body.classList.remove('dark-theme');
-    icon.src = 'img/icons/moon.png';
-  } else {
-    document.body.classList.add('dark-theme');
-    icon.src = 'img/icons/sun.png';
-  }
-}
+});
 
 function setCookie(name, value, days = 30) {
   const domain = '.realdevsquad.com';
