@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('notifications');
   this.route('tasks');
   this.route('profile');
+  this.route('identity');
 });

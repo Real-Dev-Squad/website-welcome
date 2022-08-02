@@ -9,6 +9,7 @@
 @import 'user-status.css';
 @import 'components/input-field.css';
 @import 'navbar.css';
+@import 'identity.css';
 
 html,
 body {

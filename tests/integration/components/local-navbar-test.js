@@ -7,7 +7,7 @@ module('Integration | Component | local-navbar', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    const navbarContent = 'Home | Profile | Tasks | Notifications';
+    const navbarContent = 'Home | Profile | Tasks | Notifications | Identity';
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
