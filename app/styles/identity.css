@@ -17,7 +17,7 @@
     width: 40%;
 }
 
-input[type=text] {
+.input-div input[type=text] {
     height: 2rem;
     margin-top: 25px;
     width: 65%;
@@ -78,7 +78,7 @@ input[type=text] {
     .input-div {
         width: 70%;
     }
-    input[type=text] {
+    .input-div input[type=text] {
         width: 50%;
     }
     .chaincode-div{
@@ -88,9 +88,9 @@ input[type=text] {
 
 @media (max-width: 460px){
     .input-div {
-        width: 70%;
+        width: 80%;
     }
-    input[type=text] {
+    .input-div input[type=text] {
         width: 50%;
     }
 } 
