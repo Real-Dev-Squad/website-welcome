@@ -39,6 +39,11 @@ input[type=text] {
     padding: 4px 15px;
 }
 
+.identity-Buttons:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .identity-label {
     margin-top: 30px;
     text-align: center;
@@ -53,6 +58,11 @@ input[type=text] {
     padding: 8px 20px;
     border: none;
     margin-top: 40px;
+}
+
+.identity-verify-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .chaincode {

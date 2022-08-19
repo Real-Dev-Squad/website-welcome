@@ -14,9 +14,41 @@ export default class IdentityController extends Controller {
   @tracked isCopyClicked = false;
   @tracked isVerifyClicked = false;
   @tracked profileURL = this.model.profileURL || '';
+  @tracked saveDisabled = true;
+  @tracked generateChainCodeDisabled = this.model.profileURL == undefined;
+  @tracked checkboxDisabled =
+    this.model.profileURL == undefined || this.model.Chaincode == undefined;
+  @tracked linkDisabled = true;
 
   @action async handleRefresh() {
     window.location.reload();
+  }
+
+  @action changeSaveDisabled() {
+    const isValidUrl = (urlString) => {
+      try {
+        return Boolean(new URL(urlString));
+      } catch (e) {
+        return false;
+      }
+    };
+    if (
+      this.profileURL == '' ||
+      this.profileURL == (this.model.profileURL || '') ||
+      !isValidUrl(this.profileURL)
+    ) {
+      this.saveDisabled = true;
+    } else {
+      this.saveDisabled = false;
+    }
+  }
+
+  @action changeLinkDisable() {
+    if (!this.isChecked) {
+      this.linkDisabled = false;
+    } else {
+      this.linkDisabled = true;
+    }
   }
 
   @action handleCopy() {
@@ -24,6 +56,7 @@ export default class IdentityController extends Controller {
     this.isCopyClicked = true;
     if (this.isCopyClicked === true) {
       alert('Copied');
+      this.checkboxDisabled = false;
     }
   }
 
@@ -44,6 +77,7 @@ export default class IdentityController extends Controller {
         });
         if (response.ok) {
           alert('Updated profile URL!!');
+          this.generateChainCodeDisabled = false;
         } else {
           alert('Something went wrong. Please check console errors.');
         }
