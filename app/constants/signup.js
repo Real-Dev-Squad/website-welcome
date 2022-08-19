@@ -10,3 +10,5 @@ export const GET_STARTED_SUB_HEADING =
 
 export const THANK_YOU_MAIN_HEADING = 'Congratulations!';
 export const THANK_YOU_SUB_HEADING = 'Lets get you started on your journey';
+
+export const GOTO_URL = 'https://realdevsquad.com/goto';

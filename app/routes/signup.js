@@ -1,8 +1,13 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 import ENV from 'website-my/config/environment';
+import { SIGNUP } from '../constants/analytics';
 
 export default class SignupRoute extends Route {
+  @service analytics;
+
   async model() {
+    this.analytics.trackEvent(SIGNUP.PAGE_LOADED);
     const response = await fetch(`${ENV.BASE_API_URL}/users/self`, {
       credentials: 'include',
     });
@@ -15,6 +20,7 @@ export default class SignupRoute extends Route {
       );
     }
     if (response.status === 200 && !userData.incompleteUserDetails) {
+      this.analytics.trackEvent(SIGNUP.USER_ALREADY_REGISTERED);
       alert("You already have filled the up form. You'll now be redirected.");
       window.open('https://realdevsquad.com/goto', '_self');
     }

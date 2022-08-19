@@ -15,7 +15,9 @@
        {{/if}}
         <div class="input-div">
             <label>Profile Url</label>
+
             <Input @value={{this.profileURL}} type="text" placeholder="Profile URL" onkeyup={{this.changeSaveDisabled}}/>
+            
             <button    
                 disabled={{this.saveDisabled}}
                 type="submit"

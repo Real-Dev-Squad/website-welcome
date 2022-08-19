@@ -14,13 +14,13 @@
 }
 
 .input-div {
-    width: 40%;
+    width: 30%;
 }
 
-input[type=text] {
+.input-url {
     height: 2rem;
     margin-top: 25px;
-    width: 65%;
+    width: 60%;
 }
 
 .chaincode-div {
@@ -81,26 +81,35 @@ input[type=text] {
 @media (max-width: 1240px){
     .input-div {
         width: 50%;
+        margin-left: 10%;
+    }
+    .input-url {
+        width: 55%;
+    }
+    .chaincode-div {
+        margin-left: 20%;
     }
 }
 
 @media (max-width: 790px){
     .input-div {
         width: 70%;
+        margin-left: 5%;
     }
-    input[type=text] {
-        width: 50%;
+    .input-url {
+        width: 60%;
     }
     .chaincode-div{
         margin-left: 10%;
+        width: 60%;
     }
 }
 
 @media (max-width: 460px){
     .input-div {
-        width: 70%;
+        width: 80%;
     }
-    input[type=text] {
+    .input-url {
         width: 50%;
     }
 } 
