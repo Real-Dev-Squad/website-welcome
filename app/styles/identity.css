@@ -39,11 +39,6 @@
     padding: 4px 15px;
 }
 
-.identity-Buttons:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
 .identity-label {
     margin-top: 30px;
     text-align: center;
@@ -60,6 +55,7 @@
     margin-top: 40px;
 }
 
+.identity-Buttons:disabled,
 .identity-verify-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;

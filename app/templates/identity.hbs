@@ -15,9 +15,7 @@
        {{/if}}
         <div class="input-div">
             <label>Profile Url</label>
-
-            <Input @value={{this.profileURL}} type="text" placeholder="Profile URL" onkeyup={{this.changeSaveDisabled}}/>
-            
+            <Input class="input-url" @value={{this.profileURL}} type="text" placeholder="Profile URL" onkeyup={{this.changeSaveDisabled}}/>
             <button    
                 disabled={{this.saveDisabled}}
                 type="submit"
@@ -26,7 +24,7 @@
                 {{#if this.isEditClicked}}
                     <i class="fa fa-spinner fa-spin"></i>
                 {{/if}}
-                Save           
+                Save
             </button> 
         </div>
 
@@ -50,7 +48,7 @@
                         {{on 'click' (fn this.handleGenerateChaincode)}}
                         disabled={{this.generateChainCodeDisabled}}/>
                 {{/if}}
-            </label>          
+            </label>
         </div>
 
         <label class="identity-label">

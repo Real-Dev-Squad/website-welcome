@@ -15,9 +15,9 @@ export default class IdentityController extends Controller {
   @tracked isVerifyClicked = false;
   @tracked profileURL = this.model.profileURL || '';
   @tracked saveDisabled = true;
-  @tracked generateChainCodeDisabled = this.model.profileURL == undefined;
+  @tracked generateChainCodeDisabled = this.model.profileURL === undefined;
   @tracked checkboxDisabled =
-    this.model.profileURL == undefined || this.model.Chaincode == undefined;
+    this.model.profileURL == undefined || this.model.chaincode === undefined;
   @tracked linkDisabled = true;
 
   @action async handleRefresh() {
@@ -33,8 +33,8 @@ export default class IdentityController extends Controller {
       }
     };
     if (
-      this.profileURL == '' ||
-      this.profileURL == (this.model.profileURL || '') ||
+      this.profileURL === '' ||
+      this.profileURL === (this.model.profileURL || '') ||
       !isValidUrl(this.profileURL)
     ) {
       this.saveDisabled = true;
