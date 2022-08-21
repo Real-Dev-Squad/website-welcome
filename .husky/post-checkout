@@ -4,7 +4,7 @@ if [[ "$NODE_ENV" != "production" ]]; then
 
     echo "\n 🚧 Dependencies are being installed, please wait for a while. ⏳\n"
 
-    npm install
+    yarn
 
     echo "\nCongratulations, you are good to go! ⚡⚡⚡\n"
 fi

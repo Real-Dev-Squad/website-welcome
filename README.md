@@ -6,23 +6,26 @@ A personal dashboard website where you can do profile related stuff!
 
 You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (with npm)
+- [Ember CLI](https://ember-cli.com/)
+- [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd website-my`
-* `npm install`
+We are moving to yarn, to ensure that we use yarn , we are moving ahead with [Volta](https://docs.volta.sh/guide/#why-volta)
+To install Volta, please follow the [process](https://docs.volta.sh/guide/getting-started)
+
+- `git clone <repository-url>` this repository
+- `cd website-my`
+- `yarn`
 
 ## Running / Development
 
-* `npm run dev`
-* (or `ember s`)
-* Visit your app at [http://localhost](http://localhost).
-* Visit your tests at [http://localhost/tests](http://localhost/tests).
+- `yarn dev`
+- (or `ember s`)
+- Visit your app at [http://localhost](http://localhost).
+- Visit your tests at [http://localhost/tests](http://localhost/tests).
 
 ### Code Generators
 
@@ -30,35 +33,34 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `npm run test`
-* `npm run test:ember`
-* `npm run test:ember:server`
-* (or `ember test` and `ember test --server`)
-* You can also visit the `/tests` route when running dev server
+- `yarn test`
+- `yarn test:ember`
+- `yarn test:ember:server`
+- (or `ember test` and `ember test --server`)
+- You can also visit the `/tests` route when running dev server
 
 ### Available run commands
 
-* `npx ntl`
-* (or `npm run` to see the list)
+- `npx ntl`
+- (or `yarn run` to see the list)
 
 ### Linting
 
-* `npm run lint`: To allow the linter to check for problems
-* `npm run lint:fix`: To allow linter to fix the auto-fixable problems
+- `yarn lint`: To allow the linter to check for problems
+- `yarn lint:fix`: To allow linter to fix the auto-fixable problems
 
 ### Note: For solving CORS errors while making API calls during development, please make sure to follow step 1 from [this](https://github.com/Real-Dev-Squad/website-code-docs/tree/main/docs/dev/https-dev-url-cors) documentation . This project has taken care of step 2 in itself.
 
 ### Building
 
-* `npm run build` (production)
-* (or `ember build --environment production`)
-* `ember build` (development)
-
+- `yarn build` (production)
+- (or `ember build --environment production`)
+- `ember build` (development)
 
 ## Further Reading / Useful Links
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- [ember.js](https://emberjs.com/)
+- [ember-cli](https://ember-cli.com/)
+- Development Browser Extensions
+  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

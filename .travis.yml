@@ -22,4 +22,4 @@ branches:
     - master
 
 script:
-  - npm test
+  - yarn test

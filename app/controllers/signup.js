@@ -259,7 +259,8 @@ export default class SignupController extends Controller {
   @action emailValidator(email) {
     if (typeof email !== 'string') return false;
 
-    const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const pattern =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const index = this.fields.findIndex((field) => field.type === 'email');
 
     if (pattern.test(email)) {
