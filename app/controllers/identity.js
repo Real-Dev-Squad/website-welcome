@@ -16,7 +16,8 @@ export default class IdentityController extends Controller {
   @tracked profileURL = this.model.profileURL || '';
   @tracked saveDisabled = true;
   @tracked generateChainCodeDisabled = this.model.profileURL === undefined;
-  @tracked checkboxDisabled = this.generateChainCodeDisabled || this.model.chaincode === undefined;
+  @tracked checkboxDisabled =
+    this.generateChainCodeDisabled || this.model.chaincode === undefined;
   @tracked linkDisabled = true;
 
   @action async handleRefresh() {
