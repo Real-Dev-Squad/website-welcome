@@ -18,7 +18,6 @@ export default class IdentityController extends Controller {
   @tracked generateChainCodeDisabled = this.model.profileURL === undefined;
   @tracked checkboxDisabled =
     this.generateChainCodeDisabled || this.model.chaincode === undefined;
-  @tracked linkDisabled = true;
 
   @action async handleRefresh() {
     window.location.reload();
@@ -40,14 +39,6 @@ export default class IdentityController extends Controller {
       this.saveDisabled = true;
     } else {
       this.saveDisabled = false;
-    }
-  }
-
-  @action changeLinkDisable() {
-    if (!this.isChecked) {
-      this.linkDisabled = false;
-    } else {
-      this.linkDisabled = true;
     }
   }
 

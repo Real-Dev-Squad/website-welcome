@@ -53,12 +53,12 @@
 
         <label class="identity-label">
             I have saved my profile URL, generated a chaincode<br />and successfully added that to my service.
-        <Input @type="checkbox" @checked={{this.isChecked}} disabled={{this.checkboxDisabled}} onclick={{this.changeLinkDisable}}/>
+        <Input @type="checkbox" @checked={{this.isChecked}} disabled={{this.checkboxDisabled}}/>
         </label>
         <button
             type="submit"
             class="identity-verify-btn"
-            disabled={{this.linkDisabled}}
+            disabled={{not this.isChecked}}
             {{on 'click' (fn this.handleVerify)}}>
             {{#if this.isVerifyClicked}}
                 <i class="fa fa-spinner fa-spin"></i>
