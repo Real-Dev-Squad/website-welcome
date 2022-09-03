@@ -55,6 +55,12 @@
     margin-top: 40px;
 }
 
+.identity-Buttons:disabled,
+.identity-verify-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .chaincode {
     padding-left: 1rem;
     font-weight: bold;

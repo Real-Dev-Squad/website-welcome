@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import ENV from 'website-my/config/environment';
+import isValidUrl from '../utils/checkURL';
 
 const BASE_URL = ENV.BASE_API_URL;
 
@@ -14,9 +15,25 @@ export default class IdentityController extends Controller {
   @tracked isCopyClicked = false;
   @tracked isVerifyClicked = false;
   @tracked profileURL = this.model.profileURL || '';
+  @tracked saveDisabled = true;
+  @tracked generateChainCodeDisabled = this.model.profileURL === undefined;
+  @tracked checkboxDisabled =
+    this.generateChainCodeDisabled || this.model.chaincode === undefined;
 
   @action async handleRefresh() {
     window.location.reload();
+  }
+
+  @action changeSaveDisabled() {
+    if (
+      this.profileURL === '' ||
+      this.profileURL === (this.model.profileURL || '') ||
+      !isValidUrl(this.profileURL)
+    ) {
+      this.saveDisabled = true;
+    } else {
+      this.saveDisabled = false;
+    }
   }
 
   @action handleCopy() {
@@ -24,6 +41,7 @@ export default class IdentityController extends Controller {
     this.isCopyClicked = true;
     if (this.isCopyClicked === true) {
       alert('Copied');
+      this.checkboxDisabled = false;
     }
   }
 
@@ -44,6 +62,7 @@ export default class IdentityController extends Controller {
         });
         if (response.ok) {
           alert('Updated profile URL!!');
+          this.generateChainCodeDisabled = false;
         } else {
           alert('Something went wrong. Please check console errors.');
         }

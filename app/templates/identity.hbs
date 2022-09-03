@@ -15,8 +15,9 @@
        {{/if}}
         <div class="input-div">
             <label>Profile Url</label>
-            <Input class="input-url" @value={{@model.profileURL}} type="text" placeholder="Profile URL" />
+            <Input class="input-url" @value={{this.profileURL}} type="text" placeholder="Profile URL" onkeyup={{this.changeSaveDisabled}}/>
             <button    
+                disabled={{this.saveDisabled}}
                 type="submit"
                 class="identity-Buttons edit"
                 {{on 'click' (fn this.handleEdit)}}>
@@ -44,18 +45,20 @@
                         class='identity-Buttons'
                         type="button"
                         @value={{this.Chaincode}}
-                        {{on 'click' (fn this.handleGenerateChaincode)}}/>
+                        {{on 'click' (fn this.handleGenerateChaincode)}}
+                        disabled={{this.generateChainCodeDisabled}}/>
                 {{/if}}
             </label>
         </div>
 
         <label class="identity-label">
             I have saved my profile URL, generated a chaincode<br />and successfully added that to my service.
-        <Input @type="checkbox" @checked={{this.isChecked}} />
+        <Input @type="checkbox" @checked={{this.isChecked}} disabled={{this.checkboxDisabled}}/>
         </label>
         <button
             type="submit"
             class="identity-verify-btn"
+            disabled={{not this.isChecked}}
             {{on 'click' (fn this.handleVerify)}}>
             {{#if this.isVerifyClicked}}
                 <i class="fa fa-spinner fa-spin"></i>
