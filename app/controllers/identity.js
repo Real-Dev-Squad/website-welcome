@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import ENV from 'website-my/config/environment';
+import isValidUrl from '../utils/checkURL';
 
 const BASE_URL = ENV.BASE_API_URL;
 
@@ -24,13 +25,6 @@ export default class IdentityController extends Controller {
   }
 
   @action changeSaveDisabled() {
-    const isValidUrl = (urlString) => {
-      try {
-        return Boolean(new URL(urlString));
-      } catch (e) {
-        return false;
-      }
-    };
     if (
       this.profileURL === '' ||
       this.profileURL === (this.model.profileURL || '') ||
