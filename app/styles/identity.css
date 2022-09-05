@@ -1,8 +1,6 @@
 .identity-heading {
     margin-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .identity-container {
@@ -10,60 +8,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     width: 100%;
 }
 
 .input-div {
-    width: 30%;
-}
-
-.input-url {
-    height: 2rem;
-    margin-top: 25px;
-    width: 60%;
-}
-
-.chaincode-div {
-    margin-top: 20px;
-    margin-left: 30%;
-    width: 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .identity-Buttons {
-    display: flex;
     background-color: rgb(81, 81, 245);
     color: white;
     display: inline;
     cursor: pointer;
     border-radius: 3px;
     padding: 4px 15px;
-}
-
-.identity-label {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.identity-verify-btn {
-    display: flex;
-    background-color: rgb(53, 194, 25);
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 8px 20px;
-    border: none;
-    margin-top: 40px;
-}
-
-.identity-Buttons:disabled,
-.identity-verify-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.chaincode {
-    padding-left: 1rem;
-    font-weight: bold;
 }
 
 .copy-button {
@@ -74,38 +35,61 @@
     padding: 2px 5px;
 }
 
-@media (max-width: 1240px){
-    .input-div {
-        width: 50%;
-        margin-left: 10%;
-    }
-    .input-url {
-        width: 55%;
-    }
-    .chaincode-div {
-        margin-left: 20%;
-    }
+.identity-verify-btn {
+    background-color: rgb(53, 194, 25);
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 8px 20px;
+    border: none;
+    margin-top: 1rem;
 }
 
-@media (max-width: 790px){
-    .input-div {
-        width: 70%;
-        margin-left: 5%;
-    }
-    .input-url {
-        width: 60%;
-    }
-    .chaincode-div{
-        margin-left: 10%;
-        width: 60%;
-    }
+.identity-label {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
 }
 
-@media (max-width: 460px){
+.identity-check-label {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.input-url {
+    height: 2rem;
+}
+
+.identity-Buttons:disabled,
+.identity-verify-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.chaincode {
+    font-weight: bold;
+}
+
+@media (max-width: 460px) {
+    .identity-container {
+        gap: 2rem;
+    }
+
     .input-div {
-        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 0.5rem;
     }
-    .input-url {
-        width: 50%;
+
+    .identity-label {
+        flex-direction: column;
+        gap: 0.5rem;
     }
-} 
+}
