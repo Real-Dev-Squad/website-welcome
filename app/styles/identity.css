@@ -92,4 +92,8 @@
         flex-direction: column;
         gap: 0.5rem;
     }
+
+    .identity-check-label {
+        gap: 0.5rem;
+    }
 }
