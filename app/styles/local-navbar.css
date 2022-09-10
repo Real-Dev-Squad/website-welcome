@@ -17,3 +17,13 @@
 .active {
   color: #e30062;
 }
+
+@media screen and (max-width: 350px) {
+  .local-navbar__link a {
+    padding: 5px;
+  }
+
+  .local-navbar {
+    font-size: 12px;
+  }
+}
