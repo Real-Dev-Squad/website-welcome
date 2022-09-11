@@ -98,4 +98,8 @@
         padding: 0 1rem;
         font-size: 0.8rem;
     }
+
+    .identity-verify-btn {
+        margin-top: 0;
+    }    
 }
