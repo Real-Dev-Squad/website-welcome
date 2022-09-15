@@ -1,3 +1,9 @@
+:root {
+  --notification-primary-background: #ff6f00;
+  --alert-box-background: #fff8e1;
+  --alert-box-color: #212121;
+}
+
 .notifications {
   display: flex;
   flex-direction: column;
@@ -53,21 +59,19 @@
 
 .tip-box-alert {
   padding: 10px 10px 10px 20px;
+  color: var(--alert-box-color);
+  background: var(--alert-box-background);
+  flex-direction: column;
 }
 
 .new-message-box-alert {
-  background: #ff6f00;
+  background: var(--notification-primary-background);
   padding: 3px;
   margin: 10px 0;
 }
 
-.tip-box-alert {
-  color: #212121;
-  background: #fff8e1;
-}
-
 .tip-icon-alert {
-  background: #ff6f00;
+  background: var(--notification-primary-background);
 }
 
 @media (max-width: 800px) {
@@ -84,7 +88,6 @@
 .text-title {
   font-weight: bold;
   font-size: 20px;
-  padding-bottom: 4px;
 }
 
 .text-description {

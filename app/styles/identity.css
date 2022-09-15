@@ -1,3 +1,9 @@
+:root {
+    --button-verify-color: rgb(53, 194, 25);
+    --button-primary-color: rgb(81, 81, 245);
+    --button-copy-color: #e30062;
+}
+
 .identity-heading {
     margin-top: 25px;
     text-align: center;
@@ -19,7 +25,7 @@
 }
 
 .identity-Buttons {
-    background-color: rgb(81, 81, 245);
+    background-color: var(--button-primary-color);
     color: white;
     display: inline;
     cursor: pointer;
@@ -30,13 +36,13 @@
 .copy-button {
     margin-left: 0.75rem;
     background-color: wheat;
-    color: #e30062;
-    border: 2px solid #e30062;
+    color: var(--button-copy-color);
+    border: 2px solid var(--button-copy-color);
     padding: 2px 5px;
 }
 
 .identity-verify-btn {
-    background-color: rgb(53, 194, 25);
+    background-color: var(--button-color);
     color: white;
     cursor: pointer;
     border-radius: 3px;
