@@ -202,6 +202,57 @@ input[type=range]:focus::-ms-fill-upper {
   margin-top: 10px;
 }
 
+/* modal styles */
+
+.overlay {
+  background: rgb(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal {
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  align-self: center;
+  padding: .2rem .2rem;
+  background: white;
+  color: black;
+  position: relative;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.proceed-btn {
+  display: block;
+  width: 70%;
+  margin: .4rem;
+  padding: 0.5rem;
+  background-color: green;
+  border: none;
+  color: white;
+}
+
+.close {
+  background-color: white;
+  border: none;
+  align-self: flex-end;
+}
+
 @media screen and (max-width: 800px) {
   .tasks-page {
     flex-direction: column;

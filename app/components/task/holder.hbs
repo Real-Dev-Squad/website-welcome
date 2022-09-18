@@ -7,11 +7,12 @@
           id="input"
           type="range"
           name="percentCompleted"
-          value="{{@task.percentCompleted}}"
+          disabled={{@disabled}}
+          value="{{this.percentCompleted}}"
           min="0" max="100" step="25"
-          {{on "change" this.onPercentageChange}}
+          {{on "change" this.onPercentageChange }}
           {{on "change" (fn @onTaskUpdate @task.id)}}
-        />  
+        /> 
       </div>
     </div>
   {{/if}} 
