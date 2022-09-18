@@ -15,12 +15,11 @@
     @isLoading={{this.isLoading}}
     @disabled={{this.disabled}}
   />
-  {{#if this.showModal}}
-    <Task::Modal 
-      @goBack={{this.goBack}}
-      @markComplete={{this.markComplete}}
-      @buttonRequired={{this.buttonRequired}}
-      @message={{this.message}}
-    />
-  {{/if}}
+  <Task::Modal 
+    @goBack={{this.goBack}}
+    @markComplete={{this.markComplete}}
+    @buttonRequired={{this.buttonRequired}}
+    @message={{this.message}}
+    @showModal={{this.showModal}}
+  />
 </div>

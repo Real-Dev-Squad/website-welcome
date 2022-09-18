@@ -1,21 +1,23 @@
-<div class="overlay">
-    <div class="modal">
-        <button
-            type="button"
-            class="close"
-            {{on "click" @goBack}}
-        >
-            <img src="close.png" alt="close" height="20px" width="20px" />
-        </button>
-        <p class="modal-title">{{@message}}</p>
-        {{#if @buttonRequired}}
+{{#if @showModal}}
+    <div class="overlay">
+        <div class="modal">
             <button
                 type="button"
-                class="proceed-btn"
-                {{on "click" @markComplete}}
+                class="close"
+                {{on "click" @goBack}}
             >
-                Proceed
+                <img src="close.png" alt="close" height="20px" width="20px" />
             </button>
-        {{/if}}
+            <p class="modal-title">{{@message}}</p>
+            {{#if @buttonRequired}}
+                <button
+                    type="button"
+                    class="proceed-btn"
+                    {{on "click" @markComplete}}
+                >
+                    Proceed
+                </button>
+            {{/if}}
+        </div>
     </div>
-</div>
+{{/if}}
