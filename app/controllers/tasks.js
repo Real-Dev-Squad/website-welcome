@@ -117,7 +117,6 @@ export default class TasksController extends Controller {
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
     if (taskData.percentCompleted === '100') {
-      // warning the user if he is marking the task as 100% done.
       this.message = TASK_MESSAGES.markDone;
       this.showModal = true;
       this.buttonRequired = true;

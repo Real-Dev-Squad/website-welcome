@@ -219,7 +219,7 @@ input[type=range]:focus::-ms-fill-upper {
   max-width: 650px;
   margin: 0 auto;
   align-self: center;
-  padding: .2rem .2rem;
+  padding: 0.2rem 0.2rem;
   background: white;
   color: black;
   position: relative;

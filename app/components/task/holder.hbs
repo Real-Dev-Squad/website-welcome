@@ -8,9 +8,9 @@
           type="range"
           name="percentCompleted"
           disabled={{@disabled}}
-          value="{{this.percentCompleted}}"
+          value={{this.percentCompleted}}
           min="0" max="100" step="25"
-          {{on "change" this.onPercentageChange }}
+          {{on "change" this.onPercentageChange}}
           {{on "change" (fn @onTaskUpdate @task.id)}}
         /> 
       </div>
