@@ -1,5 +1,5 @@
 .local-navbar {
-  font-size: 14px;
+  font-size: 0.87rem;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -24,6 +24,6 @@
   }
 
   .local-navbar {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }

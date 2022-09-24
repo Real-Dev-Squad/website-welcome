@@ -59,6 +59,6 @@ body {
 @media (max-width: 460px) {
   .footer {
     padding: 8px 8px 16px;
-    font-size: 14px;
+    font-size: 0.87rem;
   }
 }
