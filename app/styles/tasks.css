@@ -2,11 +2,15 @@
   --slider-colour: #424CC1;
   --slider-background: #CFD3FF;
   --thumb-background: #A1D0FF;
+  --opaque-black: #000000b3;
+  --white: #ffffff;
+  --black: #000000;
+  --green: #008000;
 }
 
 .tasks-page {
   display: flex;
-  color: black;
+  color: #000000;
   margin-top: 40px;
 }
 
@@ -205,7 +209,7 @@ input[type=range]:focus::-ms-fill-upper {
 /* modal styles */
 
 .overlay {
-  background: rgb(0, 0, 0, 0.7);
+  background: var(--opaque-black);
   position: fixed;
   left: 0;
   top: 0;
@@ -220,8 +224,8 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0 auto;
   align-self: center;
   padding: 0.2rem 0.2rem;
-  background: white;
-  color: black;
+  background: var(--white);
+  color: var(--black);
   position: relative;
   top: 40%;
   display: flex;
@@ -232,7 +236,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .modal-title {
   font-size: 1.1rem;
-  color: black;
+  color: var(--black);
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -242,13 +246,13 @@ input[type=range]:focus::-ms-fill-upper {
   width: 70%;
   margin: .4rem;
   padding: 0.5rem;
-  background-color: green;
+  background-color: var(--green);
   border: none;
   color: white;
 }
 
 .close {
-  background-color: white;
+  background-color: var(--white);
   border: none;
   align-self: flex-end;
   margin-right: 0.5rem;
