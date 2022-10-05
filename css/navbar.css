@@ -1,6 +1,8 @@
 nav {
   font-family: 'roboto';
   font-weight: 700;
+  position: sticky; top: 0;
+  background-color: #1d1283;
 }
 
 .nav-menu {
@@ -15,16 +17,16 @@ nav li {
 }
 
 .rds-logo {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
 }
 
 .nav-element {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  margin: 55px 40px;
+  margin: 40px 40px;
 }
 
 .nav-element.active-tab {
@@ -42,7 +44,7 @@ nav li {
   position: absolute;
   right: 0;
   top: 0;
-  margin: 50px 40px;
+  margin: 40px 40px;
 }
 
 .btn-login-text {
@@ -114,12 +116,12 @@ nav li {
 
   .hamburger {
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
     cursor: pointer;
   }
 
   .nav-login {
-    margin: 20px 20px;
+    margin: 10px 10px;
   }
 
   nav li {
@@ -127,8 +129,8 @@ nav li {
   }
 
   .nav-element {
-    padding: 10px 40px;
-    margin: 10px;
+    padding: 10px 10px;
+  
   }
 
   .nav-element.active-tab {

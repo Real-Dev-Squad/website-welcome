@@ -23,6 +23,13 @@ body {
   font-family: 'raleway';
   background-color: var(--color-bg);
 }
+header{
+  position: sticky; top: 0;
+  background-color: #1d1283;
+  margin: 0px;
+}
+
+
 
 h1 {
   font-size: 4.5rem;
@@ -282,7 +289,7 @@ footer {
 @media (max-width: 1024px) {
   .rds-logo-banner {
     display: block;
-    margin: 25px auto 0px auto;
+    margin: 0px auto 0px auto;
   }
 
   h1 {
