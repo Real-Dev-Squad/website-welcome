@@ -266,6 +266,9 @@ input[type=range]:focus::-ms-fill-upper {
   .task-card{
     width: 90%;
   }
+  .tasks-container {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 450px) {

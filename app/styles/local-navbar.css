@@ -1,5 +1,5 @@
 .local-navbar {
-  font-size: 14px;
+  font-size: 0.87rem;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -16,4 +16,14 @@
 
 .active {
   color: #e30062;
+}
+
+@media screen and (max-width: 371px) {
+  .local-navbar__link a {
+    padding: 5px;
+  }
+
+  .local-navbar {
+    font-size: 0.75rem;
+  }
 }

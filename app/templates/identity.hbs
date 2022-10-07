@@ -11,7 +11,7 @@
         <p>Verification Done!</p>
     {{else}}
        {{#if (eq @model.profileStatus "BLOCKED")}}
-       <p>Your previous chaincode is blocked for some reason.Please generate a new chaincode.</p>
+       <p>Your previous chaincode is blocked for some reason. Please generate a new chaincode.</p>
        {{/if}}
         <div class="input-div">
             <label>Profile Url</label>
@@ -51,7 +51,7 @@
             </label>
         </div>
 
-        <label class="identity-label">
+        <label class="identity-check-label">
             I have saved my profile URL, generated a chaincode<br />and successfully added that to my service.
         <Input @type="checkbox" @checked={{this.isChecked}} disabled={{this.checkboxDisabled}}/>
         </label>
