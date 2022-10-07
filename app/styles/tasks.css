@@ -10,7 +10,7 @@
 
 .tasks-page {
   display: flex;
-  color: #000000;
+  color: var(--black);
   margin-top: 40px;
 }
 
