@@ -223,7 +223,7 @@ input[type=range]:focus::-ms-fill-upper {
   max-width: 650px;
   margin: 0 auto;
   align-self: center;
-  padding: 0.2rem 0.2rem;
+  padding: 0.2rem;
   background: var(--white);
   color: var(--black);
   position: relative;
@@ -248,7 +248,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0.5rem;
   background-color: var(--green);
   border: none;
-  color: white;
+  color: var(--white);
 }
 
 .close {
