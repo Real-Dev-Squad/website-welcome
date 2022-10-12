@@ -36,7 +36,7 @@ export default class TasksController extends Controller {
   }
 
   constructReqBody(object) {
-    const requestBody = { status: object.status };
+    const requestBody = { ...object };
     const taskCompletionPercentage = object.percentCompleted;
     if (taskCompletionPercentage) {
       if (taskCompletionPercentage === '100') {
