@@ -18,16 +18,16 @@ nav li {
 }
 
 .rds-logo {
-  height: 80px;
-  width: 80px;
-  margin: 10px;
+  height: 50px;
+  width: 50px;
+  margin: 10px 20px;
 }
 
 .nav-element {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  margin: 40px 40px;
+  margin: 30px 40px;
 }
 
 .nav-element.active-tab {
@@ -45,7 +45,9 @@ nav li {
   position: absolute;
   right: 0;
   top: 0;
-  margin: 40px 40px;
+  margin-top: 32px;
+  margin: 10px;
+  padding: 12px;
 }
 
 .btn-login-text {
@@ -55,6 +57,7 @@ nav li {
   color: white;
   cursor: pointer;
   border: 2px solid white;
+  display: flex;
 }
 
 .user-greet {
