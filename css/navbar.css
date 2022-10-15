@@ -125,7 +125,8 @@ nav li {
   }
 
   .nav-login {
-    margin: 10px 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
   }
 
   nav li {
