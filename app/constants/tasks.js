@@ -106,4 +106,8 @@ export const TASK_MESSAGES = {
   // taskNotAssigned: "The task was assigned but there was no task available to be assigned"
 };
 
+export const TASK_PERCENTAGE = {
+  completedPercentage: '100',
+};
+
 export { TASK_KEYS, TASK_STATUS_LIST };

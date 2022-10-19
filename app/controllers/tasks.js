@@ -3,7 +3,7 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
 import { TASK_KEYS, TASK_STATUS_LIST } from 'website-my/constants/tasks';
-import { TASK_MESSAGES } from '../constants/tasks';
+import { TASK_MESSAGES, TASK_PERCENTAGE } from '../constants/tasks';
 
 const API_BASE_URL = ENV.BASE_API_URL;
 
@@ -45,7 +45,7 @@ export default class TasksController extends Controller {
     const requestBody = { ...object };
     const taskCompletionPercentage = object.percentCompleted;
     if (taskCompletionPercentage) {
-      if (taskCompletionPercentage === '100') {
+      if (taskCompletionPercentage === TASK_PERCENTAGE.completedPercentage) {
         requestBody.status = 'COMPLETED';
       }
       requestBody.percentCompleted = parseInt(taskCompletionPercentage);
