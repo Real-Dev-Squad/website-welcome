@@ -2,11 +2,15 @@
   --slider-colour: #424CC1;
   --slider-background: #CFD3FF;
   --thumb-background: #A1D0FF;
+  --opaque-black: #000000b3;
+  --white: #ffffff;
+  --black: #000000;
+  --green: #008000;
 }
 
 .tasks-page {
   display: flex;
-  color: black;
+  color: var(--black);
   margin-top: 40px;
 }
 
@@ -200,6 +204,58 @@ input[type=range]:focus::-ms-fill-upper {
 
 .task-card__loader-container {
   margin-top: 10px;
+}
+
+/* modal styles */
+
+.overlay {
+  background: var(--opaque-black);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal {
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  align-self: center;
+  padding: 0.2rem;
+  background: var(--white);
+  color: var(--black);
+  position: relative;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.proceed-btn {
+  display: block;
+  width: 70%;
+  margin: .4rem;
+  padding: 0.5rem;
+  background-color: var(--green);
+  border: none;
+  color: var(--white);
+}
+
+.close {
+  background-color: var(--white);
+  border: none;
+  align-self: flex-end;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 800px) {

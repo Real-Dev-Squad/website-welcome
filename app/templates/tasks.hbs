@@ -13,5 +13,13 @@
     @onTaskChange={{this.onTaskChange}}
     @onTaskUpdate={{this.handleUpdateTask}}
     @isLoading={{this.isLoading}}
+    @disabled={{this.disabled}}
+  />
+  <Task::Modal 
+    @goBack={{this.goBack}}
+    @markComplete={{this.markComplete}}
+    @buttonRequired={{this.buttonRequired}}
+    @message={{this.message}}
+    @showModal={{this.showModal}}
   />
 </div>

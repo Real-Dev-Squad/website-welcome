@@ -1,0 +1,23 @@
+{{#if @showModal}}
+  <div class="overlay">
+    <div class="modal">
+      <button
+        type="button"
+        class="close"
+        {{on "click" @goBack}}
+      >
+        <i class="fa fa-close" ></i>
+      </button>
+      <p class="modal-title">{{@message}}</p>
+      {{#if @buttonRequired}}
+        <button
+            type="button"
+            class="proceed-btn"
+            {{on "click" @markComplete}}
+        >
+          Proceed
+        </button>
+       {{/if}}
+    </div>
+  </div>
+{{/if}}
