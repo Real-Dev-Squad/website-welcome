@@ -119,7 +119,7 @@ export default class TasksController extends Controller {
 
   @action async handleUpdateTask(taskId) {
     const taskData = this.taskFields;
-    if (taskData.percentCompleted === '100') {
+    if (taskData.percentCompleted === TASK_PERCENTAGE.completedPercentage) {
       this.message = TASK_MESSAGES.markDone;
       this.showModal = true;
       this.buttonRequired = true;
