@@ -8,16 +8,9 @@ import {
   GOTO_URL,
   REDIRECT_TEXT,
 } from '../constants/signup';
-
-export default class SignupRoute extends Route {
+export default class NewSignupRoute extends Route {
   @service analytics;
-  @service router;
-  beforeModel(transition) {
-    if (transition?.to?.queryParams?.dev === 'true') {
-      this.analytics.trackEvent(SIGNUP.PAGE_LOADED);
-      this.router.transitionTo('new-signup');
-    }
-  }
+
   async model() {
     try {
       this.analytics.trackEvent(SIGNUP.PAGE_LOADED);

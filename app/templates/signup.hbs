@@ -1,30 +1,4 @@
 {{page-title "Sign Up"}}
-
-{{#if this.dev}}
-  {{#if this.state}}
-    {{#if (eq this.state "get-started")}}
-      <SignUp::GetStarted
-        @changeRouteParams={{this.changeRouteParams}}
-        @state={{this.state}}
-      />
-    {{else if (eq this.state "thank-you")}}
-      <SignUp::GetStarted
-        @changeRouteParams={{this.changeRouteParams}}
-        @state={{this.state}}
-      />
-    {{else}}
-      <SignUp::Form
-        @changeRouteParams={{this.changeRouteParams}}
-        @register={{this.signup}}
-        @userDetails={{this.userDetails}}
-        @onChange={{this.handleInputChange}}
-        @state={{this.state}}
-        @isSubmitClicked={{this.isSubmitClicked}}
-        @isButtonDisabled={{this.isButtonDisabled}}
-      />
-    {{/if}}
-  {{/if}}
-{{else}}
   <form class="form">
     <h2>{{this.title}}</h2>
     {{#each this.fields as |field|}}
@@ -68,7 +42,6 @@
   </form>
 
   {{outlet}}
-{{/if}}
 <div class="login-register__error">
   <p> {{this.errorMessage}} </p>
 </div>

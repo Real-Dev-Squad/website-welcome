@@ -1,0 +1,21 @@
+<div class="user-details">
+  <h2 class="user-details__heading" data-test-signup-form-label>
+    {{this.label}}
+  </h2>
+  <div class="user-details__field">
+    <Input @value={{get @signupDetails @currentStep}} type="text" placeholder="Darth" {{on 'input' this.inputFieldChanged}} data-test-signup-form-input/>
+    {{#if @error}} 
+      <p class="error">{{@error}}</p>
+    {{/if}}
+  </div>
+
+  <div class="signup-action__btn">
+    <Button
+      @onClick={{@onClick}}
+      @disabled={{@isButtonDisabled}}
+      @isLoading={{@isLoading}}
+    >
+     {{if (eq @currentStep 'username') 'Submit' 'Next'}}
+    </Button>
+  </div>
+</div>

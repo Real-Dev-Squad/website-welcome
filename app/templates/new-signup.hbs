@@ -1,0 +1,46 @@
+{{page-title "New Sign Up"}}
+
+{{#if (eq this.currentStep this.FIRST_STEP)}}
+  <NewSignup::Info
+    @onClick={{this.changeStepToTwo}}
+    @currentStep={{this.currentStep}}
+  />
+{{/if}}
+
+{{#if (eq this.currentStep this.SECOND_STEP)}}
+  <NewSignup::Input
+    @onClick={{this.changeStepToThree}}
+    @currentStep={{this.currentStep}}
+    @onChange={{this.handleInputChange}}
+    @isButtonDisabled={{this.isButtonDisabled}}
+    @isLoading={{this.isLoading}}
+  />
+{{/if}}
+
+{{#if (eq this.currentStep this.THIRD_STEP)}}
+  <NewSignup::Input
+    @onClick={{this.changeStepToFour}}
+    @currentStep={{this.currentStep}}
+    @onChange={{this.handleInputChange}}
+    @isButtonDisabled={{this.isButtonDisabled}}
+    @isLoading={{this.isLoading}}  
+  />
+{{/if}}
+
+{{#if (eq this.currentStep this.FOURTH_STEP)}}
+  <NewSignup::Input
+    @onClick={{this.register}}
+    @currentStep={{this.currentStep}}
+    @onChange={{this.handleInputChange}}
+    @isButtonDisabled={{this.isButtonDisabled}}
+    @isLoading={{this.isLoading}}
+    @error={{this.error}}
+  />
+{{/if}}
+
+{{#if (eq this.currentStep this.LAST_STEP)}}
+  <NewSignup::Info
+    @onClick={{this.completeSignUp}}
+    @currentStep={{this.currentStep}}
+  />
+{{/if}}

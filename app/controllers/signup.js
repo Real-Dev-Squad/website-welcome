@@ -2,9 +2,8 @@ import Controller from '@ember/controller';
 import { action, set } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import registerUser from '../utils/register-api';
 import { GOTO_URL } from '../constants/signup';
-import { NEW_SIGNUP_FLOW, OLD_SIGNUP_FLOW } from '../constants/analytics';
+import { OLD_SIGNUP_FLOW } from '../constants/analytics';
 import ENV from 'website-my/config/environment'; // remove this when new flow goes live
 
 const BASE_URL = ENV.BASE_API_URL; // remove this when new flow goes live
@@ -12,19 +11,9 @@ const BASE_URL = ENV.BASE_API_URL; // remove this when new flow goes live
 export default class SignupController extends Controller {
   @service analytics;
 
-  queryParams = ['state', 'dev'];
-
   @tracked isSubmitClicked = false;
-  @tracked isButtonDisabled = true;
   @tracked isSubmitDisabled = true; // remove this when new flow goes live
 
-  @tracked state = 'get-started';
-  @tracked dev = false;
-  @tracked userDetails = {
-    firstName: '',
-    lastName: '',
-    username: '',
-  };
   @tracked errorMessage;
 
   // Existing flow starts
@@ -318,53 +307,4 @@ export default class SignupController extends Controller {
       this.isSubmitClicked = false;
     }
   }
-
-  // Existing flow ends
-
-  // New flow starts
-
-  @action changeRouteParams(paramValue) {
-    this.isButtonDisabled = true;
-    if (paramValue)
-      this.transitionToRoute({ queryParams: { state: paramValue } });
-  }
-
-  @action handleInputChange(key, value) {
-    set(this.userDetails, key, value);
-    if (this.userDetails[key] > '') this.isButtonDisabled = false;
-    else this.isButtonDisabled = true;
-  }
-
-  @action signup() {
-    const user = {
-      first_name: this.userDetails.firstName,
-      last_name: this.userDetails.lastName,
-      username: this.userDetails.username,
-    };
-    this.isSubmitClicked = true;
-
-    registerUser(user)
-      .then((res) => {
-        if (res.status === 204) {
-          this.analytics.identifyUser();
-          this.analytics.trackEvent(NEW_SIGNUP_FLOW.USER_REGISTERED);
-          window.open(GOTO_URL, '_self');
-        } else {
-          this.analytics.trackEvent(NEW_SIGNUP_FLOW.UNABLE_TO_SIGNUP);
-          res.json().then((res) => {
-            const error = res.errors[0];
-            this.errorMessage = error.title;
-          });
-        }
-      })
-      .catch((err) => {
-        this.errorMessage = err;
-        this.analytics.trackEvent(NEW_SIGNUP_FLOW.UNABLE_TO_REGISTER);
-      })
-      .finally(() => {
-        this.isSubmitClicked = false;
-      });
-  }
-
-  // New flow ends
 }

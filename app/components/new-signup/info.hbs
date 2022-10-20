@@ -1,25 +1,23 @@
-
-<div class="landing">
+<div class="landing" data-test-landing>
   <h2 class="landing__main-heading" data-test-mainHeading>
     {{this.mainHeading}}
   </h2>
   <h3 class="landing__sub-heading" data-test-subHeading>
     {{this.subHeading}}
   </h3>
-  {{#if (eq @state "get-started")}}
+  {{#if (eq @currentStep this.GET_STARTED)}}
     <ul class="landing__features-lists">
       <li class="landing__features-list" data-test-li1>Use Features</li>
       <li class="landing__features-list" data-test-li2>Display yourself on the (members) page</li>
     </ul>
   {{/if}}
 
-  <div class="get-started__btn">
-    <SignUp::Button
-      @clickHandler={{@changeRouteParams}}
-      @state={{@state}}
+  <div class="get-started__btn" data-test-get-started-btn>
+    <Button
+      @onClick={{@onClick}}
       @disabled={{false}}
     >
-      {{if (eq @state "get-started") "Get Started" "Let's Go"}}
-    </SignUp::Button>
+      {{if (eq @currentStep this.GET_STARTED) "Get Started" "Let's Go"}}
+    </Button>
   </div>
 </div>

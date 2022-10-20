@@ -10,6 +10,8 @@
 @import 'components/input-field.css';
 @import 'navbar.css';
 @import 'identity.css';
+@import 'new-signup.css';
+@import 'variables.css';
 
 html,
 body {

@@ -3,9 +3,9 @@
   type="button"
   class="{{if @disabled 'btn-disabled'}}"
   disabled={{@disabled}}
-  {{on "click" this.buttonClickHandler}}
+  {{on "click" @onClick}}
 >
-  {{#if @isSubmitClicked}}
+  {{#if @isLoading}}
     <i class="fa fa-spinner fa-spin" data-test-signup-button-spinner></i>
   {{/if}}
   {{yield}}

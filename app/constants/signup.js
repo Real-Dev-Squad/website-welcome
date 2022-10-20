@@ -1,14 +1,14 @@
-export const LABEL_TEXT = {
-  firstName: 'What is your first name?',
-  lastName: 'And what is your last name?',
-  username: 'Now choose your awesome username!',
+export const GOTO_URL = 'https://realdevsquad.com/goto';
+
+export const AUTH_URL =
+  'https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97';
+
+export const REDIRECT_TEXT = {
+  loggedIn: 'You have not logged in. Please login first to fill this form.',
+  formAlreadyFilled:
+    "You already have filled the up form. You'll now be redirected.",
 };
 
-export const GET_STARTED_MAIN_HEADING = 'Thank you for connecting your GitHub!';
-export const GET_STARTED_SUB_HEADING =
-  'Please complete the signup in order to:';
-
-export const THANK_YOU_MAIN_HEADING = 'Congratulations!';
-export const THANK_YOU_SUB_HEADING = 'Lets get you started on your journey';
-
-export const GOTO_URL = 'https://realdevsquad.com/goto';
+export const ERROR_MESSAGES = {
+  unknown: 'Something went wrong!',
+};

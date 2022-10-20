@@ -8,6 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('signup');
+  this.route('new-signup');
   this.route('notifications');
   this.route('tasks');
   this.route('profile');
