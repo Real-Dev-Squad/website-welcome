@@ -4,6 +4,7 @@
   --color-bg-card: #fff;
   --color-links: #1d1283;
   --color-events: #e30162;
+  --color-nav-bg:#1d1283 ;
 }
 
 .dark-theme {
@@ -22,6 +23,12 @@ body {
   box-sizing: border-box;
   font-family: 'raleway';
   background-color: var(--color-bg);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-nav-bg);
 }
 
 h1 {
@@ -284,7 +291,7 @@ footer {
 @media (max-width: 1024px) {
   .rds-logo-banner {
     display: block;
-    margin: 25px auto 0px auto;
+    margin: 0px auto 0px auto;
   }
 
   h1 {

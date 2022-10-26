@@ -20,7 +20,9 @@
 }
 
 body {
-  font: 16px 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: 'raleway';
+  font-size: 16px;
   background-color: var(--color-bg);
 }
 

@@ -1,6 +1,12 @@
+:root {
+  --color-nav-bg:#1d1283 ; 
+}
 nav {
   font-family: 'roboto';
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-nav-bg);
 }
 
 .nav-menu {
@@ -15,16 +21,16 @@ nav li {
 }
 
 .rds-logo {
-  height: 100px;
-  width: 100px;
-  margin: 20px;
+  height: 50px;
+  width: 50px;
+  margin:10px 20px;
 }
 
 .nav-element {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  margin: 55px 40px;
+  margin: 30px 40px;
 }
 
 .nav-element.active-tab {
@@ -114,7 +120,7 @@ nav li {
 
   .hamburger {
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
     cursor: pointer;
   }
 
@@ -150,3 +156,4 @@ nav li {
     display: none;
   }
 }
+
