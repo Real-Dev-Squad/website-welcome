@@ -1,5 +1,5 @@
-:root{
-  --color-nav-bg:#1d1283 ;
+:root {
+  --color-nav-bg: #1d1283;
 }
 
 nav {
@@ -24,7 +24,7 @@ nav li {
 .rds-logo {
   height: 50px;
   width: 50px;
-  margin:10px 20px;
+  margin: 10px 20px;
 }
 
 .nav-element {
@@ -157,4 +157,3 @@ nav li {
     display: none;
   }
 }
-

@@ -4,7 +4,7 @@
   --color-bg-card: #fff;
   --color-links: #1d1283;
   --color-events: #e30162;
-  --color-nav-bg:#1d1283 ;
+  --color-nav-bg: #1d1283;
 }
 
 .dark-theme {
@@ -270,7 +270,7 @@ iframe {
 footer {
   text-align: center;
   padding: 20px;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
 }
 
