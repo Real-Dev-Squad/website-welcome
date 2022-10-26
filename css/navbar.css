@@ -1,5 +1,5 @@
 :root{
-  --color-navbar-bg:#1d1283 ;
+  --color-nav-bg:#1d1283 ;
 }
 
 nav {
@@ -7,7 +7,7 @@ nav {
   font-weight: 700;
   position: sticky;
   top: 0;
-  background-color: var(--color-navbar-bg);
+  background-color: var(--color-nav-bg);
 }
 
 .nav-menu {

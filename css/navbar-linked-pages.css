@@ -1,5 +1,5 @@
 :root{
-  --color-navbar-bg:#1d1283 ;
+  --color-nav-bg:#1d1283 ;
 }
 nav {
   font-weight: 700;
@@ -28,7 +28,7 @@ nav li a:hover {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--color-navbar-bg);
+  background-color: var(--color-nav-bg);
 }
 
 .nav-logo-li {
