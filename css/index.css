@@ -4,7 +4,7 @@
   --color-bg-card: #fff;
   --color-links: #1d1283;
   --color-events: #e30162;
-  --color-nav-bg:#1d1283 ;
+  --color-navbar-bg:#1d1283 ;
 }
 
 .dark-theme {
@@ -28,7 +28,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: var(--color-nav-bg);
+  background-color: var(--color-navbar-bg);
 }
 
 h1 {
