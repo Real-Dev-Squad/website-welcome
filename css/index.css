@@ -263,6 +263,8 @@ iframe {
 footer {
   text-align: center;
   padding: 20px;
+  font-family: Roboto,sans-serif;
+  font-size: 16px;
 }
 
 @media (max-width: 1250px) {
