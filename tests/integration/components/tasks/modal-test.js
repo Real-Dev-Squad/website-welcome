@@ -79,7 +79,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('[data-test-assignBtn]').hasProperty('button');
   });
 
-  test('the message should change to updating task when the user clicks on `do not assign task` button, and a loader should also show up, and the buttons should be removed', async function (assert) {
+  test('change message to task updating, remove buttons, add loader on clicking don`t assign task button', async function (assert) {
     this.setProperties({
       goBack: () => {},
       isUpdating: false,
@@ -119,7 +119,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('[data-test-spinner]').doesNotExist();
   });
 
-  test('the message should change to updating task when the user clicks `assign task` button, and a loader should also show up, and the buttons should be removed', async function (assert) {
+  test('change message to task updating, remove buttons, add loader on clicking assign task button', async function (assert) {
     this.setProperties({
       goBack: () => {},
       isUpdating: false,
