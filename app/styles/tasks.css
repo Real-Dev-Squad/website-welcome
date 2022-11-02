@@ -239,6 +239,8 @@ input[type=range]:focus::-ms-fill-upper {
   color: var(--black);
   margin-bottom: 1rem;
   font-weight: 600;
+  text-align: center;
+  width: 80%;
 }
 
 .proceed-btn {
@@ -249,6 +251,19 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: var(--green);
   border: none;
   color: var(--white);
+  cursor: pointer;
+}
+
+.not-assign {
+  display: block;
+  width: 70%;
+  margin: .4rem;
+  padding: 0.5rem;
+  border: 2px solid red;
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .close {

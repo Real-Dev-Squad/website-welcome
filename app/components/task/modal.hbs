@@ -5,17 +5,28 @@
         type="button"
         class="close"
         {{on "click" @goBack}}
+        disabled={{@closeDisabled}}
       >
-        <i class="fa fa-close" ></i>
+        <i class="fa fa-close"></i>
       </button>
       <p class="modal-title">{{@message}}</p>
+      {{#if @isUpdating}}
+        <Spinner />
+      {{/if}}
       {{#if @buttonRequired}}
+        <button 
+          type="button"
+          class="not-assign"
+          {{on "click" @markComplete}}
+        >
+          Don't assign task
+        </button>
         <button
             type="button"
             class="proceed-btn"
-            {{on "click" @markComplete}}
+            {{on "click" @markCompleteAndAssignTask}}
         >
-          Proceed
+          Assign task
         </button>
        {{/if}}
     </div>
