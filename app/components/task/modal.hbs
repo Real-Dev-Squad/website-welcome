@@ -1,21 +1,35 @@
 {{#if @showModal}}
   <div class="overlay">
-    <div class="modal">
+    <div class="modal" data-test-modal>
       <button
         type="button"
         class="close"
         {{on "click" @goBack}}
+        disabled={{@closeDisabled}}
+        data-test-closeBtn
       >
-        <i class="fa fa-close" ></i>
+        <i class="fa fa-close"></i>
       </button>
-      <p class="modal-title">{{@message}}</p>
+      <p class="modal-title" data-test-title>{{@message}}</p>
+      {{#if @isUpdating}}
+        <Spinner data-test-spinner/>
+      {{/if}}
       {{#if @buttonRequired}}
+        <button 
+          type="button"
+          class="not-assign"
+          {{on "click" @markComplete}}
+          data-test-notAssignBtn
+        >
+          Don't assign task
+        </button>
         <button
             type="button"
             class="proceed-btn"
-            {{on "click" @markComplete}}
+            {{on "click" @markCompleteAndAssignTask}}
+            data-test-assignBtn
         >
-          Proceed
+          Assign task
         </button>
        {{/if}}
     </div>

@@ -98,12 +98,10 @@ const TASK_STATUS_LIST = [
 ];
 
 export const TASK_MESSAGES = {
-  // this will be changed to 'This task will be marked as complete and a new task will be assigned to you.' when we have the middleware in our backend which will automatically assign a task to the user.
-  markDone: 'This task will be marked as complete',
-  // these two below will be added when we have the middleware in our backend
-
-  // taskAssigned: 'The task was marked as completed and you are assigned a new task',
-  // taskNotAssigned: "The task was assigned but there was no task available to be assigned"
+  MARK_DONE:
+    'This task will be marked as complete and a new task will be assigned to you',
+  UPDATE_TASK: 'Updating task',
+  FIND_TASK: 'Finding new task for you!',
 };
 
 export const TASK_PERCENTAGE = {
