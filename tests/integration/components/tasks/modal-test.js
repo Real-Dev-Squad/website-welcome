@@ -10,6 +10,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
     this.setProperties({
       goBack: () => {},
       markComplete: () => {},
+      markCompleteAndAssignTask: () => {},
       showModal: true,
     });
     await render(hbs`
@@ -17,6 +18,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
         @goBack={{this.goBack}}
         @markComplete={{this.markComplete}}
         @showModal={{this.showModal}}
+        @markCompleteAndAssignTask{{this.markCompleteAndAssignTask}}
       />
     `);
 
@@ -29,12 +31,14 @@ module('Integration | Component | tasks/modal', function (hooks) {
     this.setProperties({
       goBack: () => {},
       markComplete: () => {},
+      markCompleteAndAssignTask: () => {},
       showModal: false,
     });
     await render(hbs`
       <Task::Modal 
         @goBack={{this.goBack}}
         @markComplete={{this.markComplete}}
+        @markCompleteAndAssignTask={{this.markCompleteAndAssignTask}}
         @message={{this.message}}
         @showModal={{this.showModal}}
       />
@@ -44,10 +48,11 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('.close').doesNotExist();
   });
 
-  test('button should exist if buttonRequired is set to true', async function (assert) {
+  test('two buttons should exist if buttonRequired is set to true', async function (assert) {
     this.setProperties({
       goBack: () => {},
       markComplete: () => {},
+      markCompleteAndAssignTask: () => {},
       showModal: true,
       buttonRequired: true,
     });
@@ -55,16 +60,19 @@ module('Integration | Component | tasks/modal', function (hooks) {
       <Task::Modal 
         @goBack={{this.goBack}}
         @markComplete={{this.markComplete}}
+        @markCompleteAndAssignTask={{this.markCompleteAndAssignTask}}
         @message={{this.message}}
         @showModal={{this.showModal}}
         @buttonRequired={{this.buttonRequired}}
       />
     `);
 
-    assert.dom('.modal').exists();
-    assert.dom('.close').exists();
-    assert.dom('.close').hasProperty('button');
-    assert.dom('.proceed-btn').exists();
-    assert.dom('.proceed-btn').hasProperty('button');
+    assert.dom('[data-test-modal]').exists();
+    assert.dom('[data-test-closeBtn]').exists();
+    assert.dom('[data-test-closeBtn]').hasProperty('button');
+    assert.dom('[data-test-notAssignBtn]').exists();
+    assert.dom('[data-test-notAssignBtn]').hasProperty('button');
+    assert.dom('[data-test-assignBtn]').exists();
+    assert.dom('[data-test-assignBtn]').hasProperty('button');
   });
 });
