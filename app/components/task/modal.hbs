@@ -10,7 +10,7 @@
       >
         <i class="fa fa-close"></i>
       </button>
-      <p class="modal-title">{{@message}}</p>
+      <p class="modal-title" data-test-title>{{@message}}</p>
       {{#if @isUpdating}}
         <Spinner data-test-spinner/>
       {{/if}}

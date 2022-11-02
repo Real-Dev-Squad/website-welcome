@@ -138,6 +138,7 @@ export default class TasksController extends Controller {
   }
 
   @action async assingTaskFunction() {
+    this.assignTask = false;
     setTimeout(async () => {
       this.message = TASK_MESSAGES.FIND_TASK;
       const response = await fetch(`${API_BASE_URL}/tasks/assign/self`, {
