@@ -8,6 +8,7 @@ import { TASK_MESSAGES, TASK_PERCENTAGE } from '../constants/tasks';
 const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
+  queryParams = ['dev'];
   TASK_KEYS = TASK_KEYS;
   taskStatusList = TASK_STATUS_LIST;
   allTasksObject = this.taskStatusList.find(
@@ -15,6 +16,7 @@ export default class TasksController extends Controller {
   );
   DEFAULT_TASK_TYPE = this.allTasksObject;
 
+  @tracked dev = false;
   @tracked isUpdating = false;
   @tracked assignTask = false;
   @tracked closeDisabled = false;

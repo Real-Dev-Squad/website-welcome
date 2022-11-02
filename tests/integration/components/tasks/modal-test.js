@@ -48,7 +48,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('.close').doesNotExist();
   });
 
-  test('two buttons should exist if buttonRequired is set to true', async function (assert) {
+  test('two button exists if dev is set to true and buttonRequired is true', async function (assert) {
     this.setProperties({
       goBack: () => {},
       isUpdating: false,
@@ -56,6 +56,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
       markCompleteAndAssignTask: () => {},
       showModal: true,
       buttonRequired: true,
+      dev: true,
     });
 
     await render(hbs`
@@ -67,6 +68,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
         @showModal={{this.showModal}}
         @buttonRequired={{this.buttonRequired}}
         @isUpdating={{this.isUpdating}}
+        @dev={{this.dev}}
       />
     `);
 
@@ -77,6 +79,35 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('[data-test-notAssignBtn]').hasProperty('button');
     assert.dom('[data-test-assignBtn]').exists();
     assert.dom('[data-test-assignBtn]').hasProperty('button');
+  });
+
+  test('one button exists if dev is set to false and buttonRequired is true', async function (assert) {
+    this.setProperties({
+      goBack: () => {},
+      isUpdating: false,
+      markComplete: () => {},
+      markCompleteAndAssignTask: () => {},
+      showModal: true,
+      buttonRequired: true,
+      dev: false,
+    });
+
+    await render(hbs`
+      <Task::Modal 
+        @goBack={{this.goBack}}
+        @markComplete={{this.markComplete}}
+        @markCompleteAndAssignTask={{this.markCompleteAndAssignTask}}
+        @message={{this.message}}
+        @showModal={{this.showModal}}
+        @buttonRequired={{this.buttonRequired}}
+        @isUpdating={{this.isUpdating}}
+        @dev={{this.dev}}
+      />
+    `);
+
+    assert.dom('[data-test-notAssignBtn]').exists();
+    assert.dom('[data-test-notAssignBtn]').hasProperty('button');
+    assert.dom('[data-test-assignBtn]').doesNotExist();
   });
 
   test('change message to task updating, remove buttons, add loader on clicking don`t assign task button', async function (assert) {
@@ -109,7 +140,6 @@ module('Integration | Component | tasks/modal', function (hooks) {
 
     assert.dom('[data-test-spinner]').exists();
     assert.dom('[data-test-notAssignBtn]').doesNotExist();
-    assert.dom('[data-test-assignBtn]').doesNotExist();
     assert.equal(
       this.element.querySelector('.modal-title').textContent,
       'updating task'
@@ -119,7 +149,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
     assert.dom('[data-test-spinner]').doesNotExist();
   });
 
-  test('change message to task updating, remove buttons, add loader on clicking assign task button', async function (assert) {
+  test('change message to task updating, remove buttons, add loader on clicking assign task button(currently behind dev flag)', async function (assert) {
     this.setProperties({
       goBack: () => {},
       isUpdating: false,
@@ -131,6 +161,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
       },
       showModal: true,
       buttonRequired: true,
+      dev: true,
     });
 
     await render(hbs`
@@ -142,6 +173,7 @@ module('Integration | Component | tasks/modal', function (hooks) {
         @showModal={{this.showModal}}
         @buttonRequired={{this.buttonRequired}}
         @isUpdating={{this.isUpdating}}
+        @dev={{this.dev}}
       />
     `);
 
@@ -153,7 +185,6 @@ module('Integration | Component | tasks/modal', function (hooks) {
       'updating task'
     );
 
-    assert.dom('[data-test-notAssignBtn]').doesNotExist();
     assert.dom('[data-test-assignBtn]').doesNotExist();
 
     this.set('isUpdating', false);
