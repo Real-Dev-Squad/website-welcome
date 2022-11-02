@@ -158,6 +158,5 @@ module('Integration | Component | tasks/modal', function (hooks) {
 
     this.set('isUpdating', false);
     assert.dom('[data-test-spinner]').doesNotExist();
-    // removing the button
   });
 });
