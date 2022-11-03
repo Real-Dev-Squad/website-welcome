@@ -17,20 +17,22 @@
       {{#if @buttonRequired}}
         <button 
           type="button"
-          class="not-assign"
+          class={{if (eq @dev true) "not-assign" "proceed-btn"}}
           {{on "click" @markComplete}}
           data-test-notAssignBtn
         >
-          Don't assign task
+          {{if (eq @dev true) "Don't assign task" "Proceed" }}
         </button>
-        <button
-            type="button"
-            class="proceed-btn"
-            {{on "click" @markCompleteAndAssignTask}}
-            data-test-assignBtn
-        >
-          Assign task
-        </button>
+        {{#if @dev}}
+          <button
+              type="button"
+              class="proceed-btn"
+              {{on "click" @markCompleteAndAssignTask}}
+              data-test-assignBtn
+          >
+            Assign task
+          </button>
+        {{/if}}
        {{/if}}
     </div>
   </div>
