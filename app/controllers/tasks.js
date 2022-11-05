@@ -4,11 +4,14 @@ import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
 import { TASK_KEYS, TASK_STATUS_LIST } from 'website-my/constants/tasks';
 import { TASK_MESSAGES, TASK_PERCENTAGE } from '../constants/tasks';
+import { inject as service } from '@ember/service';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 
 const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksController extends Controller {
   queryParams = ['dev'];
+  @service toast;
   TASK_KEYS = TASK_KEYS;
   taskStatusList = TASK_STATUS_LIST;
   allTasksObject = this.taskStatusList.find(
@@ -127,11 +130,19 @@ export default class TasksController extends Controller {
             this.closeDisabled = false;
           }
         } else {
-          alert('Failed to update the task');
+          this.toast.error(
+            'Failed to update the task',
+            '',
+            toastNotificationTimeoutOptions
+          );
           this.disabled = false;
         }
       } catch (err) {
-        alert('Failed to update the task');
+        this.toast.error(
+          'Failed to update the task',
+          '',
+          toastNotificationTimeoutOptions
+        );
         console.error('Error : ', err);
       } finally {
         this.isLoading = false;

@@ -2,6 +2,7 @@ import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import ENV from 'website-my/config/environment';
 import { SIGNUP } from '../constants/analytics';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 import {
   AUTH_URL,
   ERROR_MESSAGES,
@@ -26,16 +27,28 @@ export default class SignupRoute extends Route {
       });
       const userData = await response.json();
       if (response.status === 401) {
-        alert(REDIRECT_TEXT.loggedIn);
-        window.open(AUTH_URL, '_self');
+        this.toast.error(
+          REDIRECT_TEXT.loggedIn,
+          '',
+          toastNotificationTimeoutOptions
+        );
+        setTimeout(() => window.open(AUTH_URL, '_self'), 2000);
       }
       if (response.status === 200 && !userData.incompleteUserDetails) {
         this.analytics.trackEvent(SIGNUP.USER_ALREADY_REGISTERED);
-        alert(REDIRECT_TEXT.formAlreadyFilled);
-        window.open(GOTO_URL, '_self');
+        this.toast.error(
+          REDIRECT_TEXT.formAlreadyFilled,
+          '',
+          toastNotificationTimeoutOptions
+        );
+        setTimeout(() => window.open(GOTO_URL, '_self'), 2000);
       }
     } catch {
-      alert(ERROR_MESSAGES.unknown);
+      this.toast.error(
+        ERROR_MESSAGES.unknown,
+        '',
+        toastNotificationTimeoutOptions
+      );
     }
   }
 }

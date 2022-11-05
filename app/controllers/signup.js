@@ -4,12 +4,14 @@ import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { GOTO_URL } from '../constants/signup';
 import { OLD_SIGNUP_FLOW } from '../constants/analytics';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 import ENV from 'website-my/config/environment'; // remove this when new flow goes live
 
 const BASE_URL = ENV.BASE_API_URL; // remove this when new flow goes live
 
 export default class SignupController extends Controller {
   @service analytics;
+  @service toast;
 
   @tracked isSubmitClicked = false;
   @tracked isSubmitDisabled = true; // remove this when new flow goes live
@@ -298,7 +300,11 @@ export default class SignupController extends Controller {
         window.open(GOTO_URL, '_self');
       } else {
         this.analytics.trackEvent(OLD_SIGNUP_FLOW.UNABLE_TO_SIGNUP);
-        alert('Something went wrong. Please check console errors.');
+        this.toast.error(
+          'Something went wrong. Please check console errors.',
+          '',
+          toastNotificationTimeoutOptions
+        );
       }
     } catch (error) {
       this.analytics.trackEvent(OLD_SIGNUP_FLOW.UNABLE_TO_REGISTER);

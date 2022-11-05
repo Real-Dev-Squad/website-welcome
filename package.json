@@ -32,6 +32,7 @@
     "mixpanel-browser": "^2.43.0"
   },
   "devDependencies": {
+    "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.2.1",
     "@fortawesome/ember-fontawesome": "^0.2.3",
@@ -60,6 +61,7 @@
     "ember-source": "~3.25.1",
     "ember-template-lint": "^2.19.0",
     "ember-test-selectors": "^6.0.0",
+    "ember-toastr": "^3.0.0",
     "ember-truth-helpers": "^3.0.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.0.0",
@@ -73,7 +75,8 @@
     "ntl": "^5.1.0",
     "prettier": "^2.2.1",
     "qunit": "^2.14.0",
-    "qunit-dom": "^1.6.0"
+    "qunit-dom": "^1.6.0",
+    "toastr": "^2.1.4"
   },
   "engines": {
     "node": "16.x"

@@ -1,9 +1,12 @@
 import Route from '@ember/routing/route';
 import ENV from 'website-my/config/environment';
+import { inject as service } from '@ember/service';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 
 const API_BASE_URL = ENV.BASE_API_URL;
 
 export default class TasksRoute extends Route {
+  @service toast;
   model = async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/tasks/self`, {
@@ -17,10 +20,15 @@ export default class TasksRoute extends Route {
       }
       return await response.json();
     } catch (error) {
-      alert(error);
-      window.open(
-        'https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97',
-        '_self'
+      this.toast.error(error, '', toastNotificationTimeoutOptions);
+      // added setTimeout here because before new page opens user should be notified of error by toast
+      setTimeout(
+        () =>
+          window.open(
+            'https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97',
+            '_self'
+          ),
+        2000
       );
     }
   };

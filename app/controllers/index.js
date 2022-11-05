@@ -2,10 +2,13 @@ import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import ENV from 'website-my/config/environment';
+import { inject as service } from '@ember/service';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 
 const BASE_URL = ENV.BASE_API_URL;
 
 export default class IndexController extends Controller {
+  @service toast;
   @tracked status = this.model;
   @tracked isStatusUpdating = false;
 
@@ -27,7 +30,11 @@ export default class IndexController extends Controller {
       }
     } catch (error) {
       console.error('Error : ', error);
-      alert('Something went wrong!');
+      this.toast.error(
+        'Something went wrong.',
+        '',
+        toastNotificationTimeoutOptions
+      );
     } finally {
       this.isStatusUpdating = false;
     }

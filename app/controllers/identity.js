@@ -3,10 +3,13 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import ENV from 'website-my/config/environment';
 import isValidUrl from '../utils/checkURL';
+import { inject as service } from '@ember/service';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 
 const BASE_URL = ENV.BASE_API_URL;
 
 export default class IdentityController extends Controller {
+  @service toast;
   @tracked isEditClicked = false;
   @tracked isGenerateChaincodeClicked = false;
   @tracked isChecked = false;
@@ -40,7 +43,7 @@ export default class IdentityController extends Controller {
     navigator.clipboard.writeText(this.Chaincode);
     this.isCopyClicked = true;
     if (this.isCopyClicked === true) {
-      alert('Copied');
+      this.toast.info('Copied', '', toastNotificationTimeoutOptions);
       this.checkboxDisabled = false;
     }
   }
@@ -61,13 +64,26 @@ export default class IdentityController extends Controller {
           credentials: 'include',
         });
         if (response.ok) {
-          alert('Updated profile URL!!');
+          this.toast.info(
+            'Updated profile URL!!',
+            '',
+            toastNotificationTimeoutOptions
+          );
           this.generateChainCodeDisabled = false;
         } else {
-          alert('Something went wrong. Please check console errors.');
+          this.toast.error(
+            'Something went wrong. Please check console errors.',
+            '',
+            toastNotificationTimeoutOptions
+          );
         }
       } catch (error) {
-        console.error('Something went wrong. Please check console errors.');
+        console.error(error);
+        this.toast.error(
+          'Something went wrong. Please check console errors.',
+          '',
+          toastNotificationTimeoutOptions
+        );
       } finally {
         this.isEditClicked = false;
       }
@@ -93,12 +109,24 @@ export default class IdentityController extends Controller {
         if (response.ok) {
           this.Chaincode = chaincode;
           this.isChaincodeClicked = true;
-          alert('Generated New Chaincode!!');
+          this.toast.info(
+            'Generated New Chaincode!!',
+            '',
+            toastNotificationTimeoutOptions
+          );
         } else {
-          alert('Something went wrong. Please check console errors.');
+          this.toast.error(
+            'Something went wrong. Please check console errors.',
+            '',
+            toastNotificationTimeoutOptions
+          );
         }
       } catch (error) {
-        alert('Something went wrong. Please check console errors.');
+        this.toast.error(
+          'Something went wrong. Please check console errors.',
+          '',
+          toastNotificationTimeoutOptions
+        );
       } finally {
         this.isGenerateChaincodeClicked = false;
       }
@@ -109,7 +137,7 @@ export default class IdentityController extends Controller {
     e.preventDefault();
 
     if (this.isChecked === false) {
-      alert('Please verify!');
+      this.toast.info('Please verify!', '', toastNotificationTimeoutOptions);
     } else if (this.isVerifyClicked === false) {
       this.isVerifyClicked = true;
 
@@ -123,13 +151,25 @@ export default class IdentityController extends Controller {
         });
 
         if (response.ok) {
-          alert('Your request has been queued successfully');
+          this.toast.info(
+            'Your request has been queued successfully',
+            '',
+            toastNotificationTimeoutOptions
+          );
           window.location.reload();
         } else {
-          alert('Something went wrong. Please check console errors.');
+          this.toast.error(
+            'Something went wrong. Please check console errors.',
+            '',
+            toastNotificationTimeoutOptions
+          );
         }
       } catch (error) {
-        alert('Something went wrong. Please check console errors.');
+        this.toast.error(
+          'Something went wrong. Please check console errors.',
+          '',
+          toastNotificationTimeoutOptions
+        );
       } finally {
         this.isVerifyClicked = false;
       }

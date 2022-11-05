@@ -2,9 +2,12 @@ import Controller from '@ember/controller';
 import ENV from 'website-my/config/environment';
 import { tracked } from '@glimmer/tracking';
 import { action, set } from '@ember/object';
+import { inject as service } from '@ember/service';
+import { toastNotificationTimeoutOptions } from '../constants/toast-notification';
 const BASE_URL = ENV.BASE_API_URL;
 
 export default class ProfileController extends Controller {
+  @service toast;
   formDataKeyName = 'profile';
 
   get imageUploadUrl() {
@@ -202,7 +205,11 @@ export default class ProfileController extends Controller {
 
       const { status } = response;
       if (status !== 204) {
-        alert('Something went wrong. Please check console errors.');
+        this.toast.error(
+          'Something went wrong. Please check console errors.',
+          '',
+          toastNotificationTimeoutOptions
+        );
       }
     } catch (error) {
       console.error('Error : ', error);
