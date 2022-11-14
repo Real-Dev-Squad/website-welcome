@@ -11,7 +11,7 @@ nav {
 nav li a {
   margin: 10px;
   display: block;
-  color: #ffffff;
+  color: var(--color-white);
   text-align: center;
   padding: 19px 16px;
   text-decoration: none;
@@ -22,7 +22,7 @@ nav li {
 }
 
 nav li a:hover {
-  color: #49a82e;
+  color: var(--color-green-light);
 }
 
 .nav-menu {
@@ -30,7 +30,7 @@ nav li a:hover {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #1d1283;
+  background-color: var(--color-blue-dark);
 }
 
 .nav__menu__logo {
@@ -58,7 +58,7 @@ nav li a:hover {
 }
 
 .user__greet {
-  color: #ffffff;
+  color: var(--color-white);
   margin: 23px;
 }
 
@@ -92,7 +92,7 @@ nav li a:hover {
     background: none;
     border: none;
     outline: none;
-    color: #fff;
+    color: var(--color-white);
   }
 
   .nav-menu {
@@ -100,7 +100,7 @@ nav li a:hover {
     display: none;
     width: 100%;
     padding: 10px 0px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 15px var(--color-black--transparent-5);
   }
 
   .active-nav {
@@ -114,7 +114,7 @@ nav li a:hover {
   nav li a {
     padding: 10px 40px;
     text-align: left;
-    color: #1d1283;
+    color: var(--color-blue-dark);
     text-decoration: none;
     display: block;
   }

@@ -6,7 +6,7 @@ h1 {
 
 .container {
   width: 100%;
-  color: #666;
+  color: var(--color-gray-dark);
   text-align: center;
   padding: 1em 0;
 }
@@ -17,7 +17,7 @@ h1 {
   min-width: 300px;
   margin: 40px auto;
   padding: 3em 1.5em;
-  background-color: rgb(231, 231, 231);
+  background-color: var(--color-white--form-bg);
   border-radius: 8px;
 }
 
@@ -47,13 +47,13 @@ h1 {
   border: none;
 }
 
-.field>.error {
+.field > .error {
   font-size: 0.8rem;
-  color: #e74c3c;
+  color: var(--color-field-error);
 }
 
 .errorBorder {
-  border: 1px solid red !important;
+  border: 1px solid var(--color-red) !important;
 }
 
 .disabledButton {
@@ -61,9 +61,9 @@ h1 {
 }
 
 .submitButton {
-  background-color: #43a047;
+  background-color: var(--button-submit-color);
   font-size: 1rem;
-  color: #fff;
+  color: var(--color-white);
   width: 100%;
   margin-top: 1em;
   padding: 1em 0.5em;

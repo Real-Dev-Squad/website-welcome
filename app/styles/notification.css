@@ -1,9 +1,3 @@
-:root {
-  --notification-primary-background: #ff6f00;
-  --alert-box-background: #fff8e1;
-  --alert-box-color: #212121;
-}
-
 .notifications {
   display: flex;
   flex-direction: column;

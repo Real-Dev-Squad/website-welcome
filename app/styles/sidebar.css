@@ -5,10 +5,9 @@
   overflow: auto;
 }
 
-
 .sidebar__dropdown-container {
   margin-left: 8px;
-  border: 1px solid rgba(84, 84, 84, 0.5);
+  border: 1px solid var(--color-gray--transparent-5);
   border-radius: 4px;
   padding: 1px 0;
 }
@@ -20,12 +19,11 @@
   border: none;
   text-align: left;
   padding: 8px 20px;
-  background-color: white;
+  background-color: var(--color-white);
 }
 
 .sidebar__dropdown-container__button:hover {
   cursor: pointer;
-  border-left: 2px solid black;
+  border-left: 2px solid var(--color-black);
   font-weight: 800;
 }
-

@@ -15,7 +15,7 @@
 }
 
 .active {
-  color: #e30062;
+  color: var(--color-pink);
 }
 
 @media screen and (max-width: 371px) {
