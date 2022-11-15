@@ -1,5 +1,5 @@
 .heading h2 {
-  color: #0034a5;
+  color: var(--color-blue--heading);
   margin: 50px 0 40px;
   font-size: 1.75rem;
   text-align: center;
@@ -15,32 +15,32 @@
 
 .buttons__idle {
   font-size: 1.25rem;
-  color: #e49504;
+  color: var(--button-idle-color);
   font-weight: 700;
-  border: 3px solid #e49504;
+  border: 3px solid var(--button-idle-color);
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 10px;
-  background: #fff;
+  background: var(--color-white);
   cursor: pointer;
 }
 
 .buttons__active {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #16a334;
-  border: 3px solid #16a334;
+  color: var(--button-active-color);
+  border: 3px solid var(--button-active-color);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 40px;
-  background: #fff;
+  background: var(--color-white);
   cursor: pointer;
 }
 
 .buttons--small {
   font-weight: 700;
-  color: #0034a5;
+  color: var(--color-blue--small-button-text);
   border: none;
-  background: #fff;
+  background: var(--color-white);
   cursor: pointer;
 }

@@ -1,103 +1,97 @@
-:root {
-    --button-verify-color: rgb(53, 194, 25);
-    --button-primary-color: rgb(81, 81, 245);
-    --button-copy-color: #e30062;
-}
-
 .identity-heading {
-    margin-top: 25px;
-    text-align: center;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .identity-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .input-div {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .identity-Buttons {
-    background-color: var(--button-primary-color);
-    color: white;
-    display: inline;
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 4px 15px;
+  background-color: var(--button-primary-color);
+  color: var(--color-white);
+  display: inline;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 4px 15px;
 }
 
 .copy-button {
-    margin-left: 0.75rem;
-    background-color: wheat;
-    color: var(--button-copy-color);
-    border: 2px solid var(--button-copy-color);
-    padding: 2px 5px;
+  margin-left: 0.75rem;
+  background-color: var(--color-wheat);
+  color: var(--button-copy-color);
+  border: 2px solid var(--button-copy-color);
+  padding: 2px 5px;
 }
 
 .identity-verify-btn {
-    background-color: var(--button-color);
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 8px 20px;
-    border: none;
-    margin-top: 1rem;
+  background-color: var(--button-primary-color);
+  color: var(--color-white);
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 8px 20px;
+  border: none;
+  margin-top: 1rem;
 }
 
 .identity-label,
 .identity-check-label {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .input-url {
-    height: 2rem;
+  height: 2rem;
 }
 
 .identity-Buttons:disabled,
 .identity-verify-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .chaincode {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 @media (max-width: 460px) {
-    .identity-container {
-        gap: 2rem;
-    }
+  .identity-container {
+    gap: 2rem;
+  }
 
-    .input-div {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-        gap: 0.5rem;
-    }
+  .input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0.5rem;
+  }
 
-    .identity-label {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  .identity-label {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    .identity-check-label {
-        gap: 0.5rem;
-        padding: 0 1rem;
-        font-size: 0.8rem;
-    }
+  .identity-check-label {
+    gap: 0.5rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
 
-    .identity-verify-btn {
-        margin-top: 0;
-    }    
+  .identity-verify-btn {
+    margin-top: 0;
+  }
 }

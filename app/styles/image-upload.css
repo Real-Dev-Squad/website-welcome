@@ -15,8 +15,8 @@
 }
 
 .drop-area__highlight {
-  border-color: purple;
-  background-color: gainsboro;
+  border-color: var(--color-purple);
+  background-color: var(--color-gainsboro);
   transition: background-color 0.5s ease-in;
 }
 
@@ -77,12 +77,12 @@
 }
 
 .message-text__success {
-  color: green;
+  color: var(--color-green);
   font-size: 1.25rem;
   font-weight: bolder;
 }
 .message-text__failure {
-  color: red;
+  color: var(--color-red);
   font-size: 1.25rem;
   font-weight: bolder;
 }

@@ -10,13 +10,13 @@
 
 .landing__main-heading {
   font-size: 2rem;
-  color: black;
+  color: var(--color-black);
   text-align: center;
 }
 
 .landing__sub-heading {
   font-size: 1.5rem;
-  color: black;
+  color: var(--color-black);
   text-align: center;
 }
 
@@ -37,11 +37,11 @@
 }
 
 .get-started__btn button {
-  background-color: #041484;
+  background-color: var(--color-nav-blue);
   padding: 0.75rem 1rem;
   border-radius: 10px;
   outline: none;
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   cursor: pointer;
   width: 30%;

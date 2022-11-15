@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  color: var(--dark-gray);
+  color: var(--color-gray-dark);
   text-align: center;
   padding: 1em 0;
 }
@@ -13,7 +13,7 @@
   align-content: center;
   max-width: 80%;
   margin: auto;
-  background-color: var(--off-white);
+  background-color: var(--color-off-white);
 }
 
 .user-details > * {
@@ -22,7 +22,7 @@
 
 .user-details__heading {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--color-black);
   margin-bottom: 0;
 }
 
@@ -30,7 +30,7 @@
   padding: 0.8rem;
   width: 100%;
   border-radius: 10px;
-  border: 2px solid var(--gray);
+  border: 2px solid var(--color-gray);
   font-size: 2rem;
 }
 
@@ -38,8 +38,8 @@
   padding: .75rem 2rem;
   border-radius: 10px;
   outline: none;
-  background-color: var(--green);
-  color: var(--white);
+  background-color: var(--color-green);
+  color: var(--color-white);
   text-decoration: none;
   cursor: pointer;
   width: 70%;
@@ -50,20 +50,20 @@
 }
 
 .error {
-  color: var(--red);
+  color: var(--color-red);
   padding: 0.4rem;
   font-size: 1rem;
 }
 
 .signup-action__btn button.btn-disabled {
-  background: var(--light-gray);
+  background: var(--color-gray-light);
 }
 
 @media (max-width: 600px) {
   .user-details__heading {
     font-size: 1.4rem;
   }
-  
+
   .user-details__field input,
   .signup-action__btn button {
     font-size: 1.5rem;

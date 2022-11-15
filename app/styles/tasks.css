@@ -1,16 +1,6 @@
-:root{
-  --slider-colour: #424CC1;
-  --slider-background: #CFD3FF;
-  --thumb-background: #A1D0FF;
-  --opaque-black: #000000b3;
-  --white: #ffffff;
-  --black: #000000;
-  --green: #008000;
-}
-
 .tasks-page {
   display: flex;
-  color: var(--black);
+  color: var(--color-black);
   margin-top: 40px;
 }
 
@@ -31,9 +21,9 @@
 .task-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #f4f4f4;
+  border: 1px solid var(--color-white--task-card-border);
   border-radius: 10px;
-  box-shadow: 0 0 15px -7px rgba(0,0,0,.65);
+  box-shadow: 0 0 15px -7px var(--color-black--transparent-5);
   width: 50%;
   margin: auto;
   padding: 1rem;
@@ -60,7 +50,7 @@
 }
 
 .task-card__progress-bar-container__progress-bar {
-  background-color: #fff;
+  background-color: var(--color-white);
   height: 40px;
   border-radius: 25px;
   overflow: hidden;
@@ -78,15 +68,15 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
   cursor: pointer;
   background-color: var(--slider-background);
-  box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px var(--color-black);
   background: var(--slider-colour);
   border-radius: 1px;
-  border: 0px solid #000000;
+  border: 0px solid var(--color-black);
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000;
-  border: 1px solid #3724e3;
+  box-shadow: 0px 0px 0px var(--color-black);
+  border: 1px solid var(--color-blue--input-border);
   height: 18px;
   width: 18px;
   border-radius: 50%;
@@ -104,10 +94,10 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px var(--color-black);
   background: var(--slider-colour);
   border-radius: 1px;
-  border: 0px solid #000000;
+  border: 0px solid var(--color-black);
 }
 
 input[type=range]::-moz-range-thumb {
@@ -131,22 +121,22 @@ input[type=range]::-ms-track {
 
 input[type=range]::-ms-fill-lower {
   background: var(--slider-colour);
-  border: 0px solid #000000;
+  border: 0px solid var(--color-black);
   border-radius: 2px;
-  box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px var(--color-black);
 }
 
 input[type=range]::-ms-fill-upper {
   background: var(--slider-background);
-  border: 0px solid #000000;
+  border: 0px solid var(--color-black);
   border-radius: 2px;
-  box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px var(--color-black);
 }
 
 input[type=range]::-ms-thumb {
   margin-top: 1px;
-  box-shadow: 0px 0px 0px #000000;
-  border: 1px solid #2497E3;
+  box-shadow: 0px 0px 0px var(--color-black);
+  border: 1px solid var(--color-blue-light);
   height: 18px;
   width: 18px;
   border-radius: 25px;
@@ -224,8 +214,8 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0 auto;
   align-self: center;
   padding: 0.2rem;
-  background: var(--white);
-  color: var(--black);
+  background: var(--color-white);
+  color: var(--color-black);
   position: relative;
   top: 40%;
   display: flex;
@@ -236,7 +226,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .modal-title {
   font-size: 1.1rem;
-  color: var(--black);
+  color: var(--color-black);
   margin-bottom: 1rem;
   font-weight: 600;
   text-align: center;
@@ -250,7 +240,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0.5rem;
   background-color: var(--green);
   border: none;
-  color: var(--white);
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -259,8 +249,8 @@ input[type=range]:focus::-ms-fill-upper {
   width: 70%;
   margin: .4rem;
   padding: 0.5rem;
-  border: 2px solid red;
-  background-color: white;
+  border: 2px solid var(--color-red);
+  background-color: var(--color-white);
   color: black;
   font-weight: 700;
   cursor: pointer;
@@ -287,7 +277,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media screen and (max-width: 450px) {
-  .task-card__status{
+ .task-card__status{
     flex-direction: column;
   }
 }

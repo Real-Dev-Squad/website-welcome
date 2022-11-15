@@ -1,10 +1,56 @@
 :root {
-  --dark-gray: #666;
-  --off-white: #f0f2f5;
-  --black: #000000f2;
-  --gray: #a9a9a9;
-  --green: #008000;
-  --white: #ffffff;
-  --light-gray: #ccc;
-  --red: #ff0000;
+  --color-white: #ffffff;
+  --color-wheat: #f5deb3;
+  --color-off-white: #f0f2f5;
+  --color-white--form-bg: #e7e7e7;
+  --color-white--task-card-border: #f4f4f4;
+
+  --color-gray-dark: #666;
+  --color-gray: #a9a9a9;
+  --color-gray-light: #ccc;
+
+  --color-black: #000000;
+  --color-black--transparent-5: rgba(0, 0, 0, 0.5);
+  --color-gray--transparent-5: rgba(84, 84, 84, 0.5);
+
+  --color-green: #008000;
+  --color-green-light: #49a82e;
+  --color-purple: purple;
+  --color-red: #ff0000;
+  --color-gainsboro: gainsboro;
+  --color-pink: #e30062;
+
+  --color-blue-light: #2497E3;
+  --color-nav-blue: #041484;
+  --color-blue-dark: #1d1283;
+  --color-blue--input-border: #3724e3;
+  --color-blue--heading: #0034a5;
+  --color-blue--input-border--light: #2497e;
+  --color-blue--small-button-text: #0034a5;
+  --color-blue--focus: #0051ff;
+
+  --color-field-error: #e74c3c;
+
+  --button-active-color: #16a334;
+  --button-submit-color: #43a047;
+  --button-verify-color: rgb(53, 194, 25);
+  --button-primary-color: hsl(240, 89%, 64%);
+  --button-copy-color: #e30062;
+  --button-idle-color: #e49504;
+
+  /* They were already defined before */
+
+  --slider-colour: hsl(235, 51%, 51%);
+  --slider-background: #cfd3ff;
+  --thumb-background: #a1d0ff;
+  --opaque-black: rgba(0, 0, 0, 0.702);
+
+  --slider-colour: #424cc1;
+  --slider-background: #cfd3ff;
+  --thumb-background: #a1d0ff;
+  --opaque-black: #000000b3;
+
+  --notification-primary-background: #ff6f00;
+  --alert-box-background: #fff8e1;
+  --alert-box-color: #212121;
 }
