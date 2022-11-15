@@ -47,7 +47,7 @@ h1 {
   border: none;
 }
 
-.field>.error {
+.field > .error {
   font-size: 0.8rem;
   color: var(--color-field-error);
 }

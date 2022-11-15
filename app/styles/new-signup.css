@@ -35,7 +35,7 @@
 }
 
 .signup-action__btn button {
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   border-radius: 10px;
   outline: none;
   background-color: var(--color-green);
