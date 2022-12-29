@@ -3,20 +3,11 @@ const currentLocation = window.location.hash;
 
 window.addEventListener("keydown", (e)=>{
   // console.log("event", e);
-  if (e.key === " ") { 
-console.log(e);
-    // e.stopPropagation();  
-  } 
-  // console.log(e.target.attributes.href.value);
   const ancTag = document.querySelector(`a[href="${e?.target?.attributes?.href?.value}"]`);
   if (e.key === " " && ancTag){
-    ancTag?.click();
-    e.stopPropagation();
+    e.preventDefault();
+    ancTag?.click();  
   }
-  
-  
-  // console.log(ancTag);
-    
 })
 
 const removeForOthers = (target) => {
@@ -26,7 +17,6 @@ const removeForOthers = (target) => {
       const ancTag = faqText.querySelectorAll(`a`);
       // console.log("others: ", ancTag);
       ancTag.forEach((element) => {
-
         element.setAttribute("tabindex", "-1");
       })
     }
