@@ -1,6 +1,24 @@
 const faqLinks = document.querySelectorAll('.faq_link');
 const currentLocation = window.location.hash;
 
+window.addEventListener("keydown", (e)=>{
+  // console.log("event", e);
+  if (e.key === " ") { 
+console.log(e);
+    // e.stopPropagation();  
+  } 
+  // console.log(e.target.attributes.href.value);
+  const ancTag = document.querySelector(`a[href="${e?.target?.attributes?.href?.value}"]`);
+  if (e.key === " " && ancTag){
+    ancTag?.click();
+    e.stopPropagation();
+  }
+  
+  
+  // console.log(ancTag);
+    
+})
+
 const removeForOthers = (target) => {
   faqLinks.forEach((faqLink) => {
     if (faqLink.getAttribute("href") != target.getAttribute("href")) {
@@ -14,7 +32,7 @@ const removeForOthers = (target) => {
     }
   })
 }
-
+    
 faqLinks.forEach((faqLink) => {
 
   const faqText = faqLink.nextElementSibling;
@@ -65,21 +83,21 @@ faqLinks.forEach((faqLink) => {
     ancTag.click();
   }
 
-  faqLink.addEventListener("click", (e) => {
-    if (e.code === "Space" || e.key == 32) {
-    console.log("space pressed", e.code);
-
-      // e.preventDefault();
-      faqLink.classList.toggle('show');
-      faqText.style.maxHeight = faqText.scrollHeight + 'px';
-      // removeEvent();
-      // faqLink.classList.remove('show');
-    }
-    // function removeEvent(e){
-    //   faqLink.removeEventListener('click', e);
-    //   faqText.style.maxHeight = 0 + 'px';
-    //   e.preventDefault();
-    //   faqLink.classList.remove('show');
-    // }
-  })
+  // faqLink.addEventListener("keyup", (e) => {
+  //   if (e.code === "Space" || e.key == 32) {
+  //   console.log("space pressed", e.code);
+  //     // e.preventDefault();
+  //     console.log(e.target);
+  //     e.target.classList.toggle('show');
+  //     faqText.style.maxHeight = faqText.scrollHeight + 'px';
+  //     // removeEvent();
+  //     // faqLink.classList.remove('show');
+  //   }
+  //   // function removeEvent(e){
+  //   //   faqLink.removeEventListener('click', e);
+  //   //   faqText.style.maxHeight = 0 + 'px';
+  //   //   e.preventDefault();
+  //   //   faqLink.classList.remove('show');
+  //   // }
+  // })
 });
