@@ -1,12 +1,11 @@
 const faqLinks = document.querySelectorAll('.faq_link');
 const currentLocation = window.location.hash;
 
-window.addEventListener("keydown", (e)=>{
-  // console.log("event", e);
+window.addEventListener("keydown", (e) => {
   const ancTag = document.querySelector(`a[href="${e?.target?.attributes?.href?.value}"]`);
-  if (e.key === " " && ancTag){
+  if (e.key === " " && ancTag) {
     e.preventDefault();
-    ancTag?.click();  
+    ancTag?.click();
   }
 })
 
@@ -15,14 +14,13 @@ const removeForOthers = (target) => {
     if (faqLink.getAttribute("href") != target.getAttribute("href")) {
       const faqText = faqLink.nextElementSibling;
       const ancTag = faqText.querySelectorAll(`a`);
-      // console.log("others: ", ancTag);
       ancTag.forEach((element) => {
         element.setAttribute("tabindex", "-1");
       })
     }
   })
 }
-    
+
 faqLinks.forEach((faqLink) => {
 
   const faqText = faqLink.nextElementSibling;
@@ -31,7 +29,6 @@ faqLinks.forEach((faqLink) => {
   faqLink.addEventListener('click', (event) => {
 
     const tabIndexing = faqLink.nextElementSibling.querySelectorAll('a')
-    //  console.log(tabIndexing);
     const currentlyActiveFaqLink = document.querySelector('.faq_link.show');
     const currentlyActiveFaqButton = document.querySelector('.faq-btn.show');
 
@@ -55,9 +52,6 @@ faqLinks.forEach((faqLink) => {
       faqExpandIcon.classList.contains('show')
     ) {
       faqText.style.maxHeight = faqText.scrollHeight + 'px';
-      // faqLists.forEach((element)=>{
-      //   element.setAttribute("tabindex","1")
-      // })
 
     } else {
       faqText.style.maxHeight = 0;
@@ -73,21 +67,4 @@ faqLinks.forEach((faqLink) => {
     ancTag.click();
   }
 
-  // faqLink.addEventListener("keyup", (e) => {
-  //   if (e.code === "Space" || e.key == 32) {
-  //   console.log("space pressed", e.code);
-  //     // e.preventDefault();
-  //     console.log(e.target);
-  //     e.target.classList.toggle('show');
-  //     faqText.style.maxHeight = faqText.scrollHeight + 'px';
-  //     // removeEvent();
-  //     // faqLink.classList.remove('show');
-  //   }
-  //   // function removeEvent(e){
-  //   //   faqLink.removeEventListener('click', e);
-  //   //   faqText.style.maxHeight = 0 + 'px';
-  //   //   e.preventDefault();
-  //   //   faqLink.classList.remove('show');
-  //   // }
-  // })
 });
