@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/navbar-linked-pages.css" />
     <link rel="stylesheet" href="./css/discord.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
     <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
@@ -16,6 +17,19 @@
   </head>
 
   <body>
+    <div class="dropdown hide">
+      <ul class="dropdown-list">
+        <li class="dropdown-item">
+          <a class="dropdown-link" href="https://my.realdevsquad.com/">
+            My Profile
+          </a>
+        </li>
+        <hr class="line" />
+        <li class="dropdown-item dropdown-link" id="signout-option">
+          Sign out
+        </li>
+      </ul>
+    </div>
     <nav>
       <div class="hamburger">
         <span class="bar"></span>
@@ -75,7 +89,7 @@
             <button class="btn-login-text">
               Sign In With GitHub
               <img
-                src="img/icons/github-logo.png"
+                src="img/github.png"
                 alt="GitHub Icon"
                 height="15px"
                 width="15px"
@@ -83,10 +97,8 @@
             </button>
           </a>
           <div class="user-greet">
-            <a href="https://my.realdevsquad.com/">
-              <div class="user-greet-msg">Hello, User!</div>
-              <img class="user-profile-pic" />
-            </a>
+            <div class="user-greet-msg">Hello, User!</div>
+            <img class="user-profile-pic" />
           </div>
         </li>
       </ul>

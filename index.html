@@ -32,6 +32,19 @@
   </head>
 
   <body>
+    <div class="dropdown hide">
+      <ul class="dropdown-list">
+        <li class="dropdown-item">
+          <a class="dropdown-link" href="https://my.realdevsquad.com/">
+            My Profile
+          </a>
+        </li>
+        <hr class="line" />
+        <li class="dropdown-item dropdown-link" id="signout-option">
+          Sign out
+        </li>
+      </ul>
+    </div>
     <div class="first-screen">
       <header>
         <div class="hamburger">
@@ -93,25 +106,26 @@
           </ul>
         </nav>
 
-        <div class="nav-login">
-          <a class="btn-login" id="user-login" href="">
-            <button class="btn-login-text">
-              <span class="btn-text1">Sign In</span>
-              <span class="btn-text2">with GitHub</span>
-              <img
-                src="img/icons/github-logo.png"
-                alt="GitHub_Icon"
-                height="15px"
-                width="15px"
-              />
-            </button>
-          </a>
-
-          <div class="user-greet">
-            <a href="https://my.realdevsquad.com/">
+        <div class="nav-login-li">
+          <div class="nav-login">
+            <a
+              class="btn-login"
+              href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
+            >
+              <button class="btn-login-text">
+                Sign In With GitHub
+                <img
+                  src="img/icons/github-logo.png"
+                  alt="GitHub Icon"
+                  height="15px"
+                  width="15px"
+                />
+              </button>
+            </a>
+            <div class="user-greet">
               <div class="user-greet-msg">Hello, User!</div>
               <img class="user-profile-pic" />
-            </a>
+            </div>
           </div>
         </div>
       </header>
