@@ -51,7 +51,8 @@ faqLinks.forEach((faqLink) => {
       faqLink.classList.contains('show') &&
       faqExpandIcon.classList.contains('show')
     ) {
-      faqTextSiblingElement.style.maxHeight = faqTextSiblingElement.scrollHeight + 'px';
+      faqTextSiblingElement.style.maxHeight =
+        faqTextSiblingElement.scrollHeight + 'px';
     } else {
       faqTextSiblingElement.style.maxHeight = 0;
     }
