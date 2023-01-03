@@ -1,6 +1,7 @@
 const faqLinks = document.querySelectorAll('.faq_link');
 const currentLocation = window.location.hash;
 
+// to open accordian by pressing spacebar
 window.addEventListener('keydown', (e) => {
   const ancTag = document.querySelector(
     `a[href="${e?.target?.attributes?.href?.value}"]`,
@@ -11,11 +12,12 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-const removeForOthers = (target) => {
+// for adding tabindex=-1 to other faqlinks so that others faqlinks can't be accessed by tab
+const removeFocusForOthers = (target) => {
   faqLinks.forEach((faqLink) => {
     if (faqLink.getAttribute('href') != target.getAttribute('href')) {
-      const faqText = faqLink.nextElementSibling;
-      const ancTag = faqText.querySelectorAll(`a`);
+      const faqTextSiblingElement = faqLink.nextElementSibling;
+      const ancTag = faqTextSiblingElement.querySelectorAll(`a`);
       ancTag.forEach((element) => {
         element.setAttribute('tabindex', '-1');
       });
@@ -24,7 +26,7 @@ const removeForOthers = (target) => {
 };
 
 faqLinks.forEach((faqLink) => {
-  const faqText = faqLink.nextElementSibling;
+  const faqTextSiblingElement = faqLink.nextElementSibling;
   const faqExpandIcon = faqLink.firstElementChild.lastElementChild;
 
   faqLink.addEventListener('click', (event) => {
@@ -42,7 +44,6 @@ faqLinks.forEach((faqLink) => {
     faqExpandIcon.classList.toggle('show');
     tabIndexing.forEach((element) => {
       const previousTabIndex = element.getAttribute('tabindex');
-      // console.log(previousTabIndex);
       element.setAttribute('tabindex', previousTabIndex == '1' ? '-1' : '1');
     });
 
@@ -50,12 +51,12 @@ faqLinks.forEach((faqLink) => {
       faqLink.classList.contains('show') &&
       faqExpandIcon.classList.contains('show')
     ) {
-      faqText.style.maxHeight = faqText.scrollHeight + 'px';
+      faqTextSiblingElement.style.maxHeight = faqTextSiblingElement.scrollHeight + 'px';
     } else {
-      faqText.style.maxHeight = 0;
+      faqTextSiblingElement.style.maxHeight = 0;
     }
 
-    removeForOthers(faqLink);
+    removeFocusForOthers(faqLink);
   });
 
   const faqLinkValue = faqLink.hash;
