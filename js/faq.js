@@ -24,6 +24,7 @@ const removeFocusForOthers = (target) => {
     }
   });
 };
+module.exports = removeFocusForOthers;
 
 faqLinks.forEach((faqLink) => {
   const faqTextSiblingElement = faqLink.nextElementSibling;
