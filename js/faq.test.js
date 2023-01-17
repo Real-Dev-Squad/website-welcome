@@ -1,8 +1,3 @@
-// test('use jsdom in this test file', () => {
-//     const element = document.createElement('div');
-//     expect(element).not.toBeNull();
-//   });
-// import removeFocusForOthers from "./faq"
 const removeFocusForOthers = require('./faq');
 
 describe('handle keydown event', () => {
@@ -22,7 +17,6 @@ describe('handle keydown event', () => {
     expect(ancTag.click).not.toHaveBeenCalled();
   });
   it('should not call click on anchor tag when anchor tag is not found', () => {
-    event.target = document.createElement('div');
     window.dispatchEvent(event);
     expect(ancTag.click).not.toHaveBeenCalled();
   });
@@ -31,25 +25,7 @@ describe('handle keydown event', () => {
 test('removes focus for all elements except the target', () => {
   const faqLinks = [
     {
-      getAttribute: () => 'link1',
-      nextElementSibling: {
-        querySelectorAll: () => [
-          { setAttribute: jest.fn() },
-          { setAttribute: jest.fn() },
-        ],
-      },
-    },
-    {
-      getAttribute: () => 'link2',
-      nextElementSibling: {
-        querySelectorAll: () => [
-          { setAttribute: jest.fn() },
-          { setAttribute: jest.fn() },
-        ],
-      },
-    },
-    {
-      getAttribute: () => 'link3',
+      getAttribute: () => 'link',
       nextElementSibling: {
         querySelectorAll: () => [
           { setAttribute: jest.fn() },
@@ -68,5 +44,34 @@ test('removes focus for all elements except the target', () => {
         faqLink.nextElementSibling.querySelectorAll()[0].setAttribute,
       ).not.toHaveBeenCalled();
     }
+  });
+});
+
+describe('faqLinks', () => {
+  let faqLinks, faqTextSiblingElement, faqExpandIcon, tabIndexing;
+  beforeEach(() => {
+    document.body.innerHTML = `
+    <div class="faq_container">
+        <div class="faq_link">
+          <div class="faq_expand_icon"></div>
+        </div>
+        <div class="faq_text"></div>
+        <div class="tab_index"></div>
+    </div>
+    `;
+    faqLinks = document.querySelectorAll('.faq_link');
+    tabIndexing = document.querySelectorAll('.tab_index');
+    faqLinks.forEach((faqLink) => {
+      faqTextSiblingElement = faqLink.nextElementSibling;
+      faqExpandIcon = faqLink.firstElementChild.lastElementChild;
+    });
+  });
+  test('should toggle tabindex on tabIndexing elements', () => {
+    faqLinks.forEach((faqLink) => {
+      tabIndexing.forEach((element) => {
+        const previousTabIndex = element.getAttribute('tabindex');
+        element.setAttribute('tabindex', previousTabIndex == '1' ? '-1' : '1');
+      });
+    });
   });
 });
