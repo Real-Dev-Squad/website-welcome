@@ -1,5 +1,8 @@
 nav {
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  background-color: #1d1283;
 }
 
 nav li a {
