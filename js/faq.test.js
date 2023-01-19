@@ -22,7 +22,7 @@ describe('handle keydown event', () => {
   });
 });
 
-test('removes focus for all elements except the target', () => {
+it('removes focus for all elements except the target', () => {
   const faqLinks = [
     {
       getAttribute: () => 'link',
@@ -34,7 +34,7 @@ test('removes focus for all elements except the target', () => {
       },
     },
   ];
-  const target = faqLinks[1];
+  const target = faqLinks[0];
 
   removeFocusForOthers(target);
 
@@ -48,7 +48,7 @@ test('removes focus for all elements except the target', () => {
 });
 
 describe('faqLinks', () => {
-  let faqLinks, faqTextSiblingElement, faqExpandIcon, tabIndexing;
+  let faqLinks, faqExpandIcon, tabIndexing;
   beforeEach(() => {
     document.body.innerHTML = `
     <div class="faq_container">
@@ -61,12 +61,19 @@ describe('faqLinks', () => {
     `;
     faqLinks = document.querySelectorAll('.faq_link');
     tabIndexing = document.querySelectorAll('.tab_index');
-    faqLinks.forEach((faqLink) => {
-      faqTextSiblingElement = faqLink.nextElementSibling;
-      faqExpandIcon = faqLink.firstElementChild.lastElementChild;
-    });
+    faqLinks = document.querySelectorAll('.faq_link');
+    faqExpandIcon = document.querySelector('.faq_expand_icon');
+    faqLink = faqLinks[0];
   });
-  test('should toggle tabindex on tabIndexing elements', () => {
+  it('should toggle the show class on faqLink and faqExpandIcon', () => {
+    faqLinks.forEach((faqLink) => {
+      faqLink.classList.toggle('show');
+      faqExpandIcon.classList.toggle('show');
+    });
+    expect(faqLink.classList.contains('show')).toBe(true);
+    expect(faqExpandIcon.classList.contains('show')).toBe(true);
+  });
+  it('should toggle tabindex on tabIndexing elements', () => {
     faqLinks.forEach((faqLink) => {
       tabIndexing.forEach((element) => {
         const previousTabIndex = element.getAttribute('tabindex');
