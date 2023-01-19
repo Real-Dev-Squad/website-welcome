@@ -115,7 +115,6 @@ nav li {
   top: 85px;
   right: 16px;
   z-index: 100;
-  border-radius: 0.5rem;
 }
 
 .dropdown-list {
@@ -146,11 +145,11 @@ nav li {
   font-size: 1rem;
   text-align: start;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .dropdown-item-btn:hover {
   background-color: var(--dropdown-hover);
-  border-radius: 0.5rem;
 }
 
 .hide {

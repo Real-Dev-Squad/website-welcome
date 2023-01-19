@@ -31,6 +31,10 @@ main {
   padding: 20px;
   margin: 20px;
 }
+
+.dropdown {
+  top: 56px;
+}
 main article {
   max-width: 750px;
 }
