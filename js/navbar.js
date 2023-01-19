@@ -30,6 +30,11 @@ document.getElementById('signout-option').addEventListener('click', () => {
   signout();
 });
 
+const myProfileButton = document.getElementById('my-profile');
+myProfileButton.addEventListener('click', () => {
+  window.location.href = 'https://my.realdevsquad.com/';
+});
+
 document.querySelectorAll('.user-greet').forEach((greet) => {
   greet.addEventListener('click', () => {
     document.querySelector('.dropdown').classList.toggle('hide');

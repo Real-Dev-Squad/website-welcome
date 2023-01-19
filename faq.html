@@ -6,8 +6,8 @@
 
     <title>FAQ</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/faq.css" />
     <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/faq.css" />
     <link rel="stylesheet" href="./css/navbar-linked-pages.css" />
     <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
     <link
@@ -19,14 +19,14 @@
   <body>
     <div class="dropdown hide">
       <ul class="dropdown-list">
-        <li class="dropdown-item">
-          <a class="dropdown-link" href="https://my.realdevsquad.com/">
-            My Profile
-          </a>
+        <li class="dropdown-link">
+          <button class="dropdown-item-btn" id="my-profile">My Profile</button>
         </li>
         <hr class="line" />
-        <li class="dropdown-item dropdown-link" id="signout-option">
-          Sign out
+        <li class="dropdown-link">
+          <button class="dropdown-item-btn" id="signout-option">
+            Sign out
+          </button>
         </li>
       </ul>
     </div>
@@ -53,10 +53,8 @@
         </a>
 
         <div class="user-greet">
-          <a href="https://my.realdevsquad.com/">
-            <div class="user-greet-msg">Hello, User!</div>
-            <img class="user-profile-pic" />
-          </a>
+          <div class="user-greet-msg">Hello, User!</div>
+          <img class="user-profile-pic" />
         </div>
       </div>
 

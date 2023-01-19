@@ -23,6 +23,9 @@ body {
   font: 16px 'Roboto', sans-serif;
   background-color: var(--color-bg);
 }
+.dropdown {
+  top: 56px;
+}
 
 a {
   text-decoration: none;
