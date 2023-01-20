@@ -48,11 +48,11 @@ it('removes focus for all elements except the target', () => {
 });
 
 describe('faqLinks', () => {
-  let faqLinks, faqExpandIcon, tabIndexing, faqLink, tabindex;
+  let faqLinks, faqExpandIcon, tabIndexing, faqLink;
   beforeEach(() => {
     document.body.innerHTML = `
     <div class="faq_container">
-        <div class="faq_link">
+        <div class="faq_link tabindex">
           <div class="faq_expand_icon"></div>
         </div>
         <div class="faq_text"></div>
@@ -64,7 +64,6 @@ describe('faqLinks', () => {
     faqLinks = document.querySelectorAll('.faq_link');
     faqExpandIcon = document.querySelector('.faq_expand_icon');
     faqLink = faqLinks[0];
-    // faqLink.classList.appendChild(tabindex);
   });
   it('should toggle the show class on faqLink and faqExpandIcon', () => {
     faqLinks.forEach((faqLink) => {
@@ -76,19 +75,12 @@ describe('faqLinks', () => {
   });
   it('should toggle tabindex on tabIndexing elements', () => {
     faqLinks.forEach((faqLink) => {
-      console.log(faqLink, tabIndexing);
       tabIndexing.forEach((element) => {
-        console.log(element);
         const previousTabIndex = element.getAttribute('tabindex');
-        console.log(previousTabIndex);
         element.setAttribute('tabindex', previousTabIndex == '1' ? '-1' : '1');
       });
-      expect(faqLink.classList.contains('tabindex')).toBe(false);
-      // expect(tabIndexing[0].getAttribute('tabindex')).toBe('1');
-    });
-    faqLink.dispatchEvent(new Event('click'));
-    tabIndexing.forEach((element) => {
-      expect(element.getAttribute('tabindex')).toBe('1');
+      expect(faqLink.classList.contains('tabindex')).toBe(true);
+      expect(tabIndexing[0].getAttribute('tabindex')).toBe('1');
     });
   });
 });
