@@ -24,10 +24,11 @@
       </div>
       <div class="nav-login">
         <a
+          tabindex="1"
           class="btn-login"
           href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
         >
-          <button class="btn-login-text">
+          <button tabindex="1" class="btn-login-text">
             Sign In
             <img
               src="img/icons/github-logo.png"
@@ -39,7 +40,7 @@
         </a>
 
         <div class="user-greet">
-          <a href="https://my.realdevsquad.com/">
+          <a tabindex="1" href="https://my.realdevsquad.com/">
             <div class="user-greet-msg">Hello, User!</div>
             <img class="user-profile-pic" />
           </a>
@@ -48,7 +49,11 @@
 
       <ul class="nav-menu">
         <li class="nav-logo-li">
-          <a href="https://www.realdevsquad.com/" class="logo-link">
+          <a
+            tabindex="1"
+            href="https://www.realdevsquad.com/"
+            class="logo-link"
+          >
             <img
               src="img/logos/RDS-logo.png"
               alt="home nav logo"
@@ -57,22 +62,39 @@
             />
           </a>
         </li>
-        <li class="home-tab"><a href="http://realdevsquad.com/">Home</a></li>
+        <li class="home-tab">
+          <a tabindex="1" href="http://realdevsquad.com/">Home</a>
+        </li>
         <li>
-          <a class="active-tab" href="https://welcome.realdevsquad.com/">
+          <a
+            class="active-tab"
+            tabindex="1"
+            href="https://welcome.realdevsquad.com/"
+          >
             Welcome
           </a>
         </li>
-        <li><a href="https://www.realdevsquad.com/events.html">Events</a></li>
-        <li><a href="https://members.realdevsquad.com/">Members</a></li>
-        <li><a href="https://crypto.realdevsquad.com/">Crypto</a></li>
-        <li><a href="https://status.realdevsquad.com/">Status</a></li>
+        <li>
+          <a tabindex="1" href="https://www.realdevsquad.com/events.html"
+            >Events</a
+          >
+        </li>
+        <li>
+          <a tabindex="1" href="https://members.realdevsquad.com/">Members</a>
+        </li>
+        <li>
+          <a tabindex="1" href="https://crypto.realdevsquad.com/">Crypto</a>
+        </li>
+        <li>
+          <a tabindex="1" href="https://status.realdevsquad.com/">Status</a>
+        </li>
         <li class="nav-login-li">
           <a
+            tabindex="1"
             class="btn-login"
             href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
           >
-            <button class="btn-login-text">
+            <button tabindex="1" class="btn-login-text">
               Sign In With GitHub
               <img
                 src="img/icons/github-logo.png"
@@ -98,11 +120,11 @@
       <section>
         <div class="container justify-content-center">
           <h2 class="topic text-center">About RDS</h2>
-          <div class="faq faq--show">
-            <a class="faq_link" href="#What-is-Real-Dev-Squad">
+          <div class="faq">
+            <a tabindex="1" class="faq_link" href="#What-is-Real-Dev-Squad">
               <div class="faq__title">
                 <h3 class="question">What is Real Dev Squad?</h3>
-                <button type="button" class="faq-btn"></button>
+                <button tabindex="1" type="button" class="faq-btn"></button>
               </div>
             </a>
             <div class="faq__text">
@@ -117,11 +139,11 @@
               </p>
             </div>
           </div>
-          <div class="faq">
-            <a class="faq_link" href="#How-do-I-contribute-to-RDS">
-              <div class="faq__title">
+          <div class="faq" type="button">
+            <a tabindex="1" class="faq_link" href="#How-do-I-contribute-to-RDS">
+              <div class="faq__title" type="button" role="button">
                 <h3 class="question">How do I contribute to RDS?</h3>
-                <button type="button" class="faq-btn"></button>
+                <button tabindex="1" type="button" class="faq-btn"></button>
               </div>
             </a>
             <div class="faq__text">
@@ -132,39 +154,40 @@
 
               <!-- prettier-ignore -->
               <ul class="faq__list">
-              <li><a href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank"
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-welcome" target="_blank"
                   rel="noopener noreferrer">Welcome</a> : HTML, CSS, Javascript</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-www" target="_blank" rel="noopener noreferrer">Main
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-www" target="_blank" rel="noopener noreferrer">Main
                   Site</a> : HTML, CSS, Javascript</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-members" target="_blank"
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-members" target="_blank"
                   rel="noopener noreferrer">Members</a> : Next.js</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-crypto" target="_blank"
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-crypto" target="_blank"
                   rel="noopener noreferrer">Crypto</a> : Next.js</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-status" target="_blank"
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-status" target="_blank"
                   rel="noopener noreferrer">Status</a> : Next.js, TypeScript</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-my" target="_blank" rel="noopener noreferrer">My
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-my" target="_blank" rel="noopener noreferrer">My
                   Site</a> : Ember</li>
-              <li><a href="https://github.com/Real-Dev-Squad/website-backend" target="_blank"
+              <li><a tabindex="-1" href="https://github.com/Real-Dev-Squad/website-backend" target="_blank"
                   rel="noopener noreferrer">Backend</a> : Node.js</li>
             </ul>
             </div>
           </div>
-
           <div class="faq">
-            <a class="faq_link" href="#How-do-I-join-the-squad">
+            <a tabindex="1" class="faq_link" href="#How-do-I-join-the-squad">
               <div class="faq__title">
                 <h3 class="question">
                   I get what the squad is about, but how do I join the squad?
                 </h3>
-                <button type="button" class="faq-btn"></button>
+                <button tabindex="1" type="button" class="faq-btn"></button>
               </div>
             </a>
             <div class="faq__text">
               <p>
                 We communicate over a Discord channel. If you wish to join the
                 Discord channel, please contact any of our
-                <a href="https://members.realdevsquad.com/">members</a> to get
-                invitation link.
+                <a tabindex="-1" href="https://members.realdevsquad.com/"
+                  >members</a
+                >
+                to get invitation link.
               </p>
             </div>
           </div>
@@ -177,6 +200,7 @@
             <h2 class="topic text-center">Git Related Questions</h2>
             <div class="faq">
               <a
+                tabindex="1"
                 class="faq_link"
                 href="#I-dont't-know-git-can-I-still-contribute"
               >
@@ -184,7 +208,7 @@
                   <h3 class="question">
                     I don't know Git. Can I still contribute?
                   </h3>
-                  <button type="button" class="faq-btn"></button>
+                  <button tabindex="1" type="button" class="faq-btn"></button>
                 </div>
               </a>
               <div class="faq__text">
@@ -192,6 +216,7 @@
                   Learning Git is highly recommended, but if you do not know it
                   yet, please follow
                   <a
+                    tabindex="-1"
                     href="https://github.com/Real-Dev-Squad/website-welcome/blob/main/CONTRIBUTING.md"
                     >this
                   </a>
@@ -208,6 +233,7 @@
       <p class="info-repo">
         The contents of this website are deployed from this
         <a
+          tabindex="1"
           href="https://github.com/Real-Dev-Squad/website-welcome"
           target="_blank"
           rel="noopener noreferrer"
