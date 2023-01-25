@@ -65,6 +65,7 @@ describe('faqLinks', () => {
     faqExpandIcon = document.querySelector('.faq_expand_icon');
     faqLink = faqLinks[0];
   });
+
   it('should toggle the show class on faqLink and faqExpandIcon', () => {
     faqLinks.forEach((faqLink) => {
       faqLink.classList.toggle('show');
@@ -73,6 +74,7 @@ describe('faqLinks', () => {
     expect(faqLink.classList.contains('show')).toBe(true);
     expect(faqExpandIcon.classList.contains('show')).toBe(true);
   });
+
   it('should toggle tabindex on tabIndexing elements', () => {
     faqLinks.forEach((faqLink) => {
       tabIndexing.forEach((element) => {
