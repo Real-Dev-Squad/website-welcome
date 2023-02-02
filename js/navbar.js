@@ -18,7 +18,7 @@ hamburger.addEventListener('click', () => {
 });
 
 const signout = () => {
-  fetch('https://api.realdevsquad.com/auth/signout', {
+  fetch(`${API_BASE_URL}/auth/signout`, {
     method: 'GET',
     credentials: 'include',
   }).then(() => {
@@ -32,7 +32,7 @@ document.getElementById('signout-option').addEventListener('click', () => {
 
 const myProfileButton = document.getElementById('my-profile');
 myProfileButton.addEventListener('click', () => {
-  window.location.href = 'https://my.realdevsquad.com/';
+  window.location.href = MY_BASE_URL;
 });
 
 document.querySelectorAll('.user-greet').forEach((greet) => {
