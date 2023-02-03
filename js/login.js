@@ -1,4 +1,4 @@
-const setUserGreeting = (username, firstName) => {
+const setUserGreeting = (username, firstName, userProfilePicture) => {
   if (username) {
     const userLoginEl = document.querySelectorAll('.btn-login');
 
@@ -10,7 +10,8 @@ const setUserGreeting = (username, firstName) => {
     msgGreetMsgEl.forEach((element) => {
       element.innerText = greetMsg;
     });
-    const userImgURL = `https://raw.githubusercontent.com/Real-Dev-Squad/website-static/main/members/${username}/img.png`;
+
+    const userImgURL = userProfilePicture;
     userImgEl.forEach((element) => {
       element.src = userImgURL;
     });
@@ -31,10 +32,12 @@ const fetchData = () => {
   })
     .then((res) => res.json())
     .then((res) => {
+      const { username, first_name, picture } = res;
+
       if (res.incompleteUserDetails) {
         return window.location.replace('https://my.realdevsquad.com/signup');
       }
-      setUserGreeting(res.username, res.first_name);
+      setUserGreeting(username, first_name, picture.url);
     });
 };
 

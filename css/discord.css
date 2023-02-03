@@ -1,3 +1,18 @@
+:root {
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-bg-card: #fff;
+  --color-links: #1d1283;
+  --color-events: #e30162;
+}
+
+.dark-theme {
+  --color-bg: #1c1b22;
+  --color-text: #e1e1ec;
+  --color-bg-card: #312f3b;
+  --color-links: #0080ff;
+  --color-events: #ff0090;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +21,15 @@
 
 body {
   font: 16px 'Roboto', sans-serif;
+  background-color: var(--color-bg);
+}
+.dropdown {
+  top: 56px;
 }
 
 a {
   text-decoration: none;
-  color: #0000ff;
+  color: var(--color-links);
 }
 
 .animation-container .animation-heading-container {
@@ -42,7 +61,7 @@ a {
 
 .new-heading {
   font-weight: 400;
-  color: #05117c;
+  color: var(--color-text);
   font-size: 2.125rem;
   margin-top: 3.5rem;
   width: 95%;
@@ -59,6 +78,7 @@ a {
 
 .discord-info-para p {
   font-size: 1.25rem;
+  color: var(--color-text);
 }
 
 .center-block {
@@ -71,7 +91,7 @@ a {
 
 .get-started-heading {
   font-weight: 400;
-  color: #030f79;
+  color: var(--color-links);
   font-size: 2.125rem;
   margin: 2rem 0;
   display: flex;
@@ -91,11 +111,12 @@ a {
 }
 
 .end-block {
-  background: #f2f2f2;
+  background-color: var(--color-bg);
   margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-text);
 }
 
 .discord-image {
@@ -120,6 +141,7 @@ footer {
   width: 100%;
   padding: 15px;
   text-align: center;
+  color: var(--color-text);
 }
 
 @keyframes moveLeftBounce {

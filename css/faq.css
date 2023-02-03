@@ -1,3 +1,18 @@
+:root {
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-bg-card: #fff;
+  --color-links: #1d1283;
+  --color-events: #e30162;
+}
+
+.dark-theme {
+  --color-bg: #1c1b22;
+  --color-text: #e1e1ec;
+  --color-bg-card: #312f3b;
+  --color-links: #0080ff;
+  --color-events: #ff0090;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +22,7 @@
 body {
   font: 16px 'Roboto', sans-serif;
   position: relative;
+  background-color: var(--color-bg);
 }
 
 main {
@@ -20,10 +36,12 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+.dropdown {
+  top: 56px;
+}
 a {
   text-decoration: none;
-  color: #0000ff;
+  color: var(--color-links);
   font-weight: 400;
 }
 
@@ -45,6 +63,7 @@ h1 {
   font-size: 1.48rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
+  color: var(--color-text);
 }
 
 .faq {
@@ -145,12 +164,14 @@ footer {
   width: 100%;
   padding: 15px;
   text-align: center;
+  color: var(--color-text);
 }
 
 .welcome-title {
   margin: 1em 0;
   text-align: center;
   font-weight: 400;
+  color: var(--color-text);
 }
 
 @media (max-width: 625px) {

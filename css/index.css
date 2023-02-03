@@ -1,3 +1,18 @@
+:root {
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-bg-card: #fff;
+  --color-links: #1d1283;
+  --color-events: #e30162;
+}
+
+.dark-theme {
+  --color-bg: #1c1b22;
+  --color-text: #e1e1ec;
+  --color-bg-card: #312f3b;
+  --color-links: #0080ff;
+  --color-events: #ff0090;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -6,6 +21,7 @@
 body {
   box-sizing: border-box;
   font-family: 'raleway';
+  background-color: var(--color-bg);
 }
 
 h1 {
@@ -108,7 +124,7 @@ h2 {
   font-size: 2.8rem;
   text-align: center;
   font-weight: 600;
-  color: #091133;
+  color: var(--color-text);
 }
 
 .cards {
@@ -150,13 +166,14 @@ h2 {
   line-height: 2.5rem;
   font-weight: 600;
   color: #091133;
-  background-color: #f6f4f4;
+  background-color: var(--color-bg);
 }
 
 .info-note {
   width: 40%;
   font-size: 2rem;
   line-height: 3rem;
+  color: var(--color-text);
 }
 
 .info-image {
@@ -186,7 +203,7 @@ h2 {
 
 .upcoming-event,
 .previous-event {
-  color: #091133;
+  color: var(--color-text);
   padding: 30px 0px 10px 0px;
   font-size: 1.5rem;
 }
@@ -206,16 +223,19 @@ h2 {
 
 .stay-tune-text {
   color: #e30062;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .events {
   margin: 0px 4px;
   font-size: 1.2rem;
   font-weight: bold;
+  color: var(--color-links);
 }
 
 .video-holder {
-  background-color: #f6f4f4;
+  background-color: var(--color-bg);
   padding-bottom: 40px;
 }
 
@@ -225,7 +245,7 @@ h2 {
 }
 
 .video-text {
-  color: #091133;
+  color: var(--color-text);
   font-weight: 600;
   font-size: 2.5rem;
   padding: 40px 0px;
@@ -525,4 +545,10 @@ footer {
   .info-image {
     width: 70%;
   }
+}
+.info-repo {
+  color: var(--color-text);
+}
+.info-repo-link {
+  color: var(--color-links);
 }

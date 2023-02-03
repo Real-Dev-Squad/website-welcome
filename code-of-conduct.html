@@ -6,6 +6,7 @@
 
     <title>Code of Conduct</title>
 
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/coc.css" />
     <link rel="stylesheet" href="./css/navbar-linked-pages.css" />
     <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico" />
@@ -16,6 +17,19 @@
   </head>
 
   <body>
+    <div class="dropdown hide">
+      <ul class="dropdown-list">
+        <li class="dropdown-link">
+          <button class="dropdown-item-btn" id="my-profile">My Profile</button>
+        </li>
+        <hr class="line" />
+        <li class="dropdown-link">
+          <button class="dropdown-item-btn" id="signout-option">
+            Sign out
+          </button>
+        </li>
+      </ul>
+    </div>
     <nav>
       <div class="hamburger">
         <span class="bar"></span>
@@ -39,16 +53,14 @@
         </a>
 
         <div class="user-greet">
-          <a href="https://my.realdevsquad.com/">
-            <div class="user-greet-msg">Hello, User!</div>
-            <img class="user-profile-pic" />
-          </a>
+          <div class="user-greet-msg">Hello, User!</div>
+          <img class="user-profile-pic" />
         </div>
       </div>
 
       <ul class="nav-menu">
         <li class="nav-logo-li">
-          <a href="#">
+          <a href="https://www.realdevsquad.com/" class="logo-link">
             <img
               src="img/logos/RDS-logo.png"
               alt="home nav logo"
@@ -83,15 +95,12 @@
             </button>
           </a>
           <div class="user-greet">
-            <a href="https://my.realdevsquad.com/">
-              <div class="user-greet-msg">Hello, User!</div>
-              <img class="user-profile-pic" />
-            </a>
+            <div class="user-greet-msg">Hello, User!</div>
+            <img class="user-profile-pic" />
           </div>
         </li>
       </ul>
     </nav>
-
     <main>
       <article>
         <h1 class="welcome-title">Code of Conduct at RDS</h1>
@@ -154,7 +163,9 @@
         </a>
       </p>
     </footer>
+    <script src="/js/constants.js" defer></script>
     <script type="text/javascript" src="./js/login.js"></script>
     <script type="text/javascript" src="./js/navbar.js"></script>
+    <script src="js/darkmode.js"></script>
   </body>
 </html>
