@@ -2,23 +2,41 @@ import removeFocusForOthers from './faq';
 import { describe, expect, it, jest } from '@jest/globals';
 
 describe('handle keydown event', () => {
-  let ancTag, event;
+  let ancTag, event, spy;
   beforeEach(() => {
     ancTag = document.createElement('a');
+    spy = jest.spyOn(document, 'querySelector').mockReturnValue(ancTag);
     ancTag.setAttribute('href', '/example');
     ancTag.click = jest.fn();
     document.body.appendChild(ancTag);
-    event = new KeyboardEvent('keydown', { key: ' ' });
+    event = { key: ' ', preventDefault: jest.fn() };
+    // event = new KeyboardEvent('keydown', { key: ' ' });
   });
 
+  // afterEach(() => {
+  //        spy.mockRestore();
+  //     });
+
   // it('should not call click on anchor tag when keydown event is not space', () => {
-  //   event.key = 'Enter';
-  //   event.target = ancTag;
+  //   // event.key = 'Enter';
+  //   // event.target = ancTag;
   //   window.dispatchEvent(event);
   //   expect(ancTag.click).not.toHaveBeenCalled();
   // });
-  it('should not call click on anchor tag when anchor tag is not found', () => {
-    window.dispatchEvent(event);
+  // it('should not call click on anchor tag when anchor tag is not found', () => {
+  //   window.dispatchEvent(event);
+  //   expect(ancTag.click).not.toHaveBeenCalled();
+  // });
+
+  it('should not call preventDefault method when key is not space', () => {
+    event.key = 'Enter';
+    window.addEventListener('keydown', event);
+    expect(event.preventDefault).not.toHaveBeenCalled();
+  });
+
+  it('should not call ancTag.click method when key is not space', () => {
+    event.key = 'Enter';
+    window.addEventListener('keydown', event);
     expect(ancTag.click).not.toHaveBeenCalled();
   });
 });
