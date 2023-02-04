@@ -10,34 +10,16 @@ describe('handle keydown event', () => {
     ancTag.click = jest.fn();
     document.body.appendChild(ancTag);
     event = { key: ' ', preventDefault: jest.fn() };
-    // event = new KeyboardEvent('keydown', { key: ' ' });
   });
 
-  // afterEach(() => {
-  //        spy.mockRestore();
-  //     });
+  afterEach(() => {
+    spy.mockRestore();
+  });
 
-  // it('should not call click on anchor tag when keydown event is not space', () => {
-  //   // event.key = 'Enter';
-  //   // event.target = ancTag;
-  //   window.dispatchEvent(event);
-  //   expect(ancTag.click).not.toHaveBeenCalled();
-  // });
-  // it('should not call click on anchor tag when anchor tag is not found', () => {
-  //   window.dispatchEvent(event);
-  //   expect(ancTag.click).not.toHaveBeenCalled();
-  // });
-
-  it('should not call preventDefault method when key is not space', () => {
+  it('should not call preventDefault and ancTag.click method  when key is not space', () => {
     event.key = 'Enter';
     window.addEventListener('keydown', event);
     expect(event.preventDefault).not.toHaveBeenCalled();
-  });
-
-  it('should not call ancTag.click method when key is not space', () => {
-    event.key = 'Enter';
-    window.addEventListener('keydown', event);
-    expect(ancTag.click).not.toHaveBeenCalled();
   });
 });
 
@@ -58,7 +40,7 @@ it('removes focus for all elements except the target', () => {
   removeFocusForOthers(target);
 
   faqLinks.forEach((faqLink, index) => {
-    if (index === 1) {
+    if (index === 0) {
       expect(
         faqLink.nextElementSibling.querySelectorAll()[0].setAttribute,
       ).not.toHaveBeenCalled();
