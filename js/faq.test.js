@@ -21,6 +21,10 @@ describe('handle keydown event', () => {
     window.addEventListener('keydown', event);
     expect(event.preventDefault).not.toHaveBeenCalled();
   });
+  it('should not call preventDefault and ancTag.click method', () => {
+    window.addEventListener('keydown', event);
+    expect(event.preventDefault).not.toHaveBeenCalled();
+  });
 });
 
 it('removes focus for all elements except the target', () => {
