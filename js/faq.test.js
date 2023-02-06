@@ -2,7 +2,7 @@ import removeFocusForOthers from './faq';
 import { describe, expect, it, jest } from '@jest/globals';
 
 describe('handle keydown event', () => {
-  let ancTag, event, spy;
+  let ancTag, event, spy, events;
   beforeEach(() => {
     ancTag = document.createElement('a');
     spy = jest.spyOn(document, 'querySelector').mockReturnValue(ancTag);
@@ -18,10 +18,6 @@ describe('handle keydown event', () => {
 
   it('should not call preventDefault and ancTag.click method  when key is not space', () => {
     event.key = 'Enter';
-    window.addEventListener('keydown', event);
-    expect(event.preventDefault).not.toHaveBeenCalled();
-  });
-  it('should not call preventDefault and ancTag.click method', () => {
     window.addEventListener('keydown', event);
     expect(event.preventDefault).not.toHaveBeenCalled();
   });

@@ -24,7 +24,6 @@ const removeFocusForOthers = (target) => {
     }
   });
 };
-export default removeFocusForOthers;
 
 faqLinks.forEach((faqLink) => {
   const faqTextSiblingElement = faqLink.nextElementSibling;
@@ -68,3 +67,5 @@ faqLinks.forEach((faqLink) => {
     ancTag.click();
   }
 });
+
+export default removeFocusForOthers;
