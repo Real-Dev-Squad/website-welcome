@@ -6,7 +6,7 @@ window.addEventListener('keydown', (e) => {
   const ancTag = document.querySelector(
     `a[href="${e?.target?.attributes?.href?.value}"]`,
   );
-  if (e.key === ' ' && ancTag) {
+  if (e.code == 'Space' && ancTag) {
     e.preventDefault();
     ancTag?.click();
   }
