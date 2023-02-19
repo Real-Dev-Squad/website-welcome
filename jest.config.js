@@ -3,7 +3,12 @@
  * https://jestjs.io/docs/configuration
  */
 
-module.exports = {
+export default {
+  // testEnvironment: 'jest-environment-node',
+  transform: {},
+  // "testEnvironment": "jest-environment-jsdom-sixteen",
+  verbose: true,
+  transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
