@@ -1,5 +1,5 @@
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// const hamburger = document.querySelector('.hamburger');
+// const navMenu = document.querySelector('.nav-menu');
 
 window.addEventListener('DOMContentLoaded', (event) => {
   const checkURL = window.location.href;
@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const clientId =
     checkURL === productionURL
       ? '23c78f66ab7964e5ef97'
-      : 'c4a84431feaf604e89d1';
+      : '8b97fd58a86f1d06b0e2';
   userLoginEl.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&state=${checkURL}`;
 });
 const hamburger = document.querySelector('.hamburger');
@@ -32,9 +32,29 @@ document.getElementById('signout-option').addEventListener('click', () => {
   signout();
 });
 
+const myStatusButton = document.getElementById('my-status');
+myStatusButton.addEventListener('click', () => {
+  window.location.href = MY_BASE_URL;
+});
+
 const myProfileButton = document.getElementById('my-profile');
 myProfileButton.addEventListener('click', () => {
-  window.location.href = MY_BASE_URL;
+  window.location.href = `${MY_BASE_URL}/profile`;
+});
+
+const myTasksButton = document.getElementById('my-tasks');
+myTasksButton.addEventListener('click', () => {
+  window.location.href = `${MY_BASE_URL}/tasks`;
+});
+
+const myIdentityButton = document.getElementById('my-identity');
+myIdentityButton.addEventListener('click', () => {
+  window.location.href = `${MY_BASE_URL}/identity`;
+});
+
+const mainSiteButton = document.getElementById('main-site');
+mainSiteButton.addEventListener('click', () => {
+  window.location.href = MAIN_SITE;
 });
 
 document.querySelectorAll('.user-greet').forEach((greet) => {
