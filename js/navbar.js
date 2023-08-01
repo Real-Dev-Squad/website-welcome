@@ -11,8 +11,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
       : 'c4a84431feaf604e89d1';
   userLoginEl.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&state=${checkURL}`;
 });
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
