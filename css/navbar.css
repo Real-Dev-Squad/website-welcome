@@ -111,11 +111,11 @@ nav li {
   color: #000;
   position: absolute;
   top: 88px;
-  right: 37px;
+  right: 39px;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  padding: 15px 0;
+  padding: 1rem 0;
   font-size: 0.87rem;
   justify-content: center;
   background-color: #fffbfb;
@@ -151,7 +151,7 @@ nav li {
   color: var(--color-black);
   border: none;
   line-height: 19.575px;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   font-size: 0.87rem;
   text-align: start;
   cursor: pointer;
@@ -236,5 +236,12 @@ nav li a:hover {
 @media (max-width: 625px) {
   .btn-text2 {
     display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .dropdown {
+    top: 60px;
+    right: 22px;
   }
 }
