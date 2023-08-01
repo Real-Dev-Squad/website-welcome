@@ -25,6 +25,17 @@ const setUserGreeting = (username, firstName, userProfilePicture) => {
   }
 };
 
+const showSignInButton = () => {
+  const loginButtons = document.querySelectorAll('.btn-login-text');
+  loginButtons.forEach((element) => {
+    element.classList.remove('hidden');
+  });
+};
+const hideSkeleton = () => {
+  const skeletonHolder = document.querySelector('.skeleton-holder');
+  skeletonHolder.style.display = 'none';
+};
+
 const fetchData = () => {
   fetch('https://api.realdevsquad.com/users/self', {
     headers: { 'content-type': 'application/json' },
@@ -33,11 +44,20 @@ const fetchData = () => {
     .then((res) => res.json())
     .then((res) => {
       const { username, first_name, picture } = res;
-
+      if (res.error) {
+        hideSkeleton();
+        showSignInButton();
+        throw new Error(res.error);
+      }
       if (res.incompleteUserDetails) {
         return window.location.replace('https://my.realdevsquad.com/signup');
       }
       setUserGreeting(username, first_name, picture.url);
+    })
+    .catch((error) => {
+      hideSkeleton();
+      showSignInButton();
+      console.error(error);
     });
 };
 
