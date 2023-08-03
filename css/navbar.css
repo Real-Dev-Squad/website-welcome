@@ -291,11 +291,12 @@ nav li a:hover {
   }
 }
 
-
 @media (max-width: 1023px) {
   .dropdown {
     top: 60px;
     right: 22px;
+  }
+}
 
 @keyframes placeholderShimmer {
   0% {
@@ -304,6 +305,5 @@ nav li a:hover {
 
   100% {
     background-position: 468px 0;
-
   }
 }
