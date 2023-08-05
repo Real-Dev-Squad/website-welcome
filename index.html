@@ -95,11 +95,12 @@
                 Members
               </a>
             </li>
-            <li>
+            <!-- TODO : uncomment when crypto page is added -->
+            <!-- <li>
               <a class="nav-element" href="https://crypto.realdevsquad.com/">
                 Crypto
               </a>
-            </li>
+            </li> -->
             <li>
               <a class="nav-element" href="https://status.realdevsquad.com/">
                 Status
@@ -114,7 +115,11 @@
               class="btn-login"
               href="https://github.com/login/oauth/authorize?client_id=23c78f66ab7964e5ef97"
             >
-              <button class="btn-login-text">
+              <div class="skeleton-holder">
+                <div class="skeleton-rectangle" id="skeleton-rectangle"></div>
+                <div class="skeleton-circle" id="skeleton-circle"></div>
+              </div>
+              <button class="btn-login-text hidden">
                 Sign In With GitHub
                 <img
                   src="img/icons/github-logo.png"

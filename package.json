@@ -4,10 +4,13 @@
   "description": "Welcome website of Real Dev Squad",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "check": "prettier --check .",
-    "fix": "prettier --write ."
+    "fix": "prettier --write .",
+    "tests:unit": "jest --config=jest.config.js",
+    "tests:component": "jest --config=tests/jest.config.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +22,8 @@
   },
   "pre-commit": [
     "check"
-  ]
+  ],
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
 }
