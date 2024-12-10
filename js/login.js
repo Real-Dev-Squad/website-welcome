@@ -37,7 +37,7 @@ const hideSkeleton = () => {
 };
 
 const fetchData = () => {
-  fetch('https://api.realdevsquad.com/users/self', {
+  fetch('https://api.realdevsquad.com/users?profile=true', {
     headers: { 'content-type': 'application/json' },
     credentials: 'include',
   })
